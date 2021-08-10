@@ -6,7 +6,7 @@ module.exports = {
     description: `My personal blog.`,
     siteUrl: `https://blog.edgardocarreras.com/`,
     social: {
-      twitter: `Edgardo Carreras | Blog`,
+      twitter: `donedgardo`,
     },
   },
   plugins: [

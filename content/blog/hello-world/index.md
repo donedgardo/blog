@@ -20,8 +20,8 @@ Oh, and here's a great quote from this Wikipedia on
 
 ![Chinese Salty Egg](./salty_egg.jpg)
 
-```js
-function helloWorld() {
-  console.log("Hello World!")
-}
+```clojure
+(defn hello-world
+  [] 
+  (print "Hello World!"))
 ```

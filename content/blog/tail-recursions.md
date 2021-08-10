@@ -4,7 +4,7 @@ date: 2021-08-02T01:22:55.506Z
 title: Tail Recursions
 description: 
 ---
-![Tail Recursion](../../assets/tails.png "Tail recursion" )
+![Tail Recursion](../assets/tails.png "Tail recursion" )
 
 Today I learned about loop and recursion in Clojure.
 ```clojure

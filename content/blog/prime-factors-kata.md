@@ -4,7 +4,7 @@ date: 2021-08-03T01:22:55.506Z
 title: Prime Factors Kata
 description: 
 ---
-![Kata](../../assets/kata.jpeg "Kata" )
+![Kata](../assets/kata.jpeg "Kata" )
 
 I did my first kata yesterday and recorded it, [the prime factors](http://www.butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata) kata in Clojure.
 The idea behind a kata is to practice your programming craft, it's not about the final code but about the journey.

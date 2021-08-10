@@ -9,7 +9,7 @@ Hello there!
 
 I'm, edgardo carreras... and coding is my [ikigai](https://en.wikipedia.org/wiki/Ikigai). 
 
-![ikigai](../../assets/ikigai.png )
+![ikigai](../assets/ikigai.png )
 
 Specifically learning and teaching coding.
 

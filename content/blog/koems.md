@@ -4,7 +4,7 @@ date: 2021-08-01T01:22:55.506Z
 title: Path to Enlightenment (Clojure koems) 
 description: 
 ---
-![Koans](../../assets/koan.png)
+![Koans](../assets/koan.png)
 
 Today I'm focusing on Clojure Koems. Koems are like TDD, but the test are written out for you, so you only have to make them pass.  This [git repository](https://github.com/donedgardo/clojure-koans/tree/develop) is a fork of the clojure koans. The develop branch has the answers if you are curious.
 My big AHA moment came after looking at how Clojure composes functions, including higher-order functions. 

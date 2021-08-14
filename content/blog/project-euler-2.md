@@ -13,7 +13,7 @@ Today we are continuing our journey through the Euler Project.
 4th problem:
 ---
 > A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
-> <br>Find the largest palindrome made from the product of two 3-digit numbers.
+> <br></br>Find the largest palindrome made from the product of two 3-digit numbers.
   
 So let's break this into smaller problems:
 
@@ -54,7 +54,7 @@ Clojure is so elegant!
 -------
 
 >2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
-<br> What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+<br></br> What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
 So from what I got from this problem is that 2520 is the lowest number that can be divided by `[1 2 3 4 5 6 7 8 9 10]`
 and the remainder is `0` for every division. 

@@ -9,7 +9,7 @@ Welcome back!
 
 Lets continuing our journey through the Euler Project.
 
-7th problem:
+8th problem:
 ---
 > By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
 > <br></br> What is the 10 001st prime number?

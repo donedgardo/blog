@@ -210,7 +210,7 @@ Wanted to make it more readable and remove duplicate code even further I happily
 
 (def coin-value {:quarter 25 :dime 10 :nickle 5 :penny 1 })
 
-(defn should-add-coin [coin amount]
+(defn should-add-coin? [coin amount]
   (>= (- amount (coin coin-value)) 0))
 
 (defn subtract-coin-amount [coin amount]
@@ -220,19 +220,19 @@ Wanted to make it more readable and remove duplicate code even further I happily
   (loop [change empty-coins
          amount-remaining (* amount  100)]
     (cond
-      (should-add-coin :quarter amount-remaining)
+      (should-add-coin? :quarter amount-remaining)
       (recur
         (add-coin :quarters change)
         (subtract-coin-amount :quarter amount-remaining))
-      (should-add-coin :dime amount-remaining)
+      (should-add-coin? :dime amount-remaining)
       (recur
         (add-coin :dimes change)
         (subtract-coin-amount :dime amount-remaining))
-      (should-add-coin :nickle amount-remaining)
+      (should-add-coin? :nickle amount-remaining)
       (recur
         (add-coin :nickles change)
         (subtract-coin-amount :nickle amount-remaining))
-      (should-add-coin :penny amount-remaining)
+      (should-add-coin? :penny amount-remaining)
       (recur
         (add-coin :pennies change)
         (subtract-coin-amount :penny amount-remaining))

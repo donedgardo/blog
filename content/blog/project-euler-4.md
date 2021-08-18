@@ -1,7 +1,7 @@
 ---
 path: /project-euler-part-4
 date: 2021-08-16T01:22:55.506Z
-title: Project Euler Part 3
+title: Project Euler Part 4
 description: 
 ---
 

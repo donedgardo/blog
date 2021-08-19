@@ -1,7 +1,7 @@
 ---
-path: /tic-tac-toe
-date: 2021-08-11T01:22:55.506Z
-title: Tic Tac Toe in Clojure
+path: /tic-tac-toe-1
+date: 2021-08-18T01:22:55.506Z
+title: Tic Tac Toe in Clojure (Part 1)
 description: 
 ---
 

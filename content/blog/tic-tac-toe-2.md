@@ -240,7 +240,7 @@ Our code after the refactor:
 ```
 
 Tomorrow we'll talk on how we implement this story:
-> ****As a player I want to play against an AI ****<br></br>
+> **As a player I want to play against an AI**<br></br>
 > Hard AI - Be able to play against (Unbeatable).
 
 <3

@@ -8,7 +8,7 @@ description:
 Greetings 🖖!
 
 Yesterday we talked about some pain points we encountered developing our Tic tac toe cli ui in Clojure.
-Today we are going to talk about how we overcame those pain points. Let;s start with printing the board.
+Today we are going to talk about how we overcame those pain points. Let's start with printing the board.
 
 This is the story:
 > **Create a Tic-Tac-Toe Game** <br></br>
@@ -205,7 +205,7 @@ Our code with failing test:
 Our code with passing test:
 ```clojure
 (defn game-over? [board]
-  (if (board-full? board)
+  (if (every? identity (vals board))
     true
     (loop [board-indexes (keys board)]
         (let [[x y] (first board-indexes)]
@@ -220,6 +220,9 @@ Too hard to read and follow.
 
 Our code after the refactor:
 ```clojure
+(defn board-full? [board]
+  (every? identity (vals board))
+
 (defn game-has-wining-play? [board]
   (loop [board-indexes (keys board)]
     (let [[x y] (first board-indexes)]

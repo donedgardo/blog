@@ -140,7 +140,7 @@ Lets start with some sensible tests:
                              empty-board
                              X)))))
 ```
-In the test I check that the `get-best-move` not only returns the winning play plus the best defensive play.
+In the test I check that the `get-best-move` not only returns the winning play but also the best defensive play.
 
 Here is the implementation:
 ```clojure

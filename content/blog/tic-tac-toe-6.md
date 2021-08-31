@@ -53,7 +53,7 @@ Essentially all the responsibilities (display and input handling) of my UI like 
 I wonder if there is an equivalent for clojurescript and reagent, guess I have a lot to figure out!
 
 Scratch that I can actually use [npm libraries with fighweel](https://figwheel.org/docs/npm.html) so I will attempt to write a simple test case for my UI using it.
-A lot of trial and error at the moment but will share next time!
+A lot of trial and error at the moment but will share the working tests next time!
 
 
 

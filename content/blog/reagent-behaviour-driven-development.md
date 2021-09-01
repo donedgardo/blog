@@ -103,15 +103,10 @@ So what kind of tests should we write for the tic-tac-toe board 🤔?
 Alright! Let's see how these test look like, onward!
 
 ```clojure
-(defonce game-state (atom new-game))
-
-(defn play-on-space [space]
-  (swap! game-state (play @game-state space X)))
-
 (deftest board-component-test
   (testing "It should be empty if the board is empty"
     (with-mounted-component
-      [board-component (:board @game-state) play-on-space]
+      [board-component]
       (fn [component]
         (is
           (= 9
@@ -121,7 +116,7 @@ Alright! Let's see how these test look like, onward!
 
   (testing "It should change board state when clicking on an empty index"
     (with-mounted-component
-      [board-component (:board @game-state) play-on-space]
+      [board-component]
       (fn [component]
         (click-element (.getByLabelText component "empty-board-space-[0 0]"))
         (is

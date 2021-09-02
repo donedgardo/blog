@@ -1,6 +1,6 @@
 ---
 path: /tic-tac-toe-reagent
-date: 2021-08-30T01:22:55.506Z
+date: 2021-08-29T01:22:55.506Z
 title: Tic Tac Toe in Clojure - Part 6 Web UI with Reagent
 ---
 

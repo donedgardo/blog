@@ -211,16 +211,17 @@ play options menu.
 
 This is our test:
 ```clojure
-(testing "It should empty board after clicking local player option"
+(testing "It should go back to play options after clicking the play-option button"
     (with-mounted-component
       [play-options]
       (fn [component]
         (click-element (.getByLabelText component "play-local-player"))
+        (click-element (.getByLabelText component "play-options-menu"))
         (is
-          (expect-empty-board component)))))
+          (label-component-in-dom? component "play-ai-player")))))
 ```
 
-And I needed and optional argument on the board component and I've learned about & [] in function arguments
+I needed and optional argument on the board component and I've learned about & [] in function arguments
 This is the production code:
 ```clojure
 (defn play-options-menu [on-back]

@@ -1,5 +1,5 @@
 ---
-path: /reagent-behaviour-driven-development
+path: /tic-tac-toe-web-2
 date: 2021-09-02T01:22:55.506Z
 title: Tic-Tac-Toe Web - UI/UX, Menus and Red green refactor! 
 ---

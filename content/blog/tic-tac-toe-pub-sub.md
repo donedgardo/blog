@@ -12,7 +12,7 @@ getting more familiar with using javascript libraries in clojurescript I will no
 snippets of our code.
 
 
-I also want to take the oportunity to also share what is IPFS and libp2p libraries.
+I also want to take the opportunity to also share what is IPFS and libp2p libraries.
 
 IPFS solves content addressing: **Find Fetch and Authenticate Content**
 
@@ -21,8 +21,8 @@ Libp2p solves process Addressing: **Find Connect and Authenticate Process**
 -----
 So here is our high level implementation flow:
 
-#### 1. We create an IPFS node. This node is our identifier in the network it allows us to interact with the IPFS network and other
-nodes. 
+#### 1. We create an IPFS node. This node is our identifier in the network it allows us to interact with the IPFS network and other nodes. 
+
 ```clojure
 (defn create-ipfs-node []
     (.create js/Ipfs
@@ -34,7 +34,7 @@ nodes.
                        })))
 ```
 
-Here I create the Ipfs node and configure it to use two misaddresses for the signaling server, our swarm.
+Here I create the Ipfs node and configure it to use two multiaddresses for the signaling server, our swarm.
 
 So what are multi-address?
 > A multiaddress (often abbreviated multiaddr), is a convention for encoding multiple layers of addressing information into a single “future-proof” path structure.
@@ -75,7 +75,7 @@ After connecting to our peer we want to subscribe to a shared topic, so we can s
   (. (. node -pubsub) (subscribe topic handle-message)))
 ```
 
-Here we use this `subscribe-to-topic` function, and we pass in the ipfs node, the topic we want to subscribe to and a handler
+Here we use this `subscribe-to-topic` function, and we pass in the ipfs node, the topic we want to subscribe to a handler
 function to be called everytime we get a new message from that topic.
 
 #### 5. Publish messages
@@ -83,7 +83,9 @@ function to be called everytime we get a new message from that topic.
 (defn publish-msg [node topic msg]
   (. (. node -pubsub) (publish topic msg)))
 ```
-Here we can publish messeages to all connected peers who are subscribed to the topic.
+Here we can publish messages to all connected peers who are subscribed to the topic.
+
+Next we'll work on our user experience, and our UI for the web to introduce this new features to players in a seamless way.
 
 <3!
 

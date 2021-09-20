@@ -37,6 +37,7 @@ This diagram allows us to describe better what kind of specifications we could u
 -----
 ### Implementation
 * On the play options component we want to have a new option for `Online Vs Mode`
+
 Test:
 ```clojure
  (testing "It should show Online VS Mode option"
@@ -53,8 +54,8 @@ Production Code:
    {:label (:ai-mode INTL) :value :ai}
    {:label (:online-vs-mode INTL) :value :online-vs}])
 ```
-
 * On clicking the online vs option the player should see two options: join or host a new game.
+
 Test
 ```clojure
 (testing "It should create or join room options after clicking online vs moe"
@@ -94,6 +95,7 @@ Production Code:
         [tic-tac-toe-board go-back-to-menu @options]))))
 ```
 * On clicking the `host a new game options` the user should see an input with the label `New Room Name`
+
 Test:
 ```clojure
 (testing "It should show an New Room Name input after clicking host game option"
@@ -125,6 +127,7 @@ Production code:
         [tic-tac-toe-board go-back-to-menu @options]))))
 ```
 * On clicking the `host a new game options` the user should see a disabled button with the label `Create Room`
+
 Test:
 ```clojure
   (testing "It should show an Create Room button disabled after clicking host game option"
@@ -148,6 +151,7 @@ Production code:
     (:create-room-button INTL)]])
 ```
 * After typing the room name in the room name input the `Create Room` button becomes enabled.
+
 Test:
 ```clojure
  (testing "It should enable the Create Room button after typing on the room name input "
@@ -178,7 +182,7 @@ Production Code:
 
 ```
 
-We'll see the implementation of our missing specifications!
+We'll see the missing implementation of our specifications next time on part DEUX!
 
 <3!
 

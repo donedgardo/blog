@@ -109,8 +109,67 @@ First our both host-game component:
 
 They seem very similar we might just remove some duplication maybe with a strategy pattern.
 
-Here's our network util function:
+Here is our board module:
+```clojure
+(defn on-play [online game space]
+  (if (nil? online)
+    (swap! game play space)
+    (if (= (:active-player @game) (:player online))
+      (do
+        (swap! game play space)
+        ((:play online) space)))))
+
+
+(defn handle-reset [online reset-game]
+  (do
+    (if (not (nil? online))
+      ((:reset online)))
+    (reset-game)))
+
+
+(defn reset-game [game new-game]
+  (reset! game new-game))
+
+(defn subscribe-to-game [online game new-game]
+  (if (not (nil? online))
+    (subscribe-to-topic
+      (:node online)
+      (:room-id online)
+      (fn [msg]
+        (let [payload (js->clj (.parse js/JSON (. (. msg -data) (toString)) :keywordize-keys true))]
+          (js/console.log "payload" payload)
+          (cond
+            (= (payload "type") "reset")
+            (reset-game game new-game)
+            (= (payload "type") "play")
+            (swap! game play (payload "board-space"))
+            :else
+            nil))))))
+
+(defn tic-tac-toe-board [& [on-back options]]
+  (let [{:keys [first-player ai-difficulty online]} options
+        new-game (create-game-factory
+                   {:first-player  first-player
+                    :ai-difficulty ai-difficulty})
+        game (atom new-game)
+        handle-play #(on-play online game %)
+        subscription (subscribe-to-game online game new-game)]
+    (fn []
+      [:div.game
+       (let [board (:board @game)
+             spaces (sort (keys board))]
+         [:div.board
+          (for [space spaces]
+            (board-space board space #(handle-play space)))
+          [:div
+           [player-turn @game]
+           [game-over @game]
+           [reset-button #(handle-reset online reset-game)]
+           [play-options-menu on-back]]])])))
 ```
+
+Here's our network util function:
+```clojure
 (def room-state (atom {:node nil :my-addresses [] :peer-ids [] :opponent-address nil :msg-input nil}))
 
 (defn get-peer-ids [node topic]

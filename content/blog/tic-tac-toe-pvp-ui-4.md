@@ -312,7 +312,7 @@ Here's our network util function:
 
 I feel like this should be a class.
 Next we'll look on how to make this code easier to maintain, by creating the class implementing strategy pattern for 
-crating networked gamed, and mocking our network util for use of tests.
+creating a networked game, and mocking our network util for use of tests.
 
 <3!
 

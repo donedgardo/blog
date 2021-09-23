@@ -1,7 +1,7 @@
 ---
 path: /tic-tac-toe-pvp-ui-3
 date: 2021-09-20T01:22:55.506Z
-title: Tic-Tac-Toe - Player vs Player UX/UI Part Deux
+title: Tic-Tac-Toe - Player vs Player Routing 
 ---
 
 👋!!

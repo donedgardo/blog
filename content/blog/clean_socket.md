@@ -1,7 +1,7 @@
 ---
 path: /clean-socket
 date: 2021-09-23T01:22:55.506Z
-title: Clean Socket - Clean Socket Server.
+title: Clean Socket Server
 ---
 👋 Hey there!!
 

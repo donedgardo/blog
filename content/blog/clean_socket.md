@@ -7,7 +7,7 @@ title: Clean Socket Server
 
 Since my early days working in development agencies I have always been chasing network problems to solve.
 
-As a teenager playing Diablo 2 Starcraft Warfract and the network connectivity in them have piqued my interest in how 
+As a teenager playing Diablo 2 Starcraft and Warfract online, their network connectivity piqued my interest in how 
 engineers made it work.
 Most of all I loved how it brought people together from all over the world. 
 

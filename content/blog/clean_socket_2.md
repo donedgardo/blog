@@ -12,7 +12,7 @@ Let's make a socket server that on visiting `/hello` on the browser it responds 
 
 So looking at the RFC for HTTP 1.1 we get request from browser like this:
 ```
-GET / HTTP/1.1
+GET /hello HTTP/1.1
 Host: localhost:3000
 Accept-Encoding: gzip, deflate
 Accept-Language: en-US,en;q=0.9

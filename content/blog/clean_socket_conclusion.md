@@ -1,6 +1,6 @@
 ---
 path: /clean-socket-conclusion
-date: 2021-10-047T01:22:55.506Z
+date: 2021-10-04T01:22:55.506Z
 title: Clean HTTP Socket - What I've Learned
 ---
 

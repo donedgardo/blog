@@ -1,6 +1,6 @@
 ---
 path: /jars-and-clojure
-date: 2021-10-04T01:22:55.506Z
+date: 2021-10-05T01:22:55.506Z
 title: JARs and Clojure 
 ---
 

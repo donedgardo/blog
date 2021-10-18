@@ -12,7 +12,7 @@ server, we would like to write more custom request handling inside the applicati
 
 #### Making Our Request Handler More Generic
 
-Our current RequestHandler is an abstract class that has a handle method which implements the visitor patter to conform 
+Our current RequestHandler is an abstract class that has a handle method which implements the visitor pattern to conform 
 to the open/closed principle.
 
 ```java

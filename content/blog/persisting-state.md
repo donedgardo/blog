@@ -72,8 +72,10 @@ In our test we mock some sessions and have some function for saving and loading 
 
 Lets look at the implementation:
 ```clojure
+(def sessions-file-path "./sessions.txt")
+
 (defn load-sessions []
-  (let [sessions-without-ai-play (clojure.edn/read-string (slurp "./sessions.txt"))]
+  (let [sessions-without-ai-play (clojure.edn/read-string (slurp sessions-file-path))]
     (reset!
       sessions
       (reduce-kv
@@ -88,7 +90,7 @@ Lets look at the implementation:
 
 (defn save-sessions [sessions]
   (spit
-    "./sessions.txt"
+    sessions-file-path
     (str
       (reduce-kv
         (fn [m k v]

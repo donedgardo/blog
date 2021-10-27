@@ -13,7 +13,7 @@ Getting software right is hard. When software is written right, you no longer ne
 or huge list of bugs whenever the software adds new features. Changes are quick and simple and bugs are few.
 This may seems farfetched, but I've experienced this.
 
-Bad code is way to common in our industry, but it doesn't have to be.
+Bad code is way too common in our industry, but it doesn't have to be.
 
 Some companies seem to believe that if you throw more resources to a badly coded software will solve the problems,
 but statistics show otherwise, it might eventually get better but if the cleanup of the code doesn't happen;
@@ -49,7 +49,7 @@ The inner most layer contains our application business rules.
 In between we have our use case layer, which purpose is to allow input an output layers be able to interact
 with our business rules.
 
-To make sure our code is clean, and our architecture is flexible all the dependencies point towards our buisness rules.
+To make sure our code is clean, and our architecture is flexible all the dependencies point towards our business rules.
 This means that our business modules do not depend on lower level modules. For example, we wouldn't want our tic-tac-toe 
 game rules to depend on any of the UI code, or the server rendering code. A good rule of thumb to recognize what a high level module
 is vs a lower level module is to see how close to the input/output it is, the closer to the inputs/outputs the lower level it is.

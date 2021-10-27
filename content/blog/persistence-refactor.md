@@ -23,8 +23,8 @@ Let's take a look at our current code:
     (.send handler out)))
 ```
 In the code above the `send-game-response` is responsible to generating the html for the game and sending the response.
-But instead, its doing a lot of things: its setting cookies, its persisting the game options and game, and its alos 
-generating and sending the html. He we are violating the Single Responsibility principle. 
+But instead, its doing a lot of things: its setting cookies, its persisting the game options and game, and its also 
+generating and sending the html. Here we are violating the Single Responsibility principle. 
 
 The fact that we are persisting the game on the output html logic, is rather odd. 
 Once we want to add persistence to another output we would need to repeat all of this.
@@ -32,7 +32,7 @@ Once we want to add persistence to another output we would need to repeat all of
 So to clean this up we move the `set-cookie` closer to our main, and we move all our persistence logic closer to our
 entities/business rules modules.
 
-```
+```clojure
 (ns tic-tac-toe-server.render
   (:require [tic-tac-toe-server.sessions :refer [set-cookies set-game-options set-game]]))
 ...

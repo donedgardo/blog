@@ -7,9 +7,9 @@ description: Lets look into applying some Dependency Inversion Principle to our 
 
 👋 Hello there!!
 
-Today we are going to improve our code.
+Today we are going to improve our code by applying some Solid Principles.
 
-Let's take a look at this:
+Let's take a look at our current code:
 ```clojure
 (ns tic-tac-toe-server.render
   (:require [tic-tac-toe-server.sessions :refer [set-cookies set-game-options set-game]]))
@@ -96,12 +96,12 @@ So to create an interface in clojure we are going to use [defprotocol](https://c
 ```
 
 With this protocol we can use it to create different types of implementations of a perishable game. Eg in our case we
-can start by creating a implementation for our persistence implantation using a simple file. Later we will implement different
+can start by creating an implementation for our persistence implantation using a simple file. Later we will implement different
 types of persistence implementations using databases. 
 
 _____
 
-Tomorrow we'll look into implementing our file game persistence using this protocol and have our rules control the flow 
+Next we'll look into implementing our file game persistence using this protocol and have our rules control the flow 
 through the abstract interface
 
 ❤️

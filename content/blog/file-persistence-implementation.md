@@ -78,7 +78,7 @@ we then persist the game on creation.
   ([] new-game)
   ([options] (get-game-with-ai options))
   ([options {:keys [persistence id]}]
-   (let [game (assoc (get-game-with-ai options) :persistence persistence :id id)]
+   (let [game (get-game-with-ai options)]
      (do
        (.save-game-options persistence id options)
        (.save-game persistence id game)

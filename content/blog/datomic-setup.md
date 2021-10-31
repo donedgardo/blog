@@ -1,6 +1,6 @@
 ---
 path: /datomic-setup
-date: 2021-10-26T01:22:55.506Z
+date: 2021-10-25T01:22:55.506Z
 title: Datomic Setup
 description: I had a lot of issues setting up datomic for leiningen, so here I show what I've learned.
 ---

@@ -1,6 +1,6 @@
 ---
 path: /file-persistence-implementation
-date: 2021-10-25T01:22:55.506Z
+date: 2021-10-22T01:22:55.506Z
 title: Polymorphic Interface File Persistence Implementation
 description: Lets implement our file persistence using our polymorphic interface.
 ---

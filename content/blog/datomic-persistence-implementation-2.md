@@ -162,7 +162,7 @@ Putting it all together:
 ```
 _____
 
-Tomorrow we'll look into implementing a new leaderboard feautre where players can keep tract of their score and rank 
+Tomorrow we'll look into implementing a new leaderboard feature where players can keep tract of their score and rank 
 against other players.
 
 Tootles.

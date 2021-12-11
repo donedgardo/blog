@@ -9,20 +9,21 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import defaultPageImage from "../images/EdgardoCarrerasLogo.png"
 
 function SEO({ description, lang, meta, keywords, title }) {
   const { site } = useStaticQuery(
     graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
+        query {
+            site {
+                siteMetadata {
+                    title
+                    description
+                    author
+                }
+            }
         }
-      }
-    `
+    `,
   )
 
   const metaDescription = description || site.siteMetadata.description
@@ -41,7 +42,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: site.siteMetadata.title,
         },
         {
           property: `og:description`,
@@ -52,12 +53,32 @@ function SEO({ description, lang, meta, keywords, title }) {
           content: `website`,
         },
         {
+          property: `og:url`,
+          content: `https://edgardocarreras.com`,
+        },
+        {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
           content: site.siteMetadata.author,
+        },
+        {
+          name: `twitter:title`,
+          content: site.siteMetadata.title,
+        },
+        {
+          name: `twitter:description`,
+          content: metaDescription,
+        },
+        {
+          name: `image`,
+          content: defaultPageImage,
+        },
+        {
+          name: `og:image`,
+          content: defaultPageImage,
         },
         {
           name: `twitter:title`,
@@ -67,17 +88,30 @@ function SEO({ description, lang, meta, keywords, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `og:image`,
+          content: `https://www.edgardocarreras.com${defaultPageImage}`,
+        },
+        {
+          name: `twitter:image`,
+          content: `https://www.edgardocarreras.com${defaultPageImage}`,
+        },
       ]
         .concat(
           keywords.length > 0
             ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
-            : []
+              name: `keywords`,
+              content: keywords.join(`, `),
+            }
+            : [],
         )
         .concat(meta)}
-    />
+    >
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+        rel="stylesheet"
+      />
+    </Helmet>
   )
 }
 

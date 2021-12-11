@@ -7,12 +7,12 @@ description:
 ![Kata](../assets/kata.jpeg "Kata" )
 
 I did my first kata yesterday and recorded it, [the prime factors](http://www.butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata) kata in Clojure.
-The idea behind a kata is to practice your programming craft, it's not about the final code but about the journey.
+The idea behind a kata is to practice your programming craft, it's not about the final code but about the dicipline.
+
 I've done it a few times already, each time I do it I feel more comfortable. 
 Today I learned about loop and recursion in Clojure.
 
 > Repetition is the mother of mastery.
-
 
 
 I followed Uncle bob steps, and worked my way up the test cases until my code magically was supporting all numbers!

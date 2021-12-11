@@ -1,10 +1,9 @@
 module.exports = {
   siteMetadata: {
-    // edit below
-    title: `Edgardo Carreras | Blog`,
+    title: `Edgardo Carreras | Software Productivity Consultant`,
+    description: `Hi, I am a software productivity consultant who helps Fin-tech product owners with their development teams’ productivity. I also find ways to introduce more joy, and decrease frustration, in a developer’s day.`,
     author: `Edgardo Carreras`,
-    description: `My personal blog.`,
-    siteUrl: `https://blog.edgardocarreras.com/`,
+    siteUrl: `https://www.edgardocarreras.com/`,
     social: {
       twitter: `carrerasdev`,
     },
@@ -16,6 +15,8 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-feed-mdx`,
+    `gatsby-plugin-root-import`,
     {
       resolve: "gatsby-plugin-local-search",
       options: {
@@ -58,13 +59,19 @@ module.exports = {
           })),
       },
     },
-    `gatsby-plugin-feed-mdx`,
-    `gatsby-plugin-root-import`,
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
     {
@@ -105,30 +112,38 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        // edit below
-        // trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `EdgardoCarreras`,
+        short_name: `CarrerasDev`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
+        background_color: `#000`,
+        theme_color: `#fff`,
         display: `minimal-ui`,
-        // edit below
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `src/images/favicon-32x32.png`, // This path is relative to the root of the site.
       },
     },
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: "gatsby-plugin-react-svg",
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        rule: {
+          include: /\.inline\.svg$/,
+        },
       },
     },
-  ],
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingIds: ["G-QWKXJQWDJF", "UA-158945218-1"],
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: false,
+          // Setting this parameter is also optional
+          respectDNT: true,
+        },
+      },
+    },
+  ]
 }

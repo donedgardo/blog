@@ -15,8 +15,8 @@ const LogoContainer = styled.div`
   display: flex;
   flex: 1;
   justify-content: center;
-  margin-top: 64px;
-  margin-bottom: 29px;
+  padding-top: 64px;
+  padding-bottom: 29px;
 `
 
 const DividerContainer = styled.div`

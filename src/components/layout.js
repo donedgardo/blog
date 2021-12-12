@@ -1,6 +1,5 @@
 import React from "react"
 import Footer from "./footer"
-import "./layout.css"
 
 class Layout extends React.Component {
   render() {

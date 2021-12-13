@@ -11,9 +11,11 @@ title: Top 10 Attitudes and Actions Unprofessional Developers Make.
 ### 1.Committing to work you can't guarantee.
 
 Unprofessional developers buckle under pressure and agree to try to meet a deadline. As a result, they will take shortcuts
-and abandon disciplines, resulting in shortcomings in their work. Conforming to try is agreeing that you aren't trying,
-and even worse, the team will believe you are committing to deliver. When you underdeliver, they will think of you as
-untrustworthy.
+and abandon disciplines, resulting in shortcomings in their work.
+
+"Could you at least try?" Conforming to try is agreeing that you aren't trying,
+and even worse, the team will believe you are committing to deliver when you do.
+When you underdeliver, they will think of you as untrustworthy.
 
 Learn **when to say no** and **only commit to things you can guarantee**. 
 

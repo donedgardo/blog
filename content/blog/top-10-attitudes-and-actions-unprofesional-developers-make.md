@@ -106,6 +106,6 @@ Building software is a collaborative effort; you need to work with the business 
 
 Employers often limit the languages and domains their programmers work on, resulting in an unhealthy narrowing of skillsets.
 Unprofessional developers believe that their employers' job is to help them keep their skills sharp. 
-       
-**Learn new languages on your time**, keep your skill sharp by **practicing**, and find yourself prepared for the
-changes that periodically transform our industry.
+
+**Learn new languages on your own time**, keep your skill sharp by practicing, and find yourself prepared for the changes
+that periodically transform our industry.

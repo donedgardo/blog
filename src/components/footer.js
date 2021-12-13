@@ -32,7 +32,7 @@ const Footer = () => (
     <SocialIcon href={"https://twitter.com/CarrerasDev"} target={"_blank"} image={twitterLogo} />
     <SocialIcon href={"https://www.linkedin.com/in/edgardo-carreras"} target={"_blank"} image={linkedinLogo} />
     <SocialIcon href={"https://github.com/donedgardo"} target={"_blank"} image={githubLogo} />
-    <SocialIcon href={"https://medium.com/@edgardocarreras"} target={"_blank"} image={mediumLogo} />
+    <SocialIcon href={"/blog"} image={mediumLogo} />
   </SocialsContainer>
 )
 

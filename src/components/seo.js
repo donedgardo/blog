@@ -42,7 +42,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           property: `og:title`,
-          content: site.siteMetadata.title,
+          content: `${title} | ${site.siteMetadata.title}`,
         },
         {
           property: `og:description`,

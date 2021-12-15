@@ -12,7 +12,7 @@ const SocialsContainer = styled.div`
   justify-content:center;
   align-items: flex-start;
   padding 10px;
-  margin: 8px 0px;
+  margin: 0px 0px;
 `
 
 const SocialIcon = styled.a`

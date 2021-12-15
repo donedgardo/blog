@@ -11,7 +11,7 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import defaultPageImage from "../images/EdgardoCarrerasLogo.png"
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, pathname }) {
   const { site } = useStaticQuery(
     graphql`
         query {
@@ -42,7 +42,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           property: `og:title`,
-          content: `${title || site.siteMetadata.title}`,
+          content: `${site.siteMetadata.title || title}`,
         },
         {
           property: `og:description`,
@@ -58,7 +58,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           property: `og:url`,
-          content: `https://edgardocarreras.com`,
+          content: `https://edgardocarreras.com${pathname}`,
         },
         {
           name: `twitter:card`,
@@ -119,6 +119,7 @@ function SEO({ description, lang, meta, keywords, title }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
+  pathname: ``,
   keywords: [],
   description: ``,
 }
@@ -127,6 +128,7 @@ SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
+  pathname: PropTypes.string,
   keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
 }

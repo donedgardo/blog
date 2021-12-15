@@ -12,10 +12,9 @@ class Blog extends React.Component {
     const { data, navigate, location } = this.props
     const posts = data.allMdx.edges
     const localSearchBlog = data.localSearchBlog
-
     return (
-      <BlogLayout location={this.props.location} title={"Edgardo Carreras | Software Productivity Consultant Blog"}>
-        <SEO title="All posts" />
+      <BlogLayout location={location} title={"Edgardo Carreras | Software Productivity Consultant Blog"}>
+        <SEO title="All posts" pathname={location.pathname} />
         <Bio />
         <SearchPosts
           posts={posts}

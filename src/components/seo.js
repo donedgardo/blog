@@ -27,7 +27,6 @@ function SEO({ description, lang, meta, keywords, title, pathname }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-
   return (
     <Helmet
       htmlAttributes={{
@@ -42,7 +41,7 @@ function SEO({ description, lang, meta, keywords, title, pathname }) {
         },
         {
           property: `og:title`,
-          content: `${site.siteMetadata.title || title}`,
+          content: `${title || site.siteMetadata.title}`,
         },
         {
           property: `og:description`,

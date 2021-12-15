@@ -5,7 +5,7 @@ module.exports = {
         owners with their development teams’ productivity. I provide high impact through
         product design, software architecture, platform selection, integration planning, and process design.`,
     author: `Edgardo Carreras`,
-    siteUrl: `https://www.edgardocarreras.com/`,
+    siteUrl: `https://www.edgardocarreras.com`,
     social: {
       twitter: `carrerasdev`,
     },

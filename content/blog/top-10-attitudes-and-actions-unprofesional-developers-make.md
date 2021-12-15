@@ -8,12 +8,19 @@ title: Top 10 Attitudes and Actions Unprofessional Developers Make.
 >
 > -Robert "Uncle Bob" Martin
 
+Hi, I've been in the software industry for almost a decade, and Uncle Bob's words have deeply resonated as I've experienced unprofessionalism throughout my career. Although I encountered unprofessionalism with peers and managers, I've also made some of these mistakes in my career. 
+
+I believe this is because most developers don't profess anything in particular. Like doctors, we need to have a set of disciplines and attitudes that we can rely on to avoid regulations. Unfortunately, I don't think the world has caught up to the concept that we are writing the rules that will operate the coming generations. When the unimaginable happens. When many lives are lost because of unprofessionalism, the government will have to do its best and regulate. 
+
+These are the top 10 attitudes and actions that professional developers overlook.
+
 ### 1.Committing to work you can't guarantee.
 
-Unprofessional developers buckle under pressure and agree to try to meet a deadline. As a result, they will take shortcuts
-and abandon disciplines, resulting in shortcomings in their work.
+Unprofessional developers buckle under pressure and agree to try to meet a deadline. 
+They agree because they are optimistic, and you should never estimate in a hopeful state. 
+As a result, they will take shortcuts and abandon disciplines, resulting in shortcomings in their work.
 
-"Could you at least try?" Conforming to try is agreeing that you aren't trying,
+"Could you at least try?" said the manager. Conforming to try is agreeing that you aren't trying,
 and even worse, the team will believe you are committing to deliver when you do.
 When you underdeliver, they will think of you as untrustworthy.
 
@@ -22,8 +29,9 @@ Learn **when to say no** and **only commit to things you can guarantee**.
 ### 2.Holding themselves unaccountable for shipping bugs.
 
 "Are you saying the product has to be perfect without bugs?"
-No, but it doesn't mean that you aren't responsible for them. The human body is too complex to understand, but doctors
-take an oath not to harm. Why shouldn't we? 
+No, but it doesn't mean that we aren't responsible for them. The attitude that drives the unprofessional is "QA will
+catch bugs," whereas a professional developer attitude says "QA will find nothing!". 
+The human body is too complex to understand, but doctors take an oath not to harm. Why shouldn't we?  
 
 Not having a set of automated tests for your code is unprofessional. You must know it works, and having automated tests
 is a discipline that helps immensely. But most importantly:
@@ -109,3 +117,9 @@ Unprofessional developers believe that their employers' job is to help them keep
 
 **Learn new languages on your own time**, keep your skill sharp by practicing, and find yourself prepared for the changes
 that periodically transform our industry.
+
+_______
+
+Each year there are 5x more developers than there was the previous year, resulting in a vas amount of inexperience in the field and very few experienced professionals. Hopefully, you find this helpful; if you did, please share it to advocate for more professionalism in software developers.
+
+For business inquiries, or feedback please feel free to reach out [here.](https://me836593.typeform.com/to/rc98w6WM) or to know more about me visit [my website](https://www.edgardocarreras.com)

@@ -74,11 +74,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           name: `image`,
-          content: defaultPageImage,
-        },
-        {
-          name: `og:image`,
-          content: defaultPageImage,
+          content: `https://www.edgardocarreras.com${defaultPageImage}`,
         },
         {
           name: `twitter:title`,

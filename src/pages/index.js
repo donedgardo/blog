@@ -192,7 +192,7 @@ const IndexPage = () => (
       <AboutP>
         Hi, I am a software productivity consultant who helps Fin-tech product
         owners with their development teams’ productivity. I provide high impact through
-        product design, software architecture, platform selection, integration planing and process design.
+        product design, software architecture, platform selection, integration planning, and process design.
       </AboutP>
       <AboutP>
         Unlike my competitors, I have mentored and trained hundreds of

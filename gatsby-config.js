@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Edgardo Carreras | Software Productivity Consultant`,
-    description: `Hi, I am a software productivity consultant who helps Fin-tech product owners with their development teams’ productivity. I also find ways to introduce more joy, and decrease frustration, in a developer’s day.`,
+    description: `Hi, I am a software productivity consultant who helps Fin-tech product
+        owners with their development teams’ productivity. I provide high impact through
+        product design, software architecture, platform selection, integration planning, and process design.`,
     author: `Edgardo Carreras`,
     siteUrl: `https://www.edgardocarreras.com/`,
     social: {

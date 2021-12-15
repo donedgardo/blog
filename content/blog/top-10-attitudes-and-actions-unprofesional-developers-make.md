@@ -120,6 +120,6 @@ that periodically transform our industry.
 
 _______
 
-Each year there are 5x more developers than there was the previous year, resulting in a vast amount of inexperience in the field and very few experienced professionals. Hopefully, you find this helpful; if you did, please share it to advocate for more professionalism in software developers.
+Each year there is an increasing rate of developers than there was the previous year, resulting in a vast amount of inexperience in the field and very few experienced professionals. Hopefully, you find this helpful; if you did, please share it to advocate for more professionalism in software developers.
 
 For business inquiries, or feedback please feel free to reach out [here,](https://me836593.typeform.com/to/rc98w6WM) or to know more about me visit [my website](https://www.edgardocarreras.com)

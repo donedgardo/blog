@@ -18,6 +18,7 @@ function SEO({ description, lang, meta, keywords, title, pathname }) {
             site {
                 siteMetadata {
                     title
+                    siteUrl
                     description
                     author
                 }
@@ -27,6 +28,8 @@ function SEO({ description, lang, meta, keywords, title, pathname }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
+  console.log(canonical)
   return (
     <Helmet
       htmlAttributes={{
@@ -34,6 +37,7 @@ function SEO({ description, lang, meta, keywords, title, pathname }) {
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
+      link={canonical ? [{ "rel": "canonical", "href": canonical }] : []}
       meta={[
         {
           name: `description`,
@@ -49,7 +53,7 @@ function SEO({ description, lang, meta, keywords, title, pathname }) {
         },
         {
           name: `author`,
-          content: `Edgardo Carreras`
+          content: `Edgardo Carreras`,
         },
         {
           property: `og:type`,
@@ -57,7 +61,7 @@ function SEO({ description, lang, meta, keywords, title, pathname }) {
         },
         {
           property: `og:url`,
-          content: `https://edgardocarreras.com${pathname}`,
+          content: `${canonical}`,
         },
         {
           name: `twitter:card`,

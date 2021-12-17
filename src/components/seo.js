@@ -56,12 +56,17 @@ function SEO({ description, lang, meta, keywords, title, pathname }) {
           content: `Edgardo Carreras`,
         },
         {
+          property: `og:url`,
+          content: `${canonical}`,
+        },
+        {
           property: `og:type`,
           content: `website`,
         },
         {
-          property: `og:url`,
-          content: `${canonical}`,
+          name: `image`,
+          property: `og:image`,
+          content: `https://edgardocarreras.com${defaultPageImage}`,
         },
         {
           name: `twitter:card`,
@@ -79,11 +84,7 @@ function SEO({ description, lang, meta, keywords, title, pathname }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-        {
-          name: `image`,
-          property: `og:image`,
-          content: `https://edgardocarreras.com${defaultPageImage}`,
-        },
+
         {
           name: `twitter:title`,
           content: title,

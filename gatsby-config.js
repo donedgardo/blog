@@ -3,7 +3,7 @@ module.exports = {
     title: `Edgardo Carreras | Software Productivity Consultant`,
     description: `Providing high impact through product design, software architecture, platform selection, integration planning, and process design.`,
     author: `Edgardo Carreras`,
-    siteUrl: `https://www.edgardocarreras.com`,
+    siteUrl: `https://edgardocarreras.com`,
     social: {
       twitter: `carrerasdev`,
     },

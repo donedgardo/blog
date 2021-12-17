@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const { path } = this.props
+    const { location } = this.props
     const post = this.props.data.mdx
     const { previous, next } = this.props.pageContext
 
@@ -17,7 +17,7 @@ class BlogPostTemplate extends React.Component {
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
-          pathname={path}
+          pathname={location.pathname}
         />
         <h1>{post.frontmatter.title}</h1>
         <p

@@ -190,13 +190,14 @@ const IndexPage = () => (
     <AboutMeContainer>
       <StyledPortrait />
       <AboutP>
-        Hi, I am a software productivity consultant who helps Fin-tech product
-        owners with their development teams’ productivity. I provide high impact through
-        product design, software architecture, platform selection, integration planning, and process design.
+        Hi <span role="img" aria-label="wave">👋</span>, I am a software productivity consultant who helps Fin-tech product owners maximize their return on investment
+        and minimize project risks.
+        I provide high impact through product design, software architecture, platform
+        selection, integration planning, and process design.
       </AboutP>
       <AboutP>
         Unlike my competitors, I have mentored and trained hundreds of
-        developers, have over a decade of experience and a track record in scaling and building successful
+        software engineers, have over a decade of experience and a track record in scaling and building successful
         software development teams and products.
       </AboutP>
     </AboutMeContainer>

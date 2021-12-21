@@ -10,6 +10,7 @@ import P from "../components/typography/P"
 import Logo from "../images/ecarreras.inline.svg"
 import Divider from "../images/divider.inline.svg"
 import styled, { keyframes } from "styled-components"
+import { MainNavBar } from "../components/main_nav_bar"
 
 const LogoContainer = styled.div`
   display: flex;
@@ -167,9 +168,10 @@ const Slide = styled.div`
   }
 `
 
-const IndexPage = () => (
+const IndexPage = ({ location: { pathname } }) => (
   <Layout>
     <SEO title={"Edgardo Carreras | Software Productivity Consultant"} />
+    <MainNavBar pathname={pathname} />
     <LogoContainer>
       <Logo />
     </LogoContainer>
@@ -190,13 +192,12 @@ const IndexPage = () => (
     <AboutMeContainer>
       <StyledPortrait />
       <AboutP>
-        Hi <span role="img" aria-label="wave">👋</span>, I am a software productivity consultant who helps Fin-tech product owners maximize their return on investment
-        and minimize project risks.
-        I provide high impact through product design, software architecture, platform
-        selection, integration planning, and process design.
+        Hi <span role="img" aria-label="wave">👋</span>, I am a software productivity consultant who helps Fin-tech
+        Product owners maximize their return on investment and increase their development teams' productivity. I provide
+        high impact through product design, software architecture, platform selection, integration planning, and process design.
       </AboutP>
       <AboutP>
-        Unlike my competitors, I have mentored and trained hundreds of
+        Unlike my competitors, I have mentored and taught hundreds of
         software engineers, have over a decade of experience and a track record in scaling and building successful
         software development teams and products.
       </AboutP>
@@ -209,22 +210,26 @@ const IndexPage = () => (
     </SlideContainer>
     <AboutMeContainer>
       <h2>WHAT THEY SAY</h2>
-      <div style={{maxWidth: 952 }}>
+      <div style={{ maxWidth: 952 }}>
 
         <Testimonial>
-          “Edgardo has a reputation for getting customers with <b>complex problems</b> akin to science fiction and somehow <b>solve them with finesse</b>. For me, he’s not only a leader or a mentor but a wizard.”
+          “Edgardo has a reputation for getting customers with <b>complex problems</b> akin to science fiction and
+          somehow <b>solve them with finesse</b>. For me, he’s not only a leader or a mentor but a wizard.”
         </Testimonial>
         <TestimonialAuthor> - Lenny Mendez | Lenny Dev LLC | Software Developer </TestimonialAuthor>
         <Testimonial>
-          “Edgardo is one of the most <b>knowledgeable and fastest programmers</b> I know. He always makes sure to be up to date with the latest tools and has a <b>keen eye for improving products and developing innovative ideas</b>.”
+          “Edgardo is one of the most <b>knowledgeable and fastest programmers</b> I know. He always makes sure to be up
+          to date with the latest tools and has a <b>keen eye for improving products and developing innovative ideas</b>.”
         </Testimonial>
         <TestimonialAuthor> - Tania Gonzalez | Skyrocket Development | Creative Director</TestimonialAuthor>
         <Testimonial>
-          “Edgardo has a <b>vast knowledge and understanding of development processes</b> and <b>technical abilities</b> which he <b>consistently demonstrates</b> through the <b>quality of his work</b>."
+          “Edgardo has a <b>vast knowledge and understanding of development processes</b> and <b>technical
+          abilities</b> which he <b>consistently demonstrates</b> through the <b>quality of his work</b>."
         </Testimonial>
         <TestimonialAuthor> - Karlo Martinez | MigoIQ | Software Engineer</TestimonialAuthor>
         <Testimonial>
-          “Edgardo  has a natural skill of <b>producing creative technical solutions</b>, working with different systems, and <b>quickly adopting new technologies</b>."
+          “Edgardo has a natural skill of <b>producing creative technical solutions</b>, working with different systems,
+          and <b>quickly adopting new technologies</b>."
         </Testimonial>
         <TestimonialAuthor> - Gabriel Flores | Loveshare | CEO</TestimonialAuthor>
       </div>

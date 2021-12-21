@@ -2,10 +2,23 @@ import Typography from "typography"
 import fairyGatesTheme from "typography-theme-fairy-gates"
 
 
-fairyGatesTheme.overrideThemeStyles = () => {
+const brandBlue = `#032EB9`
+
+fairyGatesTheme.overrideThemeStyles = (ref) => {
   return {
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
+    },
+    "a" : {
+      color: brandBlue,
+      textShadow: 'none',
+      backgroundImage: 'none',
+    },
+    "a:hover": {
+      textDecoration: `underline`,
+    },
+    blockquote: {
+      borderLeft: ref.rhythm(6 / 16) + " solid " + brandBlue,
     },
   }
 }

@@ -51,7 +51,7 @@ export const MainNavBar = ({ pathname }) => {
   const rootPath = `/`
   const blogPath = `/blog/`
   return (<NavBar>
-    <Link to={"/"}>
+    <Link to={"/"} style={{display: `flex`, justifyContent: `center`}}>
       <Monogram />
     </Link>
     <NavItems>

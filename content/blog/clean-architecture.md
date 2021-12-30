@@ -1,7 +1,7 @@
 ---
-path: /clean-architecture
+path: /clean-software-architecture
 date: 2021-10-20T01:22:55.506Z
-title: Clean Architecture
+title: Clean Software Architecture
 description: How to write systems that are clean for high development iteration throughput.
 ---
 
@@ -63,18 +63,14 @@ The answer to this is using the Dependency Inversion Principle.
 
 The way we execute this in code is to use of Polymorphic Interfaces.
 
-Most programming languages provide a way to create some abstractions. We can create those abstractions in our higher-level modules and implement them on lower-level modules like our controllers. This way, our higher-level modules don't depend on the details but instead on this interface's abstraction.
-Once our high-level modules use abstracts interfaces to control the flow of the application outwards, while also not depending on lower level modules.
+Most programming languages provide a way to create some abstractions. We can create those abstractions in our higher-level 
+modules and implement them on lower-level modules like our controllers. This way, our higher-level modules don't depend
+on the details but instead on this interface's abstraction. We achieve clean architecture once our high-level modules use abstract interfaces to control the flow of the application 
+outwards while also not depending on lower-level modules.
 
 This principle alone will drastically improve the quality of your code and its ability to change with minimum negative impacts.
  
 -----
-
-Tomorrow we'll look into some parts of our tic-tac-toe code that violate this principle and how we fix this.
-
-Cheers! ❤️
-
-_____
 
 Tomorrow we'll look into some parts of our tic-tac-toe code that violate this principle and how we fix this.
 

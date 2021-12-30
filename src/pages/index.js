@@ -193,7 +193,7 @@ const IndexPage = ({ location: { pathname } }) => (
       <StyledPortrait />
       <AboutP>
         Hi <span role="img" aria-label="wave">👋</span>, I am a software productivity consultant who helps Fin-tech
-        Product owners maximize their return on investment and increase their development teams' productivity. I provide
+        Product owners minimize developer turnover rate and increase their development teams' productivity. I provide
         high impact through product design, software architecture, platform selection, integration planning, and process design.
       </AboutP>
       <AboutP>

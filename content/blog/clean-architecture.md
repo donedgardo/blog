@@ -8,16 +8,13 @@ description: How to write systems that are clean for high development iteration 
 👋 Hello there!!
 
 #### Why does clean code matter?
-I believe that the culprit for this has the following belief:
-"We can clean it up later; we just have to get to market first!"
+Writing a software program that works does not require much knowledge or skill.
+On the other hand, getting software right is hard. When software is written clean, you no longer need many programmers to keep it working or a massive list of bugs whenever the software adds new features. Changes are quick and straightforward, and bugs are few. This may seem farfetched, but I've experienced this most recently.
 
-Of course, we all know that the cleanup never happens, and developers get pushed to get the next feature done.
-
-Instead, we should embrace these beliefs:
-
-> "Slow and steady wins the race."
-
-> "The only way to go fast is to go well."
+Harmful code is way too common in our industry, but it doesn't have to be.
+Some companies believe that throwing more resources into poorly coded software
+will solve the problems. Still, statistics show, it might eventually get better,
+but if the cleanup of the code doesn't happen, productivity stales or, even worse, it just halts.
 
 #### So why does this happen?
 

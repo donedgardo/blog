@@ -26,10 +26,11 @@ function SEO({ description, lang, meta, keywords, title, pathname, image }) {
         }
     `,
   )
-  console.log('image', image);
 
   const metaDescription = description || site.siteMetadata.description
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
+  const imageUrl = `https://edgardocarrreras.com${image}` ||`https://edgardocarreras.com${defaultPageImage}`;
+
   return (
     <Helmet
       htmlAttributes={{
@@ -66,7 +67,7 @@ function SEO({ description, lang, meta, keywords, title, pathname, image }) {
         {
           name: `image`,
           property: `og:image`,
-          content: `https://edgardocarrreras.com${image}` ||`https://edgardocarreras.com${defaultPageImage}`,
+          content: imageUrl,
         },
         {
           name: `twitter:card`,
@@ -95,11 +96,11 @@ function SEO({ description, lang, meta, keywords, title, pathname, image }) {
         },
         {
           name: `og:image`,
-          content: `https://edgardocarreras.com${defaultPageImage}`,
+          content: imageUrl,
         },
         {
           name: `twitter:image`,
-          content: `https://www.edgardocarreras.com${defaultPageImage}`,
+          content: imageUrl,
         },
       ]
         .concat(

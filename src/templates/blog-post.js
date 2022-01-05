@@ -13,6 +13,8 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.mdx
     const { previous, next } = this.props.pageContext
 
+
+    const imageURL = post?.frontmatter?.featuredImage?.publicURL;
     const featuredImgFluid = post?.frontmatter?.featuredImage?.childImageSharp?.fluid
 
     return (
@@ -21,7 +23,7 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
           pathname={location.pathname}
-          image={featuredImgFluid?.src}
+          image={imageURL}
         />
         <h1>{post.frontmatter.title}</h1>
         <p
@@ -85,6 +87,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         featuredImage {
+          publicURL  
           childImageSharp {
             fluid(maxWidth: 800) {
               ...GatsbyImageSharpFluid

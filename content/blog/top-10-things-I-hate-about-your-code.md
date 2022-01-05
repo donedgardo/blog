@@ -2,7 +2,7 @@
 path: /top-10-things-i-hate-about-your-code
 date: 2022-01-04T01:22:55.506Z
 title: Top 10 Things I Hate About Your Code. 
-featuredImage: ../assets/top-10-things-I-hate-about-your-code.jpeg
+featuredImage: ../assets/hate-your-code.jpeg
 ---
 
 ## 1. Zero to no automated tests

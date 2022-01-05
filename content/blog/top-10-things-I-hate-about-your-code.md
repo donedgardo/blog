@@ -2,6 +2,7 @@
 path: /top-10-things-i-hate-about-your-code
 date: 2022-01-04T01:22:55.506Z
 title: Top 10 Things I Hate About Your Code. 
+featuredImage: ../assets/top-10-things-I-hate-about-your-code.jpeg
 ---
 
 ## 1. Zero to no automated tests
@@ -22,7 +23,7 @@ the third-party code, so when you need to move away from the third-party, you on
 ## 3. Your critical business logic is coupled with an input/output (UI/Database) component.
 This leads to many bugs, impedes code reusability, creates circular dependencies, and a convoluted codebase! 
 
-Make sure your code is at the right level of abstraction. Check out my blog about [clean architecture](/blog/clean-software-architecture)
+Make sure your code is at the right level of abstraction. Check out my blog about [clean architecture](/blog/clean-architecture)
 to learn more.
 
 ## 4. Code duplication
@@ -50,7 +51,7 @@ class Player {
 }
 ```
 
-This bit of code does three things. First, It loops over all opponents, checks to see if they are in the range of the attack,
+This bit of code does four things. First, It loops over all opponents, checks to see if they are in the range of the attack,
 calculates the damage, and applies the damage to the opponents. This code would be better broken down into smaller
 functions as:
 
@@ -118,7 +119,7 @@ class Player {
 When a boolean is true or false in a function call, what does it mean? What would it change if it were true? 
 Selector arguments are lazy attempts to avoid splitting a large function into several smaller parts. 
 
-EG:
+Take for example the following:
 ```javascript
 player.takeDamage(20);
 player.takeCritialDamage(20);
@@ -128,6 +129,8 @@ class Player {
   takeCritialDamage(amount){ this.health -= amount * 2; }
 }
 ```
+
+Now that's a lot clearer and less convoluted!
 
 ## 8. Heavy use of comments.
 Comments do not make up for bad code. Comments usually lie and carry misinformation because the code changes, but no one maintains them. 

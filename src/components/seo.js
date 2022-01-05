@@ -11,7 +11,7 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import defaultPageImage from "../images/EdgardoCarrerasLogo.png"
 
-function SEO({ description, lang, meta, keywords, title, pathname }) {
+function SEO({ description, lang, meta, keywords, title, pathname, image }) {
   const { site } = useStaticQuery(
     graphql`
         query {
@@ -26,10 +26,10 @@ function SEO({ description, lang, meta, keywords, title, pathname }) {
         }
     `,
   )
+  console.log('image', image);
 
   const metaDescription = description || site.siteMetadata.description
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
-  console.log(canonical)
   return (
     <Helmet
       htmlAttributes={{
@@ -66,7 +66,7 @@ function SEO({ description, lang, meta, keywords, title, pathname }) {
         {
           name: `image`,
           property: `og:image`,
-          content: `https://edgardocarreras.com${defaultPageImage}`,
+          content: `https://edgardocarrreras.com${image}` ||`https://edgardocarreras.com${defaultPageImage}`,
         },
         {
           name: `twitter:card`,

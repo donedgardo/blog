@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import Img from "gatsby-image"
 
 import Bio from "../components/bio"
 import BlogLayout from "../components/blog_layout"
@@ -12,12 +13,15 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.mdx
     const { previous, next } = this.props.pageContext
 
+    const featuredImgFluid = post?.frontmatter?.featuredImage?.childImageSharp?.fluid
+
     return (
       <BlogLayout location={this.props.location} title={"Edgardo Carreras | Software Productivity Consultant Blog"}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
           pathname={location.pathname}
+          image={featuredImgFluid?.src}
         />
         <h1>{post.frontmatter.title}</h1>
         <p
@@ -27,6 +31,9 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date}
         </p>
+
+        <Img fluid={featuredImgFluid} />
+
         <MDXRenderer>{post.body}</MDXRenderer>
         <hr  />
         <Bio />
@@ -77,6 +84,13 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }  
       }
     }
   }

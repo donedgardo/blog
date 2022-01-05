@@ -2,7 +2,7 @@
 path: /clean-software-architecture
 date: 2021-10-20T01:22:55.506Z
 title: Clean Software Architecture
-description: How to write systems that are clean for high development iteration throughput.
+description: Writing a software program that works does not require much knowledge or skill. On the other hand, getting software right is hard. When software is written clean, you no longer need many programmers to keep it working or have a massive list of bugs whenever the software adds new features.
 ---
 
 👋 Hello there!!

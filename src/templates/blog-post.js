@@ -17,6 +17,7 @@ class BlogPostTemplate extends React.Component {
     const imageURL = post?.frontmatter?.featuredImage?.publicURL;
     const featuredImgFluid = post?.frontmatter?.featuredImage?.childImageSharp?.fluid
 
+
     return (
       <BlogLayout location={this.props.location} title={"Edgardo Carreras | Software Productivity Consultant Blog"}>
         <SEO

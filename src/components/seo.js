@@ -29,7 +29,9 @@ function SEO({ description, lang, meta, keywords, title, pathname, image }) {
 
   const metaDescription = description || site.siteMetadata.description
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
-  const imageUrl = `https://edgardocarrreras.com${image}` ||`https://edgardocarreras.com${defaultPageImage}`;
+  const imageUrl = image ? `https://edgardocarrreras.com${image}` : `https://edgardocarreras.com${defaultPageImage}`;
+
+  console.log(imageUrl)
 
   return (
     <Helmet

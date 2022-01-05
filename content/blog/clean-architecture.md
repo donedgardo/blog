@@ -9,7 +9,9 @@ description: How to write systems that are clean for high development iteration 
 
 #### Why does clean code matter?
 Writing a software program that works does not require much knowledge or skill.
-On the other hand, getting software right is hard. When software is written clean, you no longer need many programmers to keep it working or a massive list of bugs whenever the software adds new features. Changes are quick and straightforward, and bugs are few. This may seem farfetched, but I've experienced this most recently.
+On the other hand, getting software right is hard. When software is written clean, you no longer need many programmers to keep 
+it working or have a massive list of bugs whenever the software adds new features.
+Changes are quick and straightforward, and bugs are few. This may seem farfetched, but I've experienced this most recently.
 
 Harmful code is way too common in our industry, but it doesn't have to be.
 Some companies believe that throwing more resources into poorly coded software

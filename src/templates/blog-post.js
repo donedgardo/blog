@@ -13,9 +13,7 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.mdx
     const { previous, next } = this.props.pageContext
 
-    const imageURL = post?.frontmatter?.featuredImage?.childImageSharp?.fluid?.src;
     const featuredImgFluid = post?.frontmatter?.featuredImage?.childImageSharp?.fluid
-
 
     return (
       <BlogLayout location={this.props.location} title={"Edgardo Carreras | Software Productivity Consultant Blog"}>
@@ -23,7 +21,7 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
           pathname={location.pathname}
-          image={imageURL}
+          image={featuredImgFluid?.src}
         />
         <h1>{post.frontmatter.title}</h1>
         <p

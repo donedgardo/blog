@@ -14,7 +14,7 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
 
 
-    const imageURL = post?.frontmatter?.featuredImage?.childImageSharp?.fluid?.src;
+    const imageURL = post?.frontmatter?.featuredImage?.childImageSharp?.original?.src;
     const featuredImgFluid = post?.frontmatter?.featuredImage?.childImageSharp?.fluid
 
 
@@ -89,6 +89,9 @@ export const pageQuery = graphql`
         description
         featuredImage {
           childImageSharp {
+            original {
+              src
+            }
             fluid(maxWidth: 800) {
               ...GatsbyImageSharpFluid
             }

@@ -13,7 +13,8 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.mdx
     const { previous, next } = this.props.pageContext
 
-
+    https://edgardocarreras.com/static/0d21235b7d17f5822bfb6b0b84b7f43e/14b42/hate-your-code.jpg
+    https://edgardocarrreras.com/static/0d21235b7d17f5822bfb6b0b84b7f43e/14b42/hate-your-code.jpg
     const imageURL = post?.frontmatter?.featuredImage?.childImageSharp?.fluid?.src;
     const featuredImgFluid = post?.frontmatter?.featuredImage?.childImageSharp?.fluid
 

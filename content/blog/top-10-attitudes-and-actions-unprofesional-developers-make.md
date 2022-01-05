@@ -2,6 +2,7 @@
 path: /top-10-attitudes-unprofessional-developers-make
 date: 2021-12-13T01:22:55.506Z
 title: Top 10 Attitudes and Actions Unprofessional Developers Make. 
+featuredImage: ../assets/frustrated_team.jpeg
 ---
 
 > Professionalism is something that our profession is in dire need of.

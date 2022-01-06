@@ -5,6 +5,10 @@ title: Top 10 Things I Hate About Your Code.
 featuredImage: ../assets/hate-your-code.jpeg
 ---
 
+Forgive the provocative title; as you read, please do not take this as an attack on your person. Remember, you are not your code.
+Also, please take this with a  grain of salt. Everything has its tradeoff and what I'm about to say are values also shared by legendary 
+experts such as Martin Fowler, Robert C. Martin, and Kent Beck.
+
 ## 1. Zero to no automated tests
 Do I have to manually test all features every time I make a simple change? 
 No tests will lead developers to skip the cleaning/refactoring step since you probably don't want to break the already 

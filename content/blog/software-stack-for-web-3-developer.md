@@ -18,10 +18,10 @@ Web 2.0 is considered to start from 2004 and is currently dominating today's web
 Companies started gathering information about us to serve us better content, making us stay on their websites longer. Eventually, companies began selling all the data from their users to advertisers. Web 2.0 is also known as the age of targeted advertising and the lack of privacy.
 
 Centralized systems are built around central authorities that control a significant amount of power and are not foolproof. The current web (web 2.0) shows limits in:
-Data security with single points of failure.
-Accessibility and the risk of censorship.
-Network Efficiency, with traffic congestions and location-based content with latency deficiencies.
-The lack of permanence of information, as websites are lost or destroyed each day.
+* Data security with single points of failure.
+* Accessibility and the risk of censorship.
+* Network Efficiency, with traffic congestions and location-based content with latency deficiencies.
+* The lack of permanence of information, as websites are lost or destroyed each day.
 
 ### Web 3.0
 
@@ -36,28 +36,31 @@ Now for the good stuff.
 ## The software stack for web 3.0 developers.
 
 In the core of all web applications, we deal with data in different stages: 
-Using data (Applications)
-Defining the data transformations (Business Logic)
-Moving data (Transports and Protocols)
-Storing data (Databases, File storage)
+* Using data (Applications)
+* Defining the data transformations (Business Logic)
+* Moving data (Transports and Protocols)
+* Storing data (Databases, File storage)
+
 Next, we'll look at tools and frameworks that empower web 3.0 developers.
 
 ## Web Applications tools. 
 Luckily for web developers, we don't have to learn new frameworks or tools to build web applications. The same tools, such as React, Vue, Angular, etc., are also used to make web 3.0 applications. We call web applications on the web 3.0 dApps for decentralized applications.
 
 The main difference in dApps is how the application is hosted and how it communicates with blockchain networks. In web 2.0, one would build the application and upload the build to a hosted server where the server would then serve the application. In contrast with dApps, they would usually contain one or more of these characteristics:
-They are Open-sourced. Meaning anyone can look at the code and help audit the application.
-Hosted on a distributed network. We will look into more details about the tools to do this.
-The address for the application is defined by its content, not by its location. Let's take deeper dive into this next.
+*They are Open-sourced. Meaning anyone can look at the code and help audit the application.
+*Hosted on a distributed network. We will look into more details about the tools to do this.
+*The address for the application is defined by its content, not by its location. Let's take deeper dive into this next.
 
 ### Content-Based vs. Location-Based Addressing.
 
 Take a look at the following URL:
 `https://domain.com/path/to/file.png`
+
 Let's break this URL down:
-The server's location `domain.com` points to an IP address like its physical address.
-The `path/to` is a tree view, standard for directory listings.
-We have the `file.png`, which we want to access with its extension so that our application knows how to read it.
+
+1. The server's location `domain.com` points to an IP address like its physical address.
+2. The `path/to` is a tree view, standard for directory listings.
+3. We have the `file.png`, which we want to access with its extension so that our application knows how to read it.
 
 This URL is location-based, meaning the content of this file is only accessible based on the location (IP/domain) defined in the URL.
 If the domain is shut down, crashed, sold, etc., the content of the file.png is lost "forever." 
@@ -99,8 +102,8 @@ Note that the content becomes inaccessible when the ipfs node is offline. If you
 Say you have a web app you want to host in a distributed network like IPFS. Once you have your build files, you will upload them to an IPFS node through the CLI or desktop app (recommended). Once you have uploaded the content, you will get a root hash or CID for your build. Their desktop app allows you to set up a daemon and a user interface to see peers, pin files (so that they don't get deleted from a cleanup process), and access other distributed content. 
 
 If you turn off your node, your content won't be reachable, bummer I know, but there are solutions for this. 
-IPFS collaborative clusters. These groups of IPFS nodes collaboratively pin all content added to the IPFS Cluster by one or many trusted peers. You can also set up your [own cluster](https://cluster.ipfs.io). 
-Pinning Services. These services run many IPFS nodes and will pin your data for you! This way, you don't have to run and maintain your own IPFS node. I suggest [Piñata](https://pinata.cloud/) since it gives users 1GB of free uploads.
+* IPFS collaborative clusters. These groups of IPFS nodes collaboratively pin all content added to the IPFS Cluster by one or many trusted peers. You can also set up your [own cluster](https://cluster.ipfs.io). 
+* Pinning Services. These services run many IPFS nodes and will pin your data for you! This way, you don't have to run and maintain your own IPFS node. I suggest [Piñata](https://pinata.cloud/) since it gives users 1GB of free uploads.
 
 Check out this [simple VR web](https://ipfs.io/ipfs/QmZ7MQCQo3Xv5Q5HAp6HjLA1ivKXdLm3NsK6dnb5eBd66R) app I've just deployed to the distributed web using ipfs and pining it with Piñata.
 

@@ -47,9 +47,9 @@ Next, we'll look at tools and frameworks that empower web 3.0 developers.
 Luckily for web developers, we don't have to learn new frameworks or tools to build web applications. The same tools, such as React, Vue, Angular, etc., are also used to make web 3.0 applications. We call web applications on the web 3.0 dApps for decentralized applications.
 
 The main difference in dApps is how the application is hosted and how it communicates with blockchain networks. In web 2.0, one would build the application and upload the build to a hosted server where the server would then serve the application. In contrast with dApps, they would usually contain one or more of these characteristics:
-*They are Open-sourced. Meaning anyone can look at the code and help audit the application.
-*Hosted on a distributed network. We will look into more details about the tools to do this.
-*The address for the application is defined by its content, not by its location. Let's take deeper dive into this next.
+* They are Open-sourced. Meaning anyone can look at the code and help audit the application.
+* Hosted on a distributed network. We will look into more details about the tools to do this.
+* The address for the application is defined by its content, not by its location. Let's take deeper dive into this next.
 
 ### Content-Based vs. Location-Based Addressing.
 

@@ -192,14 +192,11 @@ const IndexPage = ({ location: { pathname } }) => (
     <AboutMeContainer>
       <StyledPortrait />
       <AboutP>
-        Hi <span role="img" aria-label="wave">👋</span>, I am a software productivity consultant who helps Fin-tech
-        Product owners minimize developer turnover rate and increase their development teams' productivity. I provide
-        high impact through product design, software architecture, platform selection, integration planning, and process design.
+        Hi <span role="img" aria-label="wave">👋</span>, I am a software productivity consultant who helps blockchain startups
+        deliver higher quality products quicker.
       </AboutP>
       <AboutP>
-        Unlike my competitors, I have mentored and taught hundreds of
-        software engineers, have over a decade of experience and a track record in scaling and building successful
-        software development teams and products.
+        Unlike my competitors, I have a track record in scaling and building successful software development teams and products.
       </AboutP>
     </AboutMeContainer>
     <BrandContainer>

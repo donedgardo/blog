@@ -13,7 +13,7 @@ class Blog extends React.Component {
     const posts = data.allMdx.edges
     const localSearchBlog = data.localSearchBlog
     return (
-      <BlogLayout location={location} title={"Edgardo Carreras | Software Productivity Consultant Blog"}>
+      <BlogLayout location={location} title={"Edgardo Carreras | Blog"}>
         <SEO title="All posts" pathname={location.pathname} />
         <Bio />
         <SearchPosts

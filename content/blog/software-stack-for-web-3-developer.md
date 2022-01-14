@@ -110,7 +110,7 @@ Check out this [simple VR web](https://ipfs.io/ipfs/QmZ7MQCQo3Xv5Q5HAp6HjLA1ivKX
 
 ### What about domain names?
 
-Having a CID to lookup content is excellent, but what if you don't know the CID of the latest version of the app. Since CIDs are immutable, each change to your web app will generate a new CID. The solution for this is [IPNS](https://docs.ipfs.io/concepts/ipns). IPNS solves this by creating an address that can be updated, using a hash of a public key, and associating with the record containing the information about the has its links to and is signed by the corresponding private key.
+Having a CID to lookup content is excellent, but what if you don't know the CID of the latest version of the app. Since CIDs are immutable, each change to your web app will generate a new CID. The solution for this is [IPNS](https://docs.ipfs.io/concepts/ipns). IPNS solves this by creating an address that can be updated, using a hash of a public key, and associating with the record containing the information about it. It links the cid to the ipns its linked to and is signed by the corresponding private key.
 
 ```bash
 $ ipfs name publish /ipfs/<CID>

@@ -33,6 +33,7 @@ class BlogPostTemplate extends React.Component {
         </p>
 
         <Img fluid={featuredImgFluid} />
+        <hr />
 
         <MDXRenderer>{post.body}</MDXRenderer>
         <hr  />

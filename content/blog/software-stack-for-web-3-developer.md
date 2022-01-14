@@ -144,7 +144,7 @@ Ethereum is the first network to support smart contracts; unfortunately, it's a 
 
 Writing contracts for the ETH network can be made using [Solidity](https://docs.soliditylang.org/) or [Viper](https://ethereum-viper.readthedocs.io/en/latest/). Solidity is the most common one, and Viper is for those Pythonistas out there.
 
-Being the first to support smart contracts, Ethereum developers more helpful tools for developing, testing, and deploying smart contracts. The one that I've enjoyed practicing Test Driven Development with has been [Truffle](https://trufflesuite.com/). Truffle makes developers' jobs more efficient by providing the tools you need for your smart contract lifecycle management. It handles scriptable deployments and migrations, a powerful console, and, best of all, an automated contract testing library. Its automated testing library can be written in JavaScript and Solidity, making your development highly productive.
+Being the first to support smart contracts, Ethereum developers have more helpful tools for developing, testing, and deploying smart contracts. The one that I've enjoyed practicing Test Driven Development with has been [Truffle](https://trufflesuite.com/). Truffle makes developers' jobs more efficient by providing the tools you need for your smart contract lifecycle management. It handles scriptable deployments and migrations, a powerful console, and, best of all, an automated contract testing library. Its automated testing library can be written in JavaScript and Solidity, making your development highly productive.
 
 ### Solana (SOL)
 

@@ -92,7 +92,7 @@ const TestimonialAuthor = styled(P)`
   max-width: 790px;
 `
 const Testimonial = styled(P)`
-  font-family: "Montserrat"; san-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-style: italic;
   font-size: 18px;

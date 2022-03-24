@@ -5,8 +5,8 @@
   "version": "1.0.0",
   "author": "Edgardo Carreras",
   "dependencies": {
-    "@mdx-js/mdx": "^1.5.1",
-    "@mdx-js/react": "^1.5.1",
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.24.47",
     "gatsby-image": "^2.0.39",
@@ -15,7 +15,7 @@
     "gatsby-plugin-google-gtag": "^3.7.1",
     "gatsby-plugin-local-search": "^1.1.1",
     "gatsby-plugin-manifest": "^2.0.29",
-    "gatsby-plugin-mdx": "^1.2.14",
+    "gatsby-plugin-mdx": "^1.6.22",
     "gatsby-plugin-netlify-cms": "^4.3.7",
     "gatsby-plugin-offline": "^3.2.23",
     "gatsby-plugin-react-helmet": "^3.0.12",
@@ -41,8 +41,8 @@
     "styled-components": "^4.2.0",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.54",
-    "typography-theme-fairy-gates": "^0.16.19",
-    "typography": "^0.16.19"
+    "typography": "^0.16.19",
+    "typography-theme-fairy-gates": "^0.16.19"
   },
   "engines": {
     "node": ">=14.17.1"

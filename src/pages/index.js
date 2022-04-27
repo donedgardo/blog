@@ -192,7 +192,7 @@ const IndexPage = ({ location: { pathname } }) => (
     <AboutMeContainer>
       <StyledPortrait />
       <AboutP>
-        Hi <span role="img" aria-label="wave">👋</span>, I am a software productivity consultant who helps blockchain startups
+        Hi <span role="img" aria-label="wave">👋</span>, I am a software productivity consultant who helps tech teams
         deliver higher quality products quicker.
       </AboutP>
       <AboutP>

@@ -85,7 +85,7 @@ Let's look at how we can create a polymorphic interface in clojure.
 
 So to create an interface in clojure we are going to use [defprotocol](https://clojuredocs.org/clojure.core/defprotocol)
 
-```clojrue
+```clojure
 (ns tic-tac-toe-core.persistable)
 
 (defprotocol Persistable

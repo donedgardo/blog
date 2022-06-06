@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import BlogLayout from "../components/blog_layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Button from "../components/button"
 import SearchPosts from "../components/searchPosts"
 
@@ -12,9 +12,10 @@ class Blog extends React.Component {
     const { data, navigate, location } = this.props
     const posts = data.allMdx.edges
     const localSearchBlog = data.localSearchBlog
+    console.log(localSearchBlog)
     return (
       <BlogLayout location={location} title={"Edgardo Carreras | Blog"}>
-        <SEO title="All posts" pathname={location.pathname} />
+        <Seo title="All posts" pathname={location.pathname} />
         <Bio />
         <SearchPosts
           posts={posts}

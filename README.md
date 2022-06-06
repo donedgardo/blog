@@ -5,4 +5,9 @@
 
 TODO:
 - [] Add newsletter drip email
-- [] Update gatsby
+- [] Responsive (> Mobile)
+- [] Add links to popular stuff
+- [] Add about me photo
+- [] Add CI pipeline
+- [x] Update content on website
+- [x] Update gatsby

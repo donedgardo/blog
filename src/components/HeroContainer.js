@@ -9,7 +9,7 @@ const FlexPortrait = styled.div`
   justify-content: center;
 `;
 
-export const SectionContent = styled(P)`
+export const SectionContent = styled.div`
   margin-bottom: 29px;
   max-width: 790px
 `;
@@ -28,6 +28,6 @@ export const HeroContainer = () =>
     </FlexPortrait>
     <H1>HI! I'M EDGARDO CARRERAS</H1>
     <SectionContent>
-      {POSITION_STATEMENT}
+      <P>{POSITION_STATEMENT}</P>
     </SectionContent>
   </DarkContainer>;

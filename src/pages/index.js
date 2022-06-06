@@ -6,6 +6,8 @@ import { HeroContainer } from "../components/HeroContainer";
 import { FirstTimeHere } from "../components/FirstTimeHere";
 import { BrandSlideshow } from "../components/BrandSlideshow";
 import { KindWords } from "../components/KindWorlds";
+import { PopularStuff } from "../components/PopularStuff";
+import { AboutMe } from "../components/AboutMe";
 
 const IndexPage = ({ location: { pathname } }) => (
   <Layout>
@@ -13,9 +15,11 @@ const IndexPage = ({ location: { pathname } }) => (
     <MainNavBar pathname={pathname} />
     <HeroContainer />
     <FirstTimeHere />
-    <BrandSlideshow />
+    <PopularStuff />
     <KindWords />
+    <BrandSlideshow />
+    <AboutMe />
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

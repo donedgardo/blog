@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { H1, LightContainer, P } from "./typography/custom";
 import React from "react";
+import { SectionContent } from "./HeroContainer";
 
 const TestimonialAuthor = styled(P)`
   align-self: flex-end;
@@ -19,8 +20,8 @@ const Testimonial = styled(P)`
 
 export const KindWords = () =>
   <LightContainer>
-    <H1>WHAT THEY SAY</H1>
-    <div style={{ maxWidth: 952 }}>
+    <H1>KIND WORDS</H1>
+    <SectionContent>
       <Testimonial>
         “Edgardo has a reputation for getting customers with <b>complex problems</b> akin to science fiction and
         somehow <b>solve them with finesse</b>. For me, he’s not only a leader or a mentor but a wizard.”
@@ -41,5 +42,5 @@ export const KindWords = () =>
         and <b>quickly adopting new technologies</b>."
       </Testimonial>
       <TestimonialAuthor> - Gabriel Flores | Loveshare | CEO</TestimonialAuthor>
-    </div>
+    </SectionContent>
   </LightContainer>;

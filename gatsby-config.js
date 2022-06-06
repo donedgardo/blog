@@ -104,6 +104,9 @@ module.exports = {
             resolve: `gatsby-remark-smartypants`,
           },
         ],
+        remarkPlugins: [
+          require('gatsby-remark-vscode').remarkPlugin
+        ],
         plugins: [`gatsby-remark-images`],
       },
     },
@@ -146,6 +149,6 @@ module.exports = {
           respectDNT: true,
         },
       },
-    },
+    }
   ]
 }

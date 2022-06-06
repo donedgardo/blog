@@ -33,7 +33,7 @@ export const MyLink = styled(Link)`
 `;
 
 const Container = styled.div`
-  padding: 0.01rem 2.45rem 1rem;
+  padding: 0.01rem 2.45rem 2.175rem;
 `
 export const DarkContainer = styled(Container)`
   background: #231f20;

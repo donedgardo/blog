@@ -48,9 +48,11 @@
     "node": ">=14.17.1"
   },
   "devDependencies": {
+    "cypress": "^10.0.2",
     "gatsby-cli": "^4.15.1",
     "gatsby-plugin-root-import": "^2.0.5",
-    "prettier": "^1.17.0"
+    "prettier": "^1.17.0",
+    "start-server-and-test": "^1.14.0"
   },
   "homepage": "https://github.com/donedgardo/blog#readme",
   "keywords": [
@@ -65,10 +67,13 @@
   },
   "scripts": {
     "build": "gatsby build",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
     "develop": "gatsby develop -p 3000",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "test:e2e": "start-server-and-test develop http://localhost:3000 cy:run"
   }
 }

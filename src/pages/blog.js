@@ -12,7 +12,6 @@ class Blog extends React.Component {
     const { data, navigate, location } = this.props
     const posts = data.allMdx.edges
     const localSearchBlog = data.localSearchBlog
-    console.log(localSearchBlog)
     return (
       <BlogLayout location={location} title={"Edgardo Carreras | Blog"}>
         <Seo title="All posts" pathname={location.pathname} />

@@ -102,8 +102,6 @@ const SearchPosts = ({ posts, localSearchBlog, location, navigate }) => {
     localSearchBlog.store
   )
 
-
-
   return (
     <>
       <SearchBar>

@@ -7,6 +7,7 @@ const slide = keyframes`
     transform: translateX(-66.6666%);
   }
 `;
+
 export const Slide = styled.div`
   width: 5900px;
   background-image: url(${logos});
@@ -22,6 +23,7 @@ export const Slide = styled.div`
     background-image: url(${logosMobile});
   }
 `;
+
 export const SlideContainer = styled.div`
   height: 286px;
   margin: 0 auto 0;

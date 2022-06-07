@@ -119,7 +119,8 @@ const SearchPosts = ({ posts, localSearchBlog, location, navigate }) => {
           value={query}
           onChange={e => {
             navigate(
-              e.target.value ? `/blog/?search=${e.target.value}` : "/blog/"
+              e.target.value ? `/blog/?search=${e.target.value}` : "/blog/",
+              { replace: true}
             )
             setQuery(e.target.value)
           }}

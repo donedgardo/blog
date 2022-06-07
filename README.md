@@ -6,8 +6,10 @@
 TODO:
 - [] Add newsletter drip email
 - [] Responsive (> Mobile)
-- [] Add links to popular stuff
-- [] Add about me photo
 - [] Add CI pipeline
+- [] Add external link in new tab at popular stuff
+- [] Fix blog search -dev mode?
+- [x] Add about me photo
+- [x] Add links to popular stuff
 - [x] Update content on website
 - [x] Update gatsby

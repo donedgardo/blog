@@ -2,21 +2,22 @@ import React from "react";
 import styled from "styled-components";
 
 import { LightContainer } from "./typography";
-import { H1, P } from "./typography/custom";
-import { SectionContent } from "./HeroContainer";
+import { H1, P, SectionContent } from "./typography/custom";
 import { SpeakingImage } from "./SpeakingImage";
 
 const AboutMeContainer = styled(LightContainer)`
-  padding-bottom: 0.1rem;
+  padding-bottom: 0;
 `;
 
 export const AboutMe = () =>
   <>
     <AboutMeContainer>
-      <H1>ABOUT EDGARDO</H1>
-      <P>Hi, I am Edgardo Carreras, and I've been a software developer, CTO, consultant, and trainer for the better part
-        of the past decade. I have mentored and trained hundreds of developers and have a track record in scaling and
-        building successful software development teams and products.</P>
+      <H1>ABOUT ME</H1>
+      <SectionContent>
+        <P>Hi, I am Edgardo Carreras, and I've been a software developer, CTO, consultant, and trainer for the better part
+          of the past decade. I have mentored and trained hundreds of developers and have a track record in scaling and
+          building successful software development teams and products.</P>
+      </SectionContent>
     </AboutMeContainer>
     <SpeakingImage />
     <LightContainer>

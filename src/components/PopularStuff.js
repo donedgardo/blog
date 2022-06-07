@@ -1,8 +1,7 @@
 import React from "react";
 
 import { DarkContainer } from "./typography";
-import { H1, Li, MyLink, P, UL } from "./typography/custom";
-import { SectionContent } from "./HeroContainer";
+import { H1, Li, MyLink, P, SectionContent, UL } from "./typography/custom";
 
 const popularLinks = [
   {

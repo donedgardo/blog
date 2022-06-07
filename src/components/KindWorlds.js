@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { H1, LightContainer, P } from "./typography/custom";
+import { H1, LightContainer, P, SectionContent } from "./typography/custom";
 import React from "react";
-import { SectionContent } from "./HeroContainer";
 
 const TestimonialAuthor = styled(P)`
   align-self: flex-end;

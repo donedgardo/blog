@@ -1,6 +1,5 @@
 import { LightContainer } from "./typography";
-import { H1, P } from "./typography/custom";
-import { SectionContent } from "./HeroContainer";
+import { H1, P, SectionContent } from "./typography/custom";
 import React from "react";
 import styled from "styled-components";
 

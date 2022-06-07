@@ -28,6 +28,7 @@ export const SlideContainer = styled.div`
   height: 286px;
   margin: 0 auto 0;
   width: 100%;
+  margin-bottom: 2em;
   position: relative;
   overflow-x: hidden;
   transform: translate3d(0, 0, 0);

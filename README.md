@@ -5,10 +5,11 @@
 
 TODO:
 - [] Add newsletter drip email
-- [] Responsive (> Mobile)
 - [] Add CI pipeline
 - [] Add external link in new tab at popular stuff
 - [] Fix blog search -dev mode?
+- [] Blog test fails as it is building before serving (timeout)
+- [x] Responsive (> Mobile)
 - [x] Add about me photo
 - [x] Add links to popular stuff
 - [x] Update content on website

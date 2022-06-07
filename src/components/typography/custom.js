@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-export const LIGHT_MODE = "Light";
-
 export const P = styled.p`
   font-family: Montserrat,serif;
   font-style: normal;
@@ -32,8 +30,13 @@ export const MyLink = styled(Link)`
   text-decoration: underline;
 `;
 
-const Container = styled.div`
+export const Container = styled.div`
   padding: 0.01rem 2.45rem 2.175rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `
 export const DarkContainer = styled(Container)`
   background: #231f20;
@@ -64,4 +67,13 @@ export const LightContainer = styled(Container)`
   ${P}, ${H1} {
     color: black;
   }
+`;
+
+export const SectionContent = styled.div`
+  margin-bottom: 29px;
+  max-width: 680px;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;

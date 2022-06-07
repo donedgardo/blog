@@ -1,11 +1,30 @@
 import styled from "styled-components";
-import Image from "./portrait";
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 
+import Image from "./portrait";
+import { Container } from "./typography/custom";
+
 const FullWidthImage = styled(Image)`
   height: 320px;
+  width: 100%;
+  background: #fff;
+  @media (min-width: 646px) {
+    height: 520px;
+    max-width: 661px;
+    margin: 0 2.45rem 0;
+  }
 `;
+
+const SpeakingImageContainer = styled(Container)`
+  background: #fff;
+  padding-bottom: 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+`;
+
 export const SpeakingImage = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -13,12 +32,15 @@ export const SpeakingImage = () => {
         relativePath: { eq: "Edgardo-Speaking@3x.png" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1700) {
+          fluid(maxWidth: 1900) {
             ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `);
-  return <FullWidthImage data={data} />;
+  return (
+    <SpeakingImageContainer>
+      <FullWidthImage data={data} />
+    </SpeakingImageContainer>);
 };

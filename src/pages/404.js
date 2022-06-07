@@ -3,8 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { H1, LightContainer } from "../components/typography/custom";
-import { SectionContent } from "../components/HeroContainer";
+import { H1, LightContainer, SectionContent } from "../components/typography/custom";
 
 class NotFoundPage extends React.Component {
   render() {

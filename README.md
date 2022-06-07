@@ -8,6 +8,7 @@ TODO:
 - [] Add CI pipeline
 - [] Add external link in new tab at popular stuff
 - [] Fix blog search -dev mode?
+- [] Add portraits to testimonials.
 - [] Blog test fails as it is building before serving (timeout)
 - [x] Responsive (> Mobile)
 - [x] Add about me photo

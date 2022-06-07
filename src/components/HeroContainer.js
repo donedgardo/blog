@@ -14,6 +14,10 @@ const FlexPortrait = styled.div`
 const StyledPortrait = styled(Portrait)`
   width: 104px;
   margin-bottom: 0;
+  @media (min-width: 660px) {
+    width: 140px;
+  }
+  
 `;
 
 const POSITION_STATEMENT = "I help C-level tech executives increase their organizations' profitability, market share, and customer satisfaction.";

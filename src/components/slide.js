@@ -28,12 +28,12 @@ export const SlideContainer = styled.div`
   height: 286px;
   margin: 0 auto 0;
   width: 100%;
-  margin-bottom: 2em;
   position: relative;
   overflow-x: hidden;
   transform: translate3d(0, 0, 0);
   background: #231f20;
-  @media (max-width: 790px) {
+  @media (min-width: 790px) {
     height: 286px;
+    margin-bottom: 2em;
   }
 `;

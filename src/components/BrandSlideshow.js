@@ -5,7 +5,7 @@ import React from "react";
 
 export const BrandSlideshow = () =>
   <>
-    <DarkContainer style={{ paddingBottom: 0 }}>
+    <DarkContainer style={{ paddingBottom: '1rem' }}>
       <H1>TRUSTED BY GREAT BRANDS</H1>
     </DarkContainer>
     <SlideContainer>

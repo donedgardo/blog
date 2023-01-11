@@ -4,12 +4,15 @@
 
 
 TODO:
-- [] Add newsletter drip email
+- [] Finish dev ops essentials content
+- [] Finish dev ops essentials landing page
 - [] Add CI pipeline
 - [] Add external link in new tab at popular stuff
 - [] Fix blog search -dev mode?
 - [] Add portraits to testimonials.
 - [] Blog test fails as it is building before serving (timeout)
+- [] Add analytics for conversion rate.
+- [x] Add devops essentials page and subscribe form.
 - [x] Responsive (> Mobile)
 - [x] Add about me photo
 - [x] Add links to popular stuff

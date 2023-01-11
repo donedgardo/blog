@@ -34,6 +34,6 @@ export const SlideContainer = styled.div`
   background: #231f20;
   @media (min-width: 790px) {
     height: 286px;
-    margin-bottom: 2em;
+    margin-bottom: 2.5em;
   }
 `;

@@ -1,18 +1,31 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
 
+export const Button = styled(Link)`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: .6em 2em;
+  background: #231F20;
+  color: #fff;
+  border-radius: 20px;
+  max-width: 394px;
+  font-family: Montserrat, serif;
+  text-align: center;
+`;
+
 export const P = styled.p`
   font-family: Montserrat,serif;
   font-style: normal;
   color: black;
-  font-weight: 500;
   letter-spacing: 0.065em;
 `
 export const H1 = styled.h4`
   font-family: Montserrat,serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   text-align: center;
   letter-spacing: 0.005em;
@@ -59,8 +72,12 @@ export const DarkContainer = styled(Container)`
     display: inline-block; /* Needed to add space between the bullet and the text */
     margin-left: -1em; /* Also needed for space (tweak if needed) */
   }
- }
-`;
+  
+  ${Button} {
+    color: #231F20;
+    background: #fff;
+  }
+ }`;
 
 export const LightContainer = styled(Container)`
   background: #fefefe;
@@ -70,10 +87,10 @@ export const LightContainer = styled(Container)`
 `;
 
 export const SectionContent = styled.div`
-  margin-bottom: 29px;
   max-width: 680px;
   flex: 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
+

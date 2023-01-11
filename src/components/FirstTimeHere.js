@@ -1,20 +1,6 @@
 import { LightContainer } from "./typography";
-import { H1, P, SectionContent } from "./typography/custom";
+import { Button, H1, P, SectionContent } from "./typography/custom";
 import React from "react";
-import styled from "styled-components";
-
-const Button = styled.a`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: .6em 2em;
-  background: #231F20;
-  border-radius: 20px;
-  color: #fff;
-  font-family: Montserrat,serif;
-  text-align: center;
-`
 
 export const FirstTimeHere = () =>
   <LightContainer>
@@ -26,8 +12,12 @@ export const FirstTimeHere = () =>
       </P>
       <P>
         It’s a a free six day email course to teach you how to create high
-        performing DevOps teams.
+        performing development teams.
       </P>
+      <Button
+        style={{ margin: "auto" }}
+        to="/dev-ops-essentials">
+        DevOps Essentials Bootcamp
+      </Button>
     </SectionContent>
-    <Button href="/#">DevOps Essentials Bootcamp</Button>
   </LightContainer>;

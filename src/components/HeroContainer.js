@@ -20,7 +20,7 @@ const StyledPortrait = styled(Portrait)`
   
 `;
 
-const POSITION_STATEMENT = "I help C-level tech executives increase their organizations' profitability, market share, and customer satisfaction.";
+const POSITION_STATEMENT = "I help software teams deliver higher quality products faster.";
 
 export const HeroContainer = () => {
   const data = useStaticQuery(graphql`

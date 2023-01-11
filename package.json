@@ -46,7 +46,7 @@
     "typography-theme-fairy-gates": "^0.16.19"
   },
   "engines": {
-    "node": ">=14.17.1"
+    "node": "16.3.0"
   },
   "devDependencies": {
     "cypress": "^10.0.2",

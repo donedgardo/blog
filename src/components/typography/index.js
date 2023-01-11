@@ -1,5 +1,5 @@
-import Typography from "typography"
-import fairyGatesTheme from "typography-theme-fairy-gates"
+import Typography from "typography";
+import fairyGatesTheme from "typography-theme-fairy-gates";
 
 
 const brandBlue = `#032EB9`
@@ -32,6 +32,10 @@ if (process.env.NODE_ENV !== `production`) {
   index.injectStyles()
 }
 
-export default index
 export const rhythm = index.rhythm
 export const scale = index.scale
+
+export default index
+
+export { DarkContainer } from "./custom";
+export { LightContainer } from "./custom";

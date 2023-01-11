@@ -93,7 +93,7 @@ Here is our new schema:
 
 To finally make our test pass we write our new protocol method implementations:
 
-```clojrue
+```clojure
 (defn get-current-score [db username]
   (or
     (second

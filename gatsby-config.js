@@ -15,7 +15,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-feed-mdx`,
     `gatsby-plugin-root-import`,
     {
       resolve: "gatsby-plugin-local-search",
@@ -70,15 +69,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
     {
@@ -99,14 +98,14 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-remark-vscode`,
-          },
-          {
             resolve: `gatsby-remark-copy-linked-files`,
           },
           {
             resolve: `gatsby-remark-smartypants`,
           },
+        ],
+        remarkPlugins: [
+          require('gatsby-remark-vscode').remarkPlugin
         ],
         plugins: [`gatsby-remark-images`],
       },
@@ -150,6 +149,6 @@ module.exports = {
           respectDNT: true,
         },
       },
-    },
+    }
   ]
 }

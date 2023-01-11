@@ -13,21 +13,7 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = ({ className }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(
-        relativePath: { eq: "edgardo-carreras-portrait@3x.png" }
-      ) {
-        childImageSharp {
-          fluid(maxWidth: 250) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
+const Image = ({ className, data }) => {
   return (
     <Img
       className={className}

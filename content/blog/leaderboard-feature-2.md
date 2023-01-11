@@ -129,7 +129,7 @@ Now our play function handles recording wins, losses and ties but our implementa
 
 To finally make our test pass we write our new protocol method implementations:
 
-```clojrue
+```clojure
 (def leaderboard (atom {}))
 (deftype FilePersistence [file-suffix]
   Persistable

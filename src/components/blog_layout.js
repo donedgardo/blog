@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { rhythm } from "./typography"
-import { MainNavBar } from "./main_nav_bar"
+import { MainNavBar } from "./MainNavBar"
 import { BlogHeader } from "./blog_header"
 
 class Layout extends React.Component {

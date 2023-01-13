@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-export const Button = styled(Link)`
+export const ButtonLink = styled(Link)`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -19,7 +19,6 @@ export const P = styled.p`
   font-family: Montserrat,serif;
   font-style: normal;
   color: black;
-  letter-spacing: 0.065em;
 `
 export const H1 = styled.h4`
   font-family: Montserrat,serif;
@@ -29,6 +28,10 @@ export const H1 = styled.h4`
   line-height: 1.5rem;
   text-align: center;
   letter-spacing: 0.005em;
+`;
+
+export const H2 = styled(H1)`
+  font-size: 1rem;
 `;
 
 export const UL = styled.ul``;
@@ -43,6 +46,25 @@ export const MyLink = styled(Link)`
   text-decoration: underline;
 `;
 
+export const Button = styled.button`
+  display: flex;
+  text-align: center;
+  border-radius: 20px;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 0.8em;
+  margin-top: 12px;
+  align-items: center;
+  color: #1E1E1E;
+  background: rgb(249, 249, 249);
+  appearance: auto;
+  font-weight: 600;
+  font-family: Montserrat, serif;
+  border: none;
+  padding: .4em 2em;
+  letter-spacing: 0.1em;
+  flex: 1;
+`
 export const Container = styled.div`
   padding: 0.01rem 2.45rem 2.175rem;
   display: flex;
@@ -53,7 +75,8 @@ export const Container = styled.div`
 `
 export const DarkContainer = styled(Container)`
   background: #231f20;
-  ${P}, ${H1} {
+  
+  ${P}, ${H1}, ${Button} {
     color: #eee9ea;
   }
   
@@ -73,9 +96,16 @@ export const DarkContainer = styled(Container)`
     margin-left: -1em; /* Also needed for space (tweak if needed) */
   }
   
-  ${Button} {
+  ${ButtonLink}, ${Button} {
     color: #231F20;
-    background: #fff;
+    background: #fefefe;
+    border: 1px solid #231f20;
+  }
+  
+  ${Button}:hover {
+    color: #eee9ea;
+    background: #231f20;
+    border: 1px solid #eee9ea;
   }
  }`;
 
@@ -83,6 +113,16 @@ export const LightContainer = styled(Container)`
   background: #fefefe;
   ${P}, ${H1} {
     color: black;
+  }
+  ${Button} {
+    color: white;
+    background: #231f20;
+    border: 1px solid #fefefe;
+  }
+  ${Button}:hover {
+    color: black;
+    background: #fefefe;
+    border: 1px solid #231f20;
   }
 `;
 
@@ -94,3 +134,4 @@ export const SectionContent = styled.div`
   justify-content: center;
 `;
 
+;

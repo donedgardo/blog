@@ -14,8 +14,8 @@ const IndexPage = ({ location: { pathname } }) => (
     <MainNavBar pathname={pathname} />
     <SignUpBootcamp />
     <Questions />
-    <BrandSlideshow />
     <KindWords />
+    <BrandSlideshow />
     <AboutMe />
   </Layout>
 );

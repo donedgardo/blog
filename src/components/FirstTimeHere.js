@@ -1,5 +1,5 @@
 import { LightContainer } from "./typography";
-import { Button, H1, P, SectionContent } from "./typography/custom";
+import { ButtonLink, H1, P, SectionContent } from "./typography/custom";
 import React from "react";
 
 export const FirstTimeHere = () =>
@@ -14,10 +14,10 @@ export const FirstTimeHere = () =>
         It’s a a free six day email course to teach you how to create high
         performing development teams.
       </P>
-      <Button
+      <ButtonLink
         style={{ margin: "auto" }}
         to="/dev-ops-essentials">
         DevOps Essentials Bootcamp
-      </Button>
+      </ButtonLink>
     </SectionContent>
   </LightContainer>;

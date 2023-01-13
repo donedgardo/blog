@@ -6,14 +6,16 @@ import { BrandSlideshow } from "../components/BrandSlideshow";
 import { KindWords } from "../components/KindWorlds";
 import { AboutMe } from "../components/AboutMe";
 import SignUpBootcamp from "../components/SignUpBootcamp";
+import { Questions } from "../components/Question";
 
 const IndexPage = ({ location: { pathname } }) => (
   <Layout>
     <Seo title={"Edgardo Carreras | Software Productivity Consultant"} />
     <MainNavBar pathname={pathname} />
     <SignUpBootcamp />
-    <KindWords />
+    <Questions />
     <BrandSlideshow />
+    <KindWords />
     <AboutMe />
   </Layout>
 );

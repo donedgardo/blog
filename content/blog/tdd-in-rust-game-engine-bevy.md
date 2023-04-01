@@ -10,7 +10,7 @@ will explain some of the benefits of TDD, when to use it, and when not to.
 
 I've been learning the programming language Rust since last year when I did my final Clean Coders Apprenticeship
 exercise: Learn one new language and implement the Tic Tac Toe game with unbeatable AI using test-driven development (
-TDD), all in one week. [link here] It was an incredible learning experience, and since then, I've been experimenting
+TDD), all in one week [link here]. It was an incredible learning experience, and since then, I've been experimenting
 with applying various disciplines like TDD, continuous integration, and deployment to the game development workflow.
 
 From what I've learned trying out different popular game engines like Unity, Unreal Engine, and Godot, the game
@@ -27,7 +27,7 @@ language for game development.
 
 ## The Bevy Engine
 
-Before we dive into TDD, let's take a quick look at the Bevy engine. Bevy is a data-driven game engine, which means
+Before we dive into TDD, let's take a quick look at the Bevy engine. Bevy [link] is a data-driven game engine, which means
 it is built around entities and components. Entities are objects in the game world, while components
 are the attributes that define the behavior of entities. In Bevy, the state of the game is represented as a collection
 of entities, and their components define how they interact with the world.
@@ -50,17 +50,17 @@ automated, allowing quick feedback and increased efficiency.
 
 Let's take a closer look at some of the benefits of TDD, as spoken about by Kent Beck, Martin Fowler, and Robert Martin.
 
-Kent Beck, the creator of Extreme Programming (XP), writer of the book Test Driven Development By Example. According to
+Kent Beck [link], the creator of Extreme Programming (XP), writer of the book Test Driven Development By Example. According to
 Beck, TDD helps
 create a safety net for developers, ensuring that the code works as expected. In addition, by writing tests first, the
 developer is forced to think about the code from the user's perspective, helping to ensure that the code is easy to use
 and maintain.
 
-Martin Fowler, an expert in software development, argues that TDD helps to create a feedback loop for developers. By
+Martin Fowler [link], an expert in software development, argues that TDD helps to create a feedback loop for developers. By
 writing tests first, developers can quickly see whether their code is working as expected. This allows them to catch
 bugs early and make changes before the code becomes too complex.
 
-Robert Martin, another software development expert, argues that TDD helps create a solid code foundation. By
+Robert Martin [link], another software development expert, argues that TDD helps create a solid code foundation. By
 writing tests first, the developer can ensure that the code works as expected and can be easily modified. This helps
 reduce the technical debt in the codebase, as changes can be made easily and quickly.
 

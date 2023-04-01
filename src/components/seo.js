@@ -14,24 +14,24 @@ import defaultPageImage from "../images/EdgardoCarrerasLogo.png"
 function SEO({ description, lang, meta, keywords, title, pathname, image }) {
   const { site } = useStaticQuery(
     graphql`
-        query {
-            site {
-                siteMetadata {
-                    title
-                    siteUrl
-                    description
-                    author
-                }
-            }
+      query {
+        site {
+          siteMetadata {
+            title
+            siteUrl
+            description
+            author
+          }
         }
-    `,
+      }
+    `
   )
 
   const metaDescription = description || site.siteMetadata.description
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
-  const imageUrl = image ? `${site.siteMetadata.siteUrl}${image}` : `${site.siteMetadata.siteUrl}${defaultPageImage}`;
-
-  console.log(imageUrl)
+  const imageUrl = image
+    ? `${site.siteMetadata.siteUrl}${image}`
+    : `${site.siteMetadata.siteUrl}${defaultPageImage}`
 
   return (
     <Helmet
@@ -40,7 +40,7 @@ function SEO({ description, lang, meta, keywords, title, pathname, image }) {
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
-      link={canonical ? [{ "rel": "canonical", "href": canonical }] : []}
+      link={canonical ? [{ rel: "canonical", href: canonical }] : []}
       meta={[
         {
           name: `description`,
@@ -108,10 +108,10 @@ function SEO({ description, lang, meta, keywords, title, pathname, image }) {
         .concat(
           keywords.length > 0
             ? {
-              name: `keywords`,
-              content: keywords.join(`, `),
-            }
-            : [],
+                name: `keywords`,
+                content: keywords.join(`, `),
+              }
+            : []
         )
         .concat(meta)}
     >

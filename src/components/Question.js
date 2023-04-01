@@ -18,10 +18,6 @@ export const Questions = () => (
     <H2>Ask yourself:</H2>
     <QuestionContainer>
       <Question>
-        Are you tired of watching your software development projects drag on
-        longer than expected?
-      </Question>
-      <Question>
         Do you wish your team could achieve twice the productivity they
         currently do?
       </Question>

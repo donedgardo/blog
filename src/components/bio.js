@@ -10,7 +10,6 @@ import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import styled from "styled-components"
 
-
 function Bio() {
   return (
     <StaticQuery
@@ -32,10 +31,7 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong>
-              <a href={`https://twitter.com/${social.twitter}`}>
-                Follow me on Twitter
-              </a>
+              Written by <strong>{author}</strong>.
             </p>
           </Container>
         )

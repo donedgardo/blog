@@ -18,58 +18,56 @@ export const Questions = () => (
     <H2>Ask yourself:</H2>
     <QuestionContainer>
       <Question>
-        Do you wish your team could achieve twice the productivity they
-        currently do?
+        How can my business scale while my code is too rigid or fragile to
+        change?
       </Question>
       <Question>
-        Am I using the most efficient and effective software development
-        methodologies?
+        Am I practicing efficient and effective software development lifecycles?
       </Question>
       <Question>
-        How can we improve the quality of our software while also increasing
-        development speed?
+        Can we improve our software's quality while increasing development speed
+        and team morale?
       </Question>
     </QuestionContainer>
-    <div style={{ maxWidth: 780 }}>
+
+    <div style={{ maxWidth: 760 }}>
       <P>I got news for you:</P>
-      <P>There is no trade-off between quality and speed!</P>
       <P>
         Research has shown that quality and speed in software development don't
-        have to be a trade-off. In this free bootcamp I will show you how with
-        the right planning, design, and implementation, your team can achieve
-        both.
+        have to be a trade-off. In this newsletter I will share how your team
+        can achieve both with the proper strategies.
       </P>
       <P>
-        I will share with you the industry-standard key metrics for measuring
-        software delivery performance and how to improve it. You will learn
-        about the technical practices that have a direct impact on your software
-        delivery performance, and how to implement them within your
-        organization.
+        I will share the industry-standard key metrics for measuring software
+        delivery performance and how to improve it. In addition, you will learn
+        about the technical practices that directly impact your software
+        delivery performance and how to implement them within your organization.
       </P>
       <P>
-        Additionally, I will also show you how to improve your team culture by
-        using DevOps practices that foster collaboration, experimentation, and
-        continuous learning. I will show you how these practices directly relate
+        I will also show you how to improve your team culture by using DevOps
+        practices that foster collaboration, experimentation, and continuous
+        learning. Finally, I will show you how these practices directly relate
         to your organization's performance and profitability.
       </P>
       <P>
-        No matter the size of your organization, improvement in software
-        delivery is possible for every team.
+        No matter your organization's size, software delivery improvement is
+        possible for every type of team.
       </P>
       <P style={{ textAlign: "center" }}>
         <b>
-          Sign up for my bootcamp and give your software development the boost
-          it needs to drive your organization towards success!
+          Sign up for my newsletter and give your software development the
+          confidence it needs to drive your organization towards success!
         </b>
       </P>
-      <ul>
-        <li>Day 1: Software Delivery Performance Assessment</li>
-        <li>Day 2: Performance Oriented Culture</li>
-        <li>Day 3: Continuous Delivery</li>
-        <li>Day 4: Clean Architecture</li>
-        <li>Day 5: Software Management Practices</li>
-      </ul>
     </div>
+    <h4>What topics will be covered?</h4>
+    <ul>
+      <li>Measuring Software Delivery Performance</li>
+      <li>Fostering Performance Oriented Culture</li>
+      <li>Practicing Continuous Delivery</li>
+      <li>When should I Practice TDD?</li>
+      <li>Clean Architecture for Expansion</li>
+    </ul>
     <SignUpForm dark />
   </LightContainer>
 )

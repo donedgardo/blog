@@ -22,7 +22,7 @@ const popularLinks = [
     path: "/blog/clean-architecture/",
   },
   {
-    label: "Top 10 Things I Hate About Your Code (blog post)",
+    label: "My Usual Code Review Rant",
     path: "/blog/top-10-things-I-hate-about-your-code",
   },
 ]

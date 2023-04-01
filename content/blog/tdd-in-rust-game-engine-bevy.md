@@ -6,11 +6,11 @@ featuredImage: ../assets/Bevy Game Engine Test Driven Development.png
 ---
 
 In this article, we will explore TDD in the context of developing a game in Rust using the Bevy engine. Additionally, I
-will explain some of the benefits of TDD, when to use it, and when not to.
+will explain some benefits of TDD, when to use it, and when not to.
 
-I've been learning the programming language Rust since last year when I did my final Clean Coders Apprenticeship
+I've been learning the programming language Rust since last year when I did my last Clean Coders Apprenticeship
 exercise: Learn one new language and implement the Tic Tac Toe game with unbeatable AI using test-driven development (
-TDD), all in one week [link here]. It was an incredible learning experience, and since then, I've been experimenting
+TDD), all in one week [(source)](https://github.com/donedgardo/tic-tac-toe-rust). It was an incredible learning experience, and since then, I've been experimenting
 with applying various disciplines like TDD, continuous integration, and deployment to the game development workflow.
 
 From what I've learned trying out different popular game engines like Unity, Unreal Engine, and Godot, the game
@@ -27,10 +27,10 @@ language for game development.
 
 ## The Bevy Engine
 
-Before we dive into TDD, let's take a quick look at the Bevy engine. Bevy [link] is a data-driven game engine, which means
-it is built around entities and components. Entities are objects in the game world, while components
-are the attributes that define the behavior of entities. In Bevy, the state of the game is represented as a collection
-of entities, and their components define how they interact with the world.
+Before we dive into TDD, let's take a quick look at the Bevy engine. [Bevy](https://bevyengine.org/)
+is a data-driven game engine, which means it is built around entities and components. Entities are objects in the game 
+world, while components are the attributes that define the behavior of entities. In Bevy, the state of the game is
+represented as a collection of entities, and their components define how they interact with the world.
 
 One of the key features of Bevy is its support for the ECS (Entity Component System) architecture. The ECS architecture
 is a data-driven approach to game development that separates data from behavior. This means the game's state is
@@ -50,17 +50,16 @@ automated, allowing quick feedback and increased efficiency.
 
 Let's take a closer look at some of the benefits of TDD, as spoken about by Kent Beck, Martin Fowler, and Robert Martin.
 
-Kent Beck [link], the creator of Extreme Programming (XP), writer of the book Test Driven Development By Example. According to
-Beck, TDD helps
-create a safety net for developers, ensuring that the code works as expected. In addition, by writing tests first, the
-developer is forced to think about the code from the user's perspective, helping to ensure that the code is easy to use
-and maintain.
+[Kent Beck](https://www.kentbeck.com/), the creator of Extreme Programming (XP), writer of the book Test Driven 
+Development By Example. According to Beck, TDD helps create a safety net for developers, ensuring that the code works as
+expected. In addition, by writing tests first, the developer is forced to think about the code from the user's 
+perspective, helping to ensure that the code is easy to use and maintain.
 
-Martin Fowler [link], an expert in software development, argues that TDD helps to create a feedback loop for developers. By
-writing tests first, developers can quickly see whether their code is working as expected. This allows them to catch
-bugs early and make changes before the code becomes too complex.
+[Martin Fowler](https://martinfowler.com/), writer of the book Refactoring Legacy Code, argues that TDD helps to create a 
+feedback loop for developers. By writing tests first, developers can quickly see whether their code is working as 
+expected. This allows them to catch bugs early and make changes before the code becomes too complex.
 
-Robert Martin [link], another software development expert, argues that TDD helps create a solid code foundation. By
+[Robert Martin](https://cleancoders.com/), writer of the book Clean Code, argues that TDD helps create a solid code foundation. By
 writing tests first, the developer can ensure that the code works as expected and can be easily modified. This helps
 reduce the technical debt in the codebase, as changes can be made easily and quickly.
 
@@ -73,7 +72,7 @@ system. Then, we can create a test module and write tests that simulate differen
 can write tests to ensure that the animation system correctly updates the animation state and that the sprite sheet
 gets updated by frame.
 
-Let's take a look at an example. Suppose we are developing a character animation system for our game. We want to create
+Let's take a look at an example from my [recent game](https://onyx.edgardocarreras.com). Suppose we are developing a character animation system for our game. We want to create
 a system that updates the character's animation based on their movement. The character animation system will take as
 input the character's velocity and update the character's sprite sheet accordingly.
 
@@ -266,8 +265,6 @@ fn update_animation_state(animation: &mut Mut<CharacterAnimation>, velocity: &Ve
 }
 ```
 
-Check out the history of this file as it matured over each TDD cycle of red, green, and blue. [link to repo]
-
 ## When should I practice test-driven development?
 
 If you haven't practiced TDD before, I suggest you go all in. First, try writing a test that fails and making it pass,
@@ -299,21 +296,20 @@ than usual. This is usually less than a week in duration, and you want to be abl
 tests for longevity instead of explorative.
 
 TDD purists will disagree with me here, but testing every line of code is not a discipline I advocate during an
-experimental phase. Recently I came across a speaking event from Kent Beck, the creator of TDD, in which he talks about
-different types of programming to varying stages of a product or business[link] after experiencing programming on
-Facebook. He explains that programming has three eX's: Exploratory, Expansion, and Extraction phases. And that TDD
-provides a whole lot of value in the expansion and extraction phase but less in the exploratory stage. As a result, he
-practices it less often in that phase.
+experimental phase. Recently I came across a [speaking event](https://www.youtube.com/watch?v=YX2XR73LnRY) from Kent Beck,
+the creator of TDD, in which he talks about different types of programming to varying stages of a product or business 
+after experiencing programming on Facebook. He explains that programming has three eX's: Exploratory, Expansion, and
+Extraction phases. And that TDD provides a lot of value in the expansion and extraction phase but less in the 
+exploratory stage. As a result, he practices it less often in that phase.
 
 This may be why the gaming industry doesn't practice TDD as much. Since the quick iteration of a game involves getting
 ideas quickly to the user for feedback. A lot of the process is trying again and hoping a gameplay feature is delightful
 for the players. Much of it involves writing a lot of throw-away code if you build digital prototypes.
 
-## Conclusion 
+## Where does this leave us? 
 
 In conclusion, Test Driven Development is a powerful software development process that can help to increase code
 quality, reduce bugs, and improve efficiency. By writing tests first, developers can ensure the code is thoroughly
 tested and works as expected. When combined with a powerful language like Rust and an efficient engine like Bevy, TDD can help to
-create high-quality games that are easy to maintain and update. 
-We also saw where TDD is less valuable when exploring ideas, and experiments have
-little to lose and when should and shouldn't use it.
+create high-quality games that are easy to maintain and update. However, we can also now understand where TDD is less 
+valuable and is not a one size shoe fits all approach. 

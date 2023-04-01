@@ -37,7 +37,7 @@ const NavItem = styled.li`
   margin-left: ${rhythm(1 / 2)};
   margin-bottom: 0px;
   a {
-    text-decoration: ${props => props.active ? "underline" : "none"};
+    text-decoration: ${props => (props.active ? "underline" : "none")};
     font-size: ${rhythm(5 / 8)};
     color: white;
     cursor: pointer;
@@ -45,18 +45,18 @@ const NavItem = styled.li`
   a:hover {
     text-decoration: underline;
   }
-  
 `
 export const MainNavBar = ({ pathname }) => {
   const rootPath = `/`
   const blogPath = `/blog/`
-  return (<NavBar>
-    <Link to={"/"} style={{display: `flex`, justifyContent: `center`}}>
-      <Monogram />
-    </Link>
-    <NavItems>
-      <NavItem active={blogPath === pathname}><Link to={`/blog/`}>Blog</Link></NavItem>
-      <NavItem active={rootPath === pathname}><Link to={`/`}>Consulting</Link></NavItem>
-    </NavItems>
-  </NavBar>)
+  return (
+    <NavBar>
+      <Link to={"/"} style={{ display: `flex`, justifyContent: `center` }}>
+        <Monogram />
+      </Link>
+      <NavItems>
+        {/*<NavItem active={blogPath === pathname}><Link to={`/blog/`}>Blog</Link></NavItem>*/}
+      </NavItems>
+    </NavBar>
+  )
 }

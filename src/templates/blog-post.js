@@ -19,7 +19,7 @@ class BlogPostTemplate extends React.Component {
     return (
       <BlogLayout
         location={this.props.location}
-        title={"Edgardo Carreras | Software Productivity Consultant Blog"}
+        title={"Edgardo Carreras | Blog"}
       >
         <SEO
           title={post.frontmatter.title}

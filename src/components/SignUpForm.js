@@ -24,7 +24,7 @@ const EmailInput = styled.input`
   font-size: 0.9em;
   border-radius: 12px;
 `
-export const SignUpForm = ({ dark: boolean }) => {
+export const SignUpForm = props => {
   const [status, setStatus] = useState(null)
   const [email, setEmail] = useState("")
   const handleSubmit = async e => {
@@ -75,8 +75,8 @@ export const SignUpForm = ({ dark: boolean }) => {
           value={email}
           required
         />
-        <Button type="submit" dark>
-          SEND LESSON 1 NOW
+        <Button type="submit" dark={props.dark}>
+          {props.ctaLabel || "SUBSCRIBE NOW"}
         </Button>
       </Form>
     </>

@@ -6,6 +6,7 @@ import BlogLayout from "../components/blog_layout"
 import Seo from "../components/seo"
 import Button from "../components/button"
 import SearchPosts from "../components/searchPosts"
+import { AboutMe } from "../components/AboutMe"
 
 class Blog extends React.Component {
   render() {
@@ -13,9 +14,8 @@ class Blog extends React.Component {
     const posts = data.allMdx.edges
     const localSearchBlog = data.localSearchBlog
     return (
-      <BlogLayout location={location} title={"Edgardo Carreras | Blog"}>
-        <Seo title="All posts" pathname={location.pathname} />
-        <Bio />
+      <BlogLayout location={location} title={"Edgardo Carreras Blog"}>
+        <Seo title="Edgardo Carreras Blog" pathname={location.pathname} />
         <SearchPosts
           posts={posts}
           localSearchBlog={localSearchBlog}

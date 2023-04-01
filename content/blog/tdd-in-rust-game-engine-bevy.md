@@ -37,6 +37,7 @@ is a data-driven approach to game development that separates data from behavior.
 represented as a collection of entities and their components. The game logic is implemented as systems that operate
 on those entities and components.
 
+## Benefits of TDD
 Now that we have a basic understanding of Bevy let's explore how we can use TDD to develop a game in Bevy. TDD is a
 development approach that emphasizes writing tests before writing code. The basic idea is to write a failing test that
 verifies the code's behavior; then, we write the code to make the test pass. Following this approach, we can ensure

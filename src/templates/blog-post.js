@@ -13,10 +13,14 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.mdx
     const { previous, next } = this.props.pageContext
 
-    const featuredImgFluid = post?.frontmatter?.featuredImage?.childImageSharp?.fluid
+    const featuredImgFluid =
+      post?.frontmatter?.featuredImage?.childImageSharp?.fluid
 
     return (
-      <BlogLayout location={this.props.location} title={"Edgardo Carreras | Software Productivity Consultant Blog"}>
+      <BlogLayout
+        location={this.props.location}
+        title={"Edgardo Carreras | Software Productivity Consultant Blog"}
+      >
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
@@ -32,11 +36,11 @@ class BlogPostTemplate extends React.Component {
           {post.frontmatter.date}
         </p>
 
-        <Img fluid={featuredImgFluid} />
+        <Img fluid={featuredImgFluid} alt={post.frontmatter.title} />
         <hr />
 
         <MDXRenderer>{post.body}</MDXRenderer>
-        <hr  />
+        <hr />
         <Bio />
         <ul
           style={{
@@ -91,7 +95,7 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid
             }
           }
-        }  
+        }
       }
     }
   }

@@ -1,13 +1,12 @@
 ---
 path: /top-10-things-i-hate-about-your-code
 date: 2022-01-04T01:22:55.506Z
-title: Top 10 Things I Hate About Your Code. 
+title: My Usual Code Review Rant. 
 featuredImage: ../assets/hate-your-code.jpeg
 ---
 
-Forgive the provocative title; as you read, please do not take this as an attack on your person. Remember, you are not your code.
-Also, please take this with a  grain of salt. Everything has its tradeoff and what I'm about to say are values also shared by legendary 
-experts such as Martin Fowler, Robert C. Martin, and Kent Beck.
+Please take this with a  grain of salt. Everything has its tradeoff and what I'm about to say are values generally
+shared by legendary experts such as Martin Fowler, Robert C. Martin, and Kent Beck.
 
 ## 1. Zero to no automated tests
 Do I have to manually test all features every time I make a simple change? 

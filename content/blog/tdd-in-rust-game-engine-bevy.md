@@ -5,6 +5,9 @@ title: Test-Driven Development in Rust Game Development with Bevy
 featuredImage: ../assets/Bevy Game Engine Test Driven Development.png
 ---
 
+In this article, we will explore TDD in the context of developing a game in Rust using the Bevy engine. Additionally, I
+will explain some of the benefits of TDD, when to use it, and when not to.
+
 I've been learning the programming language Rust since last year when I did my final Clean Coders Apprenticeship
 exercise: Learn one new language and implement the Tic Tac Toe game with unbeatable AI using test-driven development (
 TDD), all in one week. [link here] It was an incredible learning experience, and since then, I've been experimenting
@@ -12,9 +15,6 @@ with applying various disciplines like TDD, continuous integration, and deployme
 
 From what I've learned trying out different popular game engines like Unity, Unreal Engine, and Godot, the game
 industry (like most others) doesn't practice TDD. Of course, some do, but most don't and shockingly abhor it.
-
-In this article, we will explore TDD in the context of developing a game in Rust using the Bevy engine. Additionally, I
-will explain some of the benefits of TDD, when to use it, and when not to.
 
 Test Driven Development (TDD) is a software development approach that advocates for writing automated tests before
 writing code. The process encourages developers to focus on writing small tests that verify the behavior of their code,
@@ -268,7 +268,7 @@ fn update_animation_state(animation: &mut Mut<CharacterAnimation>, velocity: &Ve
 
 Check out the history of this file as it matured over each TDD cycle of red, green, and blue. [link to repo]
 
-## When do I practice test-driven development?
+## When should I practice test-driven development?
 
 If you haven't practiced TDD before, I suggest you go all in. First, try writing a test that fails and making it pass,
 then cleaning up your code. The quick iterations and feedback hit like good old dopamine. TDD is one of those
@@ -288,8 +288,7 @@ clean architecture. (link here).
 Generally, you want to test when you have lots to lose.
 
 ## When not to practice test-driven development?
-
-Practicing something other than test-driven development as you experiment rapidly would be my recommendation. Of course,
+When you are experimenting or exploring an idea rapidly I wouldn't recommend practicing TDD. Of course,
 I'm talking about hackathons, game jams, throw-away prototypes, etc., where you have almost nothing to lose. I'm not
 saying that TDD provides no value in the code you write in those scenarios, but there is a point to be made on the
 opportunity cost missed on just being able to try multiple ideas quickly to explore the space.

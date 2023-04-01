@@ -27,7 +27,7 @@ language for game development.
 
 ## The Bevy Engine
 
-Before we dive into TDD, let's take a quick look at the Bevy engine. [Bevy](https://bevyengine.org/)
+Before we dive into TDD, let's take a quick look at the [Bevy engine](https://bevyengine.org/). Bevy
 is a data-driven game engine, which means it is built around entities and components. Entities are objects in the game 
 world, while components are the attributes that define the behavior of entities. In Bevy, the state of the game is
 represented as a collection of entities, and their components define how they interact with the world.

@@ -62,6 +62,14 @@ const bioQuery = graphql`
 
 const Container = styled.div`
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin-bottom: 1rem;
+  p {
+    margin-bottom: 0;
+  }
 `
 
 export default Bio

@@ -6,6 +6,7 @@ import Img from "gatsby-image"
 import Bio from "../components/bio"
 import BlogLayout from "../components/blog_layout"
 import SEO from "../components/seo"
+import BootcampHero from "../components/BootcampHero"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -35,11 +36,13 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date}
         </p>
-
         <Img fluid={featuredImgFluid} alt={post.frontmatter.title} />
         <hr />
-
         <MDXRenderer>{post.body}</MDXRenderer>
+        <hr />
+        <h4>Want to hear more from me?</h4>
+        <p>Signup to my newsletter!</p>
+        <BootcampHero />
         <hr />
         <Bio />
         <ul

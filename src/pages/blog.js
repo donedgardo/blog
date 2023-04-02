@@ -6,7 +6,6 @@ import BlogLayout from "../components/blog_layout"
 import Seo from "../components/seo"
 import Button from "../components/button"
 import SearchPosts from "../components/searchPosts"
-import { AboutMe } from "../components/AboutMe"
 
 class Blog extends React.Component {
   render() {

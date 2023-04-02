@@ -7,6 +7,7 @@ import { KindWords } from "../components/KindWorlds"
 import { AboutMe } from "../components/AboutMe"
 import SignUpBootcamp from "../components/BootcampHero"
 import { Questions } from "../components/Question"
+import { PopularStuff } from "../components/PopularStuff"
 
 const IndexPage = ({ location: { pathname } }) => (
   <Layout>
@@ -17,6 +18,7 @@ const IndexPage = ({ location: { pathname } }) => (
     <KindWords />
     <BrandSlideshow />
     <AboutMe />
+    <PopularStuff />
   </Layout>
 )
 

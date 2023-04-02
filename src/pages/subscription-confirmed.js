@@ -15,7 +15,7 @@ export default () => {
 
       <p>
         If you have any questions or feedback, please don't hesitate to reach
-        out to us at me@edgardocarreras.com.
+        out at me@edgardocarreras.com.
       </p>
       <p>
         Thanks again for joining our community, and we look forward to staying

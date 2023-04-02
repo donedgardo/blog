@@ -70,7 +70,7 @@ export const SignUpForm = props => {
           aria-label="Your email"
           label="Your email"
           name="email_address"
-          placeholder="Whats your best email address?"
+          placeholder="What's your best email address?"
           onChange={handleInputChange}
           value={email}
           required

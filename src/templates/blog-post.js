@@ -40,8 +40,10 @@ class BlogPostTemplate extends React.Component {
         <hr />
         <MDXRenderer>{post.body}</MDXRenderer>
         <hr />
-        <h4>Want to hear more from me?</h4>
-        <p>Signup to my newsletter!</p>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <h4>Want to hear more from me?</h4>
+          <p>Signup to my newsletter!</p>
+        </div>
         <BootcampHero />
         <hr />
         <Bio />

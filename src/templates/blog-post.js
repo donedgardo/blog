@@ -40,7 +40,15 @@ class BlogPostTemplate extends React.Component {
         <hr />
         <MDXRenderer>{post.body}</MDXRenderer>
         <hr />
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            marginBottom: "1.5rem",
+          }}
+        >
           <h4>Want to hear more from me?</h4>
           <p>Signup to my newsletter!</p>
         </div>

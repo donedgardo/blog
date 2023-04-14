@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { LightContainer, H2, P } from "./typography/custom"
 import React from "react"
-import { SignUpForm } from "./SignUpForm"
+import { SignUpForm } from "./newsletters/SignUpForm"
 
 const Question = styled.li`
   max-width: 790px;

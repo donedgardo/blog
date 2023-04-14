@@ -86,6 +86,33 @@ module.exports = {
         extensions: [".mdx", ".md"],
         gatsbyRemarkPlugins: [
           {
+            resolve: "gatsby-remark-embed-video",
+            options: {
+              width: 800,
+              related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
+              noIframeBorder: true, //Optional: Disable insertion of <style> border: 0
+              loadingStrategy: "lazy", //Optional: Enable support for lazy-load offscreen iframes. Default is disabled.
+              containerClass: "embedVideo-container", //Optional: Custom CSS class for iframe container, for multiple classes separate them by space
+              iframeId: false, //Optional: if true, iframe's id will be set to what is provided after 'video:' (YouTube IFrame player API requires iframe id)
+            },
+          },
+          {
+            resolve: "gatsby-remark-soundcloud",
+            options: {
+              width: 800,
+              height: 200,
+            },
+          },
+          {
+            resolve: `gatsby-remark-gifs`,
+          },
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+          },
+          {
+            resolve: `gatsby-remark-smartypants`,
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
@@ -97,17 +124,9 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          {
-            resolve: `gatsby-remark-copy-linked-files`,
-          },
-          {
-            resolve: `gatsby-remark-smartypants`,
-          },
         ],
-        remarkPlugins: [
-          require('gatsby-remark-vscode').remarkPlugin
-        ],
-        plugins: [`gatsby-remark-images`],
+        remarkPlugins: [require("gatsby-remark-vscode").remarkPlugin],
+        plugins: [`gatsby-remark-images`, "gatsby-remark-gifs"],
       },
     },
     {
@@ -149,6 +168,6 @@ module.exports = {
           respectDNT: true,
         },
       },
-    }
-  ]
+    },
+  ],
 }

@@ -6,7 +6,8 @@ import Img from "gatsby-image"
 import Bio from "../components/bio"
 import BlogLayout from "../components/blog_layout"
 import SEO from "../components/seo"
-import BootcampHero from "../components/BootcampHero"
+import { SignUpBootcamp } from "../components/newsletters/sign-up-bootcamp"
+import { GameDevNewsletter } from "../components/newsletters/game-dev-newsletter"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -14,8 +15,12 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.mdx
     const { previous, next } = this.props.pageContext
 
+    const dateRaw = post?.frontmatter?.dateRaw
     const featuredImgFluid =
       post?.frontmatter?.featuredImage?.childImageSharp?.fluid
+
+    const isAfterGameDev =
+      new Date(dateRaw).getTime() >= new Date("2023-03-2").getTime()
 
     return (
       <BlogLayout
@@ -36,7 +41,9 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date}
         </p>
-        <Img fluid={featuredImgFluid} alt={post.frontmatter.title} />
+        {featuredImgFluid ? (
+          <Img fluid={featuredImgFluid} alt={post.frontmatter.title} />
+        ) : null}
         <hr />
         <MDXRenderer>{post.body}</MDXRenderer>
         <hr />
@@ -52,7 +59,7 @@ class BlogPostTemplate extends React.Component {
           <h4>Want to hear more from me?</h4>
           <p>Signup to my newsletter!</p>
         </div>
-        <BootcampHero />
+        {isAfterGameDev ? <GameDevNewsletter /> : <SignUpBootcamp />}
         <hr />
         <Bio />
         <ul
@@ -101,6 +108,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        dateRaw: date
         description
         featuredImage {
           childImageSharp {

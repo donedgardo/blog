@@ -5,9 +5,9 @@ import { MainNavBar } from "../components/MainNavBar"
 import { BrandSlideshow } from "../components/BrandSlideshow"
 import { KindWords } from "../components/KindWorlds"
 import { AboutMe } from "../components/AboutMe"
-import SignUpBootcamp from "../components/BootcampHero"
 import { Questions } from "../components/Question"
 import { PopularStuff } from "../components/PopularStuff"
+import { SignUpBootcamp } from "../components/newsletters/sign-up-bootcamp"
 
 const IndexPage = ({ location: { pathname } }) => (
   <Layout>

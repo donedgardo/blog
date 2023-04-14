@@ -19,8 +19,9 @@ class BlogPostTemplate extends React.Component {
     const featuredImgFluid =
       post?.frontmatter?.featuredImage?.childImageSharp?.fluid
 
-    const isAfterGameDev =
-      new Date(date).getTime() >= new Date("03-02-2023").getTime()
+    const articleDate = new Date(date.replace(/-/g, "/"));
+    const gameDevDate = new Date("2023/03/02".replace(/-/g, "/"));
+    const isAfterGameDev = articleDate.getTime() >= gameDevDate.getTime();
 
     return (
       <BlogLayout
@@ -107,7 +108,7 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
-        date(formatString: "MMMM dd, yyyy")
+        date(formatString: "MMMM DD, yyyy")
         description
         featuredImage {
           childImageSharp {

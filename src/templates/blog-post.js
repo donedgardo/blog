@@ -20,8 +20,7 @@ class BlogPostTemplate extends React.Component {
       post?.frontmatter?.featuredImage?.childImageSharp?.fluid
 
     const isAfterGameDev =
-      new Date(dateRaw.replace(/-/g, "/")).getTime() >=
-      new Date("2023-03-2".replace(/-/g, "/")).getTime()
+      new Date(dateRaw).getTime() >= new Date("2023-03-2").getTime()
 
     return (
       <BlogLayout

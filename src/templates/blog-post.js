@@ -15,12 +15,12 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.mdx
     const { previous, next } = this.props.pageContext
 
-    const dateRaw = post?.frontmatter?.dateRaw
+    const date = post?.frontmatter?.date
     const featuredImgFluid =
       post?.frontmatter?.featuredImage?.childImageSharp?.fluid
 
     const isAfterGameDev =
-      new Date(dateRaw).getTime() >= new Date("2023-03-2").getTime()
+      new Date(date).getTime() >= new Date("03-02-2023").getTime()
 
     return (
       <BlogLayout
@@ -108,7 +108,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        dateRaw: date
         description
         featuredImage {
           childImageSharp {

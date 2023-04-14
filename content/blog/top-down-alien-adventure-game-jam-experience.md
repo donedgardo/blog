@@ -141,7 +141,7 @@ Creating music is the most rewarding of all the hats I have worn, so that I will
 
 ### What went wrong?
 Skipping the decision-making process of what the game loop would look like ahead of time costs me a lot of effort and focus.
-The lack of deciding what the game would play made me spread out my focus on a lot of different generic features but no feature-rich game loop.
+I needed to decide what the game would play to spread out my focus on many different generic features but no feature-rich game loop.
 
 Another thing that could have gone better was the item and Inventory system's inventory system architecture.
 I noticed this on the last day of the game jam when I was updating my UI for the inventory system and to hack this part of the code:
@@ -214,8 +214,8 @@ Yeah, not pretty. This mess was due to the philosophy I took at the beginning of
 no refactoring; let's figure things out first and worry about that when we need to worry about it.
 
 ### What would I do differently if I had to do it again?
-Next solo game jam, I would take Hiwiller's advice and define a game loop before trying things without focus. I would 
-also change the no refactoring rule. Instead, I would be more flexible and refactor obtrusive code.
+Next solo game jam, I would take Hiwiller's advice and define a game loop before trying things without focus.
+Additionally, I would also change the no refactoring rule. Instead, I would be more flexible and refactor obtrusive code.
 
 ## Conclusion
 

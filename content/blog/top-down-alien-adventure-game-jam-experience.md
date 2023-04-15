@@ -46,7 +46,7 @@ Things I had in mind for the game:
 * Immersive music that placed the player in a mysterious mood.
 * AI entities can become your workers to build things for you.
 
-Yeah, looking back... maybe a little too much, lets see.
+Yeah, looking back... maybe a little too much, let's see.
 
 # The Process
 
@@ -81,11 +81,14 @@ beam and it felt rewarding after putting it all together.
 
 ### World Tiles
 
-Then I needed tiles to lay out our world, so I made them as needed!
+Then I needed tiles to lay out our world, I made them as needed.
 
 ![2d ground tiles top down adventure](../assets/ground-tiles-export.png)
 
-I was feeling confident, and on a roll, so I drew monsters to give them life and animated, as well as Bob's ship.
+I was feeling confident, and on a roll, so I drew monsters to give them life and animated them, as well as Bob's ship.
+
+![2d monster expanding and shrinking animation](../assets/organism-yellow.gif)
+![2d monster expanding and shrinking animation](../assets/organism-purple.gif)
 
 ### Dialog UI
 
@@ -137,13 +140,13 @@ Doing the art and animations seemed daunting at first, but once I got a few pixe
 so abstract was becoming real, and this gave the focus to continue.
 Another thing that went well was the ability to reuse systems from past games and better understand how ECS helps.
 I write more reusable code for future projects.
-Creating music is the most rewarding of all the hats I have worn, so that I will explore that further.
+Creating music is the most rewarding of all the hats I have worn, and I will explore that further.
 
 ### What went wrong?
 Skipping the decision-making process of what the game loop would look like ahead of time costs me a lot of effort and focus.
-I needed to decide what the game would play to spread out my focus on many different generic features but no feature-rich game loop.
+I needed to decide what the game would play like instead of spreading out my focus on many different generic features.
 
-Another thing that could have gone better was the item and Inventory system's inventory system architecture.
+Another thing that could have gone better was the item and inventory system's architecture.
 I noticed this on the last day of the game jam when I was updating my UI for the inventory system and to hack this part of the code:
 
 ```rust
@@ -219,7 +222,7 @@ Additionally, I would also change the no refactoring rule. Instead, I would be m
 
 ## Conclusion
 
-In conclusion, knowing how to stay focused is a crucial skill in achieving success in any aspect of life. By implementing
+Knowing how to stay focused is a crucial skill in achieving success in any aspect of life. By implementing
 the tips and strategies discussed in this blog post, such as minimizing distractions, setting goals, and taking breaks,
 you can improve your ability to concentrate and remain productive. Remember that staying focused is not always easy, but
 with practice and determination, you can overcome the challenges and stay on track to reach your desired outcomes.

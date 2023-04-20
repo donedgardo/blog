@@ -1,6 +1,6 @@
 ---
 path: /top-down-alien-adventure-game-jam-experience
-date: 2023-11-04T03:02:47.546Z
+date: 2023-04-11T03:02:47.546Z
 title: "Bevy Game Jam: Lessons Learned from Solo Game Development."
 description: Join me as I share my experience participating in a game jam, the challenges I faced, the tools and techniques I used, and the lessons I learned. Whether you're a beginner or experienced game developer, you'll find valuable insights and inspiration to help you create your own games. From defining a game loop to designing graphics and sound effects, I'll take you through the process step by step. Discover how I tackled multiple features and built a top-down adventure game with Bevy, the Rust game engine. Read on for valuable tips and tricks that will help you create your next game!
 featuredImage: ../assets/Bevy Game Jam_ Lessons Learned Solo Game Development.jpg

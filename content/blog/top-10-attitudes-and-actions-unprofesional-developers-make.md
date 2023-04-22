@@ -27,9 +27,9 @@ Fifthly, don't hold yourself unaccountable for shipping bugs. Developers should 
 their code and strive to reduce the error rate. It is unprofessional to assume that QA will catch all bugs. Automated
 tests for your code are crucial to ensure its quality.
 
-Sixthly, avoid tunnel visioning or "the zone" while coding. While "the zone" can increase productivity, developers often
-lose sight of the big picture. Take a break, walk, or pair program with someone else when you notice yourself
-slipping into "the zone" while coding.
+Sixthly, avoid tunnel visioning or "the zone" while coding. While "the zone" can increase the amount of code they write,
+developers often lose sight of the big picture. Take a break, walk, or pair program with someone else when you notice
+yourself slipping into "the zone" while coding.
 
 Seventhly, start work with a clear goal or definition of what is done. A well-written story with a clear goal helps resolve
 arguments and ensures that the team understands the situation.

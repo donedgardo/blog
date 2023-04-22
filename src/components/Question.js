@@ -15,11 +15,10 @@ const QuestionContainer = styled.ul`
 `
 export const Questions = () => (
   <LightContainer>
-    <H2>Ask yourself:</H2>
+    <H2>If you ask yourself:</H2>
     <QuestionContainer>
       <Question>
-        How can my business scale while my code is too rigid or fragile to
-        change?
+        How can my business scale if my code is too rigid or fragile to change?
       </Question>
       <Question>
         Am I practicing efficient and effective software development lifecycles?

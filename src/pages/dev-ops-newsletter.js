@@ -18,6 +18,7 @@ const IndexPage = ({ location: { pathname } }) => (
     <KindWords />
     <BrandSlideshow />
     <AboutMe />
+    <SignUpBootcamp />
     <FreeStuff />
   </Layout>
 )

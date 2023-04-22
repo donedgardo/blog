@@ -20,7 +20,7 @@ const StyledPortrait = styled(Portrait)`
 `
 
 const POSITION_STATEMENT =
-  "I help software professionals improve the speed and quality of their craft"
+  "I help software professionals improve the speed and quality of their craft."
 
 export const HeroContainer = () => {
   const data = useStaticQuery(graphql`

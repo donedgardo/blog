@@ -1,15 +1,15 @@
-import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
-import styled from "styled-components";
+import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import styled from "styled-components"
 
-import { DarkContainer, H1, P, SectionContent } from "./typography/custom";
-import Portrait from "./portrait";
+import { DarkContainer, H1, P, SectionContent } from "./typography/custom"
+import Portrait from "./portrait"
 
 const FlexPortrait = styled.div`
   display: flex;
   flex: 1;
   justify-content: center;
-`;
+`
 
 const StyledPortrait = styled(Portrait)`
   width: 104px;
@@ -17,10 +17,10 @@ const StyledPortrait = styled(Portrait)`
   @media (min-width: 660px) {
     width: 140px;
   }
-  
-`;
+`
 
-const POSITION_STATEMENT = "I help software teams deliver higher quality products faster.";
+const POSITION_STATEMENT =
+  "I help software professionals improve the speed and quality of their craft"
 
 export const HeroContainer = () => {
   const data = useStaticQuery(graphql`
@@ -35,7 +35,7 @@ export const HeroContainer = () => {
         }
       }
     }
-  `);
+  `)
 
   return (
     <DarkContainer>
@@ -47,5 +47,5 @@ export const HeroContainer = () => {
         <P style={{ textAlign: "center" }}>{POSITION_STATEMENT}</P>
       </SectionContent>
     </DarkContainer>
-  );
-};
+  )
+}

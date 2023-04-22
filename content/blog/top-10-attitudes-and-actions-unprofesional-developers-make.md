@@ -2,6 +2,7 @@
 path: /top-10-attitudes-unprofessional-developers-make
 date: 2023-02-03T01:22:55.506Z
 title: "The Importance of Professionalism in the Software Industry: Lessons Learned from a Decade in the Field"
+description: "Are you a software developer looking to improve your professionalism? Learn about the attitudes and actions you should avoid to become a more professional developer with these tips."
 featuredImage: ../assets/SkyRocket-100.jpg
 ---
 The software industry requires a high level of professionalism. However, as a developer, there are attitudes and actions that you

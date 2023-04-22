@@ -3,7 +3,7 @@ import React from "react"
 
 export const SignUpBootcamp = () => (
   <BootcampHero
-    title={"Carreras DevOps Newsletter"}
+    title={"CarrerasDev Newsletter"}
     description={
       "A free email newsletter to share with you how to create high performing development teams."
     }

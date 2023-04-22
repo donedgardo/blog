@@ -8,6 +8,7 @@ import { BrandSlideshow } from "../components/BrandSlideshow"
 import { KindWords } from "../components/KindWorlds"
 import { FreeStuff } from "../components/FreeStuff"
 import { AboutMe } from "../components/AboutMe"
+import { SignUpBootcamp } from "../components/newsletters/sign-up-bootcamp"
 
 const IndexPage = ({ location: { pathname } }) => (
   <Layout>
@@ -19,6 +20,7 @@ const IndexPage = ({ location: { pathname } }) => (
     <AboutMe />
     <BrandSlideshow />
     <KindWords />
+    <SignUpBootcamp />
   </Layout>
 )
 

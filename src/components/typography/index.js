@@ -1,24 +1,45 @@
-import Typography from "typography";
-import fairyGatesTheme from "typography-theme-fairy-gates";
+import Typography from "typography"
+import fairyGatesTheme from "typography-theme-fairy-gates"
 
+const lightBlue = `#032EB9`
 
-const brandBlue = `#032EB9`
-
-fairyGatesTheme.overrideThemeStyles = (ref) => {
+fairyGatesTheme.overrideThemeStyles = ref => {
   return {
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },
-    "a" : {
-      color: brandBlue,
-      textShadow: 'none',
-      backgroundImage: 'none',
+    hr: {
+      width: "100%",
+    },
+    a: {
+      color: lightBlue,
+      textShadow: "none",
+      backgroundImage: "none",
     },
     "a:hover": {
       textDecoration: `underline`,
     },
     blockquote: {
-      borderLeft: ref.rhythm(6 / 16) + " solid " + brandBlue,
+      borderLeft: ref.rhythm(6 / 16) + " solid " + lightBlue,
+    },
+    ".align-center": {
+      textAlign: "center",
+    },
+    ".cta": {
+      [`@media screen and (min-width: 600px)`]: {
+        margin: "1em 4em 0em 4em",
+      },
+      margin: "1em 0em 0em 0em",
+      backgroundColor: "#163961",
+      borderBottom: "3px solid black",
+      borderRadius: "2em",
+      display: "block",
+      fontWeight: "bold",
+      padding: "0.5em 0 0.4em 0",
+      textAlign: "center",
+      color: "#fff",
+      textDecoration: "none",
+      textTransform: "uppercase",
     },
   }
 }
@@ -37,5 +58,5 @@ export const scale = index.scale
 
 export default index
 
-export { DarkContainer } from "./custom";
-export { LightContainer } from "./custom";
+export { DarkContainer } from "./custom"
+export { LightContainer } from "./custom"

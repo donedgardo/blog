@@ -34,6 +34,10 @@ export const H2 = styled(H1)`
   font-size: 1rem;
 `
 
+export const H3 = styled(H1)`
+  font-size: 0.85rem;
+`
+
 export const Ul = styled.ul``
 
 export const Li = styled.li`
@@ -45,7 +49,6 @@ export const Li = styled.li`
 export const MyLink = styled(Link)`
   text-decoration: underline;
 `
-
 export const Button = styled.button`
   display: flex;
   text-align: center;
@@ -75,7 +78,6 @@ export const Container = styled.div`
 `
 export const DarkContainer = styled(Container)`
   background: #231f20;
-  
   ${P}, ${H1}, ${Button} {
     color: #eee9ea;
   }
@@ -127,7 +129,7 @@ export const LightContainer = styled(Container)`
 `
 
 export const SectionContent = styled.div`
-  max-width: 680px;
+  max-width: 35em;
   flex: 1;
   flex-direction: column;
   align-items: center;

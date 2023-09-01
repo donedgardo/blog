@@ -3,12 +3,11 @@ import { LightContainer, H2, P } from "./typography/custom"
 import React from "react"
 import { SignUpForm } from "./newsletters/SignUpForm"
 
-const Question = styled.li`
-  max-width: 790px;
-`
+const Question = styled.li``
 const QuestionContainer = styled.ul`
   display: flex;
   flex: 1;
+  max-width: 800px;
   flex-direction: column;
   font-family: Montserrat, serif;
   justify-content: center;

@@ -5,7 +5,7 @@ import { MainNavBar } from "../components/MainNavBar"
 import { BrandSlideshow } from "../components/BrandSlideshow"
 import { KindWords } from "../components/KindWorlds"
 import { AboutMe } from "../components/AboutMe"
-import { Questions } from "../components/Question"
+import { Questions } from "../components/BootcampQuestions"
 import { FreeStuff } from "../components/FreeStuff"
 import { SignUpBootcamp } from "../components/newsletters/sign-up-bootcamp"
 

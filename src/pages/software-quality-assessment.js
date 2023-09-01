@@ -66,19 +66,19 @@ const IndexPage = ({ location: { pathname } }) => (
           </li>
           <li>
             <strong>Codebase Review:</strong> Conduct a thorough review of your
-            team's codebase. (4-6 hours)
+            team's codebase.
           </li>
           <li>
             <strong>Team Interviews:</strong> Speak with team members to
-            understand their development practices. (2-3 hours)
+            understand their development practices.
           </li>
           <li>
             <strong>Quality Assessment:</strong> Evaluate your team's software
-            quality based on code review and interviews. (3-4 hours)
+            quality based on code review and interviews.
           </li>
           <li>
             <strong>Recommendations Report:</strong> Compile a detailed report
-            outlining areas for improvement and actionable steps. (4-5 hours)
+            outlining areas for improvement and actionable steps.
           </li>
         </ol>
         <hr />

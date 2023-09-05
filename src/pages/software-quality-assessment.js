@@ -49,8 +49,8 @@ const IndexPage = ({ location: { pathname } }) => (
           Book a live 1-on-1 assessment session with me. Why?
         </p>
         <ul>
-          <li>I have years of experience in software development</li>
-          <li>I've helped numerous teams improve their performance.</li>
+          <li>I have years of experience in software development and have helped numerous teams improve their performance.</li>
+          <li>I'm an expert in a wide range of programming languages and technologies.</li>
           <li>
             I've trained teams globally on software engineering and its best
             practices.

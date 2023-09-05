@@ -5,6 +5,11 @@ const lightBlue = `#032EB9`
 
 fairyGatesTheme.overrideThemeStyles = ref => {
   return {
+    body: {
+      fontFamily: "Montserrat, serif",
+      fontStyle: "normal",
+      color: "black",
+    },
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },
@@ -40,6 +45,10 @@ fairyGatesTheme.overrideThemeStyles = ref => {
       color: "#fff",
       textDecoration: "none",
       textTransform: "uppercase",
+    },
+    ".mx-auto": {
+      marginLeft: "auto",
+      marginRight: "auto",
     },
   }
 }

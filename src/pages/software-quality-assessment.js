@@ -8,7 +8,7 @@ import { AboutMe } from "../components/AboutMe"
 import { LightContainer } from "../components/typography"
 import { SectionContent } from "../components/typography/custom"
 import { Link } from "gatsby"
-
+const CTA_URL = "https://calendly.com/edgardo-g-carreras/1-on-1-software-quality-assessment-session"
 const IndexPage = ({ location: { pathname } }) => (
   <Layout>
     <Seo title={"Edgardo Carreras | Software Assessment & Recommendations."} />
@@ -39,7 +39,7 @@ const IndexPage = ({ location: { pathname } }) => (
         </h3>
         <p>
           <Link
-            href="https://calendly.com/edgardo-g-carreras/1-on-1-software-quality-assessment-session-with-edgardo-carreras"
+            href={CTA_URL}
             className="cta"
           >
             Get Unstuck »
@@ -94,7 +94,7 @@ const IndexPage = ({ location: { pathname } }) => (
         </p>
         <p>
           <Link
-            href="https://calendly.com/edgardo-g-carreras/1-on-1-software-quality-assessment-session-with-edgardo-carreras"
+             href={CTA_URL}
             className="cta"
           >
             Book your session »
@@ -117,7 +117,7 @@ const IndexPage = ({ location: { pathname } }) => (
         </p>
         <p>
           <Link
-            href="https://calendly.com/edgardo-g-carreras/1-on-1-software-quality-assessment-session-with-edgardo-carreras"
+            href={CTA_URL}
             className="cta"
           >
             BOOK YOUR SESSION »

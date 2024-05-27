@@ -1,9 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import { MainNavBar } from "../components/MainNavBar"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { H1, LightContainer, SectionContent } from "../components/typography/custom";
+import {
+  H1,
+  LightContainer,
+  SectionContent,
+} from "../components/typography/custom"
 
 class NotFoundPage extends React.Component {
   render() {
@@ -12,10 +17,13 @@ class NotFoundPage extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
+        <MainNavBar pathname={this.props.pathname} />
         <Seo title="404: Not Found" />
-        <LightContainer>
+        <LightContainer style={{ height: "90vh" }}>
           <H1>Not Found</H1>
-          <SectionContent>You just hit a route that doesn&#39;t exist... the sadness.</SectionContent>
+          <SectionContent>
+            You just hit a route that doesn&#39;t exist... the sadness.
+          </SectionContent>
         </LightContainer>
       </Layout>
     )

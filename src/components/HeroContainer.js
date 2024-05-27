@@ -36,11 +36,10 @@ export const HeroContainer = () => {
       }
     }
   `)
-
   return (
     <DarkContainer>
       <FlexPortrait>
-        <StyledPortrait data={data} />
+        <StyledPortrait fluid={data.placeholderImage.childImageSharp.fluid} />
       </FlexPortrait>
       <H1>HI! I'M EDGARDO CARRERAS</H1>
       <SectionContent>

@@ -3,12 +3,14 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { MainNavBar } from "../components/MainNavBar"
 import { BrandSlideshow } from "../components/BrandSlideshow"
-import { KindWords } from "../components/KindWorlds"
+import { KindWords } from "../components/KindWords"
 import { AboutMe } from "../components/AboutMe"
 import { LightContainer } from "../components/typography"
 import { SectionContent } from "../components/typography/custom"
 import { Link } from "gatsby"
-const CTA_URL = "https://calendly.com/edgardo-g-carreras/1-on-1-software-quality-assessment-session"
+
+const CTA_URL =
+  "https://calendly.com/edgardo-g-carreras/1-on-1-software-quality-assessment-session"
 const IndexPage = ({ location: { pathname } }) => (
   <Layout>
     <Seo title={"Edgardo Carreras | Software Assessment & Recommendations."} />
@@ -21,11 +23,11 @@ const IndexPage = ({ location: { pathname } }) => (
         </h2>
         <hr />
         <h3>Are You Struggling to Improve Your Software Team's Performance?</h3>
-
         <p>
           Your software team is stuck. You're facing recurring issues with code
-          quality, testing, and Agile practices. You know you need to make a
-          change but you're paralyzed by uncertainty.
+          quality, testing, and Agile practices. Your team keeps missing their
+          sprint goals. You know you need to make a change but you're paralyzed
+          by uncertainty.
         </p>
         <h3>Imagine Knowing Exactly What To Do Next</h3>
         <p>
@@ -38,10 +40,7 @@ const IndexPage = ({ location: { pathname } }) => (
           Get a Personalized Plan From an Industry Expert
         </h3>
         <p>
-          <Link
-            href={CTA_URL}
-            className="cta"
-          >
+          <Link href={CTA_URL} className="cta">
             Get Unstuck »
           </Link>
         </p>
@@ -49,8 +48,23 @@ const IndexPage = ({ location: { pathname } }) => (
           Book a live 1-on-1 assessment session with me. Why?
         </p>
         <ul>
-          <li>I have years of experience in software development and have helped numerous teams improve their performance.</li>
-          <li>I'm an expert in a wide range of programming languages and technologies.</li>
+          <li>
+            I have years of experience in software development and have helped
+            numerous teams improve their performance.
+          </li>
+          <li>
+            I have worked and learned from industry legends on best practices
+            and know what it takes to create high performing software teams.
+          </li>
+          <li>
+            I’ve taught hundreds of developers how to build software with clean
+            code through training classes and webinars. I know my stuff, but
+            more importantly, I know how to teach it.
+          </li>
+          <li>
+            I'm an expert in a wide range of programming languages and
+            technologies.
+          </li>
           <li>
             I've trained teams globally on software engineering and its best
             practices.
@@ -65,20 +79,17 @@ const IndexPage = ({ location: { pathname } }) => (
             challenges and objectives. (1-2 hours)
           </li>
           <li>
-            <strong>Codebase Review:</strong> Conduct a thorough review of your
-            team's codebase.
-          </li>
-          <li>
-            <strong>Team Interviews:</strong> Speak with team members to
+            <strong>Team Interviews:</strong>I will speak with team members to
             understand their development practices.
           </li>
           <li>
-            <strong>Quality Assessment:</strong> Evaluate your team's software
-            quality based on code review and interviews.
+            <strong>Quality Assessment:</strong>I'll Evaluate your team's
+            software quality based on code review and interviews.
           </li>
           <li>
-            <strong>Recommendations Report:</strong> Compile a detailed report
-            outlining areas for improvement and actionable steps.
+            <strong>Recommendations Report:</strong>You will receive a compiled
+            a detailed +10 page report outlining areas for improvement and
+            actionable steps.
           </li>
         </ol>
         <hr />
@@ -93,10 +104,7 @@ const IndexPage = ({ location: { pathname } }) => (
           Are you ready to take your software team to the next level? Great!
         </p>
         <p>
-          <Link
-             href={CTA_URL}
-            className="cta"
-          >
+          <Link href={CTA_URL} className="cta">
             Book your session »
           </Link>
         </p>
@@ -116,10 +124,7 @@ const IndexPage = ({ location: { pathname } }) => (
           now:
         </p>
         <p>
-          <Link
-            href={CTA_URL}
-            className="cta"
-          >
+          <Link href={CTA_URL} className="cta">
             BOOK YOUR SESSION »
           </Link>
         </p>

@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import { graphql, useStaticQuery } from "gatsby";
-import React from "react";
+import styled from "styled-components"
+import { graphql, useStaticQuery } from "gatsby"
+import React from "react"
 
-import Image from "./portrait";
-import { Container } from "./typography/custom";
+import Image from "./portrait"
+import { Container } from "./typography/custom"
 
 const FullWidthImage = styled(Image)`
   height: 320px;
@@ -14,7 +14,7 @@ const FullWidthImage = styled(Image)`
     max-width: 661px;
     margin: 0 2.45rem 0;
   }
-`;
+`
 
 const SpeakingImageContainer = styled(Container)`
   background: #fff;
@@ -23,14 +23,12 @@ const SpeakingImageContainer = styled(Container)`
   flex: 1;
   flex-direction: column;
   justify-content: center;
-`;
+`
 
 export const SpeakingImage = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(
-        relativePath: { eq: "Edgardo-Speaking@3x.png" }
-      ) {
+      placeholderImage: file(relativePath: { eq: "Edgardo-Speaking@3x.png" }) {
         childImageSharp {
           fluid(maxWidth: 1900) {
             ...GatsbyImageSharpFluid
@@ -38,9 +36,10 @@ export const SpeakingImage = () => {
         }
       }
     }
-  `);
+  `)
   return (
     <SpeakingImageContainer>
-      <FullWidthImage data={data} />
-    </SpeakingImageContainer>);
-};
+      <FullWidthImage fluid={data.placeholderImage.childImageSharp.fluid} />
+    </SpeakingImageContainer>
+  )
+}

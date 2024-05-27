@@ -55,7 +55,10 @@ fairyGatesTheme.overrideThemeStyles = ref => {
 
 delete fairyGatesTheme.googleFonts
 
-const index = new Typography(fairyGatesTheme)
+const index = new Typography({
+  ...fairyGatesTheme,
+  headerFontFamily: ["Montserrat", "serif"],
+})
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {

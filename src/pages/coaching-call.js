@@ -43,9 +43,11 @@ const IndexPage = ({ location: { pathname } }) => (
         </p>
         <h3>Imagine Knowing Exactly What To Do Next</h3>
         <p>
-          Picture this: stepping off the treadmill. Working smarter, not harder.
-          Seeing persistent issues fade away. Gaining the confidence to take
-          decisive actions that improve your team's performance.
+          Picture this: stepping off the treadmill. Reducing lead times,
+          increasing customer satisfaction, increased team collaboration, rapid
+          deployment cycles and streamlined Agile processes. Seeing persistent
+          issues fade away. Gaining the confidence to take decisive actions that
+          improve your team's performance.
         </p>
         <hr />
         <h3 className="align-center">

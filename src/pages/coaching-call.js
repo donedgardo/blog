@@ -31,16 +31,20 @@ const IndexPage = ({ location: { pathname } }) => (
         </h4>
         <hr />
         <h3>Struggling to Enhance Your Software Development Team?</h3>
-        <p>Your team feels stuck, like you’re on a never-ending loop.</p>
-        <p>
-          Recurring issues and obstacles keep appearing. You’re uncertain about
-          the next steps, and it’s paralyzing.
-        </p>
-        <p>
-          You’ve done your research—read articles, listened to podcasts,
-          attended webinars, and absorbed numerous technical books—yet applying
-          this knowledge to your team remains challenging.
-        </p>
+        <ul>
+          <li>Your software team is struggling.</li>
+          <li>
+            You face recurring challenges with code quality, testing, and agile
+            practices.
+          </li>
+          <li>
+            Your team frequently misses sprint goals, and lead times are
+            increasing, which results in decreasing customer satisfaction.
+          </li>
+          <li>
+            You know you need to make changes, but uncertainty holds you back.
+          </li>
+        </ul>
         <h3>Imagine Knowing Exactly What To Do Next</h3>
         <p>
           Picture this: stepping off the treadmill. Reducing lead times,

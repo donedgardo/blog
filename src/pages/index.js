@@ -18,13 +18,20 @@ const NewServiceSection = () => (
       <hr />
       <div className="container">
         <H1>Here's the problem...</H1>
-        <p>
-          Your software team is stuck. You're facing recurring issues with code
-          quality, testing, and Agile practices. Your team keeps missing their
-          sprint goals and increasing lead times while decreasing customer
-          satisfaction. You know you need to make a change but you're paralyzed
-          by uncertainty.
-        </p>
+        <ul>
+          <li>Your software team is struggling.</li>
+          <li>
+            You face recurring challenges with code quality, testing, and agile
+            practices.
+          </li>
+          <li>
+            Your team frequently misses sprint goals, and lead times are
+            increasing, which results in decreasing customer satisfaction.
+          </li>
+          <li>
+            You know you need to make changes, but uncertainty holds you back.
+          </li>
+        </ul>
         <H1>There must be a better way</H1>
         <ul>
           <li>Imagine knowing exactly what to do next.</li>

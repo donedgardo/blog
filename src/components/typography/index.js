@@ -17,7 +17,8 @@ fairyGatesTheme.overrideThemeStyles = ref => {
       width: "100%",
     },
     a: {
-      color: lightBlue,
+      color: "#163961",
+      fontWeight: 500,
       textShadow: "none",
       backgroundImage: "none",
     },

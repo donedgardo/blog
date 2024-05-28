@@ -28,20 +28,23 @@ const Footer = () => (
   <SocialsContainer>
     <SocialIcon
       href={"https://twitter.com/CarrerasDev"}
+      aria-label={"twitter"}
       target={"_blank"}
       image={twitterLogo}
     />
     <SocialIcon
       href={"https://www.linkedin.com/in/edgardo-carreras"}
       target={"_blank"}
+      aria-label={"linkedin"}
       image={linkedinLogo}
     />
     <SocialIcon
       href={"https://github.com/donedgardo"}
       target={"_blank"}
+      aria-label={"github"}
       image={githubLogo}
     />
-    <SocialIcon href={"/blog"} image={mediumLogo} />
+    <SocialIcon href={"/blog"} image={mediumLogo} aria-label="blog" />
   </SocialsContainer>
 )
 

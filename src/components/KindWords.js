@@ -6,10 +6,16 @@ import React from "react"
 
 const TestimonialContainer = styled.blockquote`
   max-width: 790px;
-  margin: 1em 0 0 50px;
-  border: none;
-  padding: 0.1em 1.9em 0.1em 4em;
+  background-color: #efefef;
+  border: 2px solid #ddd;
   position: relative;
+  border-radius: 0.2em;
+  margin: 1em 0 0 50px;
+  padding: 0.1em 1.9em 0.1em 4em;
+  @media (max-width: 790px) {
+    margin: 80px 0 1em 0;
+    padding: 50px 1em 1em 1em;
+  }
 `
 const StyledPortrait = styled(Portrait)`
   display: block !important;
@@ -19,21 +25,21 @@ const StyledPortrait = styled(Portrait)`
   width: 100px;
   top: 20px;
   left: -50px;
+  @media (max-width: 790px) {
+    top: -50px;
+    left: 30px;
+  }
 `
 const Testimonial = styled(P)`
-  font-size: 0.9em;
-  margin: 0;
+  font-size: 0.8em;
+  margin: 1em 0;
   font-style: italic;
   text-align: left;
   display: flex;
   color: #000000;
 `
 const TestimonialAuthor = styled(P)`
-  display: flex;
-  align-self: flex-end;
-  align-items: center;
-  justify-content: end;
-  flex-direction: row;
+  margin: 1em 0;
   font-size: 0.8em;
   color: #000000;
 `

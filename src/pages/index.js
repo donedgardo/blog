@@ -11,6 +11,7 @@ import { SignUpBootcamp } from "../components/newsletters/sign-up-bootcamp"
 import { LightContainer } from "../components/typography"
 import { H1, H2, SectionContent } from "../components/typography/custom"
 import { Link } from "gatsby"
+import { ExpensivePainPoints } from "../components/ExpensivePainPoints"
 
 const NewServiceSection = () => (
   <LightContainer>
@@ -18,20 +19,7 @@ const NewServiceSection = () => (
       <hr />
       <div className="container">
         <H1>Here's the problem...</H1>
-        <ul>
-          <li>Your software team is struggling.</li>
-          <li>
-            You face recurring challenges with code quality, testing, and agile
-            practices.
-          </li>
-          <li>
-            Your team frequently misses sprint goals, and lead times are
-            increasing, which results in decreasing customer satisfaction.
-          </li>
-          <li>
-            You know you need to make changes, but uncertainty holds you back.
-          </li>
-        </ul>
+        <ExpensivePainPoints />
         <H1>There must be a better way</H1>
         <ul>
           <li>Imagine knowing exactly what to do next.</li>

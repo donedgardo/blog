@@ -79,15 +79,15 @@ const IndexPage = ({ location: { pathname } }) => (
             challenges and objectives. (1-2 hours)
           </li>
           <li>
-            <strong>Team Interviews:</strong>I will speak with team members to
+            <strong>Team Interviews:</strong> I will speak with team members to
             understand their development practices.
           </li>
           <li>
-            <strong>Quality Assessment:</strong>I'll Evaluate your team's
+            <strong>Quality Assessment:</strong> I'll Evaluate your team's
             software quality based on code review and interviews.
           </li>
           <li>
-            <strong>Recommendations Report:</strong>You will receive a compiled
+            <strong>Recommendations Report:</strong> You will receive a compiled
             a detailed +10 page report outlining areas for improvement and
             actionable steps.
           </li>

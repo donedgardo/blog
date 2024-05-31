@@ -5,9 +5,8 @@ import { H1, Li, MyLink, P, SectionContent, Ul } from "./typography/custom"
 
 const popularLinks = [
   {
-    label:
-      "The Importance of Professionalism in the Software Industry: Lessons Learned from a Decade in the Field. (blog post)",
-    path: "/blog/top-10-attitudes-and-actions-unprofesional-developers-make",
+    label: "Clean Software Architecture (blog post)",
+    path: "/blog/clean-architecture",
   },
   {
     label:
@@ -15,12 +14,13 @@ const popularLinks = [
     path: "/blog/tdd-in-rust-game-engine-bevy",
   },
   {
-    label: "The Software Stack for the Web 3.0 Developer. (blog post)",
-    path: "/blog/software-stack-for-web-3-developer",
+    label:
+      "The Importance of Professionalism in the Software Industry: Lessons Learned from a Decade in the Field. (blog post)",
+    path: "/blog/top-10-attitudes-and-actions-unprofesional-developers-make",
   },
   {
-    label: "Clean Software Architecture (blog post)",
-    path: "/blog/clean-architecture",
+    label: "The Software Stack for the Web 3.0 Developer. (blog post)",
+    path: "/blog/software-stack-for-web-3-developer",
   },
   {
     label: "The Software Postmortem (my podcast)",

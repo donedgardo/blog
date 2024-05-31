@@ -8,6 +8,7 @@ import { AboutMe } from "../components/AboutMe"
 import { LightContainer } from "../components/typography"
 import { SectionContent } from "../components/typography/custom"
 import { Link } from "gatsby"
+import { ExpensivePainPoints } from "../components/ExpensivePainPoints"
 
 const CTA_URL =
   "https://calendly.com/edgardo-g-carreras/coaching-call-with-edgardo"
@@ -31,20 +32,7 @@ const IndexPage = ({ location: { pathname } }) => (
         </h4>
         <hr />
         <h3>Struggling to Enhance Your Software Development Team?</h3>
-        <ul>
-          <li>Your software team is struggling.</li>
-          <li>
-            You face recurring challenges with code quality, testing, and agile
-            practices.
-          </li>
-          <li>
-            Your team frequently misses sprint goals, and lead times are
-            increasing, which results in decreasing customer satisfaction.
-          </li>
-          <li>
-            You know you need to make changes, but uncertainty holds you back.
-          </li>
-        </ul>
+        <ExpensivePainPoints />
         <h3>Imagine Knowing Exactly What To Do Next</h3>
         <p>
           Picture this: stepping off the treadmill. Reducing lead times,

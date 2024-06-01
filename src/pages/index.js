@@ -48,18 +48,18 @@ const NewServiceSection = () => (
             Book Your Call Now »
           </Link>
         </p>
-        <H2>In-Depth Organization Assessment</H2>
+        <H2>Sass Team Performance Roadmap</H2>
         <p>
           Want to transform your software development team into an industry
-          leader? This assessment involves a comprehensive software quality
+          leader? This assessment involves a comprehensive software team quality
           assessment aimed at improving your development team's performance. It
           includes an initial consultation, codebase review, team interviews,
           and a quality assessment with a +10 page personalized plan from an
           industry expert.
         </p>
         <p>
-          <Link href="/software-quality-assessment" className="cta">
-            Get your Personalized Plan »
+          <Link href="/sass-team-performance-roadmap" className="cta">
+            Get your Personalized Roadmap »
           </Link>
         </p>
       </div>

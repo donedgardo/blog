@@ -10,14 +10,14 @@ import { SectionContent } from "../components/typography/custom"
 import { Link } from "gatsby"
 
 const CTA_URL =
-  "https://calendly.com/edgardo-g-carreras/1-on-1-software-quality-assessment-session"
+  "https://calendly.com/edgardo-g-carreras/1-on-1-sass-team-performance-assessment"
 const IndexPage = ({ location: { pathname } }) => (
   <Layout>
-    <Seo title={"Edgardo Carreras | Software Assessment & Recommendations."} />
+    <Seo title={"Edgardo Carreras | Sass Team Performance Roadmap"} />
     <MainNavBar pathname={pathname} />
     <LightContainer>
       <SectionContent>
-        <h1 className="align-center">Software Quality Assessment</h1>
+        <h1 className="align-center">Sass Team Performance Roadmap</h1>
         <h2 className="align-center">
           Transform Your Software Development Team into an Industry Leader
         </h2>

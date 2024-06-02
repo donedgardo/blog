@@ -18,66 +18,38 @@ const Form = styled.form`
 const EmailInput = styled.input`
   display: flex;
   flex: 1;
-  text-align: center;
-  padding: 0.4em 2em;
+  padding: 0.4em 0.5em;
   font-size: 0.9em;
   border-radius: 12px;
+  ::placeholder {
+    text-align: center;
+  }
 `
-export const SignUpForm = props => {
-  const [status, setStatus] = useState(null)
+export const SignUpForm = ({ url, ctaLabel, dark }) => {
   const [email, setEmail] = useState("")
   const FORM_URL =
-    props.url || "https://app.convertkit.com/forms/3332277/subscriptions"
-  const handleSubmit = async e => {
-    e.preventDefault()
-    const data = new FormData(e.target)
-    try {
-      const response = await fetch(FORM_URL, {
-        method: "post",
-        body: data,
-        headers: {
-          accept: "application/json",
-        },
-      })
-      setEmail("")
-      const json = await response.json()
-      if (json.status === "success") {
-        setStatus("SUCCESS")
-      } else {
-        setStatus("ERROR")
-      }
-    } catch (err) {
-      setStatus("ERROR")
-    }
-  }
+    url || "https://app.convertkit.com/forms/3332277/subscriptions"
+
   const handleInputChange = event => {
     const { value } = event.target
     setEmail(value)
   }
 
   return (
-    <>
-      {status === "SUCCESS" && (
-        <FormFeedback>Please go confirm your subscription!</FormFeedback>
-      )}
-      {status === "ERROR" && (
-        <FormFeedback>Oops, Something went wrong! try again.</FormFeedback>
-      )}
-      <Form action={FORM_URL} method="post" onSubmit={handleSubmit}>
-        <EmailInput
-          type="email"
-          aria-label="Your email"
-          label="Your email"
-          name="email_address"
-          placeholder="What's your best email address?"
-          onChange={handleInputChange}
-          value={email}
-          required
-        />
-        <Button type="submit" dark={props.dark}>
-          {props.ctaLabel || "SUBSCRIBE NOW"}
-        </Button>
-      </Form>
-    </>
+    <Form action={FORM_URL} method="post">
+      <EmailInput
+        type="email"
+        aria-label="Your email"
+        label="Your email"
+        name="email_address"
+        placeholder="What's your best email address?"
+        onChange={handleInputChange}
+        value={email}
+        required
+      />
+      <Button type="submit" dark={dark}>
+        {ctaLabel || "SUBSCRIBE NOW"}
+      </Button>
+    </Form>
   )
 }

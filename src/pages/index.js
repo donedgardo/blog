@@ -36,7 +36,19 @@ const NewServiceSection = () => (
           </li>
         </ul>
         <H1>Ways I can help</H1>
-        <H2>Private Coaching Call</H2>
+        <H2>1/ Sass Team Bootcamp</H2>
+        <p>
+          A free six-part email series providing actionable insights and
+          real-world strategies to overcome common SaaS development challenges,
+          streamline processes, and enhance team performance and operational
+          efficiency.
+        </p>
+        <p>
+          <Link href="/sass-team-bootcamp" className="cta">
+            Send Lesson 1 Now »
+          </Link>
+        </p>
+        <H2>2/ Private Coaching Call</H2>
         <p>
           Are you struggling with specific software development challenge and
           need expert advice quickly? Book a private 1:1 coaching call now. I’ll
@@ -48,7 +60,7 @@ const NewServiceSection = () => (
             Book Your Call Now »
           </Link>
         </p>
-        <H2>Sass Team Performance Roadmap</H2>
+        <H2>3/ Sass Team Performance Roadmap</H2>
         <p>
           Want to transform your software development team into an industry
           leader? This assessment involves a comprehensive software team quality
@@ -77,7 +89,6 @@ const IndexPage = ({ location: { pathname } }) => (
     <BrandSlideshow />
     <AboutMe />
     <FreeStuff />
-    <SignUpBootcamp />
   </Layout>
 )
 

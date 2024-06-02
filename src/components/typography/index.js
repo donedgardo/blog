@@ -10,6 +10,9 @@ fairyGatesTheme.overrideThemeStyles = ref => {
       fontStyle: "normal",
       color: "black",
     },
+    "h1,h2,h3,h4,h5": {
+      marginBottom: "1.725rem",
+    },
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },
@@ -35,6 +38,7 @@ fairyGatesTheme.overrideThemeStyles = ref => {
       [`@media screen and (min-width: 600px)`]: {
         margin: "1em 4em 0em 4em",
       },
+      maxWidth: "34em",
       margin: "1em 0em 0em 0em",
       backgroundColor: "#163961",
       borderBottom: "3px solid black",

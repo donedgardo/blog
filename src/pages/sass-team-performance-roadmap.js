@@ -112,7 +112,6 @@ const IndexPage = ({ location: { pathname } }) => (
       </SectionContent>
     </LightContainer>
     <KindWords />
-    <AboutMe />
     <LightContainer>
       <SectionContent>
         <hr />
@@ -149,6 +148,7 @@ const IndexPage = ({ location: { pathname } }) => (
         <p></p>
       </SectionContent>
     </LightContainer>
+    <AboutMe />
     <BrandSlideshow />
   </Layout>
 )

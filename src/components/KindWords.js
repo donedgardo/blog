@@ -10,7 +10,7 @@ const TestimonialContainer = styled.blockquote`
   border: 2px solid #ddd;
   position: relative;
   border-radius: 0.2em;
-  margin: 1em 0 0 50px;
+  margin: 1em 0 1.5em 50px;
   padding: 0.1em 1.9em 0.1em 4em;
   @media (max-width: 790px) {
     margin: 80px 0 1em 0;
@@ -238,6 +238,7 @@ export const KindWords = () => {
             <StyledPortrait fixed={data.samImg.childImageSharp.fixed} />
           </TestimonialAuthor>
         </TestimonialContainer>
+        <Hr />
       </SectionContent>
     </LightContainer>
   )

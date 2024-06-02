@@ -67,9 +67,12 @@ export const Button = styled.button`
   padding: 0.4em 2em;
   letter-spacing: 0.1em;
   flex: 1;
+  :hover {
+    text-decoration: underline;
+  }
 `
 export const Container = styled.div`
-  padding: 0.01rem 2.45rem 2.175rem;
+  padding: 0.01rem 2.45rem 0;
   display: flex;
   flex: 1;
   flex-direction: column;

@@ -238,7 +238,6 @@ export const KindWords = () => {
             <StyledPortrait fixed={data.samImg.childImageSharp.fixed} />
           </TestimonialAuthor>
         </TestimonialContainer>
-        <Hr />
       </SectionContent>
     </LightContainer>
   )

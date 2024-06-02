@@ -2,6 +2,7 @@ import Typography from "typography"
 import fairyGatesTheme from "typography-theme-fairy-gates"
 
 const lightBlue = `#032EB9`
+const blackBrand = "#231f20"
 
 fairyGatesTheme.overrideThemeStyles = ref => {
   return {
@@ -40,7 +41,7 @@ fairyGatesTheme.overrideThemeStyles = ref => {
       },
       maxWidth: "34em",
       margin: "1em 0em 0em 0em",
-      backgroundColor: "#163961",
+      backgroundColor: blackBrand,
       borderBottom: "3px solid black",
       borderRadius: "2em",
       display: "block",

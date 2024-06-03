@@ -124,13 +124,41 @@ export const KindWords = () => {
         <Hr />
         <TestimonialContainer>
           <Testimonial>
-            “Edgardo has a vast knowledge and understanding of development
-            processes and technical abilities which he consistently demonstrates
-            through the quality of his work."
+            "Edgardo is an Expert, Responsible, and timely professional who
+            helped us rethink our standards and find the right solutions.
+            Edgardo is not scared to bring the hard truths in a respectable
+            manner."
           </Testimonial>
           <TestimonialAuthor>
-            - Karlo Martinez
-            <StyledPortrait fixed={data.karloImg.childImageSharp.fixed} />
+            - Johann Gracia
+            <StyledPortrait fixed={data.johannImg.childImageSharp.fixed} />
+          </TestimonialAuthor>
+        </TestimonialContainer>
+
+        <Hr />
+        <TestimonialContainer>
+          <Testimonial>
+            “Edgardo is one of the most knowledgeable and fastest programmers I
+            know. He always makes sure to be up to date with the latest tools
+            and has a keen eye for improving products and developing innovative
+            ideas.”
+          </Testimonial>
+          <TestimonialAuthor>
+            - Tania Gonzalez
+            <StyledPortrait fixed={data.taniaImg.childImageSharp.fixed} />
+          </TestimonialAuthor>
+        </TestimonialContainer>
+
+        <Hr />
+        <TestimonialContainer>
+          <Testimonial>
+            "Edgardo provided invaluable mentorship, helping junior developers
+            grow technically and enforcing high code standards through TDD and
+            tool integration."
+          </Testimonial>
+          <TestimonialAuthor>
+            - William Cheung
+            <StyledPortrait fixed={data.williamImg.childImageSharp.fixed} />
           </TestimonialAuthor>
         </TestimonialContainer>
 
@@ -151,8 +179,8 @@ export const KindWords = () => {
         <TestimonialContainer>
           <Testimonial>
             "Through Edgardo's hands-on approach, I learned invaluable tactics
-            for team management and implementing CI/CD and monitoring. His focus
-            on value over effort is exceptional."
+            for team management, implementing CI/CD and monitoring. His focus on
+            value over effort is exceptional."
           </Testimonial>
           <TestimonialAuthor>
             - Fernando Yordan
@@ -163,41 +191,13 @@ export const KindWords = () => {
         <Hr />
         <TestimonialContainer>
           <Testimonial>
-            "Edgardo is an Expert, Responsible, and timely professional who
-            helped us rethink our standards and find the right solutions.
-            Edgardo is not scared to bring the hard truths in a respectable
-            manner."
+            “Edgardo has a vast knowledge and understanding of development
+            processes and technical abilities which he consistently demonstrates
+            through the quality of his work."
           </Testimonial>
           <TestimonialAuthor>
-            - Johann Gracia
-            <StyledPortrait fixed={data.johannImg.childImageSharp.fixed} />
-          </TestimonialAuthor>
-        </TestimonialContainer>
-
-        <Hr />
-        <TestimonialContainer>
-          <Testimonial>
-            "Edgardo provided invaluable mentorship, helping junior developers
-            grow technically and enforcing high code standards through TDD and
-            tool integration."
-          </Testimonial>
-          <TestimonialAuthor>
-            - William Cheung
-            <StyledPortrait fixed={data.williamImg.childImageSharp.fixed} />
-          </TestimonialAuthor>
-        </TestimonialContainer>
-
-        <Hr />
-        <TestimonialContainer>
-          <Testimonial>
-            “Edgardo is one of the most knowledgeable and fastest programmers I
-            know. He always makes sure to be up to date with the latest tools
-            and has a keen eye for improving products and developing innovative
-            ideas.”
-          </Testimonial>
-          <TestimonialAuthor>
-            - Tania Gonzalez
-            <StyledPortrait fixed={data.taniaImg.childImageSharp.fixed} />
+            - Karlo Martinez
+            <StyledPortrait fixed={data.karloImg.childImageSharp.fixed} />
           </TestimonialAuthor>
         </TestimonialContainer>
 

@@ -9,6 +9,7 @@ import { LightContainer } from "../components/typography"
 import { SectionContent } from "../components/typography/custom"
 import { Link } from "gatsby"
 import { ExpensivePainPoints } from "../components/ExpensivePainPoints"
+import { WhyMe } from "../components/why-me"
 
 const CTA_URL =
   "https://calendly.com/edgardo-g-carreras/coaching-call-with-edgardo"
@@ -55,30 +56,7 @@ const IndexPage = ({ location: { pathname } }) => (
           right time. Move past analysis paralysis and find out exactly what to
           do next. Schedule a live 1:1 coaching call with me now. Why?
         </p>
-        <ul>
-          <li>
-            I have worked and learned from industry legends on best practices
-            and know what it takes to create high performing software teams.
-          </li>
-          <li>
-            I have years of experience in software development and have helped
-            numerous teams improve their performance.
-          </li>
-          <li>
-            I’ve taught hundreds of tech teams how to build software with clean
-            code through training classes and webinars. I know my stuff, but
-            more importantly, I know how to teach it.
-          </li>
-          <li>
-            I'm an expert in a wide range of programming languages and
-            technologies.
-          </li>
-          <li>
-            I've trained teams globally on software engineering and its best
-            practices.
-          </li>
-          <li>I'm bilingual, proficient in both English and Spanish.</li>
-        </ul>
+        <WhyMe />
         <hr />
         <h3>Here's How It Works:</h3>
         <ol>

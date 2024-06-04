@@ -8,9 +8,11 @@ import { AboutMe } from "../components/AboutMe"
 import { LightContainer } from "../components/typography"
 import { SectionContent } from "../components/typography/custom"
 import { Link } from "gatsby"
+import { WhyMe } from "../components/why-me"
 
 const CTA_URL =
   "https://calendly.com/edgardo-g-carreras/1-on-1-sass-team-performance-assessment"
+
 const IndexPage = ({ location: { pathname } }) => (
   <Layout>
     <Seo title={"Edgardo Carreras | Sass Team Performance Roadmap"} />
@@ -47,30 +49,7 @@ const IndexPage = ({ location: { pathname } }) => (
         <p className="align-center">
           Book a live 1-on-1 assessment session with me. Why?
         </p>
-        <ul>
-          <li>
-            I have years of experience in software development and have helped
-            numerous teams improve their performance.
-          </li>
-          <li>
-            I have worked and learned from industry legends on best practices
-            and know what it takes to create high performing software teams.
-          </li>
-          <li>
-            I’ve taught hundreds of developers how to build software with clean
-            code through training classes and webinars. I know my stuff, but
-            more importantly, I know how to teach it.
-          </li>
-          <li>
-            I'm an expert in a wide range of programming languages and
-            technologies.
-          </li>
-          <li>
-            I've trained teams globally on software engineering and its best
-            practices.
-          </li>
-          <li>I'm bilingual, proficient in both English and Spanish.</li>
-        </ul>
+        <WhyMe />
         <hr />
         <h3>Here's How It Works:</h3>
         <ol>

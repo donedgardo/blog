@@ -7,7 +7,6 @@ import { BrandSlideshow } from "../components/BrandSlideshow"
 import { KindWords } from "../components/KindWords"
 import { FreeStuff } from "../components/FreeStuff"
 import { AboutMe } from "../components/AboutMe"
-import { SignUpBootcamp } from "../components/newsletters/sign-up-bootcamp"
 import { LightContainer } from "../components/typography"
 import { H1, H2, SectionContent } from "../components/typography/custom"
 import { Link } from "gatsby"
@@ -36,7 +35,7 @@ const NewServiceSection = () => (
           </li>
         </ul>
         <H1>Ways I can help</H1>
-        <H2>1/ Sass Team Bootcamp</H2>
+        <H2>1/ SaaS Team Bootcamp</H2>
         <p>
           A free six-part email series providing actionable insights and
           real-world strategies to overcome common SaaS development challenges,
@@ -44,7 +43,7 @@ const NewServiceSection = () => (
           efficiency.
         </p>
         <p>
-          <Link href="/sass-team-bootcamp" className="cta">
+          <Link href="/saas-team-bootcamp" className="cta">
             Send Lesson 1 Now »
           </Link>
         </p>
@@ -60,7 +59,7 @@ const NewServiceSection = () => (
             Book Your Call Now »
           </Link>
         </p>
-        <H2>3/ Sass Team Performance Roadmap</H2>
+        <H2>3/ SaaS Team Performance Roadmap</H2>
         <p>
           Want to transform your software development team into an industry
           leader? This assessment involves a comprehensive software team quality
@@ -70,7 +69,7 @@ const NewServiceSection = () => (
           industry expert.
         </p>
         <p>
-          <Link href="/sass-team-performance-roadmap" className="cta">
+          <Link href="/saas-team-performance-roadmap" className="cta">
             Get your Personalized Roadmap »
           </Link>
         </p>

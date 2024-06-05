@@ -11,15 +11,15 @@ import { Link } from "gatsby"
 import { WhyMe } from "../components/why-me"
 
 const CTA_URL =
-  "https://calendly.com/edgardo-g-carreras/1-on-1-sass-team-performance-assessment"
+  "https://calendly.com/edgardo-g-carreras/1-on-1-saas-team-performance-assessment"
 
 const IndexPage = ({ location: { pathname } }) => (
   <Layout>
-    <Seo title={"Edgardo Carreras | Sass Team Performance Roadmap"} />
+    <Seo title={"Edgardo Carreras | SaaS Team Performance Roadmap"} />
     <MainNavBar pathname={pathname} />
     <LightContainer>
       <SectionContent>
-        <h1 className="align-center">Sass Team Performance Roadmap</h1>
+        <h1 className="align-center">SaaS Team Performance Roadmap</h1>
         <h2 className="align-center">
           Transform Your Software Development Team into an Industry Leader
         </h2>

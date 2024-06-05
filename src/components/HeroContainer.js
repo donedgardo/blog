@@ -20,7 +20,7 @@ const StyledPortrait = styled(Portrait)`
 `
 
 const POSITION_STATEMENT =
-  "I help C-level executives in Sass organizations decrease their software development teams lead-times, increase their profitability, and improve their customers satisfaction."
+  "I help C-level executives in SaaS organizations decrease their software development teams lead-times, increase their profitability, and improve their customers satisfaction."
 
 export const HeroContainer = () => {
   const data = useStaticQuery(graphql`

@@ -9,6 +9,7 @@ import { AboutMe } from "./AboutMe"
 import { BrandSlideshow } from "./BrandSlideshow"
 import { FreeStuff } from "./FreeStuff"
 import React from "react"
+import { ExpensivePainPoints } from "./ExpensivePainPoints"
 
 const SaasTeamBootcampPage = ({ location: { pathname } }) => (
   <Layout>
@@ -33,28 +34,15 @@ const SaasTeamBootcampPage = ({ location: { pathname } }) => (
         </p>
         <hr />
 
-        <h2 className="align-center">Here's the problem...</h2>
+        <h2 className="align-center">The problem...</h2>
+        <ExpensivePainPoints />
         <p>
-          Are you constantly dealing with slow release cycles, high-stress
-          deployments, and increasing customer dissatisfaction? As a C-level
-          executive, you face immense pressure to deliver high-quality features
-          quickly while maintaining operational efficiency. It's frustrating
-          when your development team struggles with:
+          These issues can severely impact your SaaS organization, leading to
+          stalled growth, frustrated teams, and dissatisfied customers. If these
+          challenges sound familiar, it's time to take action and make the
+          necessary changes to get your software team back on track and aligned
+          with business objectives.
         </p>
-        <ul>
-          <li>
-            <b>Slow Release Cycles:</b> Preventing rapid feature introductions
-            and stalling innovation.
-          </li>
-          <li>
-            <b>High-Stress Deployments:</b> Eroding developer confidence and
-            leading to burnout.
-          </li>
-          <li>
-            <b>Rising Defects and Long Lead Times:</b> Negatively affecting
-            customer satisfaction and retention.
-          </li>
-        </ul>
         <h3 className="align-center">There must be a better way</h3>
         <p>
           Imagine a world where your development team operates like a well-oiled

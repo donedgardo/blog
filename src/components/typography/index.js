@@ -10,6 +10,7 @@ fairyGatesTheme.overrideThemeStyles = ref => {
       fontFamily: "Montserrat, serif",
       fontStyle: "normal",
       color: "black",
+      lineHeight: "1.5em",
     },
     "h1,h2,h3,h4,h5": {
       marginBottom: "1.725rem",

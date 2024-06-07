@@ -36,7 +36,7 @@ const IndexPage = ({ location: { pathname } }) => (
         <ExpensivePainPoints />
         <h3>Imagine Knowing Exactly What To Do Next</h3>
         <p>
-          Picture this: stepping off the treadmill. Reducing lead times,
+          <b>Picture this-</b> stepping off the treadmill. Reducing lead times,
           increasing customer satisfaction, team collaboration. Rapid deployment
           cycles and streamlined Agile processes. Seeing persistent issues fade
           away. Gaining the confidence to take decisive actions that improve

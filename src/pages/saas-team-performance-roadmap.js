@@ -9,6 +9,7 @@ import { LightContainer } from "../components/typography"
 import { SectionContent } from "../components/typography/custom"
 import { Link } from "gatsby"
 import { WhyMe } from "../components/why-me"
+import { ExpensivePainPoints } from "../components/ExpensivePainPoints"
 
 const CTA_URL =
   "https://calendly.com/edgardo-g-carreras/1-on-1-saas-team-performance-assessment"
@@ -24,14 +25,11 @@ const IndexPage = ({ location: { pathname } }) => (
           Transform Your Software Development Team into an Industry Leader
         </h2>
         <hr />
-        <h3>Are You Struggling to Improve Your Software Team's Performance?</h3>
-        <p>
-          Your software team is stuck. You're facing recurring issues with code
-          quality, testing, and Agile practices. Your team keeps missing their
-          sprint goals. You know you need to make a change but you're paralyzed
-          by uncertainty.
-        </p>
-        <h3>Imagine Knowing Exactly What To Do Next</h3>
+        <h3 className="align-center">The Problem...</h3>
+        <ExpensivePainPoints />
+        <h3 className="align-center">
+          Imagine Knowing Exactly What To Do Next
+        </h3>
         <p>
           Imagine your team working smarter, not harder. Imagine those recurring
           issues disappearing. Imagine having the confidence to act decisively
@@ -90,7 +88,34 @@ const IndexPage = ({ location: { pathname } }) => (
         <hr />
       </SectionContent>
     </LightContainer>
+    <LightContainer>
+      <SectionContent>
+        <h3 className="align-center">
+          Recent Recommendation Wins for Clients:
+        </h3>
+        <ul>
+          <li>
+            <b>Lead Times:</b> Decreased by 80%, streamlining their development
+            process and enhancing our agility.
+          </li>
+          <li>
+            <b>Throughput:</b> Increased by 250%, reflecting boost in their
+            productivity and capability to deliver more value within the same
+            timeframe.
+          </li>
+          <li>
+            <b>Release Frequency:</b> Increased by 300%, enabling them to
+            rapidly deliver updates and innovations to their customers.
+          </li>
+          <li>
+            <b>Faulty Deployments:</b> Decreased 50% in the number of bugs
+            reaching production.
+          </li>
+        </ul>
+      </SectionContent>
+    </LightContainer>
     <KindWords />
+
     <LightContainer>
       <SectionContent>
         <hr />

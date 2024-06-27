@@ -60,7 +60,7 @@ const IndexPage = ({ location: { pathname } }) => (
             understand their development practices.
           </li>
           <li>
-            <strong>Quality Assessment:</strong> I'll Evaluate your team's
+            <strong>Quality Assessment:</strong> I'll evaluate your team's
             software quality based on code review and interviews.
           </li>
           <li>

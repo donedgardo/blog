@@ -91,7 +91,7 @@ const IndexPage = ({ location: { pathname } }) => (
     <LightContainer>
       <SectionContent>
         <h3 className="align-center">
-          Recent Recommendation Wins for Clients:
+          Recent Recommendation Wins from Clients:
         </h3>
         <ul>
           <li>

@@ -10,30 +10,12 @@ import { AboutMe } from "../components/AboutMe"
 import { LightContainer } from "../components/typography"
 import { H1, H2, SectionContent } from "../components/typography/custom"
 import { Link } from "gatsby"
-import { ExpensivePainPoints } from "../components/ExpensivePainPoints"
 
 const NewServiceSection = () => (
   <LightContainer>
     <SectionContent id="productized-service">
       <hr />
       <div className="container">
-        <H1>Here's the problem...</H1>
-        <ExpensivePainPoints />
-        <H1>There must be a better way</H1>
-        <ul>
-          <li>Imagine knowing exactly what to do next.</li>
-          <li>Imagine those recurring issues disappearing.</li>
-          <li>Imagine your team consistently hitting sprint goals.</li>
-          <li>Imagine your team delivering faster and with more confidence.</li>
-          <li>
-            Imagine decreasing your lead times while also increasing overall
-            quality.
-          </li>
-          <li>
-            Imagine having the confidence to act decisively on improving your
-            team's performance.
-          </li>
-        </ul>
         <H1>Ways I can help</H1>
         <H2>1/ SaaS Team Bootcamp</H2>
         <p>

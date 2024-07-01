@@ -1,12 +1,7 @@
 import styled from "styled-components"
-import { Button, P } from "../typography/custom"
+import { Button } from "../typography/custom"
 import React, { useState } from "react"
 
-const FormFeedback = styled(P)`
-  text-align: center;
-  font-weight: 300;
-  font-size: 0.9rem;
-`
 const Form = styled.form`
   display: flex;
   flex-direction: column;

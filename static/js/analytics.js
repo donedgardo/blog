@@ -12,3 +12,4 @@ function startAnalytics(c, l, a, r, i, t, y) {
 }
 
 startAnalytics(window, document, "clarity", "script", "mp10bxqw30")
+window.clarity("consent")

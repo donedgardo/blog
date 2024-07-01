@@ -132,7 +132,7 @@ export const LightContainer = styled(Container)`
 `
 
 export const SectionContent = styled.div`
-  max-width: 35em;
+  max-width: 36em;
   flex: 1;
   flex-direction: column;
   align-items: center;

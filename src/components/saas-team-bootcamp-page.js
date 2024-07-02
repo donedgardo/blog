@@ -17,14 +17,18 @@ const SaasTeamBootcampPage = ({ location: { pathname } }) => (
     <MainNavBar pathname={pathname} />
     <LightContainer>
       <SectionContent>
-        <h1 className="align-center">SaaS Team Bootcamp</h1>
-        <h3 className="align-center">
-          Unlock Your SaaS Team's Full Potential with Our Free 6-Part Bootcamp
-        </h3>
+        <h1 className="align-center">
+          Transform Your Software Teams with My Free 6-Part Bootcamp!
+        </h1>
         <p>
-          A six-part email series providing actionable insights and real-world
-          strategies to overcome common SaaS development challenges, streamline
-          processes, and enhance team performance and operational efficiency.
+          <b>
+            Struggling with slow release cycles, high-stress deployments, and
+            keeping your customers happy?
+          </b>{" "}
+        </p>
+        <p>
+          Join the SaaS Team Bootcamp and discover the secrets to building a
+          high-performing, agile development team.
         </p>
         <p>
           <SignUpForm
@@ -33,16 +37,8 @@ const SaasTeamBootcampPage = ({ location: { pathname } }) => (
           />
         </p>
         <hr />
-
         <h2 className="align-center">The problem...</h2>
         <ExpensivePainPoints />
-        <p>
-          These issues can severely impact your SaaS organization, leading to
-          stalled growth, frustrated teams, and dissatisfied customers. If these
-          challenges sound familiar, it's time to take action and make the
-          necessary changes to get your software team back on track and aligned
-          with business objectives.
-        </p>
         <h3 className="align-center">There must be a better way</h3>
         <p>
           Imagine a world where your development team operates like a well-oiled
@@ -70,16 +66,18 @@ const SaasTeamBootcampPage = ({ location: { pathname } }) => (
         <p>
           <ol>
             <li>
-              <b>Common Challenges in Development Teams:</b> Identify and
-              address core issues hindering productivity.
+              <b>Identify and Overcome: </b>
+              Pinpoint core issues slowing your team and tackle them head-on.
             </li>
             <li>
-              <b>Setting Clear Goals:</b> Align goals with strategic objectives
-              for maximum impact.
+              <b>Clear Goals, Real Outcomes:</b>
+              Align your team's goals with your business strategy to maximize
+              impact.
             </li>
             <li>
-              <b>Collaborative Design Sessions:</b> Harness the power of
-              collective brainstorming and stakeholder alignment.
+              <b>Collaborative Design Sessions:</b>
+              Leverage group facilitation insights for innovative solutions and
+              stakeholder alignment.
             </li>
             <li>
               <b>Pair Programming and Mob Programming:</b> Boost productivity

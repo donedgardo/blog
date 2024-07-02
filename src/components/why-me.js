@@ -9,10 +9,6 @@ export const WhyMe = function() {
         execution.
       </li>
       <li>
-        I have years of experience leading software development projects and
-        have helped numerous teams enhance their performance.
-      </li>
-      <li>
         Having worked with and learned from industry legends, I know what it
         takes to build high-performing software teams and successful projects.
       </li>
@@ -22,9 +18,8 @@ export const WhyMe = function() {
         but I also excel in teaching it.
       </li>
       <li>
-        I've trained teams globally on software engineering best practices,
-        ensuring they are equipped with the latest and most effective tools and
-        techniques.
+        I have years of experience leading software development projects and
+        have helped numerous teams enhance their performance.
       </li>
       <li>
         I'm bilingual and proficient in English and Spanish, making me

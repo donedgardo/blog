@@ -22,7 +22,7 @@ const IndexPage = ({ location: { pathname } }) => (
       <SectionContent>
         <h1 className="align-center">SaaS Team Performance Roadmap</h1>
         <h2 className="align-center">
-          Transform Your Software Development Team into an Industry Leader
+          Ready to make your software development team the best in the biz? 🌟
         </h2>
         <hr />
         <h3 className="align-center">The Problem...</h3>
@@ -52,21 +52,20 @@ const IndexPage = ({ location: { pathname } }) => (
         <h3>Here's How It Works:</h3>
         <ol>
           <li>
-            <strong>Initial Consultation:</strong> Understand your development
-            challenges and objectives. (1-2 hours)
+            <strong>Initial Consultation:</strong> Let’s chat and set the stage
+            for transformation.
           </li>
           <li>
-            <strong>Team Interviews:</strong> I will speak with team members to
-            understand their development practices.
+            <strong>Team Interviews:</strong> Real talk with your team to get to
+            the core.
           </li>
           <li>
-            <strong>Quality Assessment:</strong> I'll evaluate your team's
-            software quality based on code review and interviews.
+            <strong>Quality Assessment:</strong> A thorough evaluation to
+            spotlight areas of improvement.
           </li>
           <li>
-            <strong>Recommendations Report:</strong> You will receive a compiled
-            a detailed +10 page report outlining areas for improvement and
-            actionable steps.
+            <strong>Personalized Plan:</strong> Over 10 pages of tailored
+            strategies to supercharge your team.
           </li>
         </ol>
         <hr />

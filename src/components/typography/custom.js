@@ -121,18 +121,17 @@ export const LightContainer = styled(Container)`
   }
   ${Button} {
     color: white;
-    background: #231f20;
-    border: 1px solid #fefefe;
+    background: #0071b0;
+    border: 1px solid #0071b0;
   }
   ${Button}:hover {
-    color: black;
-    background: #fefefe;
+    background: #0071b0;
     border: 1px solid #231f20;
   }
 `
 
 export const SectionContent = styled.div`
-  max-width: 36em;
+  max-width: 35em;
   flex: 1;
   flex-direction: column;
   align-items: center;

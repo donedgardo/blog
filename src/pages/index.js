@@ -19,10 +19,10 @@ const NewServiceSection = () => (
         <H1>Ways I can help</H1>
         <H2>1/ SaaS Team Bootcamp</H2>
         <p>
-          A free six-part email series providing actionable insights and
-          real-world strategies to overcome common SaaS development challenges,
-          streamline processes, and enhance team performance and operational
-          efficiency.
+          Feeling the SaaS pressure? I've got your back! Introducing my{" "}
+          <b>FREE Six-Part Email Series</b> designed to tackle your toughest
+          development challenges, optimize your processes, and supercharge your
+          team’s performance. Let's make SaaS development a breeze!
         </p>
         <p>
           <Link href="/saas-team-bootcamp" className="cta">
@@ -31,24 +31,27 @@ const NewServiceSection = () => (
         </p>
         <H2>2/ Private Coaching Call</H2>
         <p>
-          Are you struggling with specific software development challenge and
-          need expert advice quickly? Book a private 1:1 coaching call now. I’ll
-          give you no-nonsense advice that you can put into action immediately,
-          guaranteed.
+          Got a nagging software development challenge that’s slowing you down?
+          🚀 Let’s solve it together.
+          <br />
+          <b>Quick Fixes, Zero Fluff</b>: Get straight-to-the-point advice you
+          can use immediately.
+          <br />
+          <b>Results Guaranteed</b>: I don’t just talk the talk—I’ll give you
+          actionable steps that deliver real results, guaranteed.
         </p>
         <p>
           <Link href="/coaching-call" className="cta">
-            Book Your Call Now »
+            Book Your Private Coaching Call »
           </Link>
         </p>
         <H2>3/ SaaS Team Performance Roadmap</H2>
         <p>
-          Want to transform your software development team into an industry
-          leader? This assessment involves a comprehensive software team quality
-          assessment aimed at improving your development team's performance. It
-          includes an initial consultation, codebase review, team interviews,
-          and a quality assessment with a +10 page personalized plan from an
-          industry expert.
+          Ready to make your software development team the best in the biz?
+          Unlock your team’s true potential with our deep dive assessment,
+          including codebase review, team interviews, and a{" "}
+          <b>10+ page personalized strategy plan</b> from an industry expert for
+          unbeatable performance.
         </p>
         <p>
           <Link href="/saas-team-performance-roadmap" className="cta">

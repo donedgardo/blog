@@ -28,7 +28,7 @@ const SpeakingImageContainer = styled(Container)`
 export const SpeakingImage = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "Edgardo-Speaking@3x.png" }) {
+      placeholderImage: file(relativePath: { eq: "Edgardo-snow.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1900) {
             ...GatsbyImageSharpFluid

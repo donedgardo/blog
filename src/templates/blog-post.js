@@ -19,9 +19,9 @@ class BlogPostTemplate extends React.Component {
     const featuredImgFluid =
       post?.frontmatter?.featuredImage?.childImageSharp?.fluid
 
-    const articleDate = new Date(date.replace(/-/g, "/"));
-    const gameDevDate = new Date("2023/03/02".replace(/-/g, "/"));
-    const isAfterGameDev = articleDate.getTime() >= gameDevDate.getTime();
+    const articleDate = new Date(date.replace(/-/g, "/"))
+    const gameDevDate = new Date("2023/03/02".replace(/-/g, "/"))
+    const isAfterGameDev = articleDate.getTime() >= gameDevDate.getTime()
 
     return (
       <BlogLayout
@@ -60,7 +60,7 @@ class BlogPostTemplate extends React.Component {
           <h4>Want to hear more from me?</h4>
           <p>Signup to my newsletter!</p>
         </div>
-        {isAfterGameDev ? <GameDevNewsletter /> : <SignUpBootcamp />}
+        <p>{isAfterGameDev ? <GameDevNewsletter /> : <SignUpBootcamp />}</p>
         <hr />
         <Bio />
         <ul

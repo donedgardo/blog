@@ -169,5 +169,13 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-clarity`,
+      options: {
+        // String value for your clarity project ID
+        clarity_project_id: "mp10bxqw30",
+        enable_on_dev_env: false,
+      },
+    },
   ],
 }

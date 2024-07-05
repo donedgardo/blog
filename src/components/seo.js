@@ -121,7 +121,6 @@ function SEO({ description, lang, meta, keywords, title, pathname, image }) {
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
         rel="stylesheet"
       />
-      <script id="analytics" src="js/analytics.js" />
     </Helmet>
   )
 }

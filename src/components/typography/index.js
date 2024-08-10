@@ -12,6 +12,7 @@ fairyGatesTheme.overrideThemeStyles = ref => {
       fontStyle: "normal",
       color: "black",
       lineHeight: "1.5em",
+      margin: 0,
     },
     "h1,h2,h3,h4,h5": {
       marginBottom: "1.725rem",
@@ -67,11 +68,6 @@ const index = new Typography({
   ...fairyGatesTheme,
   headerFontFamily: ["Montserrat", "serif"],
 })
-
-// Hot reload typography in development.
-if (process.env.NODE_ENV !== `production`) {
-  index.injectStyles()
-}
 
 export const rhythm = index.rhythm
 export const scale = index.scale

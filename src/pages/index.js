@@ -452,7 +452,7 @@ const IndexPage = () => (
             </div>
 
             <h3 className="testimonial-title text-white text-center roboto-light text-capitalize">
-              <em>What my client says...</em>
+              <em>What my clients say...</em>
             </h3>
 
             <div className="row testimonial-row align-items-start flex-md-nowrap">
@@ -588,7 +588,7 @@ const IndexPage = () => (
         <section id="talk">
           <div className="container">
             <h2 className="sec-title text-center text-white roboto-light text-capitalize">
-              If you think you are one of them…
+              If you think you are one of these...
             </h2>
 
             <div className="row">

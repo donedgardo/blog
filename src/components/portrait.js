@@ -12,8 +12,8 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = ({ className, fluid, fixed }) => {
-  return <Img className={className} fluid={fluid} fixed={fixed} />
+const Image = ({ className, fluid, fixed, ...props }) => {
+  return <Img className={className} fluid={fluid} fixed={fixed} {...props} />
 }
 
 export default Image

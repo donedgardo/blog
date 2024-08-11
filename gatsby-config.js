@@ -149,12 +149,12 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/components/typography/index`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-typography`,
+    //   options: {
+    //     pathToConfigModule: `src/components/typography/index`,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
@@ -172,7 +172,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-clarity`,
       options: {
-        // String value for your clarity project ID
         clarity_project_id: "mp10bxqw30",
         enable_on_dev_env: false,
       },

@@ -12,6 +12,10 @@ class Layout extends React.Component {
     return (
       <Wrapper>
         <Helmet>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+            rel="stylesheet"
+          />
           <style>{typography.toString()}</style>
         </Helmet>
         <MainNavBar pathname={pathname} />

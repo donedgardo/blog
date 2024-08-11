@@ -1,6 +1,109 @@
 import React from "react"
 import Seo from "../components/seo"
 import Helmet from "react-helmet"
+import { graphql, useStaticQuery } from "gatsby"
+import Portrait from "../components/portrait"
+import { FAQ } from "../components/faqs"
+
+const CONSULTATION_LINK =
+  "https://calendly.com/edgardo-g-carreras/free-coaching-call-with-edgardo"
+
+function HeroSection() {
+  const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(
+        relativePath: { eq: "EdgardoCarrerasPortrait.png" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 802) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+  return (
+    <section id="hero">
+      <div className="container">
+        <div className="row flex-md-nowrap">
+          <div className="col-1 col-12 col-md-7">
+            <h5 className="roboto-bold text-uppercase">
+              Attention SaaS CEOs & CTOs
+            </h5>
+            <h1 className="roboto-bold mb-1 mb-md-4 text-capitalize">
+              Transform team's efficiency, quality, and alignment in weeks, not
+              months.
+            </h1>
+            <h4 className="roboto-light text-capitalize">
+              Boost software profitability without hiring or burning out your
+              team
+            </h4>
+
+            <div className="cta my-4 my-md-5">
+              <div className="site-btn pulse-btn">
+                <a href={CONSULTATION_LINK}>Schedule Your Free Consultation</a>
+              </div>
+              <small className="text-white">
+                <em>
+                  Trusted by 10+ Tech Executives to Boost Team Performance
+                </em>
+              </small>
+            </div>
+          </div>
+
+          <div className="col-2 col-12 col-md-6">
+            <Portrait
+              className="hero-image img-fluid"
+              fluid={data.placeholderImage.childImageSharp.fluid}
+              style={{ position: "none", width: 802 }}
+            />
+
+            <div className="hero-testimonial d-flex flex-wrap flex-md-nowrap">
+              <div className="image-container">
+                <img src="/images/hero-testimonial-image.png" alt="" />
+              </div>
+              <div className="text-container">
+                <span>
+                  "Edgardo is an Expert, Responsible, and timely professional
+                  who helped us rethink our standards and find the right
+                  solutions. Edgardo is not scared to bring the hard truths in a
+                  respectable manner."
+                </span>
+
+                <span className="name">- Johann Gracia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="marquee-logos mt-4 mt-md-5">
+          <div className="hero__logos-wrapper">
+            <img src="/images/maybelineNewYork.png" alt="" />
+
+            <img src="/images/galaxy-digital.png" alt="" />
+
+            <img src="/images/l'oreal.png" alt="" />
+
+            <img src="/images/sKyrocket.png" alt="" />
+
+            <img src="/images/codetrotters.png" alt="" />
+          </div>
+          <div className="hero__logos-wrapper">
+            <img src="/images/maybelineNewYork.png" alt="" />
+
+            <img src="/images/galaxy-digital.png" alt="" />
+
+            <img src="/images/l'oreal.png" alt="" />
+
+            <img src="/images/sKyrocket.png" alt="" />
+
+            <img src="/images/codetrotters.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
 
 const IndexPage = () => (
   <>
@@ -30,85 +133,7 @@ const IndexPage = () => (
       </header>
 
       <main>
-        <section id="hero">
-          <div className="container">
-            <div className="row flex-md-nowrap">
-              <div className="col-1 col-12 col-md-7">
-                <h5 className="roboto-bold text-uppercase">
-                  Attention SaaS CEOs & CTOs
-                </h5>
-                <h1 className="roboto-bold mb-1 mb-md-4 text-capitalize">
-                  Transform team's efficiency, quality, and alignment in weeks,
-                  not months.
-                </h1>
-                <h4 className="roboto-light text-capitalize">
-                  Boost software profitability without hiring or burning out
-                  your team
-                </h4>
-
-                <div className="cta my-4 my-md-5">
-                  <div className="site-btn pulse-btn">
-                    <a href="#">Schedule Your Free Consultation</a>
-                  </div>
-                  <small className="text-white">
-                    <em>
-                      Trusted by 10+ Tech Executives to Boost Team Performance
-                    </em>
-                  </small>
-                </div>
-              </div>
-
-              <div className="col-2 col-12 col-md-6">
-                <img
-                  src="/images/hero-image.png"
-                  alt=""
-                  className="hero-image img-fluid"
-                />
-
-                <div className="hero-testimonial d-flex flex-wrap flex-md-nowrap">
-                  <div className="image-container">
-                    <img src="/images/hero-testimonial-image.png" alt="" />
-                  </div>
-                  <div className="text-container">
-                    <span>
-                      "Edgardo is an Expert, Responsible, and timely
-                      professional who helped us rethink our standards and find
-                      the right solutions. Edgardo is not scared to bring the
-                      hard truths in a respectable manner."
-                    </span>
-
-                    <span className="name">- Johann Gracia</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="marquee-logos mt-4 mt-md-5">
-              <div className="hero__logos-wrapper">
-                <img src="/images/maybelineNewYork.png" alt="" />
-
-                <img src="/images/galaxy-digital.png" alt="" />
-
-                <img src="/images/l'oreal.png" alt="" />
-
-                <img src="/images/sKyrocket.png" alt="" />
-
-                <img src="/images/codetrotters.png" alt="" />
-              </div>
-              <div className="hero__logos-wrapper">
-                <img src="/images/maybelineNewYork.png" alt="" />
-
-                <img src="/images/galaxy-digital.png" alt="" />
-
-                <img src="/images/l'oreal.png" alt="" />
-
-                <img src="/images/sKyrocket.png" alt="" />
-
-                <img src="/images/codetrotters.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </section>
+        <HeroSection />
 
         <section id="challenges" className="">
           <div className="container">
@@ -410,7 +435,9 @@ const IndexPage = () => (
               <div className="col-12">
                 <div className="cta my-4 my-md-5 mx-auto">
                   <div className="site-btn pulse-btn">
-                    <a href="#">Schedule Your Free Consultation</a>
+                    <a href={CONSULTATION_LINK}>
+                      Schedule Your Free Consultation
+                    </a>
                   </div>
                   <small className="text-center">
                     <em>
@@ -1020,7 +1047,9 @@ const IndexPage = () => (
               <div className="col-12">
                 <div className="cta my-4 my-md-5 mx-auto">
                   <div className="site-btn pulse-btn">
-                    <a href="#">Schedule Your Free Consultation</a>
+                    <a href={CONSULTATION_LINK}>
+                      Schedule Your Free Consultation
+                    </a>
                   </div>
                   <small>
                     <em>
@@ -1065,347 +1094,7 @@ const IndexPage = () => (
           </div>
         </section>
 
-        <section id="faq">
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-12 col-md-9">
-                <h2 className="text-center roboto-light">
-                  Frequently Asked{" "}
-                  <span className="roboto-medium">Questions</span>
-                </h2>
-
-                <div
-                  className="accordion accordion-flush"
-                  id="accordionFlushExample"
-                >
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="flush-headingOne">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseOne"
-                        aria-expanded="false"
-                        aria-controls="flush-collapseOne"
-                      >
-                        What makes your coaching different?
-                        <div className="icons">
-                          <svg
-                            className="plus"
-                            width="18"
-                            height="19"
-                            viewBox="0 0 18 19"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.92 19V11.6956H0V7.26222H6.92V0H11.12V7.26222H18V11.6956H11.12V19H6.92Z"
-                              fill="#ED9567"
-                            />
-                          </svg>
-
-                          <svg
-                            className="minus"
-                            width="18"
-                            height="5"
-                            viewBox="0 0 18 5"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <rect width="18" height="5" fill="#ED9567" />
-                          </svg>
-                        </div>
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapseOne"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="flush-headingOne"
-                      data-bs-parent="#accordionFlushExample"
-                    >
-                      <div className="accordion-body">
-                        I offer hands-on, transformative coaching with a unique
-                        blend of business sense and technical expertise. I work
-                        directly with your team to implement practical
-                        solutions.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="flush-headingTwo">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="flush-collapseTwo"
-                      >
-                        Do you offer a guarantee?
-                        <div className="icons">
-                          <svg
-                            className="plus"
-                            width="18"
-                            height="19"
-                            viewBox="0 0 18 19"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.92 19V11.6956H0V7.26222H6.92V0H11.12V7.26222H18V11.6956H11.12V19H6.92Z"
-                              fill="#ED9567"
-                            />
-                          </svg>
-
-                          <svg
-                            className="minus"
-                            width="18"
-                            height="5"
-                            viewBox="0 0 18 5"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <rect width="18" height="5" fill="#ED9567" />
-                          </svg>
-                        </div>
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapseTwo"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="flush-headingTwo"
-                      data-bs-parent="#accordionFlushExample"
-                    >
-                      <div className="accordion-body">
-                        I offer hands-on, transformative coaching with a unique
-                        blend of business sense and technical expertise. I work
-                        directly with your team to implement practical
-                        solutions.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="flush-headingThree">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseThree"
-                        aria-expanded="false"
-                        aria-controls="flush-collapseThree"
-                      >
-                        How soon can we see results?
-                        <div className="icons">
-                          <svg
-                            className="plus"
-                            width="18"
-                            height="19"
-                            viewBox="0 0 18 19"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.92 19V11.6956H0V7.26222H6.92V0H11.12V7.26222H18V11.6956H11.12V19H6.92Z"
-                              fill="#ED9567"
-                            />
-                          </svg>
-
-                          <svg
-                            className="minus"
-                            width="18"
-                            height="5"
-                            viewBox="0 0 18 5"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <rect width="18" height="5" fill="#ED9567" />
-                          </svg>
-                        </div>
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapseThree"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="flush-headingThree"
-                      data-bs-parent="#accordionFlushExample"
-                    >
-                      <div className="accordion-body">
-                        I offer hands-on, transformative coaching with a unique
-                        blend of business sense and technical expertise. I work
-                        directly with your team to implement practical
-                        solutions.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="flush-headingFour">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseFour"
-                        aria-expanded="false"
-                        aria-controls="flush-collapseFour"
-                      >
-                        Dorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        <div className="icons">
-                          <svg
-                            className="plus"
-                            width="18"
-                            height="19"
-                            viewBox="0 0 18 19"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.92 19V11.6956H0V7.26222H6.92V0H11.12V7.26222H18V11.6956H11.12V19H6.92Z"
-                              fill="#ED9567"
-                            />
-                          </svg>
-
-                          <svg
-                            className="minus"
-                            width="18"
-                            height="5"
-                            viewBox="0 0 18 5"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <rect width="18" height="5" fill="#ED9567" />
-                          </svg>
-                        </div>
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapseFour"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="flush-headingFour"
-                      data-bs-parent="#accordionFlushExample"
-                    >
-                      <div className="accordion-body">
-                        I offer hands-on, transformative coaching with a unique
-                        blend of business sense and technical expertise. I work
-                        directly with your team to implement practical
-                        solutions.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="flush-headingFive">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseFive"
-                        aria-expanded="false"
-                        aria-controls="flush-collapseFive"
-                      >
-                        Dorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        <div className="icons">
-                          <svg
-                            className="plus"
-                            width="18"
-                            height="19"
-                            viewBox="0 0 18 19"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.92 19V11.6956H0V7.26222H6.92V0H11.12V7.26222H18V11.6956H11.12V19H6.92Z"
-                              fill="#ED9567"
-                            />
-                          </svg>
-
-                          <svg
-                            className="minus"
-                            width="18"
-                            height="5"
-                            viewBox="0 0 18 5"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <rect width="18" height="5" fill="#ED9567" />
-                          </svg>
-                        </div>
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapseFive"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="flush-headingFive"
-                      data-bs-parent="#accordionFlushExample"
-                    >
-                      <div className="accordion-body">
-                        I offer hands-on, transformative coaching with a unique
-                        blend of business sense and technical expertise. I work
-                        directly with your team to implement practical
-                        solutions.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="flush-headingSix">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseSix"
-                        aria-expanded="false"
-                        aria-controls="flush-collapseSix"
-                      >
-                        Dorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        <div className="icons">
-                          <svg
-                            className="plus"
-                            width="18"
-                            height="19"
-                            viewBox="0 0 18 19"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.92 19V11.6956H0V7.26222H6.92V0H11.12V7.26222H18V11.6956H11.12V19H6.92Z"
-                              fill="#ED9567"
-                            />
-                          </svg>
-
-                          <svg
-                            className="minus"
-                            width="18"
-                            height="5"
-                            viewBox="0 0 18 5"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <rect width="18" height="5" fill="#ED9567" />
-                          </svg>
-                        </div>
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapseSix"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="flush-headingSix"
-                      data-bs-parent="#accordionFlushExample"
-                    >
-                      <div className="accordion-body">
-                        I offer hands-on, transformative coaching with a unique
-                        blend of business sense and technical expertise. I work
-                        directly with your team to implement practical
-                        solutions.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <FAQ />
 
         <section id="bottom-cta">
           <div className="container">
@@ -1420,7 +1109,7 @@ const IndexPage = () => (
 
             <div className="cta mt-4 mt-md-5 mx-auto">
               <div className="site-btn pulse-btn">
-                <a href="#">Schedule Your Free Consultation</a>
+                <a href={CONSULTATION_LINK}>Schedule Your Free Consultation</a>
               </div>
               <small>
                 <em>

@@ -60,17 +60,16 @@ function HeroSection() {
 
             <div className="hero-testimonial d-flex flex-wrap flex-md-nowrap">
               <div className="image-container">
-                <img src="/images/hero-testimonial-image.png" alt="" />
+                <img src="/images/william_cheung.jpg" alt="" />
               </div>
               <div className="text-container">
                 <span>
-                  "Edgardo is an Expert, Responsible, and timely professional
-                  who helped us rethink our standards and find the right
-                  solutions. Edgardo is not scared to bring the hard truths in a
-                  respectable manner."
+                  "Edgardo provided invaluable mentorship, helping junior
+                  developers grow technically and enforcing high code standards
+                  through TDD and tool integration."
                 </span>
 
-                <span className="name">- Johann Gracia</span>
+                <span className="name">- William Cheung</span>
               </div>
             </div>
           </div>

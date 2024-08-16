@@ -7,7 +7,6 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import defaultPageImage from "../images/EdgardoCarrerasLogo.png"
 
@@ -34,90 +33,31 @@ function SEO({ description, lang, meta, keywords, title, pathname, image }) {
     : `${site.siteMetadata.siteUrl}${defaultPageImage}`
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      link={canonical ? [{ rel: "canonical", href: canonical }] : []}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: `${title || site.siteMetadata.title}`,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          name: `author`,
-          content: `Edgardo Carreras`,
-        },
-        {
-          property: `og:url`,
-          content: `${canonical}`,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `image`,
-          property: `og:image`,
-          content: imageUrl,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary_large_image`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: site.siteMetadata.title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-        {
-          name: `og:image`,
-          content: imageUrl,
-        },
-        {
-          name: `twitter:image`,
-          content: imageUrl,
-        },
-      ]
-        .concat(
-          keywords.length > 0
-            ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
-            : []
-        )
-        .concat(meta)}
-    >
+    <>
+      <html lang={lang} />
+      <title>{title}</title>
+      <meta name="description" content={metaDescription} />
+      <meta property="og:title" content={title || site.siteMetadata.title} />
+      <meta property="og:description" content={metaDescription} />
+      <meta name="author" content="Edgardo Carreras" />
+      <meta property="og:url" content={canonical} />
+      <meta property="og:type" content="website" />
+      <meta name="og:image" content={imageUrl} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content={site.siteMetadata.author} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:image" content={imageUrl} />
+      {keywords.length > 0 && (
+        <meta name="keywords" content={keywords.join(", ")} />
+      )}
+      {meta.map((m, i) => (
+        <meta key={i} {...m} />
+      ))}
+      <link rel="canonical" href={canonical} />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-    </Helmet>
+    </>
   )
 }
 

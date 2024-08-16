@@ -1,9 +1,8 @@
 import React from "react"
 import Seo from "../components/seo"
-import Helmet from "react-helmet"
 import { graphql, useStaticQuery } from "gatsby"
 import Portrait from "../components/portrait"
-import { FAQ } from "../components/faqs"
+import { Faq } from "../components/faqs"
 
 const CONSULTATION_LINK =
   "https://calendly.com/edgardo-g-carreras/free-coaching-call-with-edgardo"
@@ -106,16 +105,6 @@ function HeroSection() {
 
 const IndexPage = () => (
   <>
-    <Seo title={"Edgardo Carreras | SaaS Agile Technical Coach"} />
-    <Helmet>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:wght@500&display=swap"
-        rel="stylesheet"
-      />
-      <link rel="stylesheet" href="/styles/bootstrap.min.css" />
-      <link rel="stylesheet" href="/styles/bootstrap-grid.min.css" />
-      <link rel="stylesheet" href="/styles/styles.css" />
-    </Helmet>
     <div className="site-content">
       <header>
         <div className="container">
@@ -1093,7 +1082,7 @@ const IndexPage = () => (
           </div>
         </section>
 
-        <FAQ />
+        <Faq />
 
         <section id="bottom-cta">
           <div className="container">
@@ -1131,5 +1120,20 @@ const IndexPage = () => (
     </div>
   </>
 )
+
+export const Head = () => {
+  return (
+    <>
+      <Seo title={"Edgardo Carreras | SaaS Agile Technical Coach"} />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:wght@500&display=swap"
+        rel="stylesheet"
+      />
+      <link rel="stylesheet" href="/styles/bootstrap.min.css" />
+      <link rel="stylesheet" href="/styles/bootstrap-grid.min.css" />
+      <link rel="stylesheet" href="/styles/styles.css" />
+    </>
+  )
+}
 
 export default IndexPage

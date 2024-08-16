@@ -14,7 +14,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-root-import`,
     {
       resolve: "gatsby-plugin-local-search",
@@ -31,7 +30,7 @@ module.exports = {
             allMdx {
               nodes {
                 id
-                fields { slug }
+                slug 
                 excerpt
                 rawBody
                 frontmatter {
@@ -49,7 +48,7 @@ module.exports = {
         normalizer: ({ data }) =>
           data.allMdx.nodes.map(node => ({
             id: node.id,
-            slug: node.fields.slug,
+            slug: node.slug,
             rawBody: node.rawBody,
             excerpt: node.excerpt,
             title: node.frontmatter.title,

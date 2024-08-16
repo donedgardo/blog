@@ -51,7 +51,7 @@ const SearchedPosts = ({ results }) =>
       return (
         <div key={slug}>
           <h3>
-            <Link style={{ boxShadow: `none` }} to={`/blog${slug}`}>
+            <Link style={{ boxShadow: `none` }} to={`/blog/${slug}`}>
               {title}
             </Link>
           </h3>
@@ -73,11 +73,11 @@ const SearchedPosts = ({ results }) =>
 const AllPosts = ({ posts }) => (
   <div style={{ margin: "20px 0 40px" }}>
     {posts.map(({ node }) => {
-      const title = node.frontmatter.title || node.fields.slug
+      const title = node.frontmatter.title || node.slug
       return (
-        <div key={node.fields.slug}>
+        <div key={node.slug}>
           <h3>
-            <Link style={{ boxShadow: `none` }} to={`/blog${node.fields.slug}`}>
+            <Link style={{ boxShadow: `none` }} to={`/blog/${node.slug}`}>
               {title}
             </Link>
           </h3>
@@ -120,7 +120,7 @@ const SearchPosts = ({ posts, localSearchBlog, location, navigate }) => {
           onChange={e => {
             navigate(
               e.target.value ? `/blog/?search=${e.target.value}` : "/blog/",
-              { replace: true}
+              { replace: true }
             )
             setQuery(e.target.value)
           }}

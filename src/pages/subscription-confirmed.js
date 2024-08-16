@@ -2,7 +2,7 @@ import React from "react"
 
 import BlogLayout from "../components/blog_layout"
 
-export default () => {
+const SubscriptionConfirmed = () => {
   return (
     <BlogLayout
       location={"/subscription-confirmed"}
@@ -28,3 +28,5 @@ export default () => {
     </BlogLayout>
   )
 }
+
+export default SubscriptionConfirmed

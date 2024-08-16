@@ -1,11 +1,22 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import BlogLayout from "../components/blog_layout"
 import Seo from "../components/seo"
 import Button from "../components/button"
 import SearchPosts from "../components/searchPosts"
+import typography from "../components/typography"
+
+export const Head = ({ location }) => (
+  <>
+    <Seo title="Edgardo Carreras Blog" pathname={location.pathname} />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>{typography.toString()}</style>;
+  </>
+)
 
 class Blog extends React.Component {
   render() {
@@ -14,7 +25,6 @@ class Blog extends React.Component {
     const localSearchBlog = data.localSearchBlog
     return (
       <BlogLayout location={location} title={"Edgardo Carreras Blog"}>
-        <Seo title="Edgardo Carreras Blog" pathname={location.pathname} />
         <SearchPosts
           posts={posts}
           localSearchBlog={localSearchBlog}
@@ -46,9 +56,7 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
-          fields {
-            slug
-          }
+          slug
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title

@@ -39,7 +39,7 @@ const faqs = [
   },
 ]
 
-export function FAQ() {
+export function Faq() {
   const [openFaq, setOpenFaq] = useState(new Set())
   const isOpen = useCallback(
     index => {

@@ -1,9 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import typography, { rhythm } from "./typography"
+import { rhythm } from "./typography"
 import { MainNavBar } from "./MainNavBar"
 import { BlogHeader } from "./blog_header"
-import Helmet from "react-helmet"
 
 class Layout extends React.Component {
   render() {
@@ -11,13 +10,6 @@ class Layout extends React.Component {
     const { pathname } = location
     return (
       <Wrapper>
-        <Helmet>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
-            rel="stylesheet"
-          />
-          <style>{typography.toString()}</style>
-        </Helmet>
         <MainNavBar pathname={pathname} />
         <div
           style={{

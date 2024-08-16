@@ -1,6 +1,6 @@
 ---
 path: /testing-rss-3
-date: 2024-08-15T06:02:47.546Z
+date: 2024-08-16T06:02:47.546Z
 title: "Testing Rss for email automation 3"
 description: Testing email automation
 featuredImage: ../assets/Bevy Game Jam_ Lessons Learned Solo Game Development.jpg

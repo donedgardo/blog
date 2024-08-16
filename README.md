@@ -4,3 +4,5 @@
 
 Todo:
 - [] Socials and blog links.
+- [] Migrate to gatsby v5 https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v4-to-v5/
+- [] Configure RSS for daily email feed.

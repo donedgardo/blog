@@ -194,7 +194,14 @@ module.exports = {
                   date: node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + "/" + node.slug,
                   guid: site.siteMetadata.siteUrl + "/" + node.slug,
-                  custom_elements: [{ "content:encoded": node.html }],
+                  custom_elements: [
+                    {
+                      "content:encoded": node.html.replace(
+                        /(?<=\"|\s)\/static\//g,
+                        `${site.siteMetadata.siteUrl}\/static\/`
+                      ),
+                    },
+                  ],
                 })
               })
             },

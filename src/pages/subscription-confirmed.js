@@ -1,6 +1,9 @@
 import React from "react"
 
 import BlogLayout from "../components/blog_layout"
+import { DefaultHead } from "../components/defaultHead"
+
+export const Head = DefaultHead
 
 const SubscriptionConfirmed = () => {
   return (

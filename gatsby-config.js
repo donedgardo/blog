@@ -68,6 +68,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/daily`,
+        name: `daily`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
       },
@@ -193,8 +200,8 @@ module.exports = {
                   title: node.frontmatter.title,
                   description: node.frontmatter.description,
                   date: node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + "/" + node.slug,
-                  guid: site.siteMetadata.siteUrl + "/" + node.slug,
+                  url: site.siteMetadata.siteUrl + "/daily/" + node.slug,
+                  guid: site.siteMetadata.siteUrl + "/daily/" + node.slug,
                   custom_elements: [
                     {
                       "content:encoded": node.html.replace(
@@ -208,7 +215,9 @@ module.exports = {
             },
             query: `
               {
-                allMdx {
+                allMdx(
+                  filter: { frontmatter: { category: { eq: "daily" } } }
+                ) {
                   nodes {
                     slug 
                     html
@@ -227,7 +236,7 @@ module.exports = {
             // if `string` is used, it will be used to create RegExp and then test if pathname of
             // current page satisfied this regular expression;
             // if not provided or `undefined`, all pages will have feed reference inserted
-            match: "^/blog/",
+            match: "^/daily/",
             // optional configuration to specify external rss feed, such as feedburner
             link: "https://feeds.feedburner.com/gatsby/blog",
           },

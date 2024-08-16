@@ -10,9 +10,12 @@ import { SectionContent } from "../components/typography/custom"
 import { Link } from "gatsby"
 import { WhyMe } from "../components/why-me"
 import { ExpensivePainPoints } from "../components/ExpensivePainPoints"
+import { DefaultHead } from "../components/defaultHead"
 
 const CTA_URL =
   "https://calendly.com/edgardo-g-carreras/1-on-1-saas-team-performance-assessment"
+
+export const Head = DefaultHead
 
 const IndexPage = ({ location: { pathname } }) => (
   <Layout>

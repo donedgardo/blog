@@ -8,8 +8,11 @@ import { AboutMe } from "../../components/AboutMe"
 import { LightContainer } from "../../components/typography"
 import { SectionContent } from "../../components/typography/custom"
 import { Link } from "gatsby"
+import { DefaultHead } from "../../components/defaultHead"
 const CTA_URL =
   "https://calendly.com/edgardo-g-carreras/1-on-1-software-quality-assessment-session"
+
+export const Head = DefaultHead
 const IndexPage = ({ location: { pathname } }) => (
   <Layout>
     <Seo

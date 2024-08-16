@@ -8,6 +8,7 @@ import { AboutMe } from "../components/AboutMe"
 import { Questions } from "../components/BootcampQuestions"
 import { FreeStuff } from "../components/FreeStuff"
 import { SignUpBootcamp } from "../components/newsletters/sign-up-bootcamp"
+import { DefaultHead } from "../components/defaultHead"
 
 const IndexPage = ({ location: { pathname } }) => (
   <Layout>
@@ -22,5 +23,7 @@ const IndexPage = ({ location: { pathname } }) => (
     <FreeStuff />
   </Layout>
 )
+
+export const Head = DefaultHead
 
 export default IndexPage

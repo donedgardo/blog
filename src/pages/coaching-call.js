@@ -10,6 +10,7 @@ import { SectionContent } from "../components/typography/custom"
 import { Link } from "gatsby"
 import { ExpensivePainPoints } from "../components/ExpensivePainPoints"
 import { WhyMe } from "../components/why-me"
+import { DefaultHead } from "../components/defaultHead"
 
 const CTA_URL =
   "https://calendly.com/edgardo-g-carreras/coaching-call-with-edgardo"
@@ -186,5 +187,7 @@ const IndexPage = ({ location: { pathname } }) => (
     <BrandSlideshow />
   </Layout>
 )
+
+export const Head = DefaultHead
 
 export default IndexPage

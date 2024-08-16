@@ -10,7 +10,9 @@ import { FreeStuff } from "../../components/FreeStuff"
 import { AboutMe } from "../../components/AboutMe"
 import { LightContainer } from "../../components/typography"
 import { H1, H2, SectionContent } from "../../components/typography/custom"
+import { DefaultHead } from "../../components/defaultHead"
 
+export const Head = DefaultHead
 const NewServiceSection = () => (
   <LightContainer>
     <SectionContent id="productized-service">

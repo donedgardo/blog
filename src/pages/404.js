@@ -9,6 +9,7 @@ import {
   LightContainer,
   SectionContent,
 } from "../components/typography/custom"
+import { DefaultHead } from "../components/defaultHead"
 
 class NotFoundPage extends React.Component {
   render() {
@@ -31,6 +32,8 @@ class NotFoundPage extends React.Component {
 }
 
 export default NotFoundPage
+
+export const Head = DefaultHead
 
 export const pageQuery = graphql`
   query {

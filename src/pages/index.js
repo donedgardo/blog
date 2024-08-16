@@ -3,6 +3,7 @@ import Seo from "../components/seo"
 import { graphql, useStaticQuery } from "gatsby"
 import Portrait from "../components/portrait"
 import { Faq } from "../components/faqs"
+import { Header } from "../components/header"
 
 const CONSULTATION_LINK =
   "https://calendly.com/edgardo-g-carreras/free-coaching-call-with-edgardo"
@@ -26,7 +27,7 @@ function HeroSection() {
       <div className="container">
         <div className="row flex-md-nowrap">
           <div className="col-1 col-12 col-md-7">
-            <h5 className="roboto-bold text-uppercase">
+            <h5 className="roboto-bold text-uppercase primary-color">
               Attention SaaS CEOs & CTOs
             </h5>
             <h1 className="roboto-bold mb-1 mb-md-4 text-capitalize">
@@ -37,7 +38,6 @@ function HeroSection() {
               Boost software profitability without hiring or burning out your
               team
             </h4>
-
             <div className="cta my-4 my-md-5">
               <div className="site-btn pulse-btn">
                 <a href={CONSULTATION_LINK}>Schedule Your Free Consultation</a>
@@ -106,20 +106,7 @@ function HeroSection() {
 const IndexPage = () => (
   <>
     <div className="site-content">
-      <header>
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <img
-                src="/images/edgardo-carreras-logo.png"
-                alt=""
-                className="site-logo"
-              />
-            </div>
-          </div>
-        </div>
-      </header>
-
+      <Header />
       <main>
         <HeroSection />
 

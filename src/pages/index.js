@@ -26,13 +26,13 @@ function HeroSection() {
     <section id="hero">
       <div className="container">
         <div className="row flex-md-nowrap">
-          <div className="col-1 col-12 col-md-7">
+          <div className="col-1 col-12 col-md-7 col-lg-8">
             <h5 className="roboto-bold text-uppercase primary-color">
               Attention SaaS CEOs & CTOs
             </h5>
             <h1 className="roboto-bold mb-1 mb-md-4 text-capitalize">
-              Transform team's efficiency, quality, and alignment in weeks, not
-              months.
+              Transform your team's efficiency, quality, and alignment in weeks,
+              not months.
             </h1>
             <h4 className="roboto-light text-capitalize">
               Boost software profitability without hiring or burning out your

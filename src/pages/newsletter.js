@@ -3,9 +3,6 @@ import Seo from "../components/seo"
 import { SignUpForm2 } from "../components/newsletters/SignUpForm2"
 import { Header } from "../components/header"
 
-const CONSULTATION_LINK =
-  "https://calendly.com/edgardo-g-carreras/free-coaching-call-with-edgardo"
-
 function NewsletterHeroSection() {
   return (
     <section id="hero" className="no-border-radius">

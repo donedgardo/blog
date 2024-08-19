@@ -1,6 +1,6 @@
 ---
-date: 2024-08-21T03:22:55.506Z
-title: Boost Your Software Team's Performance with Learning Hours
+date: 2024-08-22T03:22:55.506Z
+title: Boost Your Software Team with Learning Hours
 category: daily
 ---
 In today's fast-changing software world, learning is a must. Growth is, too!

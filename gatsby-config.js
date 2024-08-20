@@ -216,7 +216,8 @@ module.exports = {
             query: `
               {
                 allMdx(
-                  filter: { frontmatter: { category: { eq: "daily" } } }
+                  filter: {frontmatter: {category: {eq: "daily"}}}
+                  sort: {fields: frontmatter___date, order: DESC}
                 ) {
                   nodes {
                     slug 

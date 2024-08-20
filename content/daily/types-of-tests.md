@@ -2,7 +2,7 @@
 path: /types-of-tests
 date: 2024-08-17T04:22:55.506Z
 title: Types of Automated Tests
-category: daily
+category: none 
 ---
 
 Do you know the secret sauce behind a rock-solid CI/CD pipeline? Test smarter, not harder! 🌟

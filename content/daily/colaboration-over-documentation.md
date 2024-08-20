@@ -1,5 +1,5 @@
 ---
-date: 2024-08-22T05:22:55.506Z
+date: 2024-08-20T05:22:55.506Z
 title: Collaboration Over Documentation–Achieving Agile Excellence
 category: none
 ---

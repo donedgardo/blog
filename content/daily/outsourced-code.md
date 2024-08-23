@@ -3,39 +3,35 @@ date: 2024-08-22T05:22:55.506Z
 title: Outsourcing Software? Think again.
 category: daily
 ---
-So you decided to offshore some critical software for your business… here is the thing.
+So you've decided to offshore some critical software for your business? Here’s the thing:
 
-Software built by an outside team only has one goal: to make it work.
+Software built by an outside team focuses mainly on making it work.
 
-Building software for the sake of making it work is easy.
+It's easy to build software that just works.
 
-Making software that is easy to change—now that is the hard part.
+But making software that is easy to change? Now, that's the real challenge.
 
-When software is just made to work, it assumes business requirements won't change. We are writing SOFTware, not HARDware.
+When software is merely made to work, it assumes business requirements won't change. Spoiler alert: They will. Remember, it's called SOFTware, not HARDware.
 
-Software is designed for change.
+Software is designed to be adaptable.
 
-Outsourcing critical parts of the business to offshore developers hurts your business.
+Outsourcing critical parts to offshore developers can hurt your business. Once you receive the code, it becomes a burden—complex, filled with duplicated code, and often lacking proper tests.
 
-Once you receive the code, it will be a burden.
+Maintaining it might seem daunting, but it's not impossible.
 
-This code will be too complex, with duplicated code. Worst of all, it will lack tests.
+A good developer can help by refactoring, adding tests, and building on your legacy code. But finding GOOD developers? Easier said than done.
 
-Maintaining it seems daunting, but it is not impossible.
+In fact, it's often easier to train them than to find them.
 
-A good developer can help by refactoring, adding tests, and building on your legacy code.
+I’ve seen SaaS companies freeze because their codebase is too rigid and fragile.
 
-But good developers are hard to find. It is easier to train them than to find them.
+Martin Fowler's analogy fits perfectly here. He compares legacy code to strangler figs:
 
-I've seen SaaS companies freeze because their codebase is too rigid. It's even fragile. I love Martin Fowler's analogy for this situation. He compares legacy code to strangle figs.
+> These are vines that germinate in a nook of a tree. As it grows, it draws nutrients from the host tree until it reaches the ground to grow roots and the canopy to get sunlight. It can then become self-sustaining, and its original host tree may die leaving the fig as an echo of its shape. This gradual process of replacing the host tree struck me as a striking analogy to the way I saw colleagues doing modernization of legacy software systems."
 
-> These are vines that germinate in a nook of a tree. As it grows, it draws nutrients from the host tree until it reaches the ground to grow roots and the canopy to get sunlight. It can then become self-sustaining, and its original host tree may die leaving the fig as an echo of its shape. This gradual process of replacing the host tree struck me as a striking analogy to the way I saw colleagues doing modernization of legacy software systems.
+Outsourcing software has "quick" and cheap benefits. But remember: cheap is expensive.
 
-Outsourcing software has "quick", cheap benefits.
-
-But, cheap is expensive.
-
-To go fast, you must go well.
+To go fast, you must go well. 🚀
 
 Yours, 
 

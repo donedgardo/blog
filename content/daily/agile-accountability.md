@@ -3,7 +3,7 @@ date: 2024-08-25T05:22:55.506Z
 title: Agile Accountability Baseline
 category: daily
 ---
-Fellow reader emailed me his contrarian view on Agile:
+Fellow reader emailed me their contrarian view on Agile:
 
 > "Agile is an excuse to avoid developer and customer accountability"
 

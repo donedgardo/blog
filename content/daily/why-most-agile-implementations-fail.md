@@ -2,7 +2,6 @@
 date: 2024-08-29T05:22:55.506Z
 title: Why Most Agile Implementations Fail
 category: daily
-rss: false
 ---
 There is a notion of fake agility that's suitable for corporations but doesn't work in the real world.
 

@@ -1,7 +1,8 @@
 ---
 date: 2024-08-31T05:22:55.506Z
 title: Why Time Estimates are Hard in Software Development
-category: not-daily
+category: daily
+rss: false
 ---
 A fellow newsletter subscriber asked me:
 

@@ -1,7 +1,8 @@
 ---
 date: 2024-08-30T05:22:55.506Z
 title: The True Essence of Agile
-category: not-daily
+category: daily
+rss: false
 ---
 Many large organizations claim they are agile, but they miss the crucial aspect that agile is an organizational mindset,
 not just an engineering practice.

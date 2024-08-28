@@ -1,7 +1,7 @@
 ---
 date: 2024-08-28T05:22:55.506Z
 title: The Death of Agile? 
-category: not-daily
+category: daily
 ---
 A fellow reader sent me this thought-provoking question:
 

@@ -218,7 +218,6 @@ module.exports = {
                 allMdx(
                   filter: {frontmatter: {category: {eq: "daily"}}}
                   sort: {fields: frontmatter___date, order: DESC}
-                  limit: 1
                 ) {
                   nodes {
                     slug 

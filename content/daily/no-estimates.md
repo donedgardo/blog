@@ -2,6 +2,7 @@
 date: 2024-09-01T05:22:55.506Z
 title: No estimates?
 category: daily
+rss: false
 ---
 In case you missed it, our last email discussed why time estimates are hard in software development.
 

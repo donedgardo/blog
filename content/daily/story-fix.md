@@ -15,7 +15,7 @@ Another mistake I see is how teams sometimes treat stories like in-depth documen
 
 The story should have enough detail to start work on it, not to end it.
 
-In an ideal scenario, customers are interacting with team members on a daily basis. Treat them as placeholders for these conversations.
+In an ideal scenario, customers are interacting with team members on a daily basis. Treat stories as placeholders for these conversations.
 
 Here's how I would fix the story.
 

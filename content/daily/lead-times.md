@@ -1,7 +1,8 @@
 ---
-date: 2024-09-05T05:22:55.506Z
+date: 2024-09-06T05:22:55.506Z
 title: "Optimizing Lead Times: Accelerate Your Software Team's Performance"
 category: daily
+rss: false
 ---
 You know how many software teams struggle with inefficiencies, high defect rates, and poor communication, often misaligning their development work with business goals?
 

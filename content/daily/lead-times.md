@@ -1,5 +1,5 @@
 ---
-date: 2024-11-03T05:22:55.506Z
+date: 2024-09-05T05:22:55.506Z
 title: "Optimizing Lead Times: Accelerate Your Software Team's Performance"
 category: daily
 ---

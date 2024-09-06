@@ -2,7 +2,6 @@
 date: 2024-09-06T05:22:55.506Z
 title: "Optimizing Lead Times: Accelerate Your Software Team's Performance"
 category: daily
-rss: false
 ---
 You know how CTOs struggle with the stress of deployments? 
 

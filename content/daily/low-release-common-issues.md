@@ -45,5 +45,6 @@ Ed
 ---
 
 When you are ready, lets discuss how my technical agile coaching can help your team.
+
 Book your 1:1 session here: https://edgardocarreras.com (Limited spots available.)
 

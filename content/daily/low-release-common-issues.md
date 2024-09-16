@@ -4,6 +4,8 @@ title: "Common Issues and Antipatterns for Low Deployment Frequency"
 category: daily
 ---
 
+Here are some common reasons for low deployment frequency:
+
 1. **Fear**: A lack of confidence that code changes will not cause breakage or outages.
 
 2. **Complex Integrations**: Changes in code accumulate, making it challenging to integrate and ensure compatibility across all changes.

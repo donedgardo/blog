@@ -6,6 +6,8 @@ category: daily
 
 Today, we will focus on a practice called Ensemble Programming, once known as Mob Programming. 
 
+Ensemble Programming is a collaborative software development practice where the entire team works together on the same code.
+
 Here are some key benefits of this approach:
 
 #### Collective Code Ownership

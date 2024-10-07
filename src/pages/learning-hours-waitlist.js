@@ -24,7 +24,7 @@ function WaitListConfirmedHero() {
               className="roboto-light mb-1 mb-md-4"
               style={{ maxWidth: "46.25rem" }}
             >
-              We're thrilled to have you onboard and can't wait to equip your
+              I am thrilled to have you onboard and can't wait to equip your
               team with the skills needed to deliver higher-quality software at
               speed. Your commitment to growth is a significant step toward
               transforming your team's capabilities.

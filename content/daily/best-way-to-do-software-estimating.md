@@ -23,7 +23,7 @@ Each week, count how many of these stories/tasks you have completed. Now you hav
 
 Now here's how business can answer the dreaded “when will this be done?” question. When someone requests a software deliverable, have the team break it down into smaller stories.
 
-Multiply the number of stories by your weekly completion rate.
+Divide the number of stories by your weekly completion rate.
 
 Example: The team finishes three stories per week. The team breaks down a feature into six stories. Then we forecast the deliverable to be done in two weeks.
 

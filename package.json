@@ -8,6 +8,7 @@
     "@mdx-js/mdx": "v1",
     "@mdx-js/react": "v1",
     "babel-plugin-styled-components": "^2.0.7",
+    "diff2html": "^3.4.48",
     "gatsby": "^4.15.2",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-clarity": "^1.0.1",

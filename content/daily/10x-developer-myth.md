@@ -1,5 +1,5 @@
 ---
-date: 2024-10-29T05:22:55.506Z
+date: 2024-10-28T05:22:55.506Z
 title: "Moving Beyond the Reliance on Superstars in Tech"
 category: daily
 ---

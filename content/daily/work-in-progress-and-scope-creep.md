@@ -1,5 +1,5 @@
 ---
-date: 2024-10-29T05:22:55.506Z
+date: 2024-10-31T05:22:55.506Z
 title: "Navigate Scope Creep Like a Pro and Transform Project Chaos into Success"
 category: daily
 ---

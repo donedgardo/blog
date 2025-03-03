@@ -773,8 +773,8 @@ const IndexPage = () => (
 
                   <li>
                     <div className="content">
-                      <strong>Rapid, bug-free releases</strong> ensuring quick
-                      deployment and customer satisfaction.
+                      <strong>High stress releases</strong> leading to burnout
+                      from constant fire fighting.
                     </div>
                     <svg
                       width="49"
@@ -927,8 +927,8 @@ const IndexPage = () => (
                     </svg>
 
                     <div className="content">
-                      <strong>High stress releases</strong> leading to burnout
-                      from constant fire fighting.
+                      <strong>Rapid, bug-free releases</strong> ensuring quick
+                      deployment and customer satisfaction.
                     </div>
                   </li>
 

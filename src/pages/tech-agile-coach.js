@@ -1,12 +1,12 @@
 import React from "react"
 import Seo from "../components/seo"
-import { graphql, Link, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Portrait from "../components/portrait"
 import { Faq } from "../components/faqs"
 import { Header } from "../components/header"
 
 const CONSULTATION_LINK =
-  "https://calendly.com/edgardo-g-carreras/free-coaching-call-with-edgardo"
+  "https://calendly.com/edgardo-g-carreras/agile-tech-coach-onboarding"
 
 function HeroSection() {
   const data = useStaticQuery(graphql`
@@ -26,15 +26,15 @@ function HeroSection() {
         <div className="row flex-md-nowrap">
           <div className="col-1 col-12 col-md-7 col-lg-8">
             <h5 className="roboto-bold text-uppercase primary-color">
-              Attention SaaS CEOs & CTOs
+              Attention Tech Managers
             </h5>
             <h1 className="roboto-bold mb-1 mb-md-4 text-capitalize">
-              Transform your team's efficiency, quality, and alignment in weeks,
-              not months.
+              Transform your software team’s performance with hands-on Agile
+              technical coaching.
             </h1>
-            <h4 className="roboto-light text-capitalize">
-              Boost software profitability without hiring or burning out your
-              team
+            <h4 className="roboto-light">
+              My Technical Agile Coaching helps transform your team’s
+              engineering practices so they can deliver better software, faster.
             </h4>
             <div className="cta my-4 my-md-5">
               <div className="site-btn pulse-btn">
@@ -65,7 +65,6 @@ function HeroSection() {
                   developers grow technically and enforcing high code standards
                   through TDD and tool integration."
                 </span>
-
                 <span className="name">- William Cheung</span>
               </div>
             </div>
@@ -142,7 +141,7 @@ const IndexPage = () => (
                         strokeOpacity="0.3"
                       />
                     </svg>
-                    High frequency of faulty deployments
+                    Releases take too long due to slow development cycles
                   </li>
 
                   <li>
@@ -182,7 +181,7 @@ const IndexPage = () => (
                         strokeOpacity="0.3"
                       />
                     </svg>
-                    Inconsistent delivery timelines and missed deadlines
+                    Siloed knowledge and poor collaboration hinder progress
                   </li>
 
                   <li>
@@ -222,26 +221,6 @@ const IndexPage = () => (
                         strokeOpacity="0.3"
                       />
                     </svg>
-                    Difficulty in scaling the development team efficiently
-                  </li>
-
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="8" cy="8" r="4" fill="#EB2323" />
-                      <circle
-                        cx="8"
-                        cy="8"
-                        r="7.5"
-                        stroke="#EB2323"
-                        strokeOpacity="0.3"
-                      />
-                    </svg>
                     Low team morale and high turnover rates
                   </li>
 
@@ -262,28 +241,8 @@ const IndexPage = () => (
                         strokeOpacity="0.3"
                       />
                     </svg>
-                    Lack of alignment between business goals and development
-                    work
-                  </li>
-
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="8" cy="8" r="4" fill="#EB2323" />
-                      <circle
-                        cx="8"
-                        cy="8"
-                        r="7.5"
-                        stroke="#EB2323"
-                        strokeOpacity="0.3"
-                      />
-                    </svg>
-                    Difficulty in adopting new technologies and methodologies
+                    Your Agile transformation isn’t translating into improved
+                    code or team skills.
                   </li>
                 </ul>
               </div>
@@ -292,13 +251,13 @@ const IndexPage = () => (
             <div className="row justify-content-center">
               <div className="col-12 col-md-9">
                 <h4 className="roboto-light text-center color-secondary">
-                  There are so many{" "}
                   <span className="roboto-medium color-accent">
-                    software teams struggling
-                  </span>{" "}
-                  with inefficient processes, high defect rates, and poor
-                  communication who need a proven option to enhance their
-                  performance and achieve better results.
+                    Technical Agile Coaching{" "}
+                  </span>
+                  tackles these issues head-on. We focus on the technical side
+                  of agility – how your code is crafted and delivered – bridging
+                  the gap between lofty Agile ideals and day-to-day development
+                  reality.
                 </h4>
 
                 <img
@@ -316,19 +275,22 @@ const IndexPage = () => (
             <div className="row justify-content-center">
               <div className="col-12 col-md-11 px-2 px-md-4">
                 <h2 className="text-white text-center mb-4 sec-title">
-                  And Now...
+                  The result?
                 </h2>
                 <h3 className="roboto-light text-white text-center">
-                  <strong>Edgardo Carreras offers hands-on coaching</strong>{" "}
-                  that bridges the gap between{" "}
+                  Practical,{" "}
                   <strong>
-                    <em>business leaders</em>
+                    <em>high-impact</em>
                   </strong>{" "}
-                  and
+                  changes that <strong>accelerate</strong> your team’s{" "}
                   <strong>
-                    <em> technical teams</em>
-                  </strong>
-                  , driving transformative improvements in software development.
+                    <em>throughput</em>
+                  </strong>{" "}
+                  and improve{" "}
+                  <strong>
+                    <em>quality</em>
+                  </strong>{" "}
+                  simultaneously.
                 </h3>
               </div>
             </div>
@@ -338,8 +300,9 @@ const IndexPage = () => (
             <div className="row justify-content-center">
               <div className="col-12 col-md-8">
                 <h4 className="text-white text-center roboto-light px-3 mb-4 mb-md-5">
-                  With three tailored services, Edgardo ensures that every
-                  software team can achieve peak performance:
+                  My Technical Agile Coaching service is structured for maximum
+                  impact with minimal disruption to your workflow. Here’s what’s
+                  included:
                 </h4>
               </div>
             </div>
@@ -353,35 +316,15 @@ const IndexPage = () => (
                     alt=""
                   />
                   <div className="text-container text-white">
-                    <h4 className="service-title">
-                      Agile Shift: Mastering Software Excellence
-                    </h4>
+                    <h4 className="service-title">Kickoff Workshop</h4>
                     <p>
-                      Dive into a free, comprehensive{" "}
-                      <Link style={{ color: "white" }} to="/newsletter">
-                        Six-Part Email Series
-                      </Link>{" "}
-                      designed to tackle your most pressing development
-                      challenges, optimize your processes, and enhance overall
-                      team performance.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="service col-12 col-md-4">
-                <div className="inner">
-                  <img
-                    className="img-fluid"
-                    src="/images/coaching-call.png"
-                    alt=""
-                  />
-                  <div className="text-container text-white">
-                    <h4 className="service-title">Private Coaching Call</h4>
-                    <p>
-                      Address specific software development hurdles with direct,
-                      actionable advice that delivers guaranteed results,
-                      ensuring you overcome any obstacle swiftly and
-                      effectively.
+                      We begin with a focused workshop (on-site or remote) to
+                      align with your goals and assess your team’s challenges.
+                      We’ll identify pain points in your current development
+                      process, set clear improvement targets, and ensure
+                      leadership and team members are on the same page. This
+                      kickoff builds momentum and trust, setting the stage for
+                      effective coaching.
                     </p>
                   </div>
                 </div>
@@ -394,17 +337,44 @@ const IndexPage = () => (
                     alt=""
                   />
                   <div className="text-container text-white">
-                    <h4 className="service-title">Technical Agile Coach</h4>
+                    <h4 className="service-title">Learning Hours</h4>
                     <p>
-                      My{" "}
-                      <Link style={{ color: "white" }} to="/tech-agile-coach">
-                        technical coaching service
-                      </Link>{" "}
-                      helps tech leaders like you achieve faster development
-                      cycles, improved team collaboration, higher-quality code,
-                      and frequent low-risk deployments. I embed myself with
-                      your team to elevate their software craftsmanship. So you
-                      can deliver value to end users faster and more reliably.
+                      These are short, focused training sessions conducted
+                      weekly (or as fits your schedule). In each Learning Hour,
+                      the coach introduces a critical engineering practice or
+                      technique and engages the team in hands-on exercises or
+                      coding katas. This isn’t dry lecturing – it’s interactive
+                      learning designed to stick. Developers practice skills
+                      like Test-Driven Development and refactoring in a safe
+                      setting, so they grasp both the “why” and “how” of the new
+                      techniques.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="service col-12 col-md-4">
+                <div className="inner">
+                  <img
+                    className="img-fluid"
+                    src="/images/ensemble-programming.png"
+                    alt=""
+                  />
+                  <div className="text-container text-white">
+                    <h4 className="service-title">
+                      Ensemble Programming Sessions
+                    </h4>
+                    <p>
+                      Multiple times per week, I join your developers to work
+                      together as one team on real code. In these ensemble
+                      sessions, there is one coding task, and everyone
+                      collaborates on it. The coach facilitates the flow,
+                      ensuring every voice is heard and guiding the team in
+                      applying agile technical practices on actual backlog
+                      items. This is where your team writes production code
+                      together, applying techniques from the Learning Hours
+                      under the coach’s guidance. Over time, these sessions
+                      dramatically improve team communication, spread best
+                      practices, and reduce knowledge silos.
                     </p>
                   </div>
                 </div>
@@ -1056,7 +1026,7 @@ const IndexPage = () => (
                   I'm <span className="roboto-medium">Edgardo</span> Carreras
                 </h2>
                 <h5 className="color-primary mb-4">
-                  Transformative Coach for SaaS Executives
+                  Transformative Agile Technical Coach
                 </h5>
 
                 <p className="text-white">

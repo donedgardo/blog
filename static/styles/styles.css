@@ -293,9 +293,10 @@ header {
 
 .hero-image {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: -160px;
+    right: 50px;
 }
+
 
 .hero-testimonial {
     position: relative;
@@ -761,13 +762,18 @@ footer p small a:hover {
 
 @media screen and (min-width:1020px) and (max-width: 1383px) {
     .hero-image {
-        right: -125px;
+        right: -90px;
+        bottom: -230px;
     }
+
 }
 @media screen and (min-width:767px) and (max-width: 1020px) {
     .hero-image {
-        right: -209px;
+        width: 80%;
+        right: -180px;
+        bottom: -200px;
     }
+
 }
 @media screen and (max-width:767px){
     header{
@@ -809,9 +815,12 @@ footer p small a:hover {
     #hero h1 {
         padding-right: 0 !important;
     }
-    .hero-image{
+    .hero-image {
+        left: 4px;
+        bottom: 31px;
         position: relative;
     }
+
     .hero-testimonial {
         margin-top: -30px;
         border-radius: 5px;

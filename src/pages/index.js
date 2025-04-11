@@ -4,6 +4,7 @@ import { graphql, Link, useStaticQuery } from "gatsby"
 import Portrait from "../components/portrait"
 import { Faq } from "../components/faqs"
 import { Header } from "../components/header"
+import { BrandLogos } from "../components/brandLogos"
 
 const CONSULTATION_LINK =
   "https://calendly.com/edgardo-g-carreras/free-coaching-call-with-edgardo"
@@ -29,8 +30,7 @@ function HeroSection() {
               Attention SaaS CEOs & CTOs
             </h5>
             <h1 className="roboto-bold mb-1 mb-md-4 text-capitalize">
-              Transform your team's efficiency, quality, and alignment in weeks,
-              not months.
+              I help your team deliver better software, faster.
             </h1>
             <h4 className="roboto-light text-capitalize">
               Boost software profitability without hiring or burning out your
@@ -38,12 +38,10 @@ function HeroSection() {
             </h4>
             <div className="cta my-4 my-md-5">
               <div className="site-btn pulse-btn">
-                <a href={CONSULTATION_LINK}>Schedule Your Free Consultation</a>
+                <Link href={"/newsletter"}>Get daily tips</Link>
               </div>
               <small className="text-white">
-                <em>
-                  Trusted by 10+ Tech Executives to Boost Team Performance
-                </em>
+                <em>Join 100+ readers and boost team performance.</em>
               </small>
             </div>
           </div>
@@ -52,7 +50,7 @@ function HeroSection() {
             <Portrait
               className="hero-image img-fluid"
               fluid={data.placeholderImage.childImageSharp.fluid}
-              style={{ position: "none", width: 802 }}
+              style={{ position: "none" }}
             />
 
             <div className="hero-testimonial d-flex flex-wrap flex-md-nowrap">
@@ -61,9 +59,9 @@ function HeroSection() {
               </div>
               <div className="text-container">
                 <span>
-                  "Edgardo provided invaluable mentorship, helping junior
-                  developers grow technically and enforcing high code standards
-                  through TDD and tool integration."
+                  "Edgardo provided invaluable mentorship, helping developers
+                  grow technically and enforcing high code standards through TDD
+                  and tool integration."
                 </span>
 
                 <span className="name">- William Cheung</span>
@@ -72,30 +70,7 @@ function HeroSection() {
           </div>
         </div>
 
-        <div className="marquee-logos mt-4 mt-md-5">
-          <div className="hero__logos-wrapper">
-            <img src="/images/maybelineNewYork.png" alt="" />
-
-            <img src="/images/galaxy-digital.png" alt="" />
-
-            <img src="/images/l'oreal.png" alt="" />
-
-            <img src="/images/sKyrocket.png" alt="" />
-
-            <img src="/images/codetrotters.png" alt="" />
-          </div>
-          <div className="hero__logos-wrapper">
-            <img src="/images/maybelineNewYork.png" alt="" />
-
-            <img src="/images/galaxy-digital.png" alt="" />
-
-            <img src="/images/l'oreal.png" alt="" />
-
-            <img src="/images/sKyrocket.png" alt="" />
-
-            <img src="/images/codetrotters.png" alt="" />
-          </div>
-        </div>
+        <BrandLogos />
       </div>
     </section>
   )
@@ -353,9 +328,7 @@ const IndexPage = () => (
                     alt=""
                   />
                   <div className="text-container text-white">
-                    <h4 className="service-title">
-                      Agile Shift: Mastering Software Excellence
-                    </h4>
+                    <h4 className="service-title">Agile Shift Newsletter</h4>
                     <p>
                       Dive into a free, comprehensive{" "}
                       <Link style={{ color: "white" }} to="/newsletter">
@@ -365,6 +338,9 @@ const IndexPage = () => (
                       challenges, optimize your processes, and enhance overall
                       team performance.
                     </p>
+                    <div className="site-btn">
+                      <Link href={"/newsletter"}>Get daily tips</Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -376,13 +352,18 @@ const IndexPage = () => (
                     alt=""
                   />
                   <div className="text-container text-white">
-                    <h4 className="service-title">Private Coaching Call</h4>
+                    <h4 className="service-title">Private 1-1 Coaching Call</h4>
                     <p>
                       Address specific software development hurdles with direct,
                       actionable advice that delivers guaranteed results,
                       ensuring you overcome any obstacle swiftly and
                       effectively.
                     </p>
+                    <div className="site-btn">
+                      <a href={CONSULTATION_LINK}>
+                        Fix Hurdles - Schedule Call
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -396,37 +377,16 @@ const IndexPage = () => (
                   <div className="text-container text-white">
                     <h4 className="service-title">Technical Agile Coach</h4>
                     <p>
-                      My{" "}
-                      <Link style={{ color: "white" }} to="/tech-agile-coach">
-                        technical coaching service
-                      </Link>{" "}
-                      helps tech leaders like you achieve faster development
-                      cycles, improved team collaboration, higher-quality code,
-                      and frequent low-risk deployments. I embed myself with
-                      your team to elevate their software craftsmanship. So you
-                      can deliver value to end users faster and more reliably.
+                      I embed myself with your team to elevate their software
+                      craftsmanship. So you can deliver value to end users
+                      faster, with high quality and more reliably.
                     </p>
+                    <div className="site-btn">
+                      <Link href="/tech-agile-coach">
+                        Start your team's transformation
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="row cta-row">
-              <div className="col-12">
-                <div className="cta my-4 my-md-5 mx-auto">
-                  <div className="site-btn pulse-btn">
-                    <a href={CONSULTATION_LINK}>
-                      Schedule Your Free Consultation
-                    </a>
-                  </div>
-                  <small className="text-center">
-                    <em>
-                      <small className="text-white">
-                        <strong>10+</strong> Tech executives have transformed
-                        their teams with our coaching.
-                      </small>
-                    </em>
-                  </small>
                 </div>
               </div>
             </div>

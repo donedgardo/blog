@@ -4,9 +4,12 @@ import { graphql, useStaticQuery } from "gatsby"
 import Portrait from "../components/portrait"
 import { Faq } from "../components/faqs"
 import { Header } from "../components/header"
+import { BrandLogos } from "../components/brandLogos"
 
 const CONSULTATION_LINK =
   "https://calendly.com/edgardo-g-carreras/agile-tech-coach-onboarding"
+
+const NEWSLETTER_LINK = "/newsletter"
 
 function HeroSection() {
   const data = useStaticQuery(graphql`
@@ -29,12 +32,12 @@ function HeroSection() {
               Attention Tech Managers
             </h5>
             <h1 className="roboto-bold mb-1 mb-md-4 text-capitalize">
-              Transform your software team’s performance with hands-on Agile
-              technical coaching.
+              Elevate your team’s engineering practices so they can deliver
+              better software, faster.
             </h1>
             <h4 className="roboto-light">
-              My Technical Agile Coaching helps transform your team’s
-              engineering practices so they can deliver better software, faster.
+              Transform your software team’s performance with hands-on Agile
+              technical coaching.
             </h4>
             <div className="cta my-4 my-md-5">
               <div className="site-btn pulse-btn">
@@ -52,7 +55,7 @@ function HeroSection() {
             <Portrait
               className="hero-image img-fluid"
               fluid={data.placeholderImage.childImageSharp.fluid}
-              style={{ position: "none", width: 802 }}
+              style={{ position: "none" }}
             />
 
             <div className="hero-testimonial d-flex flex-wrap flex-md-nowrap">
@@ -61,9 +64,9 @@ function HeroSection() {
               </div>
               <div className="text-container">
                 <span>
-                  "Edgardo provided invaluable mentorship, helping junior
-                  developers grow technically and enforcing high code standards
-                  through TDD and tool integration."
+                  "Edgardo provided invaluable mentorship, helping developers
+                  grow technically and enforcing high code standards through TDD
+                  and tool integration."
                 </span>
                 <span className="name">- William Cheung</span>
               </div>
@@ -71,30 +74,7 @@ function HeroSection() {
           </div>
         </div>
 
-        <div className="marquee-logos mt-4 mt-md-5">
-          <div className="hero__logos-wrapper">
-            <img src="/images/maybelineNewYork.png" alt="" />
-
-            <img src="/images/galaxy-digital.png" alt="" />
-
-            <img src="/images/l'oreal.png" alt="" />
-
-            <img src="/images/sKyrocket.png" alt="" />
-
-            <img src="/images/codetrotters.png" alt="" />
-          </div>
-          <div className="hero__logos-wrapper">
-            <img src="/images/maybelineNewYork.png" alt="" />
-
-            <img src="/images/galaxy-digital.png" alt="" />
-
-            <img src="/images/l'oreal.png" alt="" />
-
-            <img src="/images/sKyrocket.png" alt="" />
-
-            <img src="/images/codetrotters.png" alt="" />
-          </div>
-        </div>
+        <BrandLogos />
       </div>
     </section>
   )

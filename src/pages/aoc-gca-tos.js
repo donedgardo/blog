@@ -8,10 +8,10 @@ export default () => {
       </p>
 
       <p>
-        Welcome to the <strong>Ashes of Creation Companion</strong> Discord App
-        ("the App"), a guild management tool designed to help communities
-        playing <strong>Ashes of Creation</strong> organize artisan roles,
-        crafting orders, and trade logistics.
+        Welcome to the <strong>Ashes Guild Companion</strong> Discord App ("the
+        App"), a guild management tool designed to help communities playing{" "}
+        <strong>Ashes of Creation</strong> organize artisan roles, crafting
+        orders, and trade logistics.
       </p>
 
       <p>

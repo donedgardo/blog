@@ -10,8 +10,7 @@ export default () => {
       <p>
         This Privacy Policy explains how <strong>Edgardo Carreras</strong>{" "}
         ("we", "our", or "us") collects, uses, and stores information when you
-        use the <strong>Ashes of Creation Guild Companion</strong> Discord App
-        ("the App").
+        use the <strong>Ashes Guild Companion</strong> Discord App ("the App").
       </p>
 
       <h2>1. Information We Collect</h2>

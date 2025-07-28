@@ -12,29 +12,33 @@
       }
 
       :root {
-          --primary-color: #2d3748;
-          --secondary-color: #4a5568;
-          --accent-color: #3182ce;
-          --accent-hover: #2c5aa0;
-          --text-primary: #1a202c;
-          --text-secondary: #4a5568;
-          --text-light: #718096;
+          --primary-color: #1e293b;
+          --secondary-color: #334155;
+          --accent-color: #3b82f6;
+          --accent-hover: #2563eb;
+          --accent-light: #60a5fa;
+          --text-primary: #0f172a;
+          --text-secondary: #475569;
+          --text-light: #64748b;
           --bg-primary: #ffffff;
-          --bg-secondary: #f7fafc;
+          --bg-secondary: #f8fafc;
           --bg-card: #ffffff;
           --border-color: #e2e8f0;
-          --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-          --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-          --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-          --rust-orange: #dea584;
-          --success-green: #48bb78;
+          --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+          --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+          --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+          --rust-orange: #f97316;
+          --success-green: #10b981;
+          --gradient-start: #3b82f6;
+          --gradient-end: #1d4ed8;
       }
 
       body {
-          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
           line-height: 1.6;
           color: var(--text-primary);
           background: var(--bg-primary);
+          font-feature-settings: 'kern' 1, 'liga' 1;
       }
 
       .container {
@@ -45,9 +49,9 @@
 
       /* Header */
       .header {
-          background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+          background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
           color: white;
-          padding: 3rem 0;
+          padding: 4rem 0;
           position: relative;
           overflow: hidden;
       }
@@ -59,8 +63,9 @@
           left: 0;
           right: 0;
           bottom: 0;
-          background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="40" cy="80" r="1.5" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grain)"/></svg>') repeat;
-          opacity: 0.3;
+          background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%);
+          background-size: 20px 20px;
+          opacity: 0.1;
       }
 
       .header-content {
@@ -73,13 +78,14 @@
       }
 
       .header-text h1 {
-          font-size: 3rem;
-          font-weight: 700;
+          font-size: 3.5rem;
+          font-weight: 800;
           margin-bottom: 0.5rem;
-          background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+          background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
+          letter-spacing: -0.02em;
       }
 
       .header-text .subtitle {
@@ -95,19 +101,29 @@
       }
 
       .profile-image {
-          width: 180px;
-          height: 180px;
+          width: 200px;
+          height: 200px;
           border-radius: 50%;
-          border: 4px solid rgba(255, 255, 255, 0.2);
+          border: 4px solid rgba(255, 255, 255, 0.3);
           box-shadow: var(--shadow-lg);
-          background: linear-gradient(135deg, var(--rust-orange), #f6ad55);
+          background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: 4rem;
-          font-weight: bold;
+          font-size: 4.5rem;
+          font-weight: 900;
           color: white;
           justify-self: center;
+          position: relative;
+      }
+
+      .profile-image::before {
+          content: '';
+          position: absolute;
+          inset: -2px;
+          border-radius: 50%;
+          background: linear-gradient(135deg, var(--accent-light), var(--gradient-end));
+          z-index: -1;
       }
 
       /* Navigation */
@@ -170,9 +186,9 @@
           bottom: -0.5rem;
           left: 50%;
           transform: translateX(-50%);
-          width: 4rem;
-          height: 3px;
-          background: linear-gradient(135deg, var(--accent-color), var(--rust-orange));
+          width: 5rem;
+          height: 4px;
+          background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
           border-radius: 2px;
       }
 
@@ -208,14 +224,16 @@
       }
 
       .skill-category .icon {
-          width: 2rem;
-          height: 2rem;
-          background: var(--accent-color);
-          border-radius: 0.5rem;
+          width: 2.5rem;
+          height: 2.5rem;
+          background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+          border-radius: 0.75rem;
           display: flex;
           align-items: center;
           justify-content: center;
           color: white;
+          font-size: 1.25rem;
+          box-shadow: var(--shadow-sm);
       }
 
       .skill-tags {
@@ -348,16 +366,19 @@
           align-items: center;
           gap: 0.5rem;
           padding: 0.75rem 1.5rem;
-          background: var(--accent-color);
+          background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
           color: white;
           text-decoration: none;
-          border-radius: 0.5rem;
-          font-weight: 500;
-          transition: background-color 0.3s ease;
+          border-radius: 0.75rem;
+          font-weight: 600;
+          transition: all 0.3s ease;
+          box-shadow: var(--shadow-sm);
       }
 
       .project-link:hover {
-          background: var(--accent-hover);
+          background: linear-gradient(135deg, var(--accent-hover), var(--accent-color));
+          box-shadow: var(--shadow-md);
+          transform: translateY(-1px);
       }
 
       .project-link.secondary {
@@ -420,6 +441,135 @@
           font-size: 1.25rem;
       }
 
+      /* Articles Grid */
+      .articles-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+          gap: 2rem;
+      }
+
+      .article-card {
+          background: var(--bg-card);
+          border-radius: 1rem;
+          overflow: hidden;
+          box-shadow: var(--shadow-md);
+          border: 1px solid var(--border-color);
+          transition: all 0.3s ease;
+          display: flex;
+          flex-direction: column;
+      }
+
+      .article-card:hover {
+          transform: translateY(-4px);
+          box-shadow: var(--shadow-lg);
+      }
+
+      .article-card.featured {
+          border: 2px solid var(--accent-color);
+          background: linear-gradient(135deg, var(--bg-card) 0%, rgba(59, 130, 246, 0.03) 100%);
+          box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+
+      .article-header {
+          padding: 1.5rem;
+          border-bottom: 1px solid var(--border-color);
+      }
+
+      .article-category {
+          color: var(--accent-color);
+          font-size: 0.75rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          margin-bottom: 0.5rem;
+      }
+
+      .article-title {
+          font-size: 1.25rem;
+          font-weight: 600;
+          color: var(--primary-color);
+          margin-bottom: 0.5rem;
+          line-height: 1.4;
+      }
+
+      .article-subtitle {
+          color: var(--text-light);
+          font-size: 0.875rem;
+          line-height: 1.4;
+      }
+
+      .article-content {
+          padding: 1.5rem;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+      }
+
+      .article-excerpt {
+          color: var(--text-secondary);
+          margin-bottom: 1.5rem;
+          line-height: 1.6;
+          flex: 1;
+      }
+
+      .article-highlights {
+          margin-bottom: 1.5rem;
+      }
+
+      .article-highlights h4 {
+          font-size: 0.875rem;
+          font-weight: 600;
+          color: var(--primary-color);
+          margin-bottom: 0.5rem;
+      }
+
+      .article-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+      }
+
+      .article-tag {
+          background: var(--bg-secondary);
+          color: var(--text-secondary);
+          padding: 0.25rem 0.75rem;
+          border-radius: 1rem;
+          font-size: 0.75rem;
+          font-weight: 500;
+          border: 1px solid var(--border-color);
+      }
+
+      .article-actions {
+          margin-top: 1.5rem;
+          padding-top: 1rem;
+          border-top: 1px solid var(--border-color);
+      }
+
+      .article-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.75rem 1.5rem;
+          background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+          color: white;
+          text-decoration: none;
+          border-radius: 0.75rem;
+          font-weight: 600;
+          font-size: 0.875rem;
+          transition: all 0.3s ease;
+          box-shadow: var(--shadow-sm);
+      }
+
+      .article-link:hover {
+          background: linear-gradient(135deg, var(--accent-hover), var(--accent-color));
+          box-shadow: var(--shadow-md);
+          transform: translateY(-1px);
+      }
+
+      .writing-intro {
+          margin-bottom: 3rem;
+      }
+
       /* Contact Section */
       .contact-content {
           text-align: center;
@@ -439,17 +589,19 @@
           align-items: center;
           gap: 0.5rem;
           padding: 1rem 2rem;
-          background: var(--accent-color);
+          background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
           color: white;
           text-decoration: none;
-          border-radius: 0.5rem;
-          font-weight: 500;
+          border-radius: 0.75rem;
+          font-weight: 600;
           transition: all 0.3s ease;
+          box-shadow: var(--shadow-md);
       }
 
       .contact-link:hover {
-          background: var(--accent-hover);
+          background: linear-gradient(135deg, var(--accent-hover), var(--accent-color));
           transform: translateY(-2px);
+          box-shadow: var(--shadow-lg);
       }
 
       /* Footer */
@@ -535,6 +687,7 @@
       <ul class="nav-links">
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#writing">Writing</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -607,213 +760,283 @@
     </section>
 
     <section id="projects" class="section">
-      <h2 class="section-title">Featured Projects</h2>
+      <h2 class="section-title">Professional Experience & Projects</h2>
       <div class="projects-grid">
-        <div class="project-card">
+        <div class="project-card featured">
           <div class="project-header">
-            <div class="project-title">Ray Tracing Engine</div>
-            <div class="project-subtitle">Graphics Programming</div>
+            <div class="project-title">Software Productivity Consulting</div>
+            <div class="project-subtitle">Carreras Dev • Jan 2022 - Present</div>
           </div>
           <div class="project-content">
             <div class="project-description">
-              A custom ray tracing engine built from scratch in Rust, demonstrating advanced graphics programming
-              techniques and performance optimization. Features physically-based rendering and real-time visualization
-              capabilities.
+              Delivering high-impact strategies to C-Level executives across multiple organizations, focusing on
+              measurable improvements in software delivery performance and team productivity.
             </div>
             <div class="project-highlights">
               <h4>Key Achievements:</h4>
               <ul class="highlight-list">
-                <li>Implemented from-scratch ray tracing algorithms</li>
-                <li>Optimized for performance using Rust's memory safety</li>
-                <li>Physically-based material system</li>
-                <li>Real-time scene manipulation</li>
+                <li>Decreased lead times and increased deployment frequency for enterprise clients</li>
+                <li>Reduced mean time to restore faulty systems through improved CI/CD practices</li>
+                <li>Lowered faulty deployment rates via testing automation strategies</li>
+                <li>Trained software teams globally on industry best practices through speaking events</li>
+                <li>Eliminated technical debt and system fragility through strategic code analysis</li>
               </ul>
             </div>
             <div class="project-tech">
-              <span class="tech-tag">Rust</span>
-              <span class="tech-tag">Graphics Programming</span>
-              <span class="tech-tag">Linear Algebra</span>
-              <span class="tech-tag">Performance</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/donedgardo" class="project-link">
-                <span>📁</span> View Code
-              </a>
+              <span class="tech-tag">Strategic Consulting</span>
+              <span class="tech-tag">Technical Leadership</span>
+              <span class="tech-tag">Team Training</span>
+              <span class="tech-tag">DevOps</span>
+              <span class="tech-tag">Code Analysis</span>
             </div>
           </div>
         </div>
 
         <div class="project-card">
           <div class="project-header">
-            <div class="project-title">TDD with Bevy Game Engine</div>
-            <div class="project-subtitle">Game Development</div>
+            <div class="project-title">Full-Stack Platform Development</div>
+            <div class="project-subtitle">Galaxy Digital • Jan 2020 - Dec 2021</div>
           </div>
           <div class="project-content">
             <div class="project-description">
-              Pioneering the application of Test-Driven Development in game development using the Bevy engine. Created
-              comprehensive animation systems and game mechanics with full test coverage.
+              Led the design and implementation of full-stack financial technology products for a leading digital asset
+              company, serving institutional clients worldwide.
             </div>
             <div class="project-highlights">
               <h4>Key Achievements:</h4>
               <ul class="highlight-list">
-                <li>Established TDD practices for game development</li>
-                <li>Built robust animation system with ECS architecture</li>
-                <li>Comprehensive test suite for game mechanics</li>
-                <li>Published educational blog post</li>
+                <li>Architected scalable GraphQL microservices for high-frequency trading systems</li>
+                <li>Implemented data-driven product analytics for validation and optimization</li>
+                <li>Improved deployment failure rates through comprehensive testing automation</li>
+                <li>Trained global teams on GraphQL best practices and implementation</li>
+                <li>Enhanced team culture through post-mortems and knowledge sharing events</li>
+                <li>Vetted and mentored new software engineer recruits</li>
               </ul>
             </div>
             <div class="project-tech">
-              <span class="tech-tag">Rust</span>
-              <span class="tech-tag">Bevy</span>
-              <span class="tech-tag">TDD</span>
-              <span class="tech-tag">ECS</span>
-              <span class="tech-tag">Game Development</span>
-            </div>
-            <div class="project-links">
-              <a href="https://edgardocarreras.com/blog/tdd-in-rust-game-engine-bevy" class="project-link">
-                <span>📖</span> Read Article
-              </a>
-              <a href="https://github.com/donedgardo" class="project-link secondary">
-                <span>📁</span> Source
-              </a>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">GraphQL</span>
+              <span class="tech-tag">Microservices</span>
+              <span class="tech-tag">CI/CD</span>
             </div>
           </div>
         </div>
 
         <div class="project-card">
           <div class="project-header">
-            <div class="project-title">Game of Life in Rust</div>
-            <div class="project-subtitle">Algorithm Implementation</div>
+            <div class="project-title">Enterprise Security & MVP Development</div>
+            <div class="project-subtitle">San Juan Mercantile Exchange • Aug 2019 - Dec 2019</div>
           </div>
           <div class="project-content">
             <div class="project-description">
-              A Test-Driven Development implementation of Conway's Game of Life in Rust, showcasing clean code
-              principles, comprehensive testing, and efficient algorithm implementation.
+              Delivered rapid MVP development and security analysis for Puerto Rico's premier financial exchange,
+              ensuring robust and secure trading systems.
             </div>
             <div class="project-highlights">
               <h4>Key Achievements:</h4>
               <ul class="highlight-list">
-                <li>100% test coverage with TDD approach</li>
-                <li>Optimized cellular automaton algorithms</li>
-                <li>Clean, maintainable code architecture</li>
-                <li>Performance benchmarking and optimization</li>
+                <li>Built production-ready MVPs using modern tech stack in AWS ecosystem</li>
+                <li>Identified and mitigated critical security threats through comprehensive code reviews</li>
+                <li>Diagnosed and resolved IT system inefficiencies and performance bottlenecks</li>
+                <li>Established technology best practices through training and knowledge transfer</li>
+                <li>Collaborated with technical teams to ensure system familiarity and maintenance</li>
               </ul>
             </div>
             <div class="project-tech">
-              <span class="tech-tag">Rust</span>
-              <span class="tech-tag">TDD</span>
-              <span class="tech-tag">Algorithms</span>
-              <span class="tech-tag">Performance</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/donedgardo/game_of_life_rust_tdd" class="project-link">
-                <span>📁</span> View Code
-              </a>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">GraphQL</span>
+              <span class="tech-tag">AWS</span>
+              <span class="tech-tag">Security Analysis</span>
             </div>
           </div>
         </div>
 
         <div class="project-card">
           <div class="project-header">
-            <div class="project-title">Tic-Tac-Toe with AI</div>
-            <div class="project-subtitle">AI & Game Theory</div>
+            <div class="project-title">Social Commerce Platform - CTO</div>
+            <div class="project-subtitle">Loveshare • Feb 2018 - 2019</div>
           </div>
           <div class="project-content">
             <div class="project-description">
-              An unbeatable Tic-Tac-Toe AI implementation using the minimax algorithm, developed in both JavaScript and
-              Rust using Test-Driven Development methodology.
+              Developed comprehensive technical strategy for innovative social commerce platform, aligning technology
+              initiatives with business objectives and investor requirements.
             </div>
             <div class="project-highlights">
               <h4>Key Achievements:</h4>
               <ul class="highlight-list">
-                <li>Minimax algorithm with alpha-beta pruning</li>
-                <li>Cross-language implementation (JS & Rust)</li>
-                <li>Comprehensive BDD test suite</li>
-                <li>Web-based interactive interface</li>
+                <li>Architected scalable mobile-first platform using React Native and GraphQL</li>
+                <li>Implemented competitive advantage through innovative technology adoption</li>
+                <li>Monitored KPIs and IT budgets to optimize technological performance</li>
+                <li>Successfully communicated technical strategy to partners and investors</li>
+                <li>Built product analytics system for data-driven decision making</li>
               </ul>
             </div>
             <div class="project-tech">
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">Rust</span>
-              <span class="tech-tag">AI</span>
-              <span class="tech-tag">Game Theory</span>
-              <span class="tech-tag">BDD</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/donedgardo/tic-tac-toe-rust" class="project-link">
-                <span>🦀</span> Rust Version
-              </a>
-              <a href="https://github.com/donedgardo/tic-tac-toe" class="project-link secondary">
-                <span>🌐</span> Web Version
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <div class="project-title">PokemonGO Location Scanner</div>
-            <div class="project-subtitle">Mobile Development</div>
-          </div>
-          <div class="project-content">
-            <div class="project-description">
-              A React Native application that leveraged geolocation APIs and real-time data to help users discover
-              Pokémon in their vicinity, demonstrating mobile development and API integration skills.
-            </div>
-            <div class="project-highlights">
-              <h4>Key Achievements:</h4>
-              <ul class="highlight-list">
-                <li>Real-time geolocation integration</li>
-                <li>Cross-platform mobile development</li>
-                <li>External API integration and data processing</li>
-                <li>Interactive map visualization</li>
-              </ul>
-            </div>
-            <div class="project-tech">
+              <span class="tech-tag">GraphQL</span>
               <span class="tech-tag">React Native</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">Geolocation</span>
-              <span class="tech-tag">API Integration</span>
-              <span class="tech-tag">Mobile</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/donedgardo/pokegoRN" class="project-link">
-                <span>📱</span> View Code
-              </a>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Strategic Planning</span>
+              <span class="tech-tag">Product Analytics</span>
             </div>
           </div>
         </div>
 
         <div class="project-card">
           <div class="project-header">
-            <div class="project-title">Mastermind Game</div>
-            <div class="project-subtitle">Logic & Strategy</div>
+            <div class="project-title">AI-Powered E-Commerce Platform - CTO</div>
+            <div class="project-subtitle">Migo IQ • Apr 2018 - Aug 2018</div>
           </div>
           <div class="project-content">
             <div class="project-description">
-              A Test-Driven Development implementation of the classic Mastermind game, showcasing logical thinking,
-              pattern recognition algorithms, and clean user interface design.
+              Led cross-functional team to build AI-powered e-commerce MVPs for Series A funding round, incorporating
+              machine learning and NLP for intelligent product recommendations.
             </div>
             <div class="project-highlights">
               <h4>Key Achievements:</h4>
               <ul class="highlight-list">
-                <li>Complete TDD implementation</li>
-                <li>Pattern recognition algorithms</li>
-                <li>Clean, intuitive user interface</li>
-                <li>Comprehensive game logic testing</li>
+                <li>Delivered multiple MVPs that secured Series A investment funding</li>
+                <li>Implemented machine learning recommendation engines using Python and NLP</li>
+                <li>Built cross-platform applications for iOS, Android, and Web</li>
+                <li>Integrated Bluetooth technology for IoT product interactions</li>
+                <li>Led designers and engineers in rapid prototype development</li>
               </ul>
             </div>
             <div class="project-tech">
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">TDD</span>
-              <span class="tech-tag">Game Logic</span>
-              <span class="tech-tag">UI/UX</span>
+              <span class="tech-tag">GraphQL</span>
+              <span class="tech-tag">React Native</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Machine Learning</span>
+              <span class="tech-tag">NLP</span>
+              <span class="tech-tag">Bluetooth</span>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/donedgardo/mastermind" class="project-link">
-                <span>🧩</span> View Code
-              </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-title">Software Development Agency - Co-Founder & CTO</div>
+            <div class="project-subtitle">Skyrocket Development • Apr 2016 - Apr 2018</div>
+          </div>
+          <div class="project-content">
+            <div class="project-description">
+              Founded and scaled a comprehensive software development agency, delivering diverse technical solutions
+              including SaaS, mobile apps, machine learning, and IoT systems.
+            </div>
+            <div class="project-highlights">
+              <h4>Key Achievements:</h4>
+              <ul class="highlight-list">
+                <li>Successfully founded and scaled local software development agency</li>
+                <li>Delivered SaaS platforms, iOS/Android apps, and IoT solutions</li>
+                <li>Implemented machine learning solutions for multiple client projects</li>
+                <li>Managed diverse project portfolio and technical staff</li>
+                <li>Negotiated successful acquisition and company sale</li>
+                <li>Established quality standards and delivery processes</li>
+              </ul>
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">SaaS Development</span>
+              <span class="tech-tag">Mobile Apps</span>
+              <span class="tech-tag">Machine Learning</span>
+              <span class="tech-tag">IoT</span>
+              <span class="tech-tag">Team Management</span>
+              <span class="tech-tag">Business Development</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-title">Enterprise Web Platform - Backend Director</div>
+            <div class="project-subtitle">Pixnabi Labs LLC • Sep 2015 - Apr 2016</div>
+          </div>
+          <div class="project-content">
+            <div class="project-description">
+              Led comprehensive web development department, managing full-stack infrastructure including server
+              architecture, database design, and cloud deployment strategies.
+            </div>
+            <div class="project-highlights">
+              <h4>Key Achievements:</h4>
+              <ul class="highlight-list">
+                <li>Architected scalable server and network infrastructure</li>
+                <li>Designed robust data models for MongoDB and SQL systems</li>
+                <li>Implemented automated testing and deployment pipelines</li>
+                <li>Built RESTful APIs and MVC framework solutions</li>
+                <li>Managed AWS cloud infrastructure and hosting environments</li>
+                <li>Led UI/UX design and cross-browser compatibility initiatives</li>
+              </ul>
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">Meteor.js</span>
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">AWS</span>
+              <span class="tech-tag">API Design</span>
+              <span class="tech-tag">Automated Testing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-title">Full-Stack Web Applications</div>
+            <div class="project-subtitle">Freelance Development • Jul 2014 - Sep 2015</div>
+          </div>
+          <div class="project-content">
+            <div class="project-description">
+              Delivered custom web applications for diverse clients using modern JavaScript frameworks and full-stack
+              development practices.
+            </div>
+            <div class="project-highlights">
+              <h4>Key Achievements:</h4>
+              <ul class="highlight-list">
+                <li>Built responsive web applications using AngularJS and modern frameworks</li>
+                <li>Developed cross-platform solutions with Node.js and Meteor.js</li>
+                <li>Implemented RESTful APIs and microservices architecture</li>
+                <li>Created interactive prototypes and user-centered designs</li>
+                <li>Ensured cross-browser compatibility and responsive design</li>
+                <li>Applied software architecture patterns and design principles</li>
+              </ul>
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">AngularJS</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Meteor.js</span>
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">Ruby</span>
+              <span class="tech-tag">Laravel</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-title">Computer Science Education</div>
+            <div class="project-subtitle">Codetrotters • Oct 2016 - Aug 2018</div>
+          </div>
+          <div class="project-content">
+            <div class="project-description">
+              Designed and delivered comprehensive computer science curriculum, introducing programming concepts to new
+              developers using modern JavaScript frameworks and best practices.
+            </div>
+            <div class="project-highlights">
+              <h4>Key Achievements:</h4>
+              <ul class="highlight-list">
+                <li>Developed engaging Introduction to Computer Science curriculum</li>
+                <li>Taught modern JavaScript programming concepts and frameworks</li>
+                <li>Mentored aspiring developers in software development best practices</li>
+                <li>Created hands-on learning experiences and practical projects</li>
+                <li>Established foundation for students' programming careers</li>
+              </ul>
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Curriculum Development</span>
+              <span class="tech-tag">Teaching</span>
+              <span class="tech-tag">Mentoring</span>
+              <span class="tech-tag">Best Practices</span>
             </div>
           </div>
         </div>
@@ -916,6 +1139,221 @@
             Bevy, or finding better ways to solve existing problems.
           </p>
         </div>
+      </div>
+    </section>
+
+    <section id="writing" class="section">
+      <h2 class="section-title">Best Reads</h2>
+      <div class="writing-intro">
+        <p
+          style="text-align: center; font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+          Through my daily newsletter, I share insights on software development practices, team dynamics, and
+          organizational culture. Here are some of my most impactful pieces that have resonated with thousands of
+          developers and leaders.
+        </p>
+      </div>
+      <div class="articles-grid">
+        <article class="article-card featured">
+          <div class="article-header">
+            <div class="article-category">Team Culture</div>
+            <div class="article-title">A Story of an Executive Who Asked to Stop Writing Tests</div>
+            <div class="article-subtitle">Why "going fast" without tests actually slows you down</div>
+          </div>
+          <div class="article-content">
+            <div class="article-excerpt">
+              "Think skipping writing tests will make you go faster? Think again." A real story about how a CEO's demand
+              to skip tests led to a week-long debugging nightmare that was solved in 30 minutes once proper testing was
+              applied.
+            </div>
+            <div class="article-highlights">
+              <h4>Key Insights:</h4>
+              <ul class="highlight-list">
+                <li>Manual reproduction took 25+ steps vs 30-minute fix with tests</li>
+                <li>Demonstrates "to go fast, you must go well" principle</li>
+                <li>Real-world example of technical debt impact</li>
+              </ul>
+            </div>
+            <div class="article-tags">
+              <span class="article-tag">TDD</span>
+              <span class="article-tag">Technical Leadership</span>
+              <span class="article-tag">Case Study</span>
+            </div>
+            <div class="article-actions">
+              <a href="https://edgardocarreras.com/daily/skip-testing" class="article-link">
+                <span>📖</span> Read Article
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <div class="article-header">
+            <div class="article-category">Team Dynamics</div>
+            <div class="article-title">Moving Beyond the Reliance on Superstars in Tech</div>
+            <div class="article-subtitle">How "10x developers" can actually hurt team performance</div>
+          </div>
+          <div class="article-content">
+            <div class="article-excerpt">
+              Inspired by "The Phoenix Project," this piece explores how over-reliance on individual contributors can
+              create knowledge silos and team dependencies that hurt overall performance.
+            </div>
+            <div class="article-highlights">
+              <h4>Key Insights:</h4>
+              <ul class="highlight-list">
+                <li>Identifies signs of knowledge hoarding behavior</li>
+                <li>Provides behavioral solutions for culture change</li>
+                <li>Promotes collaborative over individual performance</li>
+              </ul>
+            </div>
+            <div class="article-tags">
+              <span class="article-tag">Team Building</span>
+              <span class="article-tag">Knowledge Sharing</span>
+              <span class="article-tag">Organizational Culture</span>
+            </div>
+            <div class="article-actions">
+              <a href="https://edgardocarreras.com/daily/10x-developer-myth" class="article-link">
+                <span>📖</span> Read Article
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <div class="article-header">
+            <div class="article-category">Agile Philosophy</div>
+            <div class="article-title">The Death of Agile? Why Most Implementations Fail</div>
+            <div class="article-subtitle">Distinguishing true agile values from corporate frameworks</div>
+          </div>
+          <div class="article-content">
+            <div class="article-excerpt">
+              Drawing from experience as an apprentice to Robert C. Martin (Uncle Bob), this series explains why most
+              "agile" implementations invert the original agile values and principles.
+            </div>
+            <div class="article-highlights">
+              <h4>Key Insights:</h4>
+              <ul class="highlight-list">
+                <li>Exposes how frameworks contradict agile principles</li>
+                <li>Distinguishes values, principles, and practices</li>
+                <li>Calls out certification mills and vendor dysfunction</li>
+              </ul>
+            </div>
+            <div class="article-tags">
+              <span class="article-tag">Agile</span>
+              <span class="article-tag">Leadership</span>
+              <span class="article-tag">Process Improvement</span>
+            </div>
+            <div class="article-actions">
+              <a href="https://edgardocarreras.com/daily/death-of-agile-part-1" class="article-link">
+                <span>📖</span> Read Article
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <div class="article-header">
+            <div class="article-category">Project Management</div>
+            <div class="article-title">Why You Should Stop Asking Engineers for Estimates</div>
+            <div class="article-subtitle">A practical alternative to the estimation guessing game</div>
+          </div>
+          <div class="article-content">
+            <div class="article-excerpt">
+              "Anything that stands in the way of delivering value to customers is wasteful. Estimation = guessing =
+              wasteful." Learn a better way to forecast deliverables using story breakdown and throughput measurement.
+            </div>
+            <div class="article-highlights">
+              <h4>Key Insights:</h4>
+              <ul class="highlight-list">
+                <li>Practical #noestimates approach with concrete steps</li>
+                <li>Story breakdown and throughput measurement</li>
+                <li>Eliminates waste while improving predictability</li>
+              </ul>
+            </div>
+            <div class="article-tags">
+              <span class="article-tag">#NoEstimates</span>
+              <span class="article-tag">Lean</span>
+              <span class="article-tag">Productivity</span>
+            </div>
+            <div class="article-actions">
+              <a href="https://edgardocarreras.com/daily/best-way-to-do-software-estimating" class="article-link">
+                <span>📖</span> Read Article
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <div class="article-header">
+            <div class="article-category">DevOps</div>
+            <div class="article-title">From Chaos to Clarity: The Role of Continuous Delivery</div>
+            <div class="article-subtitle">How broken build systems create organizational chaos</div>
+          </div>
+          <div class="article-content">
+            <div class="article-excerpt">
+              Using "The Phoenix Project" as a case study, this piece shows how lack of continuous delivery practices
+              leads to chaotic release management and provides concrete remedies.
+            </div>
+            <div class="article-highlights">
+              <h4>Key Insights:</h4>
+              <ul class="highlight-list">
+                <li>Identifies anti-patterns in release management</li>
+                <li>Provides behavioral changes for improvement</li>
+                <li>Connects technical practices to business outcomes</li>
+              </ul>
+            </div>
+            <div class="article-tags">
+              <span class="article-tag">CI/CD</span>
+              <span class="article-tag">DevOps</span>
+              <span class="article-tag">Quality Assurance</span>
+            </div>
+            <div class="article-actions">
+              <a href="https://edgardocarreras.com/daily/ci-disaster-and-why-it-matters" class="article-link">
+                <span>📖</span> Read Article
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="article-card">
+          <div class="article-header">
+            <div class="article-category">Collaboration</div>
+            <div class="article-title">Harness the Power of Ensemble Programming</div>
+            <div class="article-subtitle">How collaborative coding transforms teams</div>
+          </div>
+          <div class="article-content">
+            <div class="article-excerpt">
+              A comprehensive guide to ensemble programming (formerly mob programming) that covers benefits,
+              implementation, and how it creates collective code ownership while accelerating learning.
+            </div>
+            <div class="article-highlights">
+              <h4>Key Insights:</h4>
+              <ul class="highlight-list">
+                <li>Practical guide with role definitions and rotation patterns</li>
+                <li>Benefits: knowledge sharing, quality, quick onboarding</li>
+                <li>Remote session considerations and facilitation tips</li>
+              </ul>
+            </div>
+            <div class="article-tags">
+              <span class="article-tag">Pair Programming</span>
+              <span class="article-tag">Knowledge Transfer</span>
+              <span class="article-tag">Remote Work</span>
+            </div>
+            <div class="article-actions">
+              <a href="https://edgardocarreras.com/daily/ensemble-programing-benefits" class="article-link">
+                <span>📖</span> Read Article
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="https://edgardocarreras.com/newsletter" class="contact-link">
+          <span>📧</span> Subscribe to Newsletter
+        </a>
+        <p style="margin-top: 1rem; color: var(--text-light);">
+          Join thousands of developers and leaders who read my daily insights on software development
+        </p>
       </div>
     </section>
 

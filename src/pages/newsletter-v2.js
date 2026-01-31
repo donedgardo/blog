@@ -43,176 +43,12 @@ function NewsletterHeroSection() {
   )
 }
 
-function WhatYouGetSection() {
-  return (
-    <section className="py-5" style={{ backgroundColor: "#1a1a1a" }}>
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-12 col-md-10">
-            <h2 className="text-white text-center mb-5">What You'll Get</h2>
-            
-            <div className="row">
-              <div className="col-12 col-md-6 mb-4">
-                <div className="p-4" style={{ backgroundColor: "#252525", borderRadius: "8px", height: "100%" }}>
-                  <h4 className="primary-color mb-3">🎯 Principles That Scale</h4>
-                  <p className="text-white mb-0">
-                    TDD, CI/CD, shift-left security — the fundamentals that matter 
-                    more than ever when AI accelerates everything.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="col-12 col-md-6 mb-4">
-                <div className="p-4" style={{ backgroundColor: "#252525", borderRadius: "8px", height: "100%" }}>
-                  <h4 className="primary-color mb-3">🔧 Practical DevSecOps</h4>
-                  <p className="text-white mb-0">
-                    Pipeline patterns, security automation, and quality gates 
-                    you can implement this week.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="col-12 col-md-6 mb-4">
-                <div className="p-4" style={{ backgroundColor: "#252525", borderRadius: "8px", height: "100%" }}>
-                  <h4 className="primary-color mb-3">🤖 AI-Era Strategies</h4>
-                  <p className="text-white mb-0">
-                    How to harness agentic coding without accumulating 
-                    technical debt at machine speed.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="col-12 col-md-6 mb-4">
-                <div className="p-4" style={{ backgroundColor: "#252525", borderRadius: "8px", height: "100%" }}>
-                  <h4 className="primary-color mb-3">⚡ 2-Minute Reads</h4>
-                  <p className="text-white mb-0">
-                    One focused insight per day. No fluff, no filler — just 
-                    actionable ideas you can use immediately.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function RecentPostsSection() {
-  return (
-    <section className="py-5" style={{ backgroundColor: "#121212" }}>
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-12 col-md-8">
-            <h2 className="text-white text-center mb-4">Recent Issues</h2>
-            <p className="text-center text-white-50 mb-5">
-              Here's a taste of what subscribers are reading:
-            </p>
-            
-            <div className="mb-4 p-4" style={{ backgroundColor: "#1a1a1a", borderRadius: "8px", borderLeft: "4px solid #ED9567" }}>
-              <h5 className="text-white mb-2">Steering the Genie</h5>
-              <p className="text-white-50 mb-0">
-                AI agents write code at extreme speeds. But speed means nothing if 
-                the destination is wrong. The principles that let you navigate.
-              </p>
-            </div>
-            
-            <div className="mb-4 p-4" style={{ backgroundColor: "#1a1a1a", borderRadius: "8px", borderLeft: "4px solid #ED9567" }}>
-              <h5 className="text-white mb-2">The True Essence of Agile</h5>
-              <p className="text-white-50 mb-0">
-                Agile is a culture, not a framework. It starts at the top. 
-                Why most implementations miss the point entirely.
-              </p>
-            </div>
-            
-            <div className="mb-4 p-4" style={{ backgroundColor: "#1a1a1a", borderRadius: "8px", borderLeft: "4px solid #ED9567" }}>
-              <h5 className="text-white mb-2">From Chaos to Clarity: Continuous Delivery</h5>
-              <p className="text-white-50 mb-0">
-                A broken build system causes chaotic release management. 
-                Why automated builds and tests change everything.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function AboutSection() {
-  return (
-    <section className="py-5" style={{ backgroundColor: "#1a1a1a" }}>
-      <div className="container">
-        <div className="row justify-content-center align-items-center">
-          <div className="col-12 col-md-3 text-center mb-4 mb-md-0">
-            <img 
-              src="/images/portrait_edgardo.png" 
-              alt="Edgardo Carreras" 
-              style={{ maxWidth: "200px", borderRadius: "50%" }}
-              className="img-fluid"
-            />
-          </div>
-          <div className="col-12 col-md-6">
-            <h3 className="text-white mb-3">About Edgardo</h3>
-            <p className="text-white">
-              I've spent the last decade as a developer, CTO, consultant, and team 
-              lead. I've built CI/CD pipelines, rescued legacy codebases, and learned 
-              (the hard way) that security and quality can't be afterthoughts.
-            </p>
-            <p className="text-white mb-0">
-              My background is in software craftsmanship: TDD, Clean Architecture, 
-              continuous delivery. These days, I apply those same principles to 
-              DevSecOps and helping teams navigate the AI era.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function BottomCTASection() {
-  return (
-    <section className="py-5" style={{ backgroundColor: "#121212" }}>
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-12 col-md-8 text-center">
-            <h2 className="text-white mb-4">
-              Ready to ship with confidence?
-            </h2>
-            <p className="text-white mb-4">
-              Get daily insights on building pipelines that let you move fast 
-              without breaking things — even when AI writes the code.
-            </p>
-            <div className="cta">
-              <SignUpForm2
-                ctaLabel="Subscribe Now"
-                url="https://app.convertkit.com/forms/3332277/subscriptions"
-              />
-              <small className="text-white">
-                <em>
-                  No spam. No fluff. Just daily insights you can use.
-                </em>
-              </small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
 const IndexPage = () => (
   <>
     <div className="site-content">
       <Header />
       <main>
         <NewsletterHeroSection />
-        <WhatYouGetSection />
-        <RecentPostsSection />
-        <AboutSection />
-        <BottomCTASection />
       </main>
       <footer className="p-4 light-dark-bg">
         <div className="bottom">
@@ -240,9 +76,6 @@ export const Head = () => {
         {` 
           body {
             background-color: #121212;
-          }
-          .text-white-50 {
-            color: rgba(255,255,255,0.6) !important;
           }
         `}
       </style>

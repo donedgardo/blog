@@ -37,10 +37,10 @@ function HeroSection() {
             </h4>
             <div className="cta my-4 my-md-5">
               <div className="site-btn pulse-btn">
-                <a href={CONSULTATION_LINK}>Book a Free Call</a>
+                <Link to="/newsletter">Get the Newsletter</Link>
               </div>
               <small className="text-white">
-                <em>30 minutes. No pitch deck. Just a conversation.</em>
+                <em>Daily insights on shipping fast and safe in the AI era.</em>
               </small>
             </div>
           </div>
@@ -926,13 +926,11 @@ const IndexPage = () => (
               <div className="col-12">
                 <div className="cta my-4 my-md-5 mx-auto">
                   <div className="site-btn pulse-btn">
-                    <a href={CONSULTATION_LINK}>
-                      Book Your Free Call
-                    </a>
+                    <Link to="/newsletter">Get the Newsletter</Link>
                   </div>
                   <small>
                     <em>
-                      30 minutes. No pitch deck. Just a conversation about your pipeline.
+                      Join 100+ engineering leaders getting daily DevSecOps insights.
                     </em>
                   </small>
                 </div>
@@ -985,18 +983,17 @@ const IndexPage = () => (
               Ready to ship with confidence?
             </h1>
             <h4 className="roboto-light text-center text-white">
-              Schedule a free 30-minute call. We'll talk about your current 
-              pipeline, your biggest pain points, and whether working together 
-              makes sense.
+              Get daily insights on DevSecOps, CI/CD, and building pipelines 
+              that let you move fast without breaking things.
             </h4>
 
             <div className="cta mt-4 mt-md-5 mx-auto">
               <div className="site-btn pulse-btn">
-                <a href={CONSULTATION_LINK}>Book Your Free Call</a>
+                <Link to="/newsletter">Subscribe to the Newsletter</Link>
               </div>
               <small>
                 <em>
-                  No pitch deck. No pressure. Just a conversation.
+                  Join 100+ engineering leaders. No spam. Unsubscribe anytime.
                 </em>
               </small>
             </div>

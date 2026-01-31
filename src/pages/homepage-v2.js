@@ -235,7 +235,7 @@ const IndexPage = () => (
                         strokeOpacity="0.3"
                       />
                     </svg>
-                    Fear of shipping on Fridays — or any day
+                    Releases that feel like rolling the dice
                   </li>
 
                   <li>
@@ -776,8 +776,8 @@ const IndexPage = () => (
                     </svg>
 
                     <div className="content">
-                      <strong>One-click deployments</strong> you can run on 
-                      Friday afternoon
+                      <strong>One-click deployments</strong> you can run 
+                      anytime with confidence
                     </div>
                   </li>
 

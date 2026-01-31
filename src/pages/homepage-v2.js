@@ -33,7 +33,7 @@ function HeroSection() {
               I help your team deliver better software, faster.
             </h1>
             <h4 className="roboto-light text-capitalize">
-              Fewer bugs. Faster releases. Pipelines that don't break on Friday.
+              Faster releases. Fewer fire drills. Code you can trust — even when AI writes it.
             </h4>
             <div className="cta my-4 my-md-5">
               <div className="site-btn pulse-btn">
@@ -115,6 +115,86 @@ const IndexPage = () => (
                         strokeOpacity="0.3"
                       />
                     </svg>
+                    AI-generated code that ships fast and breaks faster
+                  </li>
+
+                  <li>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="8" cy="8" r="4" fill="#EB2323" />
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="7.5"
+                        stroke="#EB2323"
+                        strokeOpacity="0.3"
+                      />
+                    </svg>
+                    Technical debt accumulating at machine speed
+                  </li>
+
+                  <li>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="8" cy="8" r="4" fill="#EB2323" />
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="7.5"
+                        stroke="#EB2323"
+                        strokeOpacity="0.3"
+                      />
+                    </svg>
+                    Security vulnerabilities hiding in AI-suggested code
+                  </li>
+
+                  <li>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="8" cy="8" r="4" fill="#EB2323" />
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="7.5"
+                        stroke="#EB2323"
+                        strokeOpacity="0.3"
+                      />
+                    </svg>
+                    "The AI said it works" replacing "it works on my machine"
+                  </li>
+
+                  <li>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="8" cy="8" r="4" fill="#EB2323" />
+                      <circle
+                        cx="8"
+                        cy="8"
+                        r="7.5"
+                        stroke="#EB2323"
+                        strokeOpacity="0.3"
+                      />
+                    </svg>
                     Deployments that break production (and weekends)
                   </li>
 
@@ -135,7 +215,7 @@ const IndexPage = () => (
                         strokeOpacity="0.3"
                       />
                     </svg>
-                    Manual release processes that bottleneck delivery
+                    More code generated than your team can review
                   </li>
 
                   <li>
@@ -155,7 +235,7 @@ const IndexPage = () => (
                         strokeOpacity="0.3"
                       />
                     </svg>
-                    Security vulnerabilities discovered too late
+                    Fear of shipping on Fridays — or any day
                   </li>
 
                   <li>
@@ -175,87 +255,7 @@ const IndexPage = () => (
                         strokeOpacity="0.3"
                       />
                     </svg>
-                    Fear of shipping on Fridays (or any day)
-                  </li>
-
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="8" cy="8" r="4" fill="#EB2323" />
-                      <circle
-                        cx="8"
-                        cy="8"
-                        r="7.5"
-                        stroke="#EB2323"
-                        strokeOpacity="0.3"
-                      />
-                    </svg>
-                    Technical debt compounding faster than you can pay it
-                  </li>
-
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="8" cy="8" r="4" fill="#EB2323" />
-                      <circle
-                        cx="8"
-                        cy="8"
-                        r="7.5"
-                        stroke="#EB2323"
-                        strokeOpacity="0.3"
-                      />
-                    </svg>
-                    Constant firefighting instead of building
-                  </li>
-
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="8" cy="8" r="4" fill="#EB2323" />
-                      <circle
-                        cx="8"
-                        cy="8"
-                        r="7.5"
-                        stroke="#EB2323"
-                        strokeOpacity="0.3"
-                      />
-                    </svg>
-                    "It works on my machine" gaps between dev and prod
-                  </li>
-
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="8" cy="8" r="4" fill="#EB2323" />
-                      <circle
-                        cx="8"
-                        cy="8"
-                        r="7.5"
-                        stroke="#EB2323"
-                        strokeOpacity="0.3"
-                      />
-                    </svg>
-                    Compliance requirements that feel like quicksand
+                    Compliance requirements that can't keep up with AI velocity
                   </li>
                 </ul>
               </div>
@@ -264,11 +264,11 @@ const IndexPage = () => (
             <div className="row justify-content-center">
               <div className="col-12 col-md-9">
                 <h4 className="roboto-light text-center color-secondary">
-                  These problems don't fix themselves. But{" "}
+                  AI writes code faster than ever. The hard part is making sure it{" "}
                   <span className="roboto-medium color-accent">
-                    they are fixable
-                  </span>{" "}
-                  — with the right systems in place.
+                    doesn't sink your codebase
+                  </span>
+                  .
                 </h4>
 
                 <img

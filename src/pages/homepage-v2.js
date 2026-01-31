@@ -1,7 +1,6 @@
 import React from "react"
 import Seo from "../components/seo"
-import { graphql, Link, useStaticQuery } from "gatsby"
-import Portrait from "../components/portrait"
+import { Link } from "gatsby"
 import { Faq } from "../components/faqs"
 import { Header } from "../components/header"
 import { BrandLogos } from "../components/brandLogos"
@@ -10,17 +9,6 @@ const CONSULTATION_LINK =
   "https://calendly.com/edgardo-g-carreras/free-coaching-call-with-edgardo"
 
 function HeroSection() {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "portrait_edgardo.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 802) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
   return (
     <section id="hero">
       <div className="container">
@@ -46,10 +34,11 @@ function HeroSection() {
           </div>
 
           <div className="col-2 col-12 col-md-6">
-            <Portrait
+            <img
               className="hero-image img-fluid"
-              fluid={data.placeholderImage.childImageSharp.fluid}
-              style={{ position: "none" }}
+              src="/images/IMG_1388-removebg.png"
+              alt="Edgardo Carreras"
+              style={{ maxWidth: "100%" }}
             />
 
             <div className="hero-testimonial d-flex flex-wrap flex-md-nowrap">

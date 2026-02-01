@@ -861,6 +861,7 @@ footer p small a:hover {
         width: 80%;
         margin: auto;
         min-width: 0;
+        max-height: none;
     }
     .hero-testimonial {
         margin-top: -40px;

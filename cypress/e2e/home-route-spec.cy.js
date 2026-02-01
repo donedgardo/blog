@@ -1,13 +1,17 @@
 describe("home-route-spec.cy.js", () => {
-  it("should visit", () => {
+  it("should visit homepage", () => {
     cy.visit("/")
-    cy.contains("EDGARDO CARRERAS")
+    cy.contains("I help your team deliver")
   })
-  it("promotes devops bootcamp", () => {
+  
+  it("shows DevSecOps services", () => {
     cy.visit("/")
-    cy.get("a")
-      .contains("DevOps Essentials Bootcamp")
-      .click()
-    cy.url().should("include", "/dev-ops-newsletter")
+    cy.contains("DevSecOps Pipeline Audit")
+    cy.contains("Fractional DevSecOps Engineer")
+  })
+  
+  it("links to newsletter", () => {
+    cy.visit("/")
+    cy.get("a").contains("Get the Newsletter").should("have.attr", "href", "/newsletter")
   })
 })

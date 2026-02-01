@@ -450,6 +450,9 @@ header {
 }
 #offers .service img {
     width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: top;
 }
 #offers .service .text-container {
 	padding: 34px;

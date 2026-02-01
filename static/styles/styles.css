@@ -773,7 +773,7 @@ footer p small a:hover {
         margin-top: -30px;
     }
     .hero-testimonial {
-        margin-top: 20px;
+        margin-top: -20px;
         left: 0;
     }
 
@@ -787,7 +787,7 @@ footer p small a:hover {
         margin-top: -20px;
     }
     .hero-testimonial {
-        margin-top: 20px;
+        margin-top: -20px;
     }
 
 }
@@ -799,7 +799,7 @@ footer p small a:hover {
         margin-top: -10px;
     }
     .hero-testimonial {
-        margin-top: 20px;
+        margin-top: -20px;
     }
 
 }

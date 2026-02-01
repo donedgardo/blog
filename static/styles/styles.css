@@ -296,7 +296,7 @@ header {
     min-width: 550px;
     max-width: 750px;
     position: relative;
-    margin-top: -50px;
+    margin-top: 0;
     margin-left: auto;
 }
 
@@ -777,7 +777,7 @@ footer p small a:hover {
         width: 90%;
         min-width: 0;
         max-width: 350px;
-        margin-top: -80px;
+        margin-top: 0;
         margin-right: 20px;
     }
     .hero-testimonial {
@@ -792,7 +792,7 @@ footer p small a:hover {
         width: 80%;
         min-width: 0;
         max-width: 300px;
-        margin-top: -40px;
+        margin-top: 0;
         margin-right: 30px;
     }
     .hero-testimonial {

@@ -11,7 +11,7 @@ const CONSULTATION_LINK =
 
 function HeroSection() {
   const data = useStaticQuery(graphql`
-    query {
+    query IndexPageQuery {
       placeholderImage: file(relativePath: { eq: "portrait_edgardo.png" }) {
         childImageSharp {
           fluid(maxWidth: 802) {

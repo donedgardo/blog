@@ -11,7 +11,7 @@ const CONSULTATION_LINK =
 
 function HeroSection() {
   const data = useStaticQuery(graphql`
-    query {
+    query HomepageV2Query {
       heroImage: file(relativePath: { eq: "IMG_1388-removebg.png" }) {
         childImageSharp {
           fluid(maxWidth: 802) {

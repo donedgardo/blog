@@ -292,12 +292,12 @@ header {
 }
 
 .hero-image {
-    width: 50%;
-    min-width: 809px;
-    max-width: 1000px;
+    width: 45%;
+    min-width: 500px;
+    max-width: 700px;
     position: absolute;
-    bottom: calc(-.2 * 100vw);
-    right: 0;
+    bottom: -100px;
+    right: 5%;
 }
 
 
@@ -766,39 +766,40 @@ footer p small a:hover {
 
 @media screen and (min-width:1020px) and (max-width: 1383px) {
     .hero-image {
-        right: -90px;
-        bottom: calc(-.25 * 100vw);
-        width: 70%;
-        min-width: 0;
+        right: 0;
+        bottom: -80px;
+        width: 50%;
+        min-width: 450px;
+        max-width: 600px;
     }
     .hero-testimonial {
-        margin-top: 80%;
-        left: -30%;
+        margin-top: 350px;
+        left: -20%;
     }
 
 }
 
 @media screen and (min-width:927px) and (max-width: 1020px) {
     .hero-image {
-        width: 80%;
-        right: -10%;
-        bottom: -187px;
-        min-width: 0;
+        width: 55%;
+        right: 0;
+        bottom: -60px;
+        min-width: 400px;
     }
     .hero-testimonial {
-        margin-top: 336px;
+        margin-top: 300px;
     }
 
 }
 @media screen and (min-width:767px) and (max-width: 927px) {
     .hero-image {
-        width: 80%;
-        right: -10%;
-        bottom: -125px;
-        min-width: 0;
+        width: 60%;
+        right: 0;
+        bottom: -50px;
+        min-width: 350px;
     }
     .hero-testimonial {
-        margin-top: 336px;
+        margin-top: 280px;
     }
 
 }

@@ -166,11 +166,11 @@ function HeroSection() {
                 initial={{ opacity: 0, scale: 1.2 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.8, duration: 0.5 }}
-                style={{ color: "#ED9567", display: "inline-block" }}
+                style={{ color: "#ED9567", display: "inline-block", whiteSpace: "nowrap" }}
               >
-                better software
+                better software,
               </motion.span>
-              , faster.
+              {" "}faster.
             </motion.h1>
             <motion.h4 
               className="roboto-light text-capitalize"

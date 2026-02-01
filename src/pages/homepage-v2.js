@@ -300,7 +300,7 @@ const IndexPage = () => (
                 <div className="inner">
                   <img
                     className="img-fluid"
-                    src="/images/service-001.png"
+                    src="/images/portrait_edgardo.png"
                     alt=""
                   />
                   <div className="text-container text-white">

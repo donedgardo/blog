@@ -769,11 +769,11 @@ footer p small a:hover {
     .hero-image {
         width: 100%;
         min-width: 0;
-        max-width: 500px;
-        margin-top: -30px;
+        max-width: 380px;
+        margin-top: 0;
     }
     .hero-testimonial {
-        margin-top: -20px;
+        margin-top: -10px;
         left: 0;
     }
 

@@ -1,18 +1,137 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import Seo from "../components/seo"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import Portrait from "../components/portrait"
 import { Faq } from "../components/faqs"
 import { Header } from "../components/header"
 import { BrandLogos } from "../components/brandLogos"
+import { motion, useAnimation, useInView } from "framer-motion"
 
 const CONSULTATION_LINK =
   "https://calendly.com/edgardo-g-carreras/free-coaching-call-with-edgardo"
 
+// Animation variants
+const fadeInUp = {
+  hidden: { opacity: 0, y: 60 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" }
+  }
+}
+
+const fadeInLeft = {
+  hidden: { opacity: 0, x: -60 },
+  visible: { 
+    opacity: 1, 
+    x: 0,
+    transition: { duration: 0.6, ease: "easeOut" }
+  }
+}
+
+const fadeInRight = {
+  hidden: { opacity: 0, x: 60 },
+  visible: { 
+    opacity: 1, 
+    x: 0,
+    transition: { duration: 0.6, ease: "easeOut" }
+  }
+}
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2
+    }
+  }
+}
+
+const scaleIn = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { 
+    opacity: 1, 
+    scale: 1,
+    transition: { duration: 0.5, ease: "easeOut" }
+  }
+}
+
+const pulseGlow = {
+  animate: {
+    boxShadow: [
+      "0 0 20px rgba(237, 149, 103, 0.3)",
+      "0 0 40px rgba(237, 149, 103, 0.6)",
+      "0 0 20px rgba(237, 149, 103, 0.3)"
+    ],
+    transition: {
+      duration: 2,
+      repeat: Infinity,
+      ease: "easeInOut"
+    }
+  }
+}
+
+// Animated section wrapper with scroll trigger
+function AnimatedSection({ children, className, id }) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const controls = useAnimation()
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible")
+    }
+  }, [isInView, controls])
+
+  return (
+    <motion.section
+      ref={ref}
+      id={id}
+      className={className}
+      initial="hidden"
+      animate={controls}
+      variants={staggerContainer}
+    >
+      {children}
+    </motion.section>
+  )
+}
+
+// Counter animation component
+function AnimatedCounter({ end, suffix = "", prefix = "" }) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+  const [count, setCount] = React.useState(0)
+
+  useEffect(() => {
+    if (isInView) {
+      let startTime
+      const duration = 2000
+      const animate = (timestamp) => {
+        if (!startTime) startTime = timestamp
+        const progress = Math.min((timestamp - startTime) / duration, 1)
+        setCount(Math.floor(progress * end))
+        if (progress < 1) {
+          requestAnimationFrame(animate)
+        }
+      }
+      requestAnimationFrame(animate)
+    }
+  }, [isInView, end])
+
+  return (
+    <span ref={ref}>
+      {prefix}{count}{suffix}
+    </span>
+  )
+}
+
 function HeroSection() {
   const data = useStaticQuery(graphql`
-    query IndexPageQuery {
-      placeholderImage: file(relativePath: { eq: "portrait_edgardo.png" }) {
+    query HomepageQuery {
+      heroImage: file(relativePath: { eq: "IMG_1388-removebg.png" }) {
         childImageSharp {
           fluid(maxWidth: 802) {
             ...GatsbyImageSharpFluid
@@ -21,60 +140,141 @@ function HeroSection() {
       }
     }
   `)
+
   return (
     <section id="hero">
       <div className="container">
         <div className="row flex-md-nowrap">
-          <div className="col-1 col-12 col-md-7 col-lg-8">
-            <h5 className="roboto-bold text-uppercase primary-color">
-              Attention SaaS CEOs & CTOs
-            </h5>
-            <h1 className="roboto-bold mb-1 mb-md-4 text-capitalize">
-              I help your team deliver better software, faster.
-            </h1>
-            <h4 className="roboto-light text-capitalize">
-              Boost software profitability without hiring or burning out your
-              team
-            </h4>
-            <div className="cta my-4 my-md-5">
-              <div className="site-btn pulse-btn">
-                <Link href={"/newsletter"}>Get daily tips</Link>
-              </div>
-              <small className="text-white">
-                <em>Join 100+ readers and boost team performance.</em>
-              </small>
-            </div>
-          </div>
+          <motion.div 
+            className="col-1 col-12 col-md-7 col-lg-8"
+            initial="hidden"
+            animate="visible"
+            variants={staggerContainer}
+          >
+            <motion.h5 
+              className="roboto-bold text-uppercase primary-color"
+              variants={fadeInUp}
+            >
+              For SaaS CEOs & CTOs
+            </motion.h5>
+            <motion.h1 
+              className="roboto-bold mb-1 mb-md-4 text-capitalize"
+              variants={fadeInUp}
+            >
+              I help your team deliver{" "}
+              <motion.span
+                initial={{ opacity: 0, scale: 1.2 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.8, duration: 0.5 }}
+                style={{ color: "#ED9567", display: "inline-block" }}
+              >
+                better software
+              </motion.span>
+              , faster.
+            </motion.h1>
+            <motion.h4 
+              className="roboto-light text-capitalize"
+              variants={fadeInUp}
+            >
+              Faster releases. Fewer fire drills. Code you can trust — even when AI writes it.
+            </motion.h4>
+            <motion.div 
+              className="cta my-4 my-md-5"
+              variants={fadeInUp}
+            >
+              <motion.div 
+                className="site-btn pulse-btn"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                variants={pulseGlow}
+                animate="animate"
+              >
+                <Link to="/newsletter">Get the Newsletter</Link>
+              </motion.div>
+              <motion.small 
+                className="text-white"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.2 }}
+              >
+                <em>Daily insights on shipping fast and safe in the AI era.</em>
+              </motion.small>
+            </motion.div>
+          </motion.div>
 
-          <div className="col-2 col-12 col-md-6">
-            <Portrait
-              className="hero-image img-fluid"
-              fluid={data.placeholderImage.childImageSharp.fluid}
-              style={{ position: "none" }}
-            />
+          <motion.div 
+            className="col-2 col-12 col-md-6"
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <motion.div
+              animate={{ 
+                y: [0, -10, 0],
+              }}
+              transition={{ 
+                duration: 4, 
+                repeat: Infinity, 
+                ease: "easeInOut" 
+              }}
+            >
+              <Portrait
+                className="hero-image img-fluid"
+                fluid={data.heroImage?.childImageSharp?.fluid}
+                style={{ position: "none" }}
+              />
+            </motion.div>
 
-            <div className="hero-testimonial d-flex flex-wrap flex-md-nowrap">
+            <motion.div 
+              className="hero-testimonial d-flex flex-wrap flex-md-nowrap"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1, duration: 0.6 }}
+            >
               <div className="image-container">
-                <img src="/images/william_cheung.jpg" alt="" />
+                <img src="/images/fernando_yordan.jpg" alt="" />
               </div>
               <div className="text-container">
                 <span>
-                  "Edgardo provided invaluable mentorship, helping developers
-                  grow technically and enforcing high code standards through TDD
-                  and tool integration."
+                  "Through Edgardo's hands-on approach, I learned invaluable
+                  tactics for implementing CI/CD and monitoring. His focus on
+                  value over effort is exceptional."
                 </span>
-
-                <span className="name">- William Cheung</span>
+                <span className="name">- Fernando Yordan</span>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
 
-        <BrandLogos />
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.6 }}
+        >
+          <BrandLogos />
+        </motion.div>
       </div>
     </section>
   )
 }
+
+const RedDot = () => (
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="8" cy="8" r="4" fill="#EB2323" />
+    <circle cx="8" cy="8" r="7.5" stroke="#EB2323" strokeOpacity="0.3" />
+  </svg>
+)
+
+const challenges = [
+  "AI-generated code that ships fast and breaks faster",
+  "Technical debt accumulating at machine speed",
+  "Security vulnerabilities hiding in AI-suggested code",
+  '"The AI said it works" replacing "it works on my machine"',
+  "Deployments that break production (and weekends)",
+  "More code generated than your team can review",
+  "Releases that feel like rolling the dice",
+  "Compliance requirements that can't keep up with AI velocity"
+]
 
 const IndexPage = () => (
   <>
@@ -83,228 +283,95 @@ const IndexPage = () => (
       <main>
         <HeroSection />
 
-        <section id="challenges" className="">
+        <AnimatedSection id="challenges">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-12 col-md-6">
-                <h2 className="roboto-light text-center sec-title">
-                  Are These{" "}
+                <motion.h2 
+                  className="roboto-light text-center sec-title"
+                  variants={fadeInUp}
+                >
+                  Sound{" "}
                   <strong className="roboto-bold color-primary">
-                    Challenges{" "}
+                    Familiar?
                   </strong>
-                  Holding Your Team Back?
-                </h2>
+                </motion.h2>
               </div>
             </div>
 
             <div className="row justify-content-center">
               <div className="col-12 col-md-7">
-                <ul>
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
+                <motion.ul variants={staggerContainer}>
+                  {challenges.map((challenge, index) => (
+                    <motion.li
+                      key={index}
+                      variants={fadeInLeft}
+                      whileHover={{ x: 10, transition: { duration: 0.2 } }}
                     >
-                      <circle cx="8" cy="8" r="4" fill="#EB2323" />
-                      <circle
-                        cx="8"
-                        cy="8"
-                        r="7.5"
-                        stroke="#EB2323"
-                        strokeOpacity="0.3"
-                      />
-                    </svg>
-                    High frequency of faulty deployments
-                  </li>
-
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="8" cy="8" r="4" fill="#EB2323" />
-                      <circle
-                        cx="8"
-                        cy="8"
-                        r="7.5"
-                        stroke="#EB2323"
-                        strokeOpacity="0.3"
-                      />
-                    </svg>
-                    High amount of busy work and constant firefighting
-                  </li>
-
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="8" cy="8" r="4" fill="#EB2323" />
-                      <circle
-                        cx="8"
-                        cy="8"
-                        r="7.5"
-                        stroke="#EB2323"
-                        strokeOpacity="0.3"
-                      />
-                    </svg>
-                    Inconsistent delivery timelines and missed deadlines
-                  </li>
-
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="8" cy="8" r="4" fill="#EB2323" />
-                      <circle
-                        cx="8"
-                        cy="8"
-                        r="7.5"
-                        stroke="#EB2323"
-                        strokeOpacity="0.3"
-                      />
-                    </svg>
-                    Inefficient code reviews and poor code quality
-                  </li>
-
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="8" cy="8" r="4" fill="#EB2323" />
-                      <circle
-                        cx="8"
-                        cy="8"
-                        r="7.5"
-                        stroke="#EB2323"
-                        strokeOpacity="0.3"
-                      />
-                    </svg>
-                    Difficulty in scaling the development team efficiently
-                  </li>
-
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="8" cy="8" r="4" fill="#EB2323" />
-                      <circle
-                        cx="8"
-                        cy="8"
-                        r="7.5"
-                        stroke="#EB2323"
-                        strokeOpacity="0.3"
-                      />
-                    </svg>
-                    Low team morale and high turnover rates
-                  </li>
-
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="8" cy="8" r="4" fill="#EB2323" />
-                      <circle
-                        cx="8"
-                        cy="8"
-                        r="7.5"
-                        stroke="#EB2323"
-                        strokeOpacity="0.3"
-                      />
-                    </svg>
-                    Lack of alignment between business goals and development
-                    work
-                  </li>
-
-                  <li>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="8" cy="8" r="4" fill="#EB2323" />
-                      <circle
-                        cx="8"
-                        cy="8"
-                        r="7.5"
-                        stroke="#EB2323"
-                        strokeOpacity="0.3"
-                      />
-                    </svg>
-                    Difficulty in adopting new technologies and methodologies
-                  </li>
-                </ul>
+                      <RedDot />
+                      {challenge}
+                    </motion.li>
+                  ))}
+                </motion.ul>
               </div>
             </div>
 
             <div className="row justify-content-center">
               <div className="col-12 col-md-9">
-                <h4 className="roboto-light text-center color-secondary">
-                  There are so many{" "}
+                <motion.h4 
+                  className="roboto-light text-center color-secondary"
+                  variants={fadeInUp}
+                >
+                  AI writes code faster than ever. The hard part is making sure it{" "}
                   <span className="roboto-medium color-accent">
-                    software teams struggling
-                  </span>{" "}
-                  with inefficient processes, high defect rates, and poor
-                  communication who need a proven option to enhance their
-                  performance and achieve better results.
-                </h4>
+                    doesn't sink your codebase
+                  </span>
+                  .
+                </motion.h4>
 
-                <img
+                <motion.img
                   className="arrow-down"
                   src="/images/gradient-arrow-down.png"
                   alt="gradient-arrow-down"
+                  variants={scaleIn}
+                  animate={{ 
+                    y: [0, 10, 0],
+                  }}
+                  transition={{ 
+                    duration: 1.5, 
+                    repeat: Infinity, 
+                    ease: "easeInOut" 
+                  }}
                 />
               </div>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
 
-        <section id="offers">
+        <AnimatedSection id="offers">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-12 col-md-11 px-2 px-md-4">
-                <h2 className="text-white text-center mb-4 sec-title">
-                  And Now...
-                </h2>
-                <h3 className="roboto-light text-white text-center">
-                  <strong>Edgardo Carreras offers hands-on coaching</strong>{" "}
-                  that bridges the gap between{" "}
-                  <strong>
-                    <em>business leaders</em>
-                  </strong>{" "}
-                  and
-                  <strong>
-                    <em> technical teams</em>
-                  </strong>
-                  , driving transformative improvements in software development.
-                </h3>
+                <motion.h2 
+                  className="text-white text-center mb-4 sec-title"
+                  variants={fadeInUp}
+                >
+                  How I Help
+                </motion.h2>
+                <motion.h3 
+                  className="roboto-light text-white text-center"
+                  variants={fadeInUp}
+                >
+                  I don't just advise — <strong>I build</strong>. Pipelines, 
+                  automation, security gates. The systems that let your team{" "}
+                  <motion.strong
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.5 }}
+                  >
+                    ship fast and safe
+                  </motion.strong>.
+                </motion.h3>
               </div>
             </div>
 
@@ -312,763 +379,453 @@ const IndexPage = () => (
 
             <div className="row justify-content-center">
               <div className="col-12 col-md-8">
-                <h4 className="text-white text-center roboto-light px-3 mb-4 mb-md-5">
-                  With three tailored services, Edgardo ensures that every
-                  software team can achieve peak performance:
-                </h4>
+                <motion.h4 
+                  className="text-white text-center roboto-light px-3 mb-4 mb-md-5"
+                  variants={fadeInUp}
+                >
+                  Two ways to work together:
+                </motion.h4>
               </div>
             </div>
 
-            <div className="row services flex-md-nowrap">
-              <div className="service col-12 col-md-4">
+            <div className="row services flex-md-nowrap justify-content-center">
+              <motion.div 
+                className="service col-12 col-md-5"
+                variants={fadeInLeft}
+                whileHover={{ y: -10, transition: { duration: 0.3 } }}
+              >
                 <div className="inner">
-                  <img
-                    className="img-fluid"
-                    src="/images/service-001.png"
-                    alt=""
-                  />
+                  <img className="img-fluid" src="/images/portrait_edgardo.png" alt="" />
                   <div className="text-container text-white">
-                    <h4 className="service-title">Agile Shift Newsletter</h4>
+                    <h4 className="service-title">DevSecOps Pipeline Audit</h4>
                     <p>
-                      Dive into a free, comprehensive{" "}
-                      <Link style={{ color: "white" }} to="/newsletter">
-                        Six-Part Email Series
-                      </Link>{" "}
-                      designed to tackle your most pressing development
-                      challenges, optimize your processes, and enhance overall
-                      team performance.
+                      <strong>A focused 2-week engagement.</strong> I review your 
+                      CI/CD pipeline, identify security gaps and bottlenecks, 
+                      and deliver a prioritized action plan. You'll know exactly 
+                      where you're exposed and what to fix first.
                     </p>
-                    <div className="site-btn">
-                      <Link href={"/newsletter"}>Get daily tips</Link>
-                    </div>
+                    <motion.div 
+                      className="site-btn"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <a href={CONSULTATION_LINK}>Book Your Audit</a>
+                    </motion.div>
                   </div>
                 </div>
-              </div>
-              <div className="service col-12 col-md-4">
+              </motion.div>
+
+              <motion.div 
+                className="service col-12 col-md-5"
+                variants={fadeInRight}
+                whileHover={{ y: -10, transition: { duration: 0.3 } }}
+              >
                 <div className="inner">
-                  <img
-                    className="img-fluid"
-                    src="/images/coaching-call.png"
-                    alt=""
-                  />
+                  <img className="img-fluid" src="/images/service-003.png" alt="" />
                   <div className="text-container text-white">
-                    <h4 className="service-title">Private 1-1 Coaching Call</h4>
+                    <h4 className="service-title">Fractional DevSecOps Engineer</h4>
                     <p>
-                      Address specific software development hurdles with direct,
-                      actionable advice that delivers guaranteed results,
-                      ensuring you overcome any obstacle swiftly and
-                      effectively.
+                      <strong>I embed with your team as a hands-on contributor.</strong>{" "}
+                      Not advising from the sidelines — actually building. CI/CD pipelines 
+                      with security baked in, automated testing, infrastructure as code.
                     </p>
-                    <div className="site-btn">
-                      <a href={CONSULTATION_LINK}>
-                        Fix Hurdles - Schedule Call
-                      </a>
-                    </div>
+                    <motion.div 
+                      className="site-btn"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <a href={CONSULTATION_LINK}>Let's Talk</a>
+                    </motion.div>
                   </div>
                 </div>
-              </div>
-              <div className="service col-12 col-md-4">
-                <div className="inner">
-                  <img
-                    className="img-fluid"
-                    src="/images/service-003.png"
-                    alt=""
-                  />
-                  <div className="text-container text-white">
-                    <h4 className="service-title">Technical Agile Coach</h4>
-                    <p>
-                      I embed myself with your team to elevate their software
-                      craftsmanship. So you can deliver value to end users
-                      faster, with high quality and more reliably.
-                    </p>
-                    <div className="site-btn">
-                      <Link href="/tech-agile-coach">
-                        Start your team's transformation
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </motion.div>
             </div>
 
-            <h3 className="testimonial-title text-white text-center roboto-light text-capitalize">
+            <motion.h3 
+              className="testimonial-title text-white text-center roboto-light text-capitalize"
+              variants={fadeInUp}
+            >
               <em>What my clients say...</em>
-            </h3>
+            </motion.h3>
 
-            <div className="row testimonial-row align-items-start flex-md-nowrap">
-              <div className="col col-12 col-md-4">
-                <svg
-                  width="31"
-                  height="23"
-                  viewBox="0 0 31 23"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+            <motion.div 
+              className="row testimonial-row align-items-start flex-md-nowrap"
+              variants={staggerContainer}
+            >
+              {[
+                {
+                  quote: "Through Edgardo's hands-on approach, I learned invaluable tactics for team management, implementing CI/CD and monitoring. His focus on value over effort is exceptional.",
+                  author: "Fernando Yordan",
+                  image: "/images/fernando_yordan.jpg"
+                },
+                {
+                  quote: "Edgardo is one of the most knowledgeable and fastest programmers I know. He always makes sure to be up to date with the latest tools and has a keen eye for improving products.",
+                  author: "Tania Gonzalez",
+                  image: "/images/tania_gonzalez.jpg"
+                },
+                {
+                  quote: "Edgardo provided invaluable mentorship, helping developers grow technically and enforcing high code standards through TDD and tool integration.",
+                  author: "William Cheung",
+                  image: "/images/william_cheung.jpg"
+                }
+              ].map((testimonial, index) => (
+                <motion.div 
+                  key={index}
+                  className="col col-12 col-md-4"
+                  variants={fadeInUp}
+                  whileHover={{ scale: 1.02 }}
                 >
-                  <path
-                    d="M19.3597 14.3648C19.3597 10.2177 20.3535 6.97094 22.3412 4.62456C24.3562 2.27817 27.1744 0.736655 30.7958 0V4.25623C28.0457 5.10202 26.1941 6.62989 25.2411 8.83986C24.6965 10.013 24.4787 11.1453 24.5876 12.2367H31V23H19.3597V14.3648ZM0 14.3648C0 10.2722 0.966623 7.03915 2.89987 4.66548C4.86034 2.29182 7.70575 0.736655 11.4361 0V4.25623C8.65876 5.1293 6.79359 6.62989 5.84058 8.75801C5.35046 9.87663 5.14625 11.0362 5.22793 12.2367H11.6403V23H0V14.3648Z"
-                    fill="#ED9567"
-                  />
-                </svg>
-
-                <p className="testimonial-message text-white">
-                  <small>
-                    <em>
-                      "Through Edgardo's hands-on approach, I learned invaluable
-                      tactics for team management, implementing CI/CD and
-                      monitoring. His focus on value over effort is
-                      exceptional."
-                    </em>
-                  </small>
-                </p>
-
-                <div className="author d-flex align-items-center">
-                  <div className="img">
-                    <img src="/images/fernando_yordan.jpg" alt="" />
+                  <svg width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.3597 14.3648C19.3597 10.2177 20.3535 6.97094 22.3412 4.62456C24.3562 2.27817 27.1744 0.736655 30.7958 0V4.25623C28.0457 5.10202 26.1941 6.62989 25.2411 8.83986C24.6965 10.013 24.4787 11.1453 24.5876 12.2367H31V23H19.3597V14.3648ZM0 14.3648C0 10.2722 0.966623 7.03915 2.89987 4.66548C4.86034 2.29182 7.70575 0.736655 11.4361 0V4.25623C8.65876 5.1293 6.79359 6.62989 5.84058 8.75801C5.35046 9.87663 5.14625 11.0362 5.22793 12.2367H11.6403V23H0V14.3648Z" fill="#ED9567"/>
+                  </svg>
+                  <p className="testimonial-message text-white">
+                    <small><em>"{testimonial.quote}"</em></small>
+                  </p>
+                  <div className="author d-flex align-items-center">
+                    <div className="img">
+                      <img src={testimonial.image} alt="" />
+                    </div>
+                    <div className="info">
+                      <strong className="name text-white">- {testimonial.author}</strong>
+                      <img src="/images/custom-star-rating.png" alt="" className="ratings" />
+                    </div>
                   </div>
-                  <div className="info">
-                    <strong className="name text-white">
-                      - Fernando Yordan
-                    </strong>
-                    <img
-                      src="/images/custom-star-rating.png"
-                      alt=""
-                      className="ratings"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="col col-12 col-md-4">
-                <svg
-                  width="31"
-                  height="23"
-                  viewBox="0 0 31 23"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M19.3597 14.3648C19.3597 10.2177 20.3535 6.97094 22.3412 4.62456C24.3562 2.27817 27.1744 0.736655 30.7958 0V4.25623C28.0457 5.10202 26.1941 6.62989 25.2411 8.83986C24.6965 10.013 24.4787 11.1453 24.5876 12.2367H31V23H19.3597V14.3648ZM0 14.3648C0 10.2722 0.966623 7.03915 2.89987 4.66548C4.86034 2.29182 7.70575 0.736655 11.4361 0V4.25623C8.65876 5.1293 6.79359 6.62989 5.84058 8.75801C5.35046 9.87663 5.14625 11.0362 5.22793 12.2367H11.6403V23H0V14.3648Z"
-                    fill="#ED9567"
-                  />
-                </svg>
-
-                <p className="testimonial-message text-white">
-                  <small>
-                    <em>
-                      “Edgardo is one of the most knowledgeable and fastest
-                      programmers I know. He always makes sure to be up to date
-                      with the latest tools and has a keen eye for improving
-                      products and developing innovative ideas.”
-                    </em>
-                  </small>
-                </p>
-
-                <div className="author d-flex align-items-center">
-                  <div className="img">
-                    <img src="/images/tania_gonzalez.jpg" alt="" />
-                  </div>
-                  <div className="info">
-                    <strong className="name text-white">
-                      - Tania Gonzalez
-                    </strong>
-                    <img
-                      src="/images/custom-star-rating.png"
-                      alt=""
-                      className="ratings"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="col col-12 col-md-4">
-                <svg
-                  width="31"
-                  height="23"
-                  viewBox="0 0 31 23"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M19.3597 14.3648C19.3597 10.2177 20.3535 6.97094 22.3412 4.62456C24.3562 2.27817 27.1744 0.736655 30.7958 0V4.25623C28.0457 5.10202 26.1941 6.62989 25.2411 8.83986C24.6965 10.013 24.4787 11.1453 24.5876 12.2367H31V23H19.3597V14.3648ZM0 14.3648C0 10.2722 0.966623 7.03915 2.89987 4.66548C4.86034 2.29182 7.70575 0.736655 11.4361 0V4.25623C8.65876 5.1293 6.79359 6.62989 5.84058 8.75801C5.35046 9.87663 5.14625 11.0362 5.22793 12.2367H11.6403V23H0V14.3648Z"
-                    fill="#ED9567"
-                  />
-                </svg>
-
-                <p className="testimonial-message text-white">
-                  <small>
-                    <em>
-                      “Edgardo has a vast knowledge and understanding of
-                      development processes and technical abilities which he
-                      consistently demonstrates through the quality of his
-                      work."
-                    </em>
-                  </small>
-                </p>
-
-                <div className="author d-flex align-items-center">
-                  <div className="img">
-                    <img src="/images/karlo_martinez.jpg" alt="" />
-                  </div>
-                  <div className="info">
-                    <strong className="name text-white">
-                      - Karlo Martinez
-                    </strong>
-                    <img
-                      src="/images/custom-star-rating.png"
-                      alt=""
-                      className="ratings"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
-        </section>
+        </AnimatedSection>
 
-        <section id="talk">
+        <AnimatedSection id="talk">
           <div className="container">
-            <h2 className="sec-title text-center text-white roboto-light text-capitalize">
-              If you think you are one of these...
-            </h2>
+            <motion.h2 
+              className="sec-title text-center text-white roboto-light text-capitalize"
+              variants={fadeInUp}
+            >
+              I work best with...
+            </motion.h2>
 
-            <div className="row">
-              <div className="col col-12 col-md-4">
-                <div className="inner">
-                  <svg
-                    width="50"
-                    height="51"
-                    viewBox="0 0 50 51"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+            <motion.div className="row" variants={staggerContainer}>
+              {[
+                {
+                  icon: (
+                    <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.0696 38.2914C22.0696 36.6756 23.3842 35.361 25.0001 35.361C26.6159 35.361 27.9305 36.6756 27.9305 38.2914H30.861C30.861 35.0597 28.2318 32.4305 25.0001 32.4305C21.7684 32.4305 19.1392 35.0597 19.1392 38.2914H22.0696Z" fill="#ED9567"/>
+                      <path d="M33.7912 5.66589H31.7664L31.2793 4.69162L34.6151 2.42317L32.9673 0L27.5118 3.70973L28.4899 5.66589H21.5098L22.4879 3.70973L17.0326 0L15.3848 2.42327L18.7206 4.69172L18.2335 5.66599H8.88257V33.8958C8.88257 42.7829 16.1129 50.0132 25 50.0132C33.8871 50.0132 41.1173 42.7829 41.1173 33.8958C41.1173 31.2484 41.1173 15.0328 41.1173 12.9921C41.1173 8.95237 37.8308 5.66589 33.7912 5.66589ZM11.813 8.59632H16.7684L15.7849 10.5632L21.2568 14.2111L22.8823 11.7728L19.5628 9.55985L20.0446 8.59632H29.9552L30.437 9.55985L27.1176 11.7728L28.7431 14.2111L34.215 10.5632L33.2315 8.59632H33.7912C36.215 8.59632 38.1869 10.5682 38.1869 12.992V17.3876H11.813V8.59632ZM38.1869 33.8957C38.1869 41.167 32.2712 47.0827 24.9999 47.0827C17.7287 47.0827 11.813 41.167 11.813 33.8957V20.318H38.1869V33.8957Z" fill="#ED9567"/>
+                      <path d="M14.7435 23.6392H20.6044V26.5696H14.7435V23.6392Z" fill="#ED9567"/>
+                      <path d="M29.3958 23.6392H35.2567V26.5696H29.3958V23.6392Z" fill="#ED9567"/>
+                      <path d="M7.10327 3.70973L1.64788 0L0 2.42327L3.3359 4.69162L0.400199 10.5632L5.8721 14.2111L7.49751 11.7728L4.17811 9.55985L7.10327 3.70973Z" fill="#ED9567"/>
+                      <path d="M50 2.42327L48.3521 0L42.8967 3.70973L45.8218 9.55985L42.5024 11.7728L44.1279 14.2111L49.5997 10.5632L46.664 4.69162L50 2.42327Z" fill="#ED9567"/>
+                    </svg>
+                  ),
+                  text: <><strong>CTOs and Engineering Leaders</strong> tired of firefighting deployments</>
+                },
+                {
+                  icon: (
+                    <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M44.8021 37.7331V31.9863H25.9355V29.0398C33.29 28.3165 39.0553 22.0967 39.0553 14.5553C39.0553 6.52954 32.5258 0 24.5 0C16.4742 0 9.9447 6.52954 9.9447 14.5553C9.9447 22.0967 15.71 28.3165 23.0645 29.0398V31.9863H4.19792V37.7331H0V49H11.267V37.7331H7.06902V34.8574H23.0645V37.7331H18.8665V49H30.1336V37.7331H25.9355V34.8574H41.931V37.7331H37.7331V49H49V37.7331H44.8021ZM22.1044 12.9291C22.1044 11.6081 23.179 10.5335 24.5 10.5335C25.821 10.5335 26.8956 11.6081 26.8956 12.9291C26.8956 14.2501 25.821 15.3248 24.5 15.3248C23.179 15.3248 22.1044 14.2501 22.1044 12.9291ZM24.5 18.1958C26.8773 18.1958 28.8112 20.1298 28.8112 22.5071V25.415C27.4767 25.9467 26.0219 26.2395 24.5 26.2395C22.9781 26.2395 21.5233 25.9466 20.1888 25.415V22.5071C20.1888 20.1298 22.1227 18.1958 24.5 18.1958ZM12.8158 14.5553C12.8158 8.11266 18.0574 2.87109 24.5 2.87109C30.9426 2.87109 36.1842 8.11266 36.1842 14.5553C36.1842 18.2921 34.4207 21.6246 31.6823 23.7649V22.5071C31.6823 19.98 30.3694 17.7553 28.391 16.4748C29.2452 15.5383 29.7668 14.2935 29.7668 12.9292C29.7668 10.0251 27.4041 7.66247 24.5001 7.66247C21.5961 7.66247 19.2334 10.0252 19.2334 12.9292C19.2334 14.2936 19.755 15.5384 20.6092 16.4748C18.6308 17.7553 17.3179 19.9801 17.3179 22.5071V23.7649C14.5794 21.6246 12.8158 18.2921 12.8158 14.5553ZM8.39594 46.1289H2.87109V40.6042H8.39594V46.1289ZM27.2624 46.1289H21.7375V40.6042H27.2624V46.1289ZM46.1289 46.1289H40.6041V40.6042H46.1289V46.1289Z" fill="#ED9567"/>
+                    </svg>
+                  ),
+                  text: <><strong>SaaS teams</strong> scaling past their current release process</>
+                },
+                {
+                  icon: (
+                    <svg width="44" height="50" viewBox="0 0 44 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21.9389 0C18.4106 0 15.54 2.87054 15.54 6.3989C15.54 9.92726 18.4106 12.7977 21.9389 12.7977C25.4673 12.7977 28.3378 9.92726 28.3378 6.3989C28.3379 2.87054 25.4673 0 21.9389 0ZM21.9389 9.86838C20.0258 9.86838 18.4694 8.31204 18.4694 6.3989C18.4694 4.48576 20.0258 2.92932 21.9389 2.92932C23.8521 2.92932 25.4085 4.48576 25.4085 6.3989C25.4086 8.31204 23.8522 9.86838 21.9389 9.86838Z" fill="#ED9567"/>
+                      <path d="M9.11519 5.41335C6.14076 5.41335 3.72075 7.83326 3.72075 10.8077C3.72075 13.7821 6.14066 16.202 9.11519 16.202C12.0896 16.202 14.5095 13.7821 14.5095 10.8077C14.5095 7.83326 12.0895 5.41335 9.11519 5.41335ZM9.11519 13.2726C7.75598 13.2726 6.65007 12.1668 6.65007 10.8076C6.65007 9.44839 7.75588 8.34257 9.11519 8.34257C10.4744 8.34257 11.5802 9.44839 11.5802 10.8076C11.5802 12.1668 10.4743 13.2726 9.11519 13.2726Z" fill="#ED9567"/>
+                      <path d="M39.5674 17.3729H32.2336C31.3406 15.9588 29.7647 15.0169 27.9721 15.0169H15.9058C14.1132 15.0169 12.5373 15.9588 11.6442 17.3729H4.31039C1.93364 17.3729 0 19.3066 0 21.6834V26.5901V28.0547V32.3172L6.21562 32.9754C6.50865 33.9129 6.88526 34.8213 7.34214 35.6924L3.41187 40.5537L9.43992 46.5818L14.3013 42.6513C15.1724 43.1082 16.0811 43.4848 17.0184 43.7778L17.6765 49.9935H26.2016L26.8596 43.7778C27.7971 43.4848 28.7056 43.1083 29.5766 42.6514L34.4379 46.5819L40.4661 40.5538L36.5356 35.6925C36.9925 34.8214 37.3691 33.9129 37.662 32.9755L43.8777 32.3173V28.0548V26.5902V21.6835C43.8777 19.3066 41.9441 17.3729 39.5674 17.3729ZM13.7973 20.0547C13.7973 18.8921 14.7432 17.9462 15.9058 17.9462H27.9721C29.1347 17.9462 30.0806 18.8921 30.0806 20.0547V26.59H13.7973V20.0547ZM27.1714 29.5194C26.5302 31.8066 24.4281 33.4893 21.9389 33.4893C19.4498 33.4893 17.3476 31.8066 16.7065 29.5194H27.1714ZM2.92932 21.6833C2.92932 20.9218 3.54887 20.3022 4.31039 20.3022H10.8679V26.59H2.92932V21.6833ZM35.3397 30.2755L35.0956 31.2765C34.7685 32.6169 34.2384 33.896 33.5194 35.0784L32.9842 35.9589L36.5312 40.3461L34.2304 42.6469L29.8431 39.0999L28.9627 39.6351C27.7803 40.3538 26.5012 40.8841 25.1607 41.2112L24.1597 41.4554L23.5658 47.0642H20.3119L19.7179 41.4554L18.717 41.2111C17.3768 40.8843 16.0978 40.3541 14.9152 39.6351L14.0348 39.0999L9.64751 42.6469L7.34663 40.3461L10.8937 35.9589L10.3585 35.0784C9.6396 33.8961 9.1093 32.6168 8.78229 31.2765L8.53818 30.2755L2.92932 29.6816V29.5194H13.706C14.4008 33.4349 17.8269 36.4186 21.9388 36.4186C26.0508 36.4186 29.4768 33.4349 30.1717 29.5194H40.9483V29.6816H40.9484L35.3397 30.2755ZM40.9485 26.59H33.0099V20.3022H39.5674C40.3289 20.3022 40.9485 20.9218 40.9485 21.6833V26.59Z" fill="#ED9567"/>
+                      <path d="M34.7627 5.41335C31.7883 5.41335 29.3684 7.83326 29.3684 10.8077C29.3684 13.7821 31.7883 16.202 34.7627 16.202C37.7371 16.202 40.157 13.7821 40.157 10.8077C40.157 7.83326 37.737 5.41335 34.7627 5.41335ZM34.7627 13.2727C33.4035 13.2727 32.2977 12.1669 32.2977 10.8077C32.2977 9.44849 33.4035 8.34257 34.7627 8.34257C36.1219 8.34257 37.2277 9.44839 37.2277 10.8076C37.2277 12.1668 36.1218 13.2727 34.7627 13.2727Z" fill="#ED9567"/>
+                    </svg>
+                  ),
+                  text: <><strong>Organizations</strong> who need senior DevSecOps expertise without a full-time hire</>
+                }
+              ].map((item, index) => (
+                <motion.div 
+                  key={index} 
+                  className="col col-12 col-md-4"
+                  variants={fadeInUp}
+                >
+                  <motion.div 
+                    className="inner"
+                    whileHover={{ 
+                      scale: 1.05, 
+                      boxShadow: "0 10px 40px rgba(237, 149, 103, 0.2)" 
+                    }}
                   >
-                    <path
-                      d="M22.0696 38.2914C22.0696 36.6756 23.3842 35.361 25.0001 35.361C26.6159 35.361 27.9305 36.6756 27.9305 38.2914H30.861C30.861 35.0597 28.2318 32.4305 25.0001 32.4305C21.7684 32.4305 19.1392 35.0597 19.1392 38.2914H22.0696Z"
-                      fill="#ED9567"
-                    />
-                    <path
-                      d="M33.7912 5.66589H31.7664L31.2793 4.69162L34.6151 2.42317L32.9673 0L27.5118 3.70973L28.4899 5.66589H21.5098L22.4879 3.70973L17.0326 0L15.3848 2.42327L18.7206 4.69172L18.2335 5.66599H8.88257V33.8958C8.88257 42.7829 16.1129 50.0132 25 50.0132C33.8871 50.0132 41.1173 42.7829 41.1173 33.8958C41.1173 31.2484 41.1173 15.0328 41.1173 12.9921C41.1173 8.95237 37.8308 5.66589 33.7912 5.66589ZM11.813 8.59632H16.7684L15.7849 10.5632L21.2568 14.2111L22.8823 11.7728L19.5628 9.55985L20.0446 8.59632H29.9552L30.437 9.55985L27.1176 11.7728L28.7431 14.2111L34.215 10.5632L33.2315 8.59632H33.7912C36.215 8.59632 38.1869 10.5682 38.1869 12.992V17.3876H11.813V8.59632ZM38.1869 33.8957C38.1869 41.167 32.2712 47.0827 24.9999 47.0827C17.7287 47.0827 11.813 41.167 11.813 33.8957V20.318H38.1869V33.8957Z"
-                      fill="#ED9567"
-                    />
-                    <path
-                      d="M14.7435 23.6392H20.6044V26.5696H14.7435V23.6392Z"
-                      fill="#ED9567"
-                    />
-                    <path
-                      d="M29.3958 23.6392H35.2567V26.5696H29.3958V23.6392Z"
-                      fill="#ED9567"
-                    />
-                    <path
-                      d="M7.10327 3.70973L1.64788 0L0 2.42327L3.3359 4.69162L0.400199 10.5632L5.8721 14.2111L7.49751 11.7728L4.17811 9.55985L7.10327 3.70973Z"
-                      fill="#ED9567"
-                    />
-                    <path
-                      d="M50 2.42327L48.3521 0L42.8967 3.70973L45.8218 9.55985L42.5024 11.7728L44.1279 14.2111L49.5997 10.5632L46.664 4.69162L50 2.42327Z"
-                      fill="#ED9567"
-                    />
-                  </svg>
+                    {item.icon}
+                    <p>{item.text}</p>
+                  </motion.div>
+                </motion.div>
+              ))}
+            </motion.div>
 
-                  <p>
-                    <strong>Frustrated CEOs and CTOs</strong> managing software
-                    teams
-                  </p>
-                </div>
-              </div>
-
-              <div className="col col-12 col-md-4">
-                <div className="inner">
-                  <svg
-                    width="49"
-                    height="49"
-                    viewBox="0 0 49 49"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M44.8021 37.7331V31.9863H25.9355V29.0398C33.29 28.3165 39.0553 22.0967 39.0553 14.5553C39.0553 6.52954 32.5258 0 24.5 0C16.4742 0 9.9447 6.52954 9.9447 14.5553C9.9447 22.0967 15.71 28.3165 23.0645 29.0398V31.9863H4.19792V37.7331H0V49H11.267V37.7331H7.06902V34.8574H23.0645V37.7331H18.8665V49H30.1336V37.7331H25.9355V34.8574H41.931V37.7331H37.7331V49H49V37.7331H44.8021ZM22.1044 12.9291C22.1044 11.6081 23.179 10.5335 24.5 10.5335C25.821 10.5335 26.8956 11.6081 26.8956 12.9291C26.8956 14.2501 25.821 15.3248 24.5 15.3248C23.179 15.3248 22.1044 14.2501 22.1044 12.9291ZM24.5 18.1958C26.8773 18.1958 28.8112 20.1298 28.8112 22.5071V25.415C27.4767 25.9467 26.0219 26.2395 24.5 26.2395C22.9781 26.2395 21.5233 25.9466 20.1888 25.415V22.5071C20.1888 20.1298 22.1227 18.1958 24.5 18.1958ZM12.8158 14.5553C12.8158 8.11266 18.0574 2.87109 24.5 2.87109C30.9426 2.87109 36.1842 8.11266 36.1842 14.5553C36.1842 18.2921 34.4207 21.6246 31.6823 23.7649V22.5071C31.6823 19.98 30.3694 17.7553 28.391 16.4748C29.2452 15.5383 29.7668 14.2935 29.7668 12.9292C29.7668 10.0251 27.4041 7.66247 24.5001 7.66247C21.5961 7.66247 19.2334 10.0252 19.2334 12.9292C19.2334 14.2936 19.755 15.5384 20.6092 16.4748C18.6308 17.7553 17.3179 19.9801 17.3179 22.5071V23.7649C14.5794 21.6246 12.8158 18.2921 12.8158 14.5553ZM8.39594 46.1289H2.87109V40.6042H8.39594V46.1289ZM27.2624 46.1289H21.7375V40.6042H27.2624V46.1289ZM46.1289 46.1289H40.6041V40.6042H46.1289V46.1289Z"
-                      fill="#ED9567"
-                    />
-                  </svg>
-
-                  <p>
-                    <strong>SaaS industry leaders</strong> aiming to transform
-                    their team
-                  </p>
-                </div>
-              </div>
-
-              <div className="col col-12 col-md-4">
-                <div className="inner">
-                  <svg
-                    width="44"
-                    height="50"
-                    viewBox="0 0 44 50"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21.9389 0C18.4106 0 15.54 2.87054 15.54 6.3989C15.54 9.92726 18.4106 12.7977 21.9389 12.7977C25.4673 12.7977 28.3378 9.92726 28.3378 6.3989C28.3379 2.87054 25.4673 0 21.9389 0ZM21.9389 9.86838C20.0258 9.86838 18.4694 8.31204 18.4694 6.3989C18.4694 4.48576 20.0258 2.92932 21.9389 2.92932C23.8521 2.92932 25.4085 4.48576 25.4085 6.3989C25.4086 8.31204 23.8522 9.86838 21.9389 9.86838Z"
-                      fill="#ED9567"
-                    />
-                    <path
-                      d="M9.11519 5.41335C6.14076 5.41335 3.72075 7.83326 3.72075 10.8077C3.72075 13.7821 6.14066 16.202 9.11519 16.202C12.0896 16.202 14.5095 13.7821 14.5095 10.8077C14.5095 7.83326 12.0895 5.41335 9.11519 5.41335ZM9.11519 13.2726C7.75598 13.2726 6.65007 12.1668 6.65007 10.8076C6.65007 9.44839 7.75588 8.34257 9.11519 8.34257C10.4744 8.34257 11.5802 9.44839 11.5802 10.8076C11.5802 12.1668 10.4743 13.2726 9.11519 13.2726Z"
-                      fill="#ED9567"
-                    />
-                    <path
-                      d="M39.5674 17.3729H32.2336C31.3406 15.9588 29.7647 15.0169 27.9721 15.0169H15.9058C14.1132 15.0169 12.5373 15.9588 11.6442 17.3729H4.31039C1.93364 17.3729 0 19.3066 0 21.6834V26.5901V28.0547V32.3172L6.21562 32.9754C6.50865 33.9129 6.88526 34.8213 7.34214 35.6924L3.41187 40.5537L9.43992 46.5818L14.3013 42.6513C15.1724 43.1082 16.0811 43.4848 17.0184 43.7778L17.6765 49.9935H26.2016L26.8596 43.7778C27.7971 43.4848 28.7056 43.1083 29.5766 42.6514L34.4379 46.5819L40.4661 40.5538L36.5356 35.6925C36.9925 34.8214 37.3691 33.9129 37.662 32.9755L43.8777 32.3173V28.0548V26.5902V21.6835C43.8777 19.3066 41.9441 17.3729 39.5674 17.3729ZM13.7973 20.0547C13.7973 18.8921 14.7432 17.9462 15.9058 17.9462H27.9721C29.1347 17.9462 30.0806 18.8921 30.0806 20.0547V26.59H13.7973V20.0547ZM27.1714 29.5194C26.5302 31.8066 24.4281 33.4893 21.9389 33.4893C19.4498 33.4893 17.3476 31.8066 16.7065 29.5194H27.1714ZM2.92932 21.6833C2.92932 20.9218 3.54887 20.3022 4.31039 20.3022H10.8679V26.59H2.92932V21.6833ZM35.3397 30.2755L35.0956 31.2765C34.7685 32.6169 34.2384 33.896 33.5194 35.0784L32.9842 35.9589L36.5312 40.3461L34.2304 42.6469L29.8431 39.0999L28.9627 39.6351C27.7803 40.3538 26.5012 40.8841 25.1607 41.2112L24.1597 41.4554L23.5658 47.0642H20.3119L19.7179 41.4554L18.717 41.2111C17.3768 40.8843 16.0978 40.3541 14.9152 39.6351L14.0348 39.0999L9.64751 42.6469L7.34663 40.3461L10.8937 35.9589L10.3585 35.0784C9.6396 33.8961 9.1093 32.6168 8.78229 31.2765L8.53818 30.2755L2.92932 29.6816V29.5194H13.706C14.4008 33.4349 17.8269 36.4186 21.9388 36.4186C26.0508 36.4186 29.4768 33.4349 30.1717 29.5194H40.9483V29.6816H40.9484L35.3397 30.2755ZM40.9485 26.59H33.0099V20.3022H39.5674C40.3289 20.3022 40.9485 20.9218 40.9485 21.6833V26.59Z"
-                      fill="#ED9567"
-                    />
-                    <path
-                      d="M34.7627 5.41335C31.7883 5.41335 29.3684 7.83326 29.3684 10.8077C29.3684 13.7821 31.7883 16.202 34.7627 16.202C37.7371 16.202 40.157 13.7821 40.157 10.8077C40.157 7.83326 37.737 5.41335 34.7627 5.41335ZM34.7627 13.2727C33.4035 13.2727 32.2977 12.1669 32.2977 10.8077C32.2977 9.44849 33.4035 8.34257 34.7627 8.34257C36.1219 8.34257 37.2277 9.44839 37.2277 10.8076C37.2277 12.1668 36.1218 13.2727 34.7627 13.2727Z"
-                      fill="#ED9567"
-                    />
-                  </svg>
-
-                  <p>
-                    <strong>Tech executives</strong> seeking to bridge the gap
-                    between business and technical teams
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <h2 className="sec-title text-center mb-3 color-dark text-capitalize">
-              We need to talk.
-            </h2>
+            <motion.h2 
+              className="sec-title text-center mb-3 color-dark text-capitalize"
+              variants={fadeInUp}
+            >
+              Sound like you? Let's talk.
+            </motion.h2>
           </div>
-        </section>
+        </AnimatedSection>
 
-        <section id="shortCut">
+        <AnimatedSection id="shortCut">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-12 col-md-11 px-md-3">
-                <h3 className="text-center roboto-light mb-0">
-                  <span className="roboto-medium">Edgardo</span> Carreras is a
-                </h3>
-                <h1 className="text-center color-primary mb-4 text-capitalize">
-                  Shortcut for you
-                </h1>
-
-                <div className="fast-track mb-4">
-                  <img src="/images/fast-track-logo.png" alt="fast-track" />
-                  <span className="color-secondary text-capitalize text-center">
-                    Fast-Track Your Team's Success
-                  </span>
-                </div>
-
-                <p className="text-center">
-                  With my intervention, your software teams will become more
-                  profitable, improve customer satisfaction, and achieve quicker
-                  turnover of customer requests. Experience fewer bugs and more
-                  aligned software products.
-                </p>
+                <motion.h3 
+                  className="text-center roboto-light mb-0"
+                  variants={fadeInUp}
+                >
+                  What changes when we work together
+                </motion.h3>
+                <motion.h1 
+                  className="text-center color-primary mb-4 text-capitalize"
+                  variants={scaleIn}
+                >
+                  Before & After
+                </motion.h1>
               </div>
             </div>
 
             <div className="row">
-              <div className="col-1 col-12 col-md-6">
-                <h4 className="text-center roboto-medium">Old Way</h4>
+              <motion.div 
+                className="col-1 col-12 col-md-6"
+                variants={fadeInLeft}
+              >
+                <h4 className="text-center roboto-medium">Before</h4>
                 <ul className="items">
-                  <li>
-                    <div className="content">
-                      <strong>Misaligned products</strong> with business goals
-                      and market needs.
-                    </div>
-                    <svg
-                      width="49"
-                      height="21"
-                      viewBox="0 0 49 21"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
+                  {[
+                    { bold: "Manual deployments", rest: "everyone's afraid to touch" },
+                    { bold: "Security as an afterthought", rest: "caught too late" },
+                    { bold: "Releases that break things", rest: "and burn out the team" },
+                    { bold: "Slow feedback loops", rest: "that hide problems" }
+                  ].map((item, index) => (
+                    <motion.li 
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1 }}
                     >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M30.3485 0L48.4615 10.5L30.3485 21V13.5793L0 13.5793L0 7.4207L30.3485 7.4207V0Z"
-                        fill="url(#paint0_linear_1_151)"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_1_151"
-                          x1="-0.17004"
-                          y1="10.5"
-                          x2="31.8225"
-                          y2="10.5"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop stopColor="#ED9567" stopOpacity="0" />
-                          <stop offset="1" stopColor="#ED9567" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                  </li>
-
-                  <li>
-                    <div className="content">
-                      <strong>Unproductive development</strong> cycles due to
-                      inefficient processes.
-                    </div>
-                    <svg
-                      width="49"
-                      height="21"
-                      viewBox="0 0 49 21"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M30.3485 0L48.4615 10.5L30.3485 21V13.5793L0 13.5793L0 7.4207L30.3485 7.4207V0Z"
-                        fill="url(#paint0_linear_1_151)"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_1_151"
-                          x1="-0.17004"
-                          y1="10.5"
-                          x2="31.8225"
-                          y2="10.5"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop stopColor="#ED9567" stopOpacity="0" />
-                          <stop offset="1" stopColor="#ED9567" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                  </li>
-
-                  <li>
-                    <div className="content">
-                      <strong>High stress releases</strong> leading to burnout
-                      from constant fire fighting.
-                    </div>
-                    <svg
-                      width="49"
-                      height="21"
-                      viewBox="0 0 49 21"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M30.3485 0L48.4615 10.5L30.3485 21V13.5793L0 13.5793L0 7.4207L30.3485 7.4207V0Z"
-                        fill="url(#paint0_linear_1_151)"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_1_151"
-                          x1="-0.17004"
-                          y1="10.5"
-                          x2="31.8225"
-                          y2="10.5"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop stopColor="#ED9567" stopOpacity="0" />
-                          <stop offset="1" stopColor="#ED9567" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                  </li>
-
-                  <li>
-                    <div className="content">
-                      <strong>Slow releases</strong> hindering responsiveness to
-                      market demands.
-                    </div>
-                    <svg
-                      width="49"
-                      height="21"
-                      viewBox="0 0 49 21"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M30.3485 0L48.4615 10.5L30.3485 21V13.5793L0 13.5793L0 7.4207L30.3485 7.4207V0Z"
-                        fill="url(#paint0_linear_1_151)"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_1_151"
-                          x1="-0.17004"
-                          y1="10.5"
-                          x2="31.8225"
-                          y2="10.5"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop stopColor="#ED9567" stopOpacity="0" />
-                          <stop offset="1" stopColor="#ED9567" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                  </li>
+                      <div className="content">
+                        <strong>{item.bold}</strong> {item.rest}
+                      </div>
+                      <svg width="49" height="21" viewBox="0 0 49 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fillRule="evenodd" clipRule="evenodd" d="M30.3485 0L48.4615 10.5L30.3485 21V13.5793L0 13.5793L0 7.4207L30.3485 7.4207V0Z" fill="url(#paint0_linear_arrow)"/>
+                        <defs>
+                          <linearGradient id="paint0_linear_arrow" x1="-0.17004" y1="10.5" x2="31.8225" y2="10.5" gradientUnits="userSpaceOnUse">
+                            <stop stopColor="#ED9567" stopOpacity="0"/>
+                            <stop offset="1" stopColor="#ED9567"/>
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </motion.li>
+                  ))}
                 </ul>
-              </div>
+              </motion.div>
 
-              <div className="col-2 col-12 col-md-6">
-                <h3 className="text-center color-primary roboto-bold">
-                  New Way
-                </h3>
+              <motion.div 
+                className="col-2 col-12 col-md-6"
+                variants={fadeInRight}
+              >
+                <h3 className="text-center color-primary roboto-bold">After</h3>
                 <ul className="items-2">
-                  <li>
-                    <svg
-                      width="21"
-                      height="18"
-                      viewBox="0 0 21 18"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
+                  {[
+                    { bold: "One-click deployments", rest: "you can run anytime with confidence" },
+                    { bold: "Security checks that run automatically", rest: "on every commit" },
+                    { bold: "Rapid, reliable releases", rest: "that ship without drama" },
+                    { bold: "Tight feedback loops", rest: "that catch issues before production" }
+                  ].map((item, index) => (
+                    <motion.li 
+                      key={index}
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1 }}
                     >
-                      <rect
-                        y="0.914795"
-                        width="16.625"
-                        height="16.625"
-                        rx="2"
-                        fill="white"
-                      />
-                      <path
-                        d="M4 8.57692L8.28819 12.6875L19.4375 2"
-                        stroke="#ED9567"
-                        strokeWidth="3"
-                      />
-                    </svg>
-
-                    <div className="content">
-                      <strong>Aligned software products</strong> that meet
-                      business objectives effectively.
-                    </div>
-                  </li>
-
-                  <li>
-                    <svg
-                      width="21"
-                      height="18"
-                      viewBox="0 0 21 18"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect
-                        y="0.914795"
-                        width="16.625"
-                        height="16.625"
-                        rx="2"
-                        fill="white"
-                      />
-                      <path
-                        d="M4 8.57692L8.28819 12.6875L19.4375 2"
-                        stroke="#ED9567"
-                        strokeWidth="3"
-                      />
-                    </svg>
-
-                    <div className="content">
-                      <strong>
-                        Streamlined, productive development cycles
-                      </strong>{" "}
-                      optimizing resource use.
-                    </div>
-                  </li>
-
-                  <li>
-                    <svg
-                      width="21"
-                      height="18"
-                      viewBox="0 0 21 18"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect
-                        y="0.914795"
-                        width="16.625"
-                        height="16.625"
-                        rx="2"
-                        fill="white"
-                      />
-                      <path
-                        d="M4 8.57692L8.28819 12.6875L19.4375 2"
-                        stroke="#ED9567"
-                        strokeWidth="3"
-                      />
-                    </svg>
-
-                    <div className="content">
-                      <strong>Rapid, bug-free releases</strong> ensuring quick
-                      deployment and customer satisfaction.
-                    </div>
-                  </li>
-
-                  <li>
-                    <svg
-                      width="21"
-                      height="18"
-                      viewBox="0 0 21 18"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect
-                        y="0.914795"
-                        width="16.625"
-                        height="16.625"
-                        rx="2"
-                        fill="white"
-                      />
-                      <path
-                        d="M4 8.57692L8.28819 12.6875L19.4375 2"
-                        stroke="#ED9567"
-                        strokeWidth="3"
-                      />
-                    </svg>
-
-                    <div className="content">
-                      <strong>Improved team morale</strong> fostering innovation
-                      and high-performance culture.
-                    </div>
-                  </li>
+                      <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="0.914795" width="16.625" height="16.625" rx="2" fill="white"/>
+                        <motion.path 
+                          d="M4 8.57692L8.28819 12.6875L19.4375 2" 
+                          stroke="#ED9567" 
+                          strokeWidth="3"
+                          initial={{ pathLength: 0 }}
+                          whileInView={{ pathLength: 1 }}
+                          transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
+                        />
+                      </svg>
+                      <div className="content">
+                        <strong>{item.bold}</strong> {item.rest}
+                      </div>
+                    </motion.li>
+                  ))}
                 </ul>
-              </div>
+              </motion.div>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
 
-        <section id="transformation">
+        <AnimatedSection id="transformation">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-12 col-md-8">
-                <h5 className="color-primary text-center text-uppercase">
-                  See the Transformation
-                </h5>
-                <h2 className="text-center roboto-light">
-                  Do You Want Your <strong>Software Team</strong> To Look Like
-                  One of These?
-                </h2>
+                <motion.h5 
+                  className="color-primary text-center text-uppercase"
+                  variants={fadeInUp}
+                >
+                  Real Results
+                </motion.h5>
+                <motion.h2 
+                  className="text-center roboto-light"
+                  variants={fadeInUp}
+                >
+                  What <strong>Transformation</strong> Looks Like
+                </motion.h2>
               </div>
             </div>
 
-            <div className="row trans-boxes">
-              <div className="col-12 col-md-3 text-center">
-                <div className="inner">
-                  <small>Decreased by</small>
-                  <h1 className="color-primary">
-                    80<span>%</span>
-                  </h1>
-                  <p>Lead Times</p>
-                </div>
-              </div>
-              <div className="col-12 col-md-3 text-center">
-                <div className="inner">
-                  <small>Increased by</small>
-                  <h1 className="color-primary">
-                    250<span>%</span>
-                  </h1>
-                  <p>Throughput</p>
-                </div>
-              </div>
-              <div className="col-12 col-md-3 text-center">
-                <div className="inner">
-                  <small>Increased by</small>
-                  <h1 className="color-primary">
-                    300<span>%</span>
-                  </h1>
-                  <p>Release Frequency</p>
-                </div>
-              </div>
-              <div className="col-12 col-md-3 text-center">
-                <div className="inner">
-                  <small>Decreased by</small>
-                  <h1 className="color-primary">
-                    50<span>%</span>
-                  </h1>
-                  <p>Faulty Deployments</p>
-                </div>
-              </div>
-            </div>
+            <motion.div 
+              className="row trans-boxes"
+              variants={staggerContainer}
+            >
+              {[
+                { label: "Decreased by", value: 80, suffix: "%", description: "Lead Times" },
+                { label: "Increased by", value: 250, suffix: "%", description: "Throughput" },
+                { label: "Increased by", value: 300, suffix: "%", description: "Release Frequency" },
+                { label: "Decreased by", value: 50, suffix: "%", description: "Faulty Deployments" }
+              ].map((stat, index) => (
+                <motion.div 
+                  key={index}
+                  className="col-12 col-md-3 text-center"
+                  variants={scaleIn}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <div className="inner">
+                    <small>{stat.label}</small>
+                    <h1 className="color-primary">
+                      <AnimatedCounter end={stat.value} suffix={stat.suffix} />
+                    </h1>
+                    <p>{stat.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
 
             <div className="row cta-row">
               <div className="col-12">
-                <div className="cta my-4 my-md-5 mx-auto">
-                  <div className="site-btn pulse-btn">
-                    <a href={CONSULTATION_LINK}>
-                      Schedule Your Free Consultation
-                    </a>
-                  </div>
+                <motion.div 
+                  className="cta my-4 my-md-5 mx-auto"
+                  variants={fadeInUp}
+                >
+                  <motion.div 
+                    className="site-btn pulse-btn"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Link to="/newsletter">Get the Newsletter</Link>
+                  </motion.div>
                   <small>
-                    <em>
-                      <strong>10+</strong> Tech executives have transformed
-                      their teams with our coaching.
-                    </em>
+                    <em>Join 100+ engineering leaders getting daily DevSecOps insights.</em>
                   </small>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
 
-        <section id="about">
+        <AnimatedSection id="about">
           <div className="container">
             <div className="row align-items-center justify-content-end">
-              <img
+              <motion.img
                 src="/images/about-Image.png"
                 className="img-fluid feature-image"
                 alt=""
+                variants={fadeInLeft}
               />
-              <div className="col-2 col-12 col-md-6">
+              <motion.div 
+                className="col-2 col-12 col-md-6"
+                variants={fadeInRight}
+              >
                 <h2 className="roboto-light text-white mb-0">
                   I'm <span className="roboto-medium">Edgardo</span> Carreras
                 </h2>
                 <h5 className="color-primary mb-4">
-                  Transformative Coach for SaaS Executives
+                  DevSecOps Engineer & Software Craftsman
                 </h5>
 
                 <p className="text-white">
-                  I've been a software developer, CTO, consultant, and trainer
-                  for the better part of the past decade. I have mentored and
-                  trained hundreds of developers, and have a track record in
-                  scaling and building successful software development teams and
-                  products. By leading different organizations as a CTO,
-                  consulting teams, and training developers, I've learned how to
-                  improve programmers' professionalism and elevate their craft
-                  to the next level.
+                  I've spent the last decade in the trenches — as a developer, CTO, 
+                  consultant, and team lead. I've built CI/CD pipelines, rescued 
+                  legacy codebases, and learned (the hard way) that security and 
+                  quality can't be afterthoughts.
                 </p>
-              </div>
+                <p className="text-white">
+                  My background is in software craftsmanship: TDD, Clean Architecture, 
+                  continuous delivery. These days, I apply those same principles to 
+                  DevSecOps. Shift left. Automate everything. Make the right thing 
+                  the easy thing.
+                </p>
+                <motion.p 
+                  className="text-white"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  <strong>I don't just tell teams what to do. I build it with them.</strong>
+                </motion.p>
+              </motion.div>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
 
         <Faq />
 
-        <section id="bottom-cta">
+        <AnimatedSection id="bottom-cta">
           <div className="container">
-            <h1 className="text-center text-white">
-              Ready To See The Difference?
-            </h1>
-            <h4 className="roboto-light text-center text-white">
-              Schedule your free consultation now and let's discuss how we can
-              improve your team's performance, profitability, and customer
-              satisfaction.
-            </h4>
+            <motion.h1 
+              className="text-center text-white"
+              variants={fadeInUp}
+            >
+              Ready to ship with confidence?
+            </motion.h1>
+            <motion.h4 
+              className="roboto-light text-center text-white"
+              variants={fadeInUp}
+            >
+              Get daily insights on DevSecOps, CI/CD, and building pipelines 
+              that let you move fast without breaking things.
+            </motion.h4>
 
-            <div className="cta mt-4 mt-md-5 mx-auto">
-              <div className="site-btn pulse-btn">
-                <a href={CONSULTATION_LINK}>Schedule Your Free Consultation</a>
-              </div>
+            <motion.div 
+              className="cta mt-4 mt-md-5 mx-auto"
+              variants={scaleIn}
+            >
+              <motion.div 
+                className="site-btn pulse-btn"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                variants={pulseGlow}
+                animate="animate"
+              >
+                <Link to="/newsletter">Subscribe to the Newsletter</Link>
+              </motion.div>
               <small>
-                <em>
-                  <strong>10+</strong> Tech executives have transformed their
-                  teams with our coaching.
-                </em>
+                <em>Join 100+ engineering leaders. No spam. Unsubscribe anytime.</em>
               </small>
-            </div>
+            </motion.div>
           </div>
-        </section>
+        </AnimatedSection>
       </main>
 
-      <footer className="ec-bg-dark p-4">
+      <motion.footer 
+        className="ec-bg-dark p-4"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+      >
         <div className="bottom">
           <p className="text-center text-white mb-1">
             © {new Date().getFullYear()} Copyright. Edgardo Carreras.
           </p>
         </div>
-      </footer>
+      </motion.footer>
     </div>
   </>
 )
@@ -1076,7 +833,7 @@ const IndexPage = () => (
 export const Head = () => {
   return (
     <>
-      <Seo title={"Edgardo Carreras | SaaS Agile Technical Coach"} />
+      <Seo title={"Edgardo Carreras | DevSecOps Engineer"} />
       <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:wght@500&display=swap"
         rel="stylesheet"

@@ -292,12 +292,11 @@ header {
 }
 
 .hero-image {
-    width: 55%;
-    min-width: 550px;
-    max-width: 750px;
+    width: 100%;
+    max-width: 550px;
     position: relative;
-    margin-top: 0;
     margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -774,43 +773,30 @@ footer p small a:hover {
 
 @media screen and (min-width:1020px) and (max-width: 1383px) {
     .hero-image {
-        width: 90%;
-        min-width: 0;
-        max-width: 350px;
-        margin-top: 0;
-        margin-right: 20px;
+        max-width: 400px;
     }
     .hero-testimonial {
         margin-top: -10px;
         left: 0;
     }
-
 }
 
 @media screen and (min-width:927px) and (max-width: 1020px) {
     .hero-image {
-        width: 80%;
-        min-width: 0;
-        max-width: 300px;
-        margin-top: 0;
-        margin-right: 30px;
+        max-width: 350px;
     }
     .hero-testimonial {
         margin-top: -10px;
     }
-
 }
+
 @media screen and (min-width:767px) and (max-width: 927px) {
     .hero-image {
-        width: 100%;
-        min-width: 0;
         max-width: 400px;
-        margin-top: -10px;
     }
     .hero-testimonial {
         margin-top: -20px;
     }
-
 }
 
 @media screen and (max-width:767px){
@@ -855,14 +841,7 @@ footer p small a:hover {
         padding-right: 0 !important;
     }
     .hero-image {
-        left: 4px;
-        bottom: 31px;
-        top: -20px;
-        position: relative;
-        width: 80%;
-        margin: auto;
-        min-width: 0;
-        max-height: none;
+        max-width: 300px;
     }
     .hero-testimonial {
         margin-top: -40px;

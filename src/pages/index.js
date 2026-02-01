@@ -5,6 +5,7 @@ import Portrait from "../components/portrait"
 import { Faq } from "../components/faqs"
 import { Header } from "../components/header"
 import { BrandLogos } from "../components/brandLogos"
+import { SignUpForm2 } from "../components/newsletters/SignUpForm2"
 import { motion, useAnimation, useInView } from "framer-motion"
 
 const CONSULTATION_LINK =
@@ -181,23 +182,19 @@ function HeroSection() {
             <motion.div 
               className="cta my-4 my-md-5"
               variants={fadeInUp}
+              style={{ maxWidth: "400px" }}
             >
-              <motion.div 
-                className="site-btn pulse-btn"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                variants={pulseGlow}
-                animate="animate"
-              >
-                <Link to="/newsletter">Get the Newsletter</Link>
-              </motion.div>
+              <SignUpForm2 
+                ctaLabel="Send My First Tip Now"
+                url="https://app.convertkit.com/forms/3332277/subscriptions"
+              />
               <motion.small 
                 className="text-white"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2 }}
               >
-                <em>Daily insights on shipping fast and safe in the AI era.</em>
+                <em>(Don't worry—I hate spam, too, and I'll NEVER share your email!)</em>
               </motion.small>
             </motion.div>
           </motion.div>

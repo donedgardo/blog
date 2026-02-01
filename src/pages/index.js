@@ -12,7 +12,7 @@ const CONSULTATION_LINK =
 
 // Animation variants
 const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 1, y: 0 },
   visible: { 
     opacity: 1, 
     y: 0,
@@ -21,7 +21,7 @@ const fadeInUp = {
 }
 
 const fadeInLeft = {
-  hidden: { opacity: 0, x: -30 },
+  hidden: { opacity: 1, x: 0 },
   visible: { 
     opacity: 1, 
     x: 0,
@@ -30,7 +30,7 @@ const fadeInLeft = {
 }
 
 const fadeInRight = {
-  hidden: { opacity: 0, x: 30 },
+  hidden: { opacity: 1, x: 0 },
   visible: { 
     opacity: 1, 
     x: 0,
@@ -39,7 +39,7 @@ const fadeInRight = {
 }
 
 const staggerContainer = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 1 },
   visible: {
     opacity: 1,
     transition: {
@@ -50,7 +50,7 @@ const staggerContainer = {
 }
 
 const scaleIn = {
-  hidden: { opacity: 0, scale: 0.8 },
+  hidden: { opacity: 1, scale: 1 },
   visible: { 
     opacity: 1, 
     scale: 1,

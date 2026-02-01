@@ -12,29 +12,29 @@ const CONSULTATION_LINK =
 
 // Animation variants
 const fadeInUp = {
-  hidden: { opacity: 0, y: 60 },
+  hidden: { opacity: 0, y: 30 },
   visible: { 
     opacity: 1, 
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
+    transition: { duration: 0.5, ease: "easeOut" }
   }
 }
 
 const fadeInLeft = {
-  hidden: { opacity: 0, x: -60 },
+  hidden: { opacity: 0, x: -30 },
   visible: { 
     opacity: 1, 
     x: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
+    transition: { duration: 0.5, ease: "easeOut" }
   }
 }
 
 const fadeInRight = {
-  hidden: { opacity: 0, x: 60 },
+  hidden: { opacity: 0, x: 30 },
   visible: { 
     opacity: 1, 
     x: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
+    transition: { duration: 0.5, ease: "easeOut" }
   }
 }
 
@@ -204,16 +204,16 @@ function HeroSection() {
 
           <motion.div 
             className="col-2 col-12 col-md-6"
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
           >
             <motion.div
               animate={{ 
-                y: [0, -10, 0],
+                y: [0, -5, 0],
               }}
               transition={{ 
-                duration: 4, 
+                duration: 5, 
                 repeat: Infinity, 
                 ease: "easeInOut" 
               }}
@@ -221,7 +221,7 @@ function HeroSection() {
               <Portrait
                 className="hero-image img-fluid"
                 fluid={data.heroImage?.childImageSharp?.fluid}
-                style={{ position: "none" }}
+                style={{ position: "relative" }}
               />
             </motion.div>
 

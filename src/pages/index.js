@@ -214,6 +214,7 @@ function HeroSection() {
                 repeat: Infinity, 
                 ease: "easeInOut" 
               }}
+              style={{ transform: "scaleX(-1)" }}
             >
               <Portrait
                 className="hero-image img-fluid"

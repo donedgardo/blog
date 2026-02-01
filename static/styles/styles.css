@@ -303,7 +303,7 @@ header {
 
 .hero-testimonial {
     position: relative;
-    margin-top: 320px;
+    margin-top: 220px;
     left: -5%;
     z-index: 1;
     background: #000;
@@ -773,7 +773,7 @@ footer p small a:hover {
         max-width: 600px;
     }
     .hero-testimonial {
-        margin-top: 350px;
+        margin-top: 250px;
         left: -20%;
     }
 
@@ -787,7 +787,7 @@ footer p small a:hover {
         min-width: 400px;
     }
     .hero-testimonial {
-        margin-top: 300px;
+        margin-top: 220px;
     }
 
 }
@@ -799,7 +799,7 @@ footer p small a:hover {
         min-width: 350px;
     }
     .hero-testimonial {
-        margin-top: 280px;
+        margin-top: 200px;
     }
 
 }

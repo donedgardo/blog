@@ -781,13 +781,14 @@ footer p small a:hover {
 
 @media screen and (min-width:927px) and (max-width: 1020px) {
     .hero-image {
-        width: 100%;
+        width: 90%;
         min-width: 0;
-        max-width: 450px;
-        margin-top: -20px;
+        max-width: 350px;
+        margin-top: -60px;
+        margin-right: 20px;
     }
     .hero-testimonial {
-        margin-top: -20px;
+        margin-top: -10px;
     }
 
 }

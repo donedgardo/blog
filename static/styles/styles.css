@@ -250,7 +250,7 @@ header {
     position: relative;
     padding: 180px 20px 66px;
     color: var(--color-white);
-    overflow: hidden;
+    overflow: visible;
 }
 
 #hero::before {
@@ -296,7 +296,7 @@ header {
     min-width: 550px;
     max-width: 750px;
     position: relative;
-    margin-top: -120px;
+    margin-top: -50px;
     margin-left: auto;
 }
 

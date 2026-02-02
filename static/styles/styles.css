@@ -248,7 +248,7 @@ header {
     background-position: center center;
     border-radius: 0 0 70px 70px;
     position: relative;
-    padding: 180px 20px 66px;
+    padding: 180px 20px 40px;
     color: var(--color-white);
     overflow: visible;
 }
@@ -272,7 +272,7 @@ header {
 }
 
 #hero .col-2 {
-    overflow: hidden;
+    overflow: visible;
 }
 
 #hero .col-1 h4{
@@ -299,7 +299,7 @@ header {
     width: 100%;
     max-width: 550px;
     position: relative;
-    margin-left: 0;
+    margin-left: auto;
     margin-right: auto;
 }
 
@@ -337,6 +337,7 @@ header {
     display: flex;
     z-index: 1;
     gap: 56px;
+    margin-top: 60px;
 }
 
 .hero__logos-wrapper {
@@ -779,7 +780,7 @@ footer p small a:hover {
 
 @media screen and (min-width:1020px) and (max-width: 1383px) {
     .hero-image {
-        max-width: 400px;
+        max-width: 450px;
     }
     .hero-testimonial {
         margin-top: -10px;
@@ -789,7 +790,7 @@ footer p small a:hover {
 
 @media screen and (min-width:927px) and (max-width: 1020px) {
     .hero-image {
-        max-width: 350px;
+        max-width: 380px;
     }
     .hero-testimonial {
         margin-top: -10px;
@@ -798,7 +799,7 @@ footer p small a:hover {
 
 @media screen and (min-width:767px) and (max-width: 927px) {
     .hero-image {
-        max-width: 400px;
+        max-width: 420px;
     }
     .hero-testimonial {
         margin-top: -20px;
@@ -846,8 +847,13 @@ footer p small a:hover {
     #hero h1 {
         padding-right: 0 !important;
     }
+    #hero .col-2 {
+        align-items: center;
+    }
     .hero-image {
         max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .hero-testimonial {
         margin-top: -40px;

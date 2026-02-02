@@ -67,6 +67,7 @@
     "node": ">=14.17.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.58.1",
     "cypress": "^10.0.2",
     "gatsby-cli": "^4.15.1",
     "gatsby-plugin-root-import": "^2.0.5",

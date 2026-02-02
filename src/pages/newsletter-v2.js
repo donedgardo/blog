@@ -28,7 +28,7 @@ function NewsletterHeroSection() {
             <div className="cta my-4 my-md-5">
               <SignUpForm2
                 ctaLabel="Send Me Daily Insights"
-                url="https://app.convertkit.com/forms/3332277/subscriptions"
+                url="https://app.convertkit.com/forms/9041041/subscriptions"
               />
               <small className="text-white">
                 <em>

@@ -452,9 +452,9 @@ const IndexPage = () => (
             >
               {[
                 {
-                  quote: "Through Edgardo's hands-on approach, I learned invaluable tactics for team management, implementing CI/CD and monitoring. His focus on value over effort is exceptional.",
-                  author: "Fernando Yordan",
-                  image: "/images/fernando_yordan.jpg"
+                  quote: "Edgardo has a vast knowledge and understanding of development processes and technical abilities which he consistently demonstrates through the quality of his work.",
+                  author: "Karlo Martinez",
+                  image: "/images/karlo_martinez.jpg"
                 },
                 {
                   quote: "Edgardo is one of the most knowledgeable and fastest programmers I know. He always makes sure to be up to date with the latest tools and has a keen eye for improving products.",

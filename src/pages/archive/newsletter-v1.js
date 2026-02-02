@@ -1,7 +1,7 @@
 import React from "react"
-import Seo from "../components/seo"
-import { SignUpForm2 } from "../components/newsletters/SignUpForm2"
-import { Header } from "../components/header"
+import Seo from "../../components/seo"
+import { SignUpForm2 } from "../../components/newsletters/SignUpForm2"
+import { Header } from "../../components/header"
 
 function NewsletterHeroSection() {
   return (

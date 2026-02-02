@@ -10,29 +10,31 @@ function NewsletterHeroSection() {
         <div className="row flex-md-nowrap">
           <div className="col-1 col-12">
             <h5 className="roboto-bold text-uppercase primary-color">
-              For Engineering Leaders in the AI Era
+              Attention SaaS CEOs & CTOs
             </h5>
             <h1 className="roboto-bold mb-1 mb-md-4 text-capitalize">
-              Ship Fast. Stay Safe. <br /> Even When AI Writes the Code.
+              Agile Shift: <br /> Mastering Software Excellence
             </h1>
             <h4 className="roboto-light" style={{ maxWidth: "46.25rem" }}>
-              A daily newsletter on DevSecOps, CI/CD, and the principles that 
-              let you harness AI speed without the chaos.
+              A daily newsletter that helps tech executives in SaaS
+              organizations accelerate their software teams' productivity,
+              quality, and alignment.
             </h4>
             <h5 className="roboto-light" style={{ maxWidth: "46.25rem" }}>
-              AI generates code faster than ever. The hard part is making sure 
-              it doesn't sink your codebase. Get daily insights on building 
-              pipelines, quality gates, and feedback loops that keep you 
-              moving fast — without the fire drills.
+              Give me two minutes a day, and I’ll provide you with proven
+              strategies to boost your software team's productivity, quality,
+              and alignment, leading to faster and more profitable delivery
+              without sacrificing quality or burnout.
             </h5>
             <div className="cta my-4 my-md-5">
               <SignUpForm2
-                ctaLabel="Send Me Daily Insights"
-                url="https://app.convertkit.com/forms/9041041/subscriptions"
+                ctaLabel="Send My First Tip Now"
+                url="https://app.convertkit.com/forms/3332277/subscriptions"
               />
               <small className="text-white">
                 <em>
-                  Join 100+ engineering leaders. No spam. Unsubscribe anytime.
+                  (Don’t worry—I hate spam, too, and I’ll NEVER share your email
+                  address with anyone!)
                 </em>
               </small>
             </div>
@@ -64,7 +66,7 @@ const IndexPage = () => (
 export const Head = () => {
   return (
     <>
-      <Seo title={"Edgardo Carreras | DevSecOps Newsletter"} />
+      <Seo title={"Edgardo Carreras | SaaS Agile Technical Coach"} />
       <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:wght@500&display=swap"
         rel="stylesheet"

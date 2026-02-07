@@ -53,7 +53,7 @@ const IndexPage = () => (
       <footer className="p-4 light-dark-bg">
         <div className="bottom">
           <p className="text-center text-white mb-1">
-            © {new Date().getFullYear()} Copyright. Edgardo Carreras.
+            © 2026 Copyright. Edgardo Carreras.
           </p>
         </div>
       </footer>

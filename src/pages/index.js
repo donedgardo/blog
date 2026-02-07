@@ -1,18 +1,39 @@
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import Seo from "../components/seo"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import Portrait from "../components/portrait"
 import { Faq } from "../components/faqs"
 import { Header } from "../components/header"
 import { BrandLogos } from "../components/brandLogos"
-import { motion, useAnimation, useInView } from "framer-motion"
+import { motion, useAnimation, useInView, LazyMotion, domAnimation, m } from "framer-motion"
+
+// Hydration-safe check for client-side
+const useIsClient = () => {
+  const [isClient, setIsClient] = useState(false)
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+  return isClient
+}
+
+// Wrapper to prevent hydration mismatch - renders static on server, animated on client
+const ClientOnlyMotion = ({ children, fallback = null, ...props }) => {
+  const isClient = useIsClient()
+  if (!isClient) {
+    // Return a static div with same className on server
+    const { className, style, id } = props
+    return <div className={className} style={style} id={id}>{children}</div>
+  }
+  return <motion.div {...props}>{children}</motion.div>
+}
 
 const CONSULTATION_LINK =
   "https://calendly.com/edgardo-g-carreras/free-coaching-call-with-edgardo"
 
-// Animation variants
+// Animation variants - start visible to prevent hydration mismatch
+// Animations only run on client via whileInView
 const fadeInUp = {
-  hidden: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: 20 },
   visible: { 
     opacity: 1, 
     y: 0,
@@ -21,7 +42,7 @@ const fadeInUp = {
 }
 
 const fadeInLeft = {
-  hidden: { opacity: 1, x: 0 },
+  hidden: { opacity: 0, x: -20 },
   visible: { 
     opacity: 1, 
     x: 0,
@@ -30,7 +51,7 @@ const fadeInLeft = {
 }
 
 const fadeInRight = {
-  hidden: { opacity: 1, x: 0 },
+  hidden: { opacity: 0, x: 20 },
   visible: { 
     opacity: 1, 
     x: 0,
@@ -50,7 +71,7 @@ const staggerContainer = {
 }
 
 const scaleIn = {
-  hidden: { opacity: 1, scale: 1 },
+  hidden: { opacity: 0, scale: 0.9 },
   visible: { 
     opacity: 1, 
     scale: 1,
@@ -73,11 +94,12 @@ const pulseGlow = {
   }
 }
 
-// Animated section wrapper with scroll trigger
+// Animated section wrapper with scroll trigger (hydration-safe)
 function AnimatedSection({ children, className, id }) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const controls = useAnimation()
+  const isClient = useIsClient()
 
   useEffect(() => {
     if (isInView) {
@@ -85,12 +107,21 @@ function AnimatedSection({ children, className, id }) {
     }
   }, [isInView, controls])
 
+  // Render without animation on server, animate only on client
+  if (!isClient) {
+    return (
+      <section ref={ref} id={id} className={className}>
+        {children}
+      </section>
+    )
+  }
+
   return (
     <motion.section
       ref={ref}
       id={id}
       className={className}
-      initial="hidden"
+      initial="visible"
       animate={controls}
       variants={staggerContainer}
     >
@@ -99,14 +130,19 @@ function AnimatedSection({ children, className, id }) {
   )
 }
 
-// Counter animation component
+// Counter animation component (hydration-safe)
 function AnimatedCounter({ end, suffix = "", prefix = "" }) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
-  const [count, setCount] = React.useState(0)
+  const isClient = useIsClient()
+  // Start with final value to match server render
+  const [count, setCount] = React.useState(end)
+  const [hasAnimated, setHasAnimated] = React.useState(false)
 
   useEffect(() => {
-    if (isInView) {
+    if (isInView && isClient && !hasAnimated) {
+      setHasAnimated(true)
+      setCount(0) // Reset to 0 then animate up
       let startTime
       const duration = 2000
       const animate = (timestamp) => {
@@ -119,7 +155,7 @@ function AnimatedCounter({ end, suffix = "", prefix = "" }) {
       }
       requestAnimationFrame(animate)
     }
-  }, [isInView, end])
+  }, [isInView, isClient, end, hasAnimated])
 
   return (
     <span ref={ref}>
@@ -813,17 +849,13 @@ const IndexPage = () => (
         </AnimatedSection>
       </main>
 
-      <motion.footer 
-        className="ec-bg-dark p-4"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-      >
+      <footer className="ec-bg-dark p-4">
         <div className="bottom">
           <p className="text-center text-white mb-1">
-            © {new Date().getFullYear()} Copyright. Edgardo Carreras.
+            © 2026 Copyright. Edgardo Carreras.
           </p>
         </div>
-      </motion.footer>
+      </footer>
     </div>
   </>
 )

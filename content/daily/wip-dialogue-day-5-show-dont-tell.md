@@ -1,13 +1,13 @@
 ---
-path: /wip-dialogue-day-5-show-dont-tell
 date: 2026-02-23T14:00:00.000Z
 title: "WIP Dialogue Day 5: Show, Don't Tell"
-description: "You can't argue with someone's diagnosis. You have to show them a different result."
+category: daily
+rss: true
 ---
 
 👋 Hello there!
 
-*This is Day 5 of a 6-day dialogue on reducing work in progress. [Start from Day 1](/wip-dialogue-day-1-stop-starting) or [read Day 4](/wip-dialogue-day-4-the-pain-prerequisite).*
+*This is Day 5 of a 6-day dialogue on reducing work in progress. [Start from Day 1](/daily/wip-dialogue-day-1-stop-starting) or [read Day 4](/daily/wip-dialogue-day-4-the-pain-prerequisite).*
 
 ---
 

@@ -1,13 +1,13 @@
 ---
-path: /ai-dialogue-day-6-the-sponsor-question
 date: 2026-02-17T14:00:00.000Z
 title: "AI Dialogue Day 6: The Sponsor Question"
-description: "Can a team build culture from the bottom up? Or does it require air cover from above?"
+category: daily
+rss: true
 ---
 
 👋 Hello there!
 
-*This is Day 6 of a 7-day dialogue on building software in the age of AI. [Start from Day 1](/ai-dialogue-day-1-why-not-better-ai) or [read Day 5](/ai-dialogue-day-5-culture-eats-practices).*
+*This is Day 6 of a 7-day dialogue on building software in the age of AI. [Start from Day 1](/daily/ai-dialogue-day-1-why-not-better-ai) or [read Day 5](/daily/ai-dialogue-day-5-culture-eats-practices).*
 
 ---
 

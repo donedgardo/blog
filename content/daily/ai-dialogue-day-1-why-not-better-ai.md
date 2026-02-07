@@ -1,8 +1,8 @@
 ---
-path: /ai-dialogue-day-1-why-not-better-ai
 date: 2026-02-12T14:00:00.000Z
 title: "AI Dialogue Day 1: Why Not a Better AI?"
-description: "If judgment is the bottleneck, why add another human? A dialogue on building software in the age of AI."
+category: daily
+rss: true
 ---
 
 👋 Hello there!

@@ -1,13 +1,13 @@
 ---
-path: /ai-dialogue-day-4-ask-the-whys
 date: 2026-02-15T14:00:00.000Z
 title: "AI Dialogue Day 4: Ask the Whys"
-description: "When goals are unclear, the missing key is asking why. Not one line of code should start without understanding the whys."
+category: daily
+rss: true
 ---
 
 👋 Hello there!
 
-*This is Day 4 of a 7-day dialogue on building software in the age of AI. [Start from Day 1](/ai-dialogue-day-1-why-not-better-ai) or [read Day 3](/ai-dialogue-day-3-third-party-in-the-room).*
+*This is Day 4 of a 7-day dialogue on building software in the age of AI. [Start from Day 1](/daily/ai-dialogue-day-1-why-not-better-ai) or [read Day 3](/daily/ai-dialogue-day-3-third-party-in-the-room).*
 
 ---
 

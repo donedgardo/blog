@@ -1,13 +1,13 @@
 ---
-path: /wip-dialogue-day-6-sparking-hope
 date: 2026-02-24T14:00:00.000Z
 title: "WIP Dialogue Day 6: Sparking Hope"
-description: "The spark comes from leadership. Not management. Leadership."
+category: daily
+rss: true
 ---
 
 👋 Hello there!
 
-*This is Day 6, the final day of a 6-day dialogue on reducing work in progress. [Start from Day 1](/wip-dialogue-day-1-stop-starting) or [read Day 5](/wip-dialogue-day-5-show-dont-tell).*
+*This is Day 6, the final day of a 6-day dialogue on reducing work in progress. [Start from Day 1](/daily/wip-dialogue-day-1-stop-starting) or [read Day 5](/daily/wip-dialogue-day-5-show-dont-tell).*
 
 ---
 

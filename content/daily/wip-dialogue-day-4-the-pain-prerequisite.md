@@ -1,13 +1,13 @@
 ---
-path: /wip-dialogue-day-4-the-pain-prerequisite
 date: 2026-02-22T14:00:00.000Z
 title: "WIP Dialogue Day 4: The Pain Prerequisite"
-description: "You can't sell medicine to someone who doesn't know they're sick."
+category: daily
+rss: true
 ---
 
 👋 Hello there!
 
-*This is Day 4 of a 6-day dialogue on reducing work in progress. [Start from Day 1](/wip-dialogue-day-1-stop-starting) or [read Day 3](/wip-dialogue-day-3-protecting-focus).*
+*This is Day 4 of a 6-day dialogue on reducing work in progress. [Start from Day 1](/daily/wip-dialogue-day-1-stop-starting) or [read Day 3](/daily/wip-dialogue-day-3-protecting-focus).*
 
 ---
 

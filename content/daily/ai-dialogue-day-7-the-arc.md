@@ -1,13 +1,13 @@
 ---
-path: /ai-dialogue-day-7-the-arc
 date: 2026-02-18T14:00:00.000Z
 title: "AI Dialogue Day 7: The Arc"
-description: "We thought we were talking about coding with AI. We were actually talking about building teams."
+category: daily
+rss: true
 ---
 
 👋 Hello there!
 
-*This is Day 7, the final day of a 7-day dialogue on building software in the age of AI. [Start from Day 1](/ai-dialogue-day-1-why-not-better-ai) or [read Day 6](/ai-dialogue-day-6-the-sponsor-question).*
+*This is Day 7, the final day of a 7-day dialogue on building software in the age of AI. [Start from Day 1](/daily/ai-dialogue-day-1-why-not-better-ai) or [read Day 6](/daily/ai-dialogue-day-6-the-sponsor-question).*
 
 ---
 

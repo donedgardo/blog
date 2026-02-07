@@ -1,13 +1,13 @@
 ---
-path: /ai-dialogue-day-3-third-party-in-the-room
 date: 2026-02-14T14:00:00.000Z
 title: "AI Dialogue Day 3: The Third Party in the Room"
-description: "What keeps friction generative instead of destructive? Goals become the impartial judge."
+category: daily
+rss: true
 ---
 
 👋 Hello there!
 
-*This is Day 3 of a 7-day dialogue on building software in the age of AI. [Start from Day 1](/ai-dialogue-day-1-why-not-better-ai) or [read Day 2](/ai-dialogue-day-2-compliance-or-transfer).*
+*This is Day 3 of a 7-day dialogue on building software in the age of AI. [Start from Day 1](/daily/ai-dialogue-day-1-why-not-better-ai) or [read Day 2](/daily/ai-dialogue-day-2-compliance-or-transfer).*
 
 ---
 

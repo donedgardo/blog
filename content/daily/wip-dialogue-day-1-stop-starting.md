@@ -1,8 +1,8 @@
 ---
-path: /wip-dialogue-day-1-stop-starting
 date: 2026-02-19T14:00:00.000Z
 title: "WIP Dialogue Day 1: Stop Starting, Start Finishing"
-description: "Your team has 10 things in progress and nothing shipping. The problem isn't velocity. It's focus."
+category: daily
+rss: true
 ---
 
 👋 Hello there!

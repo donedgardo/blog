@@ -1,13 +1,13 @@
 ---
-path: /wip-dialogue-day-2-the-prioritization-fight
 date: 2026-02-20T14:00:00.000Z
 title: "WIP Dialogue Day 2: The Prioritization Fight"
-description: "Three stakeholders want three things. Get them in a room and make them fight it out."
+category: daily
+rss: true
 ---
 
 👋 Hello there!
 
-*This is Day 2 of a 6-day dialogue on reducing work in progress. [Read Day 1 here](/wip-dialogue-day-1-stop-starting).*
+*This is Day 2 of a 6-day dialogue on reducing work in progress. [Read Day 1 here](/daily/wip-dialogue-day-1-stop-starting).*
 
 ---
 

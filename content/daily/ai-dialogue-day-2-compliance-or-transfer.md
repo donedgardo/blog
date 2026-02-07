@@ -1,13 +1,13 @@
 ---
-path: /ai-dialogue-day-2-compliance-or-transfer
 date: 2026-02-13T14:00:00.000Z
 title: "AI Dialogue Day 2: Compliance or Transfer?"
-description: "When the principled witness says 'don't do that,' does the prompter learn why? Or do they just comply?"
+category: daily
+rss: true
 ---
 
 👋 Hello there!
 
-*This is Day 2 of a 7-day dialogue on building software in the age of AI. [Read Day 1 here](/ai-dialogue-day-1-why-not-better-ai).*
+*This is Day 2 of a 7-day dialogue on building software in the age of AI. [Read Day 1 here](/daily/ai-dialogue-day-1-why-not-better-ai).*
 
 ---
 

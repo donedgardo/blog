@@ -1,13 +1,13 @@
 ---
-path: /wip-dialogue-day-3-protecting-focus
 date: 2026-02-21T14:00:00.000Z
 title: "WIP Dialogue Day 3: Protecting Focus"
-description: "The urgent crowds out the important. But what is urgent is seldom important."
+category: daily
+rss: true
 ---
 
 👋 Hello there!
 
-*This is Day 3 of a 6-day dialogue on reducing work in progress. [Start from Day 1](/wip-dialogue-day-1-stop-starting) or [read Day 2](/wip-dialogue-day-2-the-prioritization-fight).*
+*This is Day 3 of a 6-day dialogue on reducing work in progress. [Start from Day 1](/daily/wip-dialogue-day-1-stop-starting) or [read Day 2](/daily/wip-dialogue-day-2-the-prioritization-fight).*
 
 ---
 

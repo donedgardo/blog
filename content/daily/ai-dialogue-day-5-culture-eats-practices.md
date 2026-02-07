@@ -1,13 +1,13 @@
 ---
-path: /ai-dialogue-day-5-culture-eats-practices
 date: 2026-02-16T14:00:00.000Z
 title: "AI Dialogue Day 5: Culture Eats Practices"
-description: "When answers are political instead of principled, you've hit the boundary. But practices can build culture."
+category: daily
+rss: true
 ---
 
 👋 Hello there!
 
-*This is Day 5 of a 7-day dialogue on building software in the age of AI. [Start from Day 1](/ai-dialogue-day-1-why-not-better-ai) or [read Day 4](/ai-dialogue-day-4-ask-the-whys).*
+*This is Day 5 of a 7-day dialogue on building software in the age of AI. [Start from Day 1](/daily/ai-dialogue-day-1-why-not-better-ai) or [read Day 4](/daily/ai-dialogue-day-4-ask-the-whys).*
 
 ---
 

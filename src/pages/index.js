@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef, useState, lazy, Suspense } from "react"
 import Seo from "../components/seo"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import Portrait from "../components/portrait"
@@ -17,6 +17,38 @@ const useIsClient = () => {
     setIsClient(true)
   }, [])
   return isClient
+}
+
+// Lazy-load section when it approaches viewport (saves initial render time)
+function LazySection({ children, className, id, fallbackHeight = "400px" }) {
+  const ref = useRef(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.disconnect()
+        }
+      },
+      { rootMargin: "200px" } // Start loading 200px before it's visible
+    )
+
+    if (ref.current) {
+      observer.observe(ref.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <section ref={ref} id={id} className={className}>
+      {isVisible ? children : (
+        <div style={{ minHeight: fallbackHeight }} aria-hidden="true" />
+      )}
+    </section>
+  )
 }
 
 // Wrapper to prevent hydration mismatch - renders static on server, animated on client
@@ -318,7 +350,7 @@ const IndexPage = () => (
       <main>
         <HeroSection />
 
-        <AnimatedSection id="challenges">
+        <LazySection id="challenges">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-12 col-md-6">
@@ -381,9 +413,9 @@ const IndexPage = () => (
               </div>
             </div>
           </div>
-        </AnimatedSection>
+        </LazySection>
 
-        <AnimatedSection id="offers">
+        <LazySection id="offers">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-12 col-md-11 px-2 px-md-4">
@@ -529,9 +561,9 @@ const IndexPage = () => (
               ))}
             </motion.div>
           </div>
-        </AnimatedSection>
+        </LazySection>
 
-        <AnimatedSection id="talk">
+        <LazySection id="talk">
           <div className="container">
             <motion.h2 
               className="sec-title text-center text-white roboto-light text-capitalize"
@@ -601,9 +633,9 @@ const IndexPage = () => (
               Sound like you? Let's talk.
             </motion.h2>
           </div>
-        </AnimatedSection>
+        </LazySection>
 
-        <AnimatedSection id="shortCut">
+        <LazySection id="shortCut">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-12 col-md-11 px-md-3">
@@ -696,9 +728,9 @@ const IndexPage = () => (
               </motion.div>
             </div>
           </div>
-        </AnimatedSection>
+        </LazySection>
 
-        <AnimatedSection id="transformation">
+        <LazySection id="transformation">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-12 col-md-8">
@@ -764,9 +796,9 @@ const IndexPage = () => (
               </div>
             </div>
           </div>
-        </AnimatedSection>
+        </LazySection>
 
-        <AnimatedSection id="about">
+        <LazySection id="about">
           <div className="container">
             <div className="row align-items-center justify-content-end">
               <motion.img
@@ -809,11 +841,11 @@ const IndexPage = () => (
               </motion.div>
             </div>
           </div>
-        </AnimatedSection>
+        </LazySection>
 
         <Faq />
 
-        <AnimatedSection id="bottom-cta">
+        <LazySection id="bottom-cta">
           <div className="container">
             <motion.h1 
               className="text-center text-white"
@@ -847,7 +879,7 @@ const IndexPage = () => (
               </small>
             </motion.div>
           </div>
-        </AnimatedSection>
+        </LazySection>
       </main>
 
       <footer className="ec-bg-dark p-4">

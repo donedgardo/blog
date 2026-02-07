@@ -5,7 +5,10 @@ import Portrait from "../components/portrait"
 import { Faq } from "../components/faqs"
 import { Header } from "../components/header"
 import { BrandLogos } from "../components/brandLogos"
-import { motion, useAnimation, useInView, LazyMotion, domAnimation, m } from "framer-motion"
+import { LazyMotion, domAnimation, m, useAnimation, useInView } from "framer-motion"
+
+// Use m instead of motion for lighter bundle with LazyMotion
+const motion = m
 
 // Hydration-safe check for client-side
 const useIsClient = () => {
@@ -309,7 +312,7 @@ const challenges = [
 ]
 
 const IndexPage = () => (
-  <>
+  <LazyMotion features={domAnimation} strict>
     <div className="site-content">
       <Header />
       <main>
@@ -855,7 +858,7 @@ const IndexPage = () => (
         </div>
       </footer>
     </div>
-  </>
+  </LazyMotion>
 )
 
 export const Head = () => {

@@ -1,5 +1,5 @@
 ---
-date: 2026-02-13T14:00:00.000Z
+date: 2026-02-09T14:00:00.000Z
 title: "AI Dialogue Day 2: Compliance or Transfer?"
 category: daily
 rss: true

@@ -1,5 +1,5 @@
 ---
-date: 2026-02-22T14:00:00.000Z
+date: 2026-02-18T14:00:00.000Z
 title: "WIP Dialogue Day 4: The Pain Prerequisite"
 category: daily
 rss: true

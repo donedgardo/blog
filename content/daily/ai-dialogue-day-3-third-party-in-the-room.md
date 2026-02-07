@@ -1,5 +1,5 @@
 ---
-date: 2026-02-14T14:00:00.000Z
+date: 2026-02-10T14:00:00.000Z
 title: "AI Dialogue Day 3: The Third Party in the Room"
 category: daily
 rss: true

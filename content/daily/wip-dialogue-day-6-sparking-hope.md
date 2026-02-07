@@ -1,5 +1,5 @@
 ---
-date: 2026-02-24T14:00:00.000Z
+date: 2026-02-20T14:00:00.000Z
 title: "WIP Dialogue Day 6: Sparking Hope"
 category: daily
 rss: true

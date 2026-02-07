@@ -1,5 +1,5 @@
 ---
-date: 2026-02-17T14:00:00.000Z
+date: 2026-02-13T14:00:00.000Z
 title: "AI Dialogue Day 6: The Sponsor Question"
 category: daily
 rss: true

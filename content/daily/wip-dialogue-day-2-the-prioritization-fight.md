@@ -1,5 +1,5 @@
 ---
-date: 2026-02-20T14:00:00.000Z
+date: 2026-02-16T14:00:00.000Z
 title: "WIP Dialogue Day 2: The Prioritization Fight"
 category: daily
 rss: true

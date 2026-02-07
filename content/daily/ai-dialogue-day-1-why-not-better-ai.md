@@ -1,5 +1,5 @@
 ---
-date: 2026-02-12T14:00:00.000Z
+date: 2026-02-08T14:00:00.000Z
 title: "AI Dialogue Day 1: Why Not a Better AI?"
 category: daily
 rss: true

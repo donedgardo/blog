@@ -1,5 +1,5 @@
 ---
-date: 2026-02-19T14:00:00.000Z
+date: 2026-02-15T14:00:00.000Z
 title: "WIP Dialogue Day 1: Stop Starting, Start Finishing"
 category: daily
 rss: true

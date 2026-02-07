@@ -1,5 +1,5 @@
 ---
-date: 2026-02-15T14:00:00.000Z
+date: 2026-02-11T14:00:00.000Z
 title: "AI Dialogue Day 4: Ask the Whys"
 category: daily
 rss: true

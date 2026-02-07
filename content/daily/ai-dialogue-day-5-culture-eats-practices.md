@@ -1,5 +1,5 @@
 ---
-date: 2026-02-16T14:00:00.000Z
+date: 2026-02-12T14:00:00.000Z
 title: "AI Dialogue Day 5: Culture Eats Practices"
 category: daily
 rss: true

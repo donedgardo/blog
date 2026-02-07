@@ -1,5 +1,5 @@
 ---
-date: 2026-02-23T14:00:00.000Z
+date: 2026-02-19T14:00:00.000Z
 title: "WIP Dialogue Day 5: Show, Don't Tell"
 category: daily
 rss: true

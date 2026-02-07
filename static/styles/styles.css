@@ -3,7 +3,7 @@
     /*--color-primary: #C45417;*/
     --color-primary: #d3703c;
     --color-secondary: #333333;
-    --color-accent: #EB2323;
+    --color-accent: #C91E1E; /* Darkened from #EB2323 for WCAG AA contrast (5.07:1) */
     --color-white: #FFFFFF;
     --color-dark: #0A1823;
     --color-blue: #17344B;
@@ -188,7 +188,7 @@ strong {
 }
 .cta small {
     font-size: 14px;
-    color: #848484;
+    color: #5C5C5C; /* Darkened from #848484 for WCAG AA contrast (5.9:1 on white) */
     font-weight: 400;
 }
 

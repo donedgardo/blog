@@ -183,8 +183,6 @@ function HeroSection() {
         <div className="row flex-md-nowrap">
           <motion.div 
             className="col-1 col-12 col-md-7 col-lg-8"
-            initial="hidden"
-            animate="visible"
             variants={staggerContainer}
           >
             <motion.h5 
@@ -199,8 +197,8 @@ function HeroSection() {
             >
               I help your team deliver{" "}
               <motion.span
-                initial={{ opacity: 0, scale: 1.2 }}
-                animate={{ opacity: 1, scale: 1 }}
+                style={{ opacity: 1, scale: 1 }}
+                
                 transition={{ delay: 0.8, duration: 0.5 }}
                 style={{ color: "#ED9567", display: "inline-block", whiteSpace: "nowrap" }}
               >
@@ -227,8 +225,8 @@ function HeroSection() {
               </motion.div>
               <motion.small 
                 className="text-white"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                
+                
                 transition={{ delay: 1.2 }}
               >
                 <em>Daily insights on shipping fast and safe in the AI era.</em>
@@ -238,8 +236,8 @@ function HeroSection() {
 
           <motion.div 
             className="col-2 col-12 col-md-6"
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
+            
+            
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <motion.div
@@ -261,8 +259,8 @@ function HeroSection() {
 
             <motion.div 
               className="hero-testimonial d-flex flex-wrap flex-md-nowrap"
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
+              
+              
               transition={{ delay: 1, duration: 0.6 }}
             >
               <div className="image-container">
@@ -281,8 +279,8 @@ function HeroSection() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
+          
+          
           transition={{ delay: 0.8, duration: 0.6 }}
         >
           <BrandLogos />
@@ -399,7 +397,7 @@ const IndexPage = () => (
                   I don't just advise — <strong>I build</strong>. Pipelines, 
                   automation, security gates. The systems that let your team{" "}
                   <motion.strong
-                    initial={{ opacity: 0 }}
+                    
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.5 }}
                   >
@@ -636,7 +634,7 @@ const IndexPage = () => (
                   ].map((item, index) => (
                     <motion.li 
                       key={index}
-                      initial={{ opacity: 0, x: -20 }}
+                      
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.1 }}
                     >
@@ -671,7 +669,7 @@ const IndexPage = () => (
                   ].map((item, index) => (
                     <motion.li 
                       key={index}
-                      initial={{ opacity: 0, x: 20 }}
+                      
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.1 }}
                     >
@@ -681,7 +679,7 @@ const IndexPage = () => (
                           d="M4 8.57692L8.28819 12.6875L19.4375 2" 
                           stroke="#ED9567" 
                           strokeWidth="3"
-                          initial={{ pathLength: 0 }}
+                          
                           whileInView={{ pathLength: 1 }}
                           transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
                         />
@@ -799,7 +797,7 @@ const IndexPage = () => (
                 </p>
                 <motion.p 
                   className="text-white"
-                  initial={{ opacity: 0 }}
+                  
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.3 }}
                 >

@@ -7,7 +7,7 @@ rss: true
 
 👋 Hello there!
 
-*This is Day 2 of a 6-day dialogue on reducing work in progress. [Read Day 1 here](https://edgardocarreras.com/daily/wip-dialogue-day-1-stop-starting).*
+*This is Day 2 of a 7-day dialogue on reducing work in progress. [Read Day 1 here](https://edgardocarreras.com/daily/wip-dialogue-day-1-stop-starting).*
 
 ---
 

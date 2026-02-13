@@ -7,7 +7,7 @@ rss: true
 
 👋 Hello there!
 
-*This is Day 1 of a 6-day dialogue on reducing work in progress.*
+*This is Day 1 of a 7-day dialogue on reducing work in progress.*
 
 ---
 

@@ -14,6 +14,11 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx
     const { previous, next } = this.props.pageContext
+    
+    // Hide "next" link if the next post is dated in the future
+    const today = new Date()
+    today.setHours(23, 59, 59, 999)
+    const showNext = next && new Date(next.frontmatter.date) <= today
 
     const featuredImgFluid =
       post?.frontmatter?.featuredImage?.childImageSharp?.fluid
@@ -55,7 +60,7 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
           <li>
-            {next && (
+            {showNext && (
               <Link to={`/daily/${next.slug}`} rel="next">
                 {next.frontmatter.title} →
               </Link>

@@ -17,7 +17,6 @@ exports.createPages = ({ graphql, actions }) => {
               slug
               frontmatter {
                 title
-                date
               }
             }
           }
@@ -29,16 +28,8 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    // Filter out future posts (date > today)
-    const today = new Date()
-    today.setHours(23, 59, 59, 999) // End of today
-    
-    const allPosts = result.data.allMdx.edges
-    const posts = allPosts.filter(({ node }) => {
-      const postDate = new Date(node.frontmatter.date)
-      return postDate <= today
-    })
-    
+    // Create blog posts pages.
+    const posts = result.data.allMdx.edges
     const blogPost = path.resolve(`./src/templates/daily.js`)
 
     posts.forEach((post, index) => {

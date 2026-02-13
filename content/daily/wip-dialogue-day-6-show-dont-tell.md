@@ -15,7 +15,7 @@ Yesterday's question: how do you get from "we're in pain" to "our system is the 
 
 You can't argue with someone's diagnosis. You have to show them a different result.
 
-So you don't ask permission. You run small experiments. A rebel team, tired of the same dysfunction, tries something different. They focus. They limit WIP. They automate. They test. They ship in small batches.
+So you don't ask permission. You run small experiments. A rebel team, tired of the same dysfunction, tries something different. They focus. They limit WIP. They collaborate. They automate. They test. They ship in small batches.
 
 And the results show up in metrics that can't be argued with:
 - Shorter lead times

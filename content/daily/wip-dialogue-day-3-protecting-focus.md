@@ -13,7 +13,7 @@ rss: true
 
 Yesterday's question: how do you protect focus when reality attacks?
 
-That prioritization exercise brings a subtle benefit to the table: alignment.
+Yesterday's prioritization exercise brings a subtle benefit to the table: alignment.
 
 To quote Eisenhower: *"What is important is seldom urgent and what is urgent is seldom important."*
 

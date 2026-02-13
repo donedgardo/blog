@@ -7,7 +7,7 @@ rss: true
 
 👋 Hello there!
 
-*This is Day 2 of a 6-day dialogue on reducing work in progress. [Read Day 1 here](/daily/wip-dialogue-day-1-stop-starting).*
+*This is Day 2 of a 6-day dialogue on reducing work in progress. [Read Day 1 here](https://edgardocarreras.com/daily/wip-dialogue-day-1-stop-starting).*
 
 ---
 
@@ -24,6 +24,8 @@ Get the team and stakeholders together.
 Have the stakeholders write down their requests in story format: *As a [type of user] I want [deliverable] so that [reason].*
 
 Draw a cross on a whiteboard. Vertical line is value. Horizontal line is effort.
+
+![Impact-Effort Matrix](./impact-effort-matrix.svg)
 
 Pick a story and put it in the middle. Ask: is this high effort or low effort? Have everyone participate. Move it left and right as the team discusses, nudging on each argument.
 

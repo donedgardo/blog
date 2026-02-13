@@ -7,7 +7,7 @@ rss: true
 
 👋 Hello there!
 
-*This is Day 4 of a 6-day dialogue on reducing work in progress. [Start from Day 1](/daily/wip-dialogue-day-1-stop-starting) or [read Day 3](/daily/wip-dialogue-day-3-protecting-focus).*
+*This is Day 4 of a 6-day dialogue on reducing work in progress. [Start from Day 1](https://edgardocarreras.com/daily/wip-dialogue-day-1-stop-starting) or [read Day 3](https://edgardocarreras.com/daily/wip-dialogue-day-3-protecting-focus).*
 
 ---
 

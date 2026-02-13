@@ -7,7 +7,7 @@ rss: true
 
 👋 Hello there!
 
-*This is Day 3 of a 6-day dialogue on reducing work in progress. [Start from Day 1](/daily/wip-dialogue-day-1-stop-starting) or [read Day 2](/daily/wip-dialogue-day-2-the-prioritization-fight).*
+*This is Day 3 of a 6-day dialogue on reducing work in progress. [Start from Day 1](https://edgardocarreras.com/daily/wip-dialogue-day-1-stop-starting) or [read Day 2](https://edgardocarreras.com/daily/wip-dialogue-day-2-the-prioritization-fight).*
 
 ---
 

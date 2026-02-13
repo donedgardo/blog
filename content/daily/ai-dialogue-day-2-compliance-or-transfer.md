@@ -7,7 +7,7 @@ rss: true
 
 👋 Hello there!
 
-*This is Day 2 of a 7-day dialogue on building software in the age of AI. [Read Day 1 here](/daily/ai-dialogue-day-1-why-not-better-ai).*
+*This is Day 2 of a 7-day dialogue on building software in the age of AI. [Read Day 1 here](https://edgardocarreras.com/daily/ai-dialogue-day-1-why-not-better-ai).*
 
 ---
 

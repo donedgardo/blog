@@ -7,7 +7,7 @@ rss: true
 
 👋 Hello there!
 
-*This is Day 7, the final day of a 7-day dialogue on building software in the age of AI. [Start from Day 1](/daily/ai-dialogue-day-1-why-not-better-ai) or [read Day 6](/daily/ai-dialogue-day-6-the-sponsor-question).*
+*This is Day 7, the final day of a 7-day dialogue on building software in the age of AI. [Start from Day 1](https://edgardocarreras.com/daily/ai-dialogue-day-1-why-not-better-ai) or [read Day 6](https://edgardocarreras.com/daily/ai-dialogue-day-6-the-sponsor-question).*
 
 ---
 

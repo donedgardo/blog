@@ -7,7 +7,7 @@ rss: true
 
 👋 Hello there!
 
-*This is Day 5 of a 7-day dialogue on building software in the age of AI. [Start from Day 1](/daily/ai-dialogue-day-1-why-not-better-ai) or [read Day 4](/daily/ai-dialogue-day-4-ask-the-whys).*
+*This is Day 5 of a 7-day dialogue on building software in the age of AI. [Start from Day 1](https://edgardocarreras.com/daily/ai-dialogue-day-1-why-not-better-ai) or [read Day 4](https://edgardocarreras.com/daily/ai-dialogue-day-4-ask-the-whys).*
 
 ---
 

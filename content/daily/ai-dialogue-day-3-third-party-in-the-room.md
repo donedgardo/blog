@@ -7,7 +7,7 @@ rss: true
 
 👋 Hello there!
 
-*This is Day 3 of a 7-day dialogue on building software in the age of AI. [Start from Day 1](/daily/ai-dialogue-day-1-why-not-better-ai) or [read Day 2](/daily/ai-dialogue-day-2-compliance-or-transfer).*
+*This is Day 3 of a 7-day dialogue on building software in the age of AI. [Start from Day 1](https://edgardocarreras.com/daily/ai-dialogue-day-1-why-not-better-ai) or [read Day 2](https://edgardocarreras.com/daily/ai-dialogue-day-2-compliance-or-transfer).*
 
 ---
 

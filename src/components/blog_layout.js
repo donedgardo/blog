@@ -36,15 +36,22 @@ const Wrapper = styled.div`
 
 const BlogHeaderWrapper = styled.div`
   background-color: #0A1823;
-  padding: 20px 0;
+  padding: 12px 0;
   
   header {
     position: relative;
     top: 0;
   }
   
+  .container {
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+  }
+  
   .site-logo {
-    max-height: 50px;
+    max-height: 36px;
+    vertical-align: middle;
   }
 `
 

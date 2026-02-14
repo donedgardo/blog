@@ -52,6 +52,8 @@ const BlogHeaderWrapper = styled.div`
   .site-logo {
     max-height: 36px;
     vertical-align: middle;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 `
 

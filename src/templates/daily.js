@@ -85,10 +85,10 @@ export const Head = ({ location, data }) => {
         image={featuredImgFluid?.src}
       />
       <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet"
       />
-      <style>{typography.toString()}</style>;
+      <style>{typography.toString()}</style>
     </>
   )
 }

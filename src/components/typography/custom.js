@@ -6,13 +6,23 @@ export const ButtonLink = styled(Link)`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0.6em 2em;
-  background: #231f20;
+  padding: 0.8em 2em;
+  background: #d3703c;
   color: #fff;
-  border-radius: 20px;
+  border-radius: 50px;
   max-width: 394px;
-  font-family: Montserrat, serif;
+  font-family: Roboto, Montserrat, sans-serif;
+  font-weight: 700;
   text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: #b85a2a;
+    text-decoration: none;
+  }
 `
 
 export const P = styled.p`
@@ -52,23 +62,29 @@ export const MyLink = styled(Link)`
 export const Button = styled.button`
   display: flex;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 50px;
   justify-content: center;
   text-decoration: none;
-  font-size: 0.8em;
+  font-size: 0.9em;
   margin-top: 12px;
   align-items: center;
-  color: #1e1e1e;
-  background: rgb(249, 249, 249);
-  appearance: auto;
-  font-weight: 600;
-  font-family: Montserrat, serif;
+  color: #fff;
+  background: #d3703c;
+  appearance: none;
+  font-weight: 700;
+  font-family: Roboto, Montserrat, sans-serif;
   border: none;
-  padding: 0.4em 2em;
-  letter-spacing: 0.1em;
+  padding: 0.8em 2em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
   flex: 1;
-  :hover {
-    text-decoration: underline;
+  
+  &:hover {
+    background: #b85a2a;
+    text-decoration: none;
   }
 `
 export const Container = styled.div`
@@ -121,12 +137,12 @@ export const LightContainer = styled(Container)`
   }
   ${Button} {
     color: white;
-    background: #0071b0;
-    border: 1px solid #0071b0;
+    background: #d3703c;
+    border: none;
   }
   ${Button}:hover {
-    background: #0071b0;
-    border: 1px solid #231f20;
+    background: #b85a2a;
+    border: none;
   }
 `
 

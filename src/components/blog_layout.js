@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { rhythm } from "./typography"
-import { MainNavBar } from "./MainNavBar"
+import { Header } from "./header"
 import { BlogHeader } from "./blog_header"
 
 class Layout extends React.Component {
@@ -10,7 +10,9 @@ class Layout extends React.Component {
     const { pathname } = location
     return (
       <Wrapper>
-        <MainNavBar pathname={pathname} />
+        <BlogHeaderWrapper>
+          <Header />
+        </BlogHeaderWrapper>
         <div
           style={{
             marginLeft: `auto`,
@@ -32,9 +34,27 @@ const Wrapper = styled.div`
   min-height: 100vh;
 `
 
+const BlogHeaderWrapper = styled.div`
+  background-color: #0A1823;
+  padding: 20px 0;
+  
+  header {
+    position: relative;
+    top: 0;
+  }
+  
+  .site-logo {
+    max-height: 50px;
+  }
+`
+
 const Footer = styled.footer`
   text-align: center;
   margin: 24px;
+  background-color: #0A1823;
+  color: white;
+  padding: 24px;
+  margin: 0;
 `
 
 export default Layout

@@ -1,10 +1,8 @@
 ---
-path: /your-team-coordinates-but-do-they-collaborate
 date: 2026-03-09T14:00:00.000Z
-title: Your team coordinates. But do they collaborate?
-description: Coordination divides the problem. Collaboration inhabits it. Most teams think they're collaborating. They're not.
+title: "Your team coordinates. But do they collaborate?"
+category: daily
 ---
-
 Hello there! 👋
 
 Here's a question worth sitting with:

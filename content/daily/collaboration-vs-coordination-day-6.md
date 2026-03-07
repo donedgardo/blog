@@ -1,10 +1,8 @@
 ---
-path: /why-solving-it-faster-feels-wrong
 date: 2026-03-14T14:00:00.000Z
-title: Why solving it faster feels wrong
-description: When you bill hours, effort becomes the product. Outcomes change everything.
+title: "Why solving it faster feels wrong"
+category: daily
 ---
-
 Hello there! 👋
 
 Let's talk about incentives.

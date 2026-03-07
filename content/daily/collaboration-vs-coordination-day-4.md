@@ -1,10 +1,8 @@
 ---
-path: /debugging-in-public-feels-vulnerable
 date: 2026-03-12T14:00:00.000Z
-title: Debugging in public feels vulnerable. That's the point.
-description: Real collaboration requires safety to not know, to be wrong, to figure it out live.
+title: "Debugging in public feels vulnerable. That's the point."
+category: daily
 ---
-
 Hello there! 👋
 
 Nobody wants to look stupid.

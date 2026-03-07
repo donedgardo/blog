@@ -1,10 +1,8 @@
 ---
-path: /five-problems-in-progress-is-not-five-times-faster
 date: 2026-03-10T14:00:00.000Z
-title: Five problems in progress is not five times faster
-description: Work in progress is not work completed. Starting is easy. Finishing is hard.
+title: "Five problems in progress is not five times faster"
+category: daily
 ---
-
 Hello there! 👋
 
 Picture two teams.

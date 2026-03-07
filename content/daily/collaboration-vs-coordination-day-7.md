@@ -1,10 +1,8 @@
 ---
-path: /collaboration-compounds-coordination-adds
 date: 2026-03-15T14:00:00.000Z
-title: Collaboration compounds. Coordination adds.
-description: The team that learns together doesn't just move faster. They get exponentially better.
+title: "Collaboration compounds. Coordination adds."
+category: daily
 ---
-
 Hello there! 👋
 
 Here's the insight that ties it all together:

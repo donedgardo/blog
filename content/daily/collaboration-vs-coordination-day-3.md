@@ -1,10 +1,8 @@
 ---
-path: /the-longer-you-wait-the-harder-it-gets
 date: 2026-03-11T14:00:00.000Z
-title: The longer you wait, the harder it gets
-description: Integration pain compounds exponentially. Integrate early, integrate often.
+title: "The longer you wait, the harder it gets"
+category: daily
 ---
-
 Hello there! 👋
 
 Here's a pattern you might recognize:

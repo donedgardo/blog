@@ -1,10 +1,8 @@
 ---
-path: /the-six-words-that-kill-improvement
 date: 2026-03-13T14:00:00.000Z
-title: The six words that kill improvement
-description: "It's working, why change it?" — familiar pain is still pain.
+title: "The six words that kill improvement"
+category: daily
 ---
-
 Hello there! 👋
 
 There's a phrase that's killed more progress than any technical debt:

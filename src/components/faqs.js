@@ -4,38 +4,37 @@ const faqs = [
   {
     question: "What makes your coaching different?",
     answer:
-      "I blend business skills with technical expertise. I focus on practical solutions that drive quick, lasting improvements. I provide hands-on coaching. It bridges the gap between business leaders and tech teams.",
+      "I work in your codebase, not in slides. We solve your real problems live, together — ensemble style — on the work your team would be doing anyway. No workshops, no offsites, no homework that piles up. The habits stick because they were built in the actual work.",
   },
   {
-    question: "How do you measure the success of your coaching engagements?",
+    question: "We're a startup. We can't slow down. Will coaching kill our velocity?",
     answer:
-      "We measure success by key performance indicators. These are: shorter lead times, more throughput, faster releases, and fewer bugs. Client testimonials and case studies show a big rise in team morale and productivity.",
+      "No — that's the whole point. The work we do together is real work that ships. There's no productivity freeze. Teams I coach typically end the engagement shipping more often, not less, because the fire drills shrink and reviews stop being a bottleneck.",
   },
   {
-    question:
-      "How does your coaching improve our software development process?",
+    question: "How do you help teams trust AI-generated code?",
     answer:
-      "My coaching introduces iterative and incremental development techniques, refactoring, and automated testing strategies. It reduces technical debt and improves code quality. This leads to faster, more reliable deployments and higher team efficiency.",
+      "We build review habits, fast feedback loops, and test patterns that catch the specific ways AI output goes wrong — plausible-looking code that's subtly broken, hidden assumptions, repeated mistakes. The team learns to use AI faster while shipping fewer surprises to prod.",
   },
   {
-    question: "Can you help with legacy code and technical debt?",
+    question: "How do you measure success?",
     answer:
-      "Yes, I specialize in helping teams manage and improve legacy codebases. I coach on safe refactoring, improving test coverage, and automated testing. This helps reduce technical debt and improve code maintenance.",
+      "Concrete operational metrics: lead time (commit → users), release frequency, percentage of releases that ship bugs, and team sentiment. At Flexio: lead time went from ~2 weeks to minutes, releases from one every two weeks to multiple per day, buggy releases from ~50% to ~10%, sentiment from 4.25 to 5.98 on a 1–7 scale.",
   },
   {
-    question: "How do you handle reluctant teams?",
+    question: "What happens when you leave?",
     answer:
-      "By demonstrating value through small, impactful changes. In our first meetings, we find and fix key pain points. We show teams the benefits of our methods. We also ensure that participation is voluntary and value-driven.",
+      "You own the practices, not me. The point is the team becomes the asset. I aim to make myself unnecessary — clients usually extend anyway, but because they want to, not because they're stuck.",
   },
   {
-    question: "What is ensemble programming and how can it benefit our team?",
+    question: "What's ensemble programming, and why is it your default?",
     answer:
-      "Ensemble programming, or mob programming, means the whole team works on the same task. This practice boosts collaboration and knowledge sharing. It improves code quality as many perspectives contribute to the solution at once.",
+      "Ensemble (or mob) programming means the whole team works on the same problem together, on one machine. It's how the coaching transfers — patterns, judgment calls, and review instincts get passed across the team in real time instead of stuck in one engineer's head. It's especially useful in the AI era, where knowing which AI output to trust is itself a skill that has to be taught.",
   },
   {
-    question: "How do I get started with your coaching services?",
+    question: "How do I get started?",
     answer:
-      "You can start by scheduling a free consultation through our website. We'll discuss your team's challenges in this meeting. Then, we'll see if my coaching can help you reach your goals.",
+      "Book a working session — we'll spend the call on a real problem in your codebase so you can see how I work before committing to anything.",
   },
 ]
 

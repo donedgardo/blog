@@ -63,7 +63,7 @@ const ClientOnlyMotion = ({ children, fallback = null, ...props }) => {
 }
 
 const CONSULTATION_LINK =
-  "https://calendly.com/edgardo-g-carreras/free-coaching-call-with-edgardo"
+  "https://calendly.com/edgardo-g-carreras/code-working-session"
 
 // Animation variants - start visible to prevent hydration mismatch
 // Animations only run on client via whileInView
@@ -220,51 +220,47 @@ function HeroSection() {
             className="col-1 col-12 col-md-7 col-lg-8"
             variants={staggerContainer}
           >
-            <motion.h5 
+            <motion.h5
               className="roboto-bold text-uppercase primary-color"
               variants={fadeInUp}
             >
-              For SaaS CEOs & CTOs
+              For startup CTOs and engineering leads
             </motion.h5>
-            <motion.h1 
-              className="roboto-bold mb-1 mb-md-4 text-capitalize"
+            <motion.h1
+              className="roboto-bold mb-1 mb-md-4"
               variants={fadeInUp}
             >
-              I help your team deliver{" "}
+              Ship at startup speed.{" "}
               <motion.span
-                style={{ opacity: 1, scale: 1 }}
-                
                 transition={{ delay: 0.8, duration: 0.5 }}
-                style={{ color: "#ED9567", display: "inline-block", whiteSpace: "nowrap" }}
+                style={{ color: "#ED9567", display: "inline-block" }}
               >
-                better software,
+                Trust every line
               </motion.span>
-              {" "}faster.
+              {" "}— even the AI-written ones.
             </motion.h1>
-            <motion.h4 
-              className="roboto-light text-capitalize"
+            <motion.h4
+              className="roboto-light"
               variants={fadeInUp}
             >
-              Faster releases. Fewer fire drills. Code you can trust — even when AI writes it.
+              Live, embedded coaching for startup engineering teams. I work alongside your devs on your real codebase, building the habits that keep you fast <em>and</em> keep the code trustworthy.
             </motion.h4>
-            <motion.div 
+            <motion.div
               className="cta my-4 my-md-5"
               variants={fadeInUp}
             >
-              <motion.div 
+              <motion.div
                 className="site-btn pulse-btn"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link to="/newsletter">Join My Newsletter</Link>
+                <a href={CONSULTATION_LINK}>Book a working session</a>
               </motion.div>
-              <motion.small 
-                className="text-white"
-                
-                
+              <motion.small
+                className="text-white d-block mt-3"
                 transition={{ delay: 1.2 }}
               >
-                <em>Daily insights on shipping fast and safe in the AI era.</em>
+                Or <Link to="/newsletter" style={{ color: "#ED9567", textDecoration: "underline" }}>join the newsletter</Link> — notes on shipping fast and safe in the AI era.
               </motion.small>
             </motion.div>
           </motion.div>
@@ -333,14 +329,14 @@ const RedDot = () => (
 )
 
 const challenges = [
-  "AI-generated code that ships fast and breaks faster",
-  "Technical debt accumulating at machine speed",
-  "Security vulnerabilities hiding in AI-suggested code",
-  '"The AI said it works" replacing "it works on my machine"',
-  "Deployments that break production (and weekends)",
-  "More code generated than your team can review",
-  "Releases that feel like rolling the dice",
-  "Compliance requirements that can't keep up with AI velocity"
+  "AI is writing more of your code than reviews can keep up with",
+  "\"It works\" — but nobody on the team can tell you why",
+  "The same bugs keep resurfacing after they were \"fixed\"",
+  "AI-suggested code passes review, then surprises you in prod",
+  "Refactors keep getting deferred because the next sprint is on fire",
+  "Engineers can't tell which AI output to trust",
+  "Releases still trigger fire drills (and weekends)",
+  "Velocity is high, but confidence in what's shipping is dropping"
 ]
 
 const IndexPage = () => (
@@ -385,13 +381,13 @@ const IndexPage = () => (
 
             <div className="row justify-content-center">
               <div className="col-12 col-md-9">
-                <motion.h4 
+                <motion.h4
                   className="roboto-light text-center color-secondary"
                   variants={fadeInUp}
                 >
-                  AI writes code faster than ever. The hard part is making sure it{" "}
+                  At startup speed, you can't slow down to fix it. So the fragility{" "}
                   <span className="roboto-medium color-accent">
-                    doesn't sink your codebase
+                    compounds until something breaks
                   </span>
                   .
                 </motion.h4>
@@ -419,147 +415,98 @@ const IndexPage = () => (
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-12 col-md-11 px-2 px-md-4">
-                <motion.h2 
+                <motion.h2
                   className="text-white text-center mb-4 sec-title"
                   variants={fadeInUp}
                 >
-                  How I Help
+                  How this works
                 </motion.h2>
-                <motion.h3 
+                <motion.h3
                   className="roboto-light text-white text-center"
                   variants={fadeInUp}
                 >
-                  I don't just advise — <strong>I build</strong>. Pipelines, 
-                  automation, security gates. The systems that let your team{" "}
+                  Not workshops. Not slide decks. Not advice you have to translate.{" "}
                   <motion.strong
-                    
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.5 }}
                   >
-                    ship fast and safe
-                  </motion.strong>.
+                    Live coaching, inside your codebase, on your real problems.
+                  </motion.strong>
                 </motion.h3>
               </div>
             </div>
 
             <hr />
 
-            <div className="row justify-content-center">
-              <div className="col-12 col-md-8">
-                <motion.h4 
-                  className="text-white text-center roboto-light px-3 mb-4 mb-md-5"
-                  variants={fadeInUp}
-                >
-                  Two ways to work together:
-                </motion.h4>
-              </div>
-            </div>
-
             <div className="row services flex-md-nowrap justify-content-center">
-              <motion.div 
-                className="service col-12 col-md-5"
+              <motion.div
+                className="service col-12 col-md-4"
                 variants={fadeInLeft}
                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
               >
                 <div className="inner">
-                  <img className="img-fluid" src="/images/portrait_edgardo.png" alt="" />
                   <div className="text-container text-white">
-                    <h4 className="service-title">DevSecOps Pipeline Audit</h4>
+                    <h4 className="service-title">I work in your codebase, not in slides.</h4>
                     <p>
-                      <strong>A focused 2-week engagement.</strong> I review your 
-                      CI/CD pipeline, identify security gaps and bottlenecks, 
-                      and deliver a prioritized action plan. You'll know exactly 
-                      where you're exposed and what to fix first.
+                      We tackle your real problems live, together. The work we do
+                      in a session is work that ships. No artificial exercises,
+                      no homework that piles up.
                     </p>
-                    <motion.div 
-                      className="site-btn"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <a href={CONSULTATION_LINK}>Book Your Audit</a>
-                    </motion.div>
                   </div>
                 </div>
               </motion.div>
 
-              <motion.div 
-                className="service col-12 col-md-5"
+              <motion.div
+                className="service col-12 col-md-4"
+                variants={fadeInUp}
+                whileHover={{ y: -10, transition: { duration: 0.3 } }}
+              >
+                <div className="inner">
+                  <div className="text-container text-white">
+                    <h4 className="service-title">Your team keeps shipping while we coach.</h4>
+                    <p>
+                      Embedded, ensemble-style. No productivity freeze. No offsite.
+                      You don't have to choose between learning and delivering —
+                      they happen in the same hour.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="service col-12 col-md-4"
                 variants={fadeInRight}
                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
               >
                 <div className="inner">
-                  <img className="img-fluid" src="/images/service-003.png" alt="" />
                   <div className="text-container text-white">
-                    <h4 className="service-title">Fractional DevSecOps Engineer</h4>
+                    <h4 className="service-title">The habits stay after I leave.</h4>
                     <p>
-                      <strong>I embed with your team as a hands-on contributor.</strong>{" "}
-                      Not advising from the sidelines — actually building. CI/CD pipelines 
-                      with security baked in, automated testing, infrastructure as code.
+                      You own the practices. The team becomes the asset, not me.
+                      I aim to make myself unnecessary — clients usually extend
+                      anyway, but because they want to.
                     </p>
-                    <motion.div 
-                      className="site-btn"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <a href={CONSULTATION_LINK}>Let's Talk</a>
-                    </motion.div>
                   </div>
                 </div>
               </motion.div>
             </div>
 
-            <motion.h3 
-              className="testimonial-title text-white text-center roboto-light text-capitalize"
-              variants={fadeInUp}
-            >
-              <em>What my clients say...</em>
-            </motion.h3>
-
-            <motion.div 
-              className="row testimonial-row align-items-start flex-md-nowrap"
-              variants={staggerContainer}
-            >
-              {[
-                {
-                  quote: "Edgardo has a vast knowledge and understanding of development processes and technical abilities which he consistently demonstrates through the quality of his work.",
-                  author: "Karlo Martinez",
-                  image: "/images/karlo_martinez.jpg"
-                },
-                {
-                  quote: "Edgardo is one of the most knowledgeable and fastest programmers I know. He always makes sure to be up to date with the latest tools and has a keen eye for improving products.",
-                  author: "Tania Gonzalez",
-                  image: "/images/tania_gonzalez.jpg"
-                },
-                {
-                  quote: "Edgardo provided invaluable mentorship, helping developers grow technically and enforcing high code standards through TDD and tool integration.",
-                  author: "William Cheung",
-                  image: "/images/william_cheung.jpg"
-                }
-              ].map((testimonial, index) => (
-                <motion.div 
-                  key={index}
-                  className="col col-12 col-md-4"
+            <div className="row cta-row">
+              <div className="col-12">
+                <motion.div
+                  className="cta my-4 my-md-5 mx-auto"
                   variants={fadeInUp}
-                  whileHover={{ scale: 1.02 }}
                 >
-                  <svg width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19.3597 14.3648C19.3597 10.2177 20.3535 6.97094 22.3412 4.62456C24.3562 2.27817 27.1744 0.736655 30.7958 0V4.25623C28.0457 5.10202 26.1941 6.62989 25.2411 8.83986C24.6965 10.013 24.4787 11.1453 24.5876 12.2367H31V23H19.3597V14.3648ZM0 14.3648C0 10.2722 0.966623 7.03915 2.89987 4.66548C4.86034 2.29182 7.70575 0.736655 11.4361 0V4.25623C8.65876 5.1293 6.79359 6.62989 5.84058 8.75801C5.35046 9.87663 5.14625 11.0362 5.22793 12.2367H11.6403V23H0V14.3648Z" fill="#ED9567"/>
-                  </svg>
-                  <p className="testimonial-message text-white">
-                    <small><em>"{testimonial.quote}"</em></small>
-                  </p>
-                  <div className="author d-flex align-items-center">
-                    <div className="img">
-                      <img src={testimonial.image} alt="" />
-                    </div>
-                    <div className="info">
-                      <strong className="name text-white">- {testimonial.author}</strong>
-                      <img src="/images/custom-star-rating.png" alt="" className="ratings" />
-                    </div>
-                  </div>
+                  <motion.div
+                    className="site-btn pulse-btn"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <a href={CONSULTATION_LINK}>Book a working session</a>
+                  </motion.div>
                 </motion.div>
-              ))}
-            </motion.div>
+              </div>
+            </div>
           </div>
         </LazySection>
 
@@ -585,7 +532,7 @@ const IndexPage = () => (
                       <path d="M50 2.42327L48.3521 0L42.8967 3.70973L45.8218 9.55985L42.5024 11.7728L44.1279 14.2111L49.5997 10.5632L46.664 4.69162L50 2.42327Z" fill="#ED9567"/>
                     </svg>
                   ),
-                  text: <><strong>CTOs and Engineering Leaders</strong> tired of firefighting deployments</>
+                  text: <><strong>Startup CTOs and VPs of Eng</strong> under pressure to ship faster — without losing the plot</>
                 },
                 {
                   icon: (
@@ -593,7 +540,7 @@ const IndexPage = () => (
                       <path d="M44.8021 37.7331V31.9863H25.9355V29.0398C33.29 28.3165 39.0553 22.0967 39.0553 14.5553C39.0553 6.52954 32.5258 0 24.5 0C16.4742 0 9.9447 6.52954 9.9447 14.5553C9.9447 22.0967 15.71 28.3165 23.0645 29.0398V31.9863H4.19792V37.7331H0V49H11.267V37.7331H7.06902V34.8574H23.0645V37.7331H18.8665V49H30.1336V37.7331H25.9355V34.8574H41.931V37.7331H37.7331V49H49V37.7331H44.8021ZM22.1044 12.9291C22.1044 11.6081 23.179 10.5335 24.5 10.5335C25.821 10.5335 26.8956 11.6081 26.8956 12.9291C26.8956 14.2501 25.821 15.3248 24.5 15.3248C23.179 15.3248 22.1044 14.2501 22.1044 12.9291ZM24.5 18.1958C26.8773 18.1958 28.8112 20.1298 28.8112 22.5071V25.415C27.4767 25.9467 26.0219 26.2395 24.5 26.2395C22.9781 26.2395 21.5233 25.9466 20.1888 25.415V22.5071C20.1888 20.1298 22.1227 18.1958 24.5 18.1958ZM12.8158 14.5553C12.8158 8.11266 18.0574 2.87109 24.5 2.87109C30.9426 2.87109 36.1842 8.11266 36.1842 14.5553C36.1842 18.2921 34.4207 21.6246 31.6823 23.7649V22.5071C31.6823 19.98 30.3694 17.7553 28.391 16.4748C29.2452 15.5383 29.7668 14.2935 29.7668 12.9292C29.7668 10.0251 27.4041 7.66247 24.5001 7.66247C21.5961 7.66247 19.2334 10.0252 19.2334 12.9292C19.2334 14.2936 19.755 15.5384 20.6092 16.4748C18.6308 17.7553 17.3179 19.9801 17.3179 22.5071V23.7649C14.5794 21.6246 12.8158 18.2921 12.8158 14.5553ZM8.39594 46.1289H2.87109V40.6042H8.39594V46.1289ZM27.2624 46.1289H21.7375V40.6042H27.2624V46.1289ZM46.1289 46.1289H40.6041V40.6042H46.1289V46.1289Z" fill="#ED9567"/>
                     </svg>
                   ),
-                  text: <><strong>SaaS teams</strong> scaling past their current release process</>
+                  text: <><strong>Engineering teams of 5–30</strong> where AI velocity is outpacing review capacity</>
                 },
                 {
                   icon: (
@@ -604,7 +551,7 @@ const IndexPage = () => (
                       <path d="M34.7627 5.41335C31.7883 5.41335 29.3684 7.83326 29.3684 10.8077C29.3684 13.7821 31.7883 16.202 34.7627 16.202C37.7371 16.202 40.157 13.7821 40.157 10.8077C40.157 7.83326 37.737 5.41335 34.7627 5.41335ZM34.7627 13.2727C33.4035 13.2727 32.2977 12.1669 32.2977 10.8077C32.2977 9.44849 33.4035 8.34257 34.7627 8.34257C36.1219 8.34257 37.2277 9.44839 37.2277 10.8076C37.2277 12.1668 36.1218 13.2727 34.7627 13.2727Z" fill="#ED9567"/>
                     </svg>
                   ),
-                  text: <><strong>Organizations</strong> who need senior DevSecOps expertise without a full-time hire</>
+                  text: <><strong>Founders who chose speed</strong> and now need to make that speed safe to keep</>
                 }
               ].map((item, index) => (
                 <motion.div 
@@ -662,10 +609,10 @@ const IndexPage = () => (
                 <h4 className="text-center roboto-medium">Before</h4>
                 <ul className="items">
                   {[
-                    { bold: "Manual deployments", rest: "everyone's afraid to touch" },
-                    { bold: "Security as an afterthought", rest: "caught too late" },
-                    { bold: "Releases that break things", rest: "and burn out the team" },
-                    { bold: "Slow feedback loops", rest: "that hide problems" }
+                    { bold: "AI output shipped on trust", rest: "and reviewed in a hurry" },
+                    { bold: "Releases that need a human to babysit them", rest: "and a Slack channel on standby" },
+                    { bold: "Fire drills that eat the sprint", rest: "and the weekend" },
+                    { bold: "Bugs that come back", rest: "because the fix never reached the pattern" }
                   ].map((item, index) => (
                     <motion.li 
                       key={index}
@@ -697,10 +644,10 @@ const IndexPage = () => (
                 <h3 className="text-center color-primary roboto-bold">After</h3>
                 <ul className="items-2">
                   {[
-                    { bold: "One-click deployments", rest: "you can run anytime with confidence" },
-                    { bold: "Security checks that run automatically", rest: "on every commit" },
-                    { bold: "Rapid, reliable releases", rest: "that ship without drama" },
-                    { bold: "Tight feedback loops", rest: "that catch issues before production" }
+                    { bold: "AI used as a force multiplier,", rest: "with review patterns that catch its tells" },
+                    { bold: "Deploys that ship without drama,", rest: "any day, any hour" },
+                    { bold: "Fire drills shrink,", rest: "and stop eating roadmap time" },
+                    { bold: "Bugs that get fixed once,", rest: "because the team learned what made them ship" }
                   ].map((item, index) => (
                     <motion.li 
                       key={index}
@@ -733,65 +680,103 @@ const IndexPage = () => (
         <LazySection id="transformation">
           <div className="container">
             <div className="row justify-content-center">
-              <div className="col-12 col-md-8">
-                <motion.h5 
+              <div className="col-12 col-md-10">
+                <motion.h5
                   className="color-primary text-center text-uppercase"
                   variants={fadeInUp}
                 >
-                  Real Results
+                  Case Study — Flexio
                 </motion.h5>
-                <motion.h2 
+                <motion.h2
                   className="text-center roboto-light"
                   variants={fadeInUp}
                 >
-                  What <strong>Transformation</strong> Looks Like
+                  How a startup team went from <strong>fortnightly, fragile releases</strong> to <strong>multiple trustworthy deploys a day</strong>.
                 </motion.h2>
+                <motion.p
+                  className="text-center roboto-light color-secondary"
+                  variants={fadeInUp}
+                  style={{ marginTop: "1rem" }}
+                >
+                  3-month engagement. The CTO extended it to 9.
+                </motion.p>
               </div>
             </div>
 
-            <motion.div 
+            <motion.div
               className="row trans-boxes"
               variants={staggerContainer}
             >
               {[
-                { label: "Decreased by", value: 80, suffix: "%", description: "Lead Times" },
-                { label: "Increased by", value: 250, suffix: "%", description: "Throughput" },
-                { label: "Increased by", value: 300, suffix: "%", description: "Release Frequency" },
-                { label: "Decreased by", value: 50, suffix: "%", description: "Faulty Deployments" }
+                { before: "~2 wks", after: "minutes", description: "Lead time, commit to users" },
+                { before: "1 / 2 wks", after: "many / day", description: "Release frequency" },
+                { before: "~50%", after: "~10%", description: "Releases that shipped bugs" },
+                { before: "4.25", after: "5.98", description: "Team sentiment (1–7 scale, +41%)" }
               ].map((stat, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   className="col-12 col-md-3 text-center"
                   variants={scaleIn}
                   whileHover={{ scale: 1.05 }}
                 >
                   <div className="inner">
-                    <small>{stat.label}</small>
-                    <h1 className="color-primary">
-                      <AnimatedCounter end={stat.value} suffix={stat.suffix} />
-                    </h1>
                     <p>{stat.description}</p>
+                    <div style={{ marginTop: "16px" }}>
+                      <small>Before</small>
+                      <h3 className="roboto-light" style={{ opacity: 0.6, margin: 0 }}>{stat.before}</h3>
+                    </div>
+                    <div style={{ marginTop: "12px" }}>
+                      <small>After</small>
+                      <h1 className="color-primary" style={{ margin: 0 }}>{stat.after}</h1>
+                    </div>
                   </div>
                 </motion.div>
               ))}
             </motion.div>
 
+            <div className="row justify-content-center mt-4 mt-md-5">
+              <div className="col-12 col-md-10">
+                <motion.div
+                  variants={fadeInUp}
+                  style={{
+                    background: "#fff",
+                    borderLeft: "4px solid #ED9567",
+                    padding: "1.5rem 2rem",
+                    borderRadius: "4px",
+                    boxShadow: "0 2px 12px rgba(0,0,0,0.05)"
+                  }}
+                >
+                  <p style={{ fontSize: "1.1rem", marginBottom: "1rem", color: "#231F20" }}>
+                    <em>"Through Edgardo's hands-on approach, I learned invaluable tactics for implementing CI/CD and monitoring. His focus on value over effort is exceptional."</em>
+                  </p>
+                  <div className="d-flex align-items-center">
+                    <img
+                      src="/images/fernando_yordan.jpg"
+                      alt=""
+                      style={{ width: "48px", height: "48px", borderRadius: "50%", marginRight: "12px" }}
+                    />
+                    <div>
+                      <strong style={{ color: "#231F20" }}>Fernando Yordan</strong>
+                      <div style={{ fontSize: "0.9rem", color: "#4D4D4D" }}>CTO, Flexio</div>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+
             <div className="row cta-row">
               <div className="col-12">
-                <motion.div 
+                <motion.div
                   className="cta my-4 my-md-5 mx-auto"
                   variants={fadeInUp}
                 >
-                  <motion.div 
+                  <motion.div
                     className="site-btn pulse-btn"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <Link to="/newsletter">Get the Newsletter</Link>
+                    <a href={CONSULTATION_LINK}>Book a working session</a>
                   </motion.div>
-                  <small>
-                    <em>Join 100+ engineering leaders getting daily DevSecOps insights.</em>
-                  </small>
                 </motion.div>
               </div>
             </div>
@@ -815,28 +800,28 @@ const IndexPage = () => (
                   I'm <span className="roboto-medium">Edgardo</span> Carreras
                 </h2>
                 <h5 className="color-primary mb-4">
-                  DevSecOps Engineer & Software Craftsman
+                  Engineering Coach
                 </h5>
 
                 <p className="text-white">
-                  I've spent the last decade in the trenches — as a developer, CTO, 
-                  consultant, and team lead. I've built CI/CD pipelines, rescued 
-                  legacy codebases, and learned (the hard way) that security and 
-                  quality can't be afterthoughts.
+                  Decade in the trenches — developer, CTO, team lead, coach.
+                  I've shipped startup codebases, rescued legacy ones, and
+                  spent years inside teams figuring out what actually moves
+                  the needle versus what just sounds good on a slide.
                 </p>
                 <p className="text-white">
-                  My background is in software craftsmanship: TDD, Clean Architecture, 
-                  continuous delivery. These days, I apply those same principles to 
-                  DevSecOps. Shift left. Automate everything. Make the right thing 
-                  the easy thing.
+                  My roots are in software craftsmanship: TDD, clean architecture,
+                  continuous delivery. These days I apply that lens to coaching
+                  startup teams through the AI shift — keeping velocity high
+                  while making sure the code (especially the AI-generated parts)
+                  is something the team can actually trust.
                 </p>
-                <motion.p 
+                <motion.p
                   className="text-white"
-                  
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.3 }}
                 >
-                  <strong>I don't just tell teams what to do. I build it with them.</strong>
+                  <strong>I don't tell teams what to do. I sit with them and we build it together.</strong>
                 </motion.p>
               </motion.div>
             </div>
@@ -847,35 +832,35 @@ const IndexPage = () => (
 
         <LazySection id="bottom-cta">
           <div className="container">
-            <motion.h1 
+            <motion.h1
               className="text-center text-white"
               variants={fadeInUp}
             >
-              Ready to ship with confidence?
+              Ready to ship at startup speed — and trust it?
             </motion.h1>
-            <motion.h4 
+            <motion.h4
               className="roboto-light text-center text-white"
               variants={fadeInUp}
             >
-              Get daily insights on DevSecOps, CI/CD, and building pipelines 
-              that let you move fast without breaking things.
+              We'll spend the call on a real problem in your codebase. You'll
+              see exactly how I work before committing to anything.
             </motion.h4>
 
-            <motion.div 
+            <motion.div
               className="cta mt-4 mt-md-5 mx-auto"
               variants={scaleIn}
             >
-              <motion.div 
+              <motion.div
                 className="site-btn pulse-btn"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 variants={pulseGlow}
                 animate="animate"
               >
-                <Link to="/newsletter">Subscribe to the Newsletter</Link>
+                <a href={CONSULTATION_LINK}>Book a working session</a>
               </motion.div>
-              <small>
-                <em>Join 100+ engineering leaders. No spam. Unsubscribe anytime.</em>
+              <small className="d-block mt-3 text-white">
+                Or <Link to="/newsletter" style={{ color: "#ED9567", textDecoration: "underline" }}>join the newsletter</Link> for daily notes on shipping fast and safe in the AI era.
               </small>
             </motion.div>
           </div>
@@ -896,7 +881,10 @@ const IndexPage = () => (
 export const Head = () => {
   return (
     <>
-      <Seo title={"Edgardo Carreras | DevSecOps Engineer"} />
+      <Seo
+        title={"Edgardo Carreras | Engineering Coach for Startup Teams"}
+        description={"Live, embedded coaching for startup engineering teams. Ship at startup speed and trust every line — even the AI-written ones."}
+      />
       <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:wght@500&display=swap"
         rel="stylesheet"

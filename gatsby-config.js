@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Edgardo Carreras | Software Productivity Consultant`,
-    description: `Providing high impact through product design, software architecture, platform selection, integration planning, and process design.`,
+    title: `Edgardo Carreras | Engineering Coach for Startup Teams`,
+    description: `Live, embedded coaching for startup engineering teams. Ship at startup speed and trust every line — even the AI-written ones.`,
     author: `Edgardo Carreras`,
     siteUrl: `https://edgardocarreras.com`,
     social: {

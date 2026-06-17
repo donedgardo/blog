@@ -16,8 +16,9 @@ function NewsletterHeroSection() {
               Ship Fast. Stay Safe. <br /> Even When AI Writes the Code.
             </h1>
             <h4 className="roboto-light" style={{ maxWidth: "46.25rem" }}>
-              A daily newsletter on DevSecOps, CI/CD, and the principles that 
-              let you harness AI speed without the chaos.
+              A daily newsletter on shipping fast and safe in the AI era —
+              the habits, patterns, and feedback loops that keep startup
+              teams trusting what they ship.
             </h4>
             <h5 className="roboto-light" style={{ maxWidth: "46.25rem" }}>
               AI generates code faster than ever. The hard part is making sure 
@@ -64,7 +65,10 @@ const IndexPage = () => (
 export const Head = () => {
   return (
     <>
-      <Seo title={"Edgardo Carreras | DevSecOps Newsletter"} />
+      <Seo
+        title={"Newsletter — Shipping fast and safe in the AI era | Edgardo Carreras"}
+        description={"Daily notes for startup engineering teams: ship fast, keep code trustworthy, and make AI-written code something you can rely on."}
+      />
       <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:wght@500&display=swap"
         rel="stylesheet"

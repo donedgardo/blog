@@ -30,11 +30,11 @@ And that person is not always awake.
 
 I've written to you about this for years.
 
-Deploy daily instead of weekly, so changes stay small. Watch your faulty deployment rate. Restore service fast — [high performers roll back in under five minutes, with one button](https://edgardocarreras.com/daily/mean-time-to-recover).
+Deploy daily instead of weekly, so changes stay small. Watch your faulty deployment rate. Restore service fast. [High performers roll back in under five minutes, with one button](https://edgardocarreras.com/daily/mean-time-to-recover).
 
 I kept saying *one button*.
 
-And then I'd walk into a team and ask: okay — where is it? Who's allowed to press it?
+And then I'd walk into a team and ask: okay, where is it? Who's allowed to press it?
 
 Nobody had one. Or one person did, and it lived on their laptop, in their head, behind a script only they had ever run.
 
@@ -48,7 +48,7 @@ It's called **GitLaunch**.
 
 It is not another CI/CD tool. Keep your GitHub Actions. Keep your Jenkins. Nothing to rip out.
 
-GitLaunch starts where your pipeline ends — with the part nobody owns.
+GitLaunch starts where your pipeline ends. The part nobody owns.
 
 One board shows every build across every environment. What's on staging. What's live. What's ready to promote.
 
@@ -68,7 +68,7 @@ Boring is the goal.
 
 ---
 
-GitLaunch is almost ready, and I'm opening a small alpha — inviting people in waves.
+GitLaunch is almost ready, and I'm opening a small alpha. I'm inviting people in waves.
 
 If your team ships regularly, and deploys are bottlenecked on one or two people, I'd genuinely love to have you in early.
 

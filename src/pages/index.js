@@ -63,7 +63,7 @@ const ClientOnlyMotion = ({ children, fallback = null, ...props }) => {
 }
 
 const CONSULTATION_LINK =
-  "https://calendly.com/edgardo-g-carreras/free-coaching-call-with-edgardo"
+  "https://calendly.com/edgardo-g-carreras/coaching-call-with-edgardo"
 
 // Animation variants - start visible to prevent hydration mismatch
 // Animations only run on client via whileInView

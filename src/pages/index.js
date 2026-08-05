@@ -25,21 +25,43 @@ function LazySection({ children, className, id, fallbackHeight = "400px" }) {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-          observer.disconnect()
-        }
-      },
-      { rootMargin: "200px" } // Start loading 200px before it's visible
-    )
+    const el = ref.current
+    if (!el) return
 
-    if (ref.current) {
-      observer.observe(ref.current)
+    // Sections above this one start as short placeholders, so the page grows
+    // under us as they render. That can displace a section past the viewport
+    // without it ever intersecting, leaving it stuck on the placeholder — so
+    // reveal on "has reached us" rather than on intersection alone.
+    const hasReached = () =>
+      el.getBoundingClientRect().top < window.innerHeight + 200 // 200px lead
+
+    if (hasReached()) {
+      setIsVisible(true)
+      return
     }
 
-    return () => observer.disconnect()
+    let observer
+    const onScroll = () => {
+      if (hasReached()) reveal()
+    }
+    const reveal = () => {
+      setIsVisible(true)
+      observer.disconnect()
+      window.removeEventListener("scroll", onScroll)
+    }
+
+    observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting || hasReached()) {
+        reveal()
+      }
+    }, { rootMargin: "200px" })
+    observer.observe(el)
+    window.addEventListener("scroll", onScroll, { passive: true })
+
+    return () => {
+      observer.disconnect()
+      window.removeEventListener("scroll", onScroll)
+    }
   }, [])
 
   return (
@@ -63,7 +85,7 @@ const ClientOnlyMotion = ({ children, fallback = null, ...props }) => {
 }
 
 const CONSULTATION_LINK =
-  "https://calendly.com/edgardo-g-carreras/coaching-call-with-edgardo"
+  "https://calendly.com/edgardo-g-carreras/interview"
 
 // Animation variants - start visible to prevent hydration mismatch
 // Animations only run on client via whileInView

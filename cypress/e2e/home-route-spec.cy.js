@@ -6,7 +6,14 @@ describe("home-route-spec.cy.js", () => {
     // ignore uncaught page errors and check its content. Remove this handler
     // once the hydration mismatch is fixed, so a regression fails the build.
     cy.on("uncaught:exception", () => false)
-    cy.visit("/")
+    // gatsby-plugin-offline registers a service worker. Once it takes control
+    // of the page, later visits in the same run fail under Cypress, so the
+    // tests load the page without it.
+    cy.visit("/", {
+      onBeforeLoad(win) {
+        delete win.navigator.__proto__.serviceWorker
+      },
+    })
   })
 
   it("shows the headline", () => {

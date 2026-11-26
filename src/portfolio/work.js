@@ -148,7 +148,7 @@ const work = [
     slug: "flexio-delivery-coaching",
     name: "From a release every 2 weeks to several a day at Flexio",
     kind: "Client engagement",
-    org: "Carreras Dev, for Flexio (package delivery logistics SaaS)",
+    org: "CarrerasDev, for Flexio (package delivery logistics SaaS)",
     period: "9 months",
     role: "Software delivery coach, hands-on",
     summary:

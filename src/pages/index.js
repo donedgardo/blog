@@ -191,11 +191,11 @@ const IndexPage = () => (
                 present)
               </li>
               <li>
-                President of Carreras Dev: advised 5 client organizations on
+                President of CarrerasDev: advised 5 client organizations on
                 software delivery (2021 – 2025)
               </li>
               <li>
-                Software Delivery Manager at Galaxy Digital, across 3 teams in
+                Software Delivery Manager at Galaxy, across 3 teams in
                 Asia, the UK and the US
               </li>
               <li>

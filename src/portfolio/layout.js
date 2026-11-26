@@ -43,7 +43,20 @@ const person = {
 
 export const PortfolioHead = ({ title, description, pathname }) => (
   <>
-    <Seo title={title} description={description} pathname={pathname} />
+    <Seo
+      title={title}
+      description={description}
+      pathname={pathname}
+      image="/images/edgardo-carreras-ai-agentic-engineer.png"
+      meta={[
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
+        {
+          property: "og:image:alt",
+          content: "Edgardo Carreras, AI / Agentic Engineer",
+        },
+      ]}
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"

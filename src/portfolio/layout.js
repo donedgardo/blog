@@ -48,6 +48,8 @@ export const PortfolioHead = ({ title, description, pathname }) => (
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    {/* The blog and coaching pages get this from their typography styles. */}
+    <style>{"body{margin:0}"}</style>
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(person) }}

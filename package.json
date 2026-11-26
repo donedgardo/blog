@@ -94,6 +94,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "test:e2e": "start-server-and-test develop http://localhost:3000 cy:run"
+    "test:e2e": "start-server-and-test develop http://localhost:3000 cy:run",
+    "test:e2e:build": "start-server-and-test \"gatsby serve -p 3000\" http://localhost:3000 cy:run"
   }
 }

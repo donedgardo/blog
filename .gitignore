@@ -73,3 +73,7 @@ yarn-error.log
 content/drafts/
 
 
+
+# Cypress run output
+cypress/videos/
+cypress/screenshots/

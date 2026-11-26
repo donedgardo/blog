@@ -1,5 +1,4 @@
 import Layout from "./layout"
-import Seo from "./seo"
 import { MainNavBar } from "./MainNavBar"
 import { LightContainer } from "./typography"
 import { SectionContent } from "./typography/custom"
@@ -13,7 +12,6 @@ import { ExpensivePainPoints } from "./ExpensivePainPoints"
 
 const SaasTeamBootcampPage = ({ location: { pathname } }) => (
   <Layout>
-    <Seo title={"Saas Team Bootcamp | Edgardo Carreras"} />
     <MainNavBar pathname={pathname} />
     <LightContainer>
       <SectionContent>
@@ -30,12 +28,12 @@ const SaasTeamBootcampPage = ({ location: { pathname } }) => (
           Join the SaaS Team Bootcamp and discover the secrets to building a
           high-performing, agile development team.
         </p>
-        <p>
+        <div>
           <SignUpForm
             url="https://app.convertkit.com/forms/3332277/subscriptions"
             ctaLabel="SEND LESSON 1 NOW »"
           />
-        </p>
+        </div>
         <hr />
         <h2 className="align-center">The problem...</h2>
         <ExpensivePainPoints />
@@ -63,7 +61,7 @@ const SaasTeamBootcampPage = ({ location: { pathname } }) => (
           </li>
         </ul>
         <h3 className="align-center">What You'll Learn:</h3>
-        <p>
+        <div>
           <ol>
             <li>
               <b>Identify and Overcome: </b>
@@ -93,7 +91,7 @@ const SaasTeamBootcampPage = ({ location: { pathname } }) => (
               deployment.
             </li>
           </ol>
-        </p>
+        </div>
         <p>
           Each email provides a detailed exploration of these topics, ensuring
           you have the tools and knowledge to implement changes effectively.
@@ -109,12 +107,12 @@ const SaasTeamBootcampPage = ({ location: { pathname } }) => (
           page, but you could be at the beginning of a transformative journey
           for your software team.
         </p>
-        <p>
+        <div>
           <SignUpForm
             url="https://app.convertkit.com/forms/3332277/subscriptions"
             ctaLabel="SEND LESSON 1 NOW »"
           />
-        </p>
+        </div>
         <p style={{ fontSize: "0.9em" }}>
           <b>Risk-Free Guarantee:</b> We respect your privacy. No spam, ever.
           Unsubscribe anytime.

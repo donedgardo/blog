@@ -1,11 +1,5 @@
 describe("home-route-spec.cy.js", () => {
   beforeEach(() => {
-    // Known issue: the homepage throws React hydration errors (#418, then
-    // #423 when React falls back to client rendering), and Cypress 10 can
-    // fail while reporting them. The page still renders, so these tests
-    // ignore uncaught page errors and check its content. Remove this handler
-    // once the hydration mismatch is fixed, so a regression fails the build.
-    cy.on("uncaught:exception", () => false)
     // gatsby-plugin-offline registers a service worker. Once it takes control
     // of the page, later visits in the same run fail under Cypress, so the
     // tests load the page without it.

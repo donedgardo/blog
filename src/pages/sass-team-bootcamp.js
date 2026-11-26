@@ -1,6 +1,6 @@
 import SaasTeamBootcampPage from "../components/saas-team-bootcamp-page"
-import { DefaultHead } from "../components/defaultHead"
+import { headWithTitle } from "../components/defaultHead"
 
 export default SaasTeamBootcampPage
 
-export const Head = DefaultHead
+export const Head = headWithTitle("Saas Team Bootcamp | Edgardo Carreras")

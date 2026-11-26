@@ -1,7 +1,7 @@
 import React from "react"
 export default () => {
   return (
-    <body>
+    <main>
       <h1>Terms of Service</h1>
       <p>
         <em>Last updated: April 23, 2025</em>
@@ -117,6 +117,6 @@ export default () => {
         <strong>Email:</strong>{" "}
         <a href="mailto:me@edgardocarreras.com">me@edgardocarreras.com</a>
       </p>
-    </body>
+    </main>
   )
 }

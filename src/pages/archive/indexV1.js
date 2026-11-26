@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../../components/layout"
-import Seo from "../../components/seo"
 import { MainNavBar } from "../../components/MainNavBar"
 import { HeroContainer } from "../../components/HeroContainer"
 import { BrandSlideshow } from "../../components/BrandSlideshow"
@@ -10,9 +9,9 @@ import { FreeStuff } from "../../components/FreeStuff"
 import { AboutMe } from "../../components/AboutMe"
 import { LightContainer } from "../../components/typography"
 import { H1, H2, SectionContent } from "../../components/typography/custom"
-import { DefaultHead } from "../../components/defaultHead"
+import { headWithTitle } from "../../components/defaultHead"
 
-export const Head = DefaultHead
+export const Head = headWithTitle("Edgardo Carreras | Software Productivity Consultant")
 const NewServiceSection = () => (
   <LightContainer>
     <SectionContent id="productized-service">
@@ -67,7 +66,6 @@ const NewServiceSection = () => (
 )
 const IndexPage = ({ location: { pathname } }) => (
   <Layout>
-    <Seo title={"Edgardo Carreras | Software Productivity Consultant"} />
     <MainNavBar pathname={pathname} />
     <HeroContainer />
     <NewServiceSection />

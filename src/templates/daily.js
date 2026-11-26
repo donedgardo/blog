@@ -1,13 +1,15 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import Img from "gatsby-image"
+import { MDXProvider } from "@mdx-js/react"
+import Img from "../components/portrait"
 
 import Bio from "../components/bio"
 import BlogLayout from "../components/blog_layout"
 import Seo from "../components/seo"
 import { SignUpBootcamp } from "../components/newsletters/sign-up-bootcamp"
 import { GameDevNewsletter } from "../components/newsletters/game-dev-newsletter"
+import { mdxComponents } from "../components/mdxComponents"
 import typography from "../components/typography"
 
 class BlogPostTemplate extends React.Component {
@@ -40,7 +42,9 @@ class BlogPostTemplate extends React.Component {
           <Img fluid={featuredImgFluid} alt={post.frontmatter.title} />
         ) : null}
         <hr />
-        <MDXRenderer>{post.body}</MDXRenderer>
+        <MDXProvider components={mdxComponents}>
+          <MDXRenderer>{post.body}</MDXRenderer>
+        </MDXProvider>
         <hr />
         <SignUpBootcamp />
         <ul

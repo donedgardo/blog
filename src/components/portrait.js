@@ -2,18 +2,25 @@ import React from "react"
 import Img from "gatsby-image"
 
 /*
- * This component is built using `gatsby-image` to automatically serve optimized
- * images with lazy loading and reduced file sizes. The image is loaded using a
- * `useStaticQuery`, which allows us to load the image from directly within this
- * component, rather than having to pass the image data down from pages.
+ * Thin wrapper around the legacy `gatsby-image` component.
  *
- * For more information, see the docs:
- * - `gatsby-image`: https://gatsby.dev/gatsby-image
- * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
+ * `loading="eager"` is the default on purpose. With lazy loading, gatsby-image
+ * renders only the placeholder on the server but adds the <picture> element on
+ * the first client render (any browser with native lazy loading). React 18
+ * treats that as a hydration mismatch, throws error #418 and re-renders the
+ * whole page on the client. Eager images render the same markup on both sides.
  */
 
-const Image = ({ className, fluid, fixed, ...props }) => {
-  return <Img className={className} fluid={fluid} fixed={fixed} {...props} />
+const Image = ({ className, fluid, fixed, loading = "eager", ...props }) => {
+  return (
+    <Img
+      className={className}
+      fluid={fluid}
+      fixed={fixed}
+      loading={loading}
+      {...props}
+    />
+  )
 }
 
 export default Image

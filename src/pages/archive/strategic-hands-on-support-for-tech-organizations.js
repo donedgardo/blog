@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from "../../components/layout"
-import Seo from "../../components/seo"
 import { MainNavBar } from "../../components/MainNavBar"
 import { BrandSlideshow } from "../../components/BrandSlideshow"
 import { KindWords } from "../../components/KindWords"
@@ -8,18 +7,13 @@ import { AboutMe } from "../../components/AboutMe"
 import { LightContainer } from "../../components/typography"
 import { SectionContent } from "../../components/typography/custom"
 import { Link } from "gatsby"
-import { DefaultHead } from "../../components/defaultHead"
+import { headWithTitle } from "../../components/defaultHead"
 const CTA_URL =
   "https://calendly.com/edgardo-g-carreras/1-on-1-software-quality-assessment-session"
 
-export const Head = DefaultHead
+export const Head = headWithTitle("Edgardo Carreras | Strategic & Hands-on Support for Tech Organizations.")
 const IndexPage = ({ location: { pathname } }) => (
   <Layout>
-    <Seo
-      title={
-        "Edgardo Carreras | Strategic & Hands-on Support for Tech Organizations."
-      }
-    />
     <MainNavBar pathname={pathname} />
     <LightContainer>
       <SectionContent>

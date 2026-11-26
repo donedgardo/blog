@@ -3,13 +3,12 @@ import { graphql } from "gatsby"
 
 import { MainNavBar } from "../components/MainNavBar"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
 import {
   H1,
   LightContainer,
   SectionContent,
 } from "../components/typography/custom"
-import { DefaultHead } from "../components/defaultHead"
+import { headWithTitle } from "../components/defaultHead"
 
 class NotFoundPage extends React.Component {
   render() {
@@ -19,7 +18,6 @@ class NotFoundPage extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <MainNavBar pathname={this.props.pathname} />
-        <Seo title="404: Not Found" />
         <LightContainer style={{ height: "90vh" }}>
           <H1>Not Found</H1>
           <SectionContent>
@@ -33,7 +31,7 @@ class NotFoundPage extends React.Component {
 
 export default NotFoundPage
 
-export const Head = DefaultHead
+export const Head = headWithTitle("404: Not Found")
 
 export const pageQuery = graphql`
   query {

@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
 import { MainNavBar } from "../components/MainNavBar"
 import { BrandSlideshow } from "../components/BrandSlideshow"
 import { KindWords } from "../components/KindWords"
@@ -10,13 +9,12 @@ import { SectionContent } from "../components/typography/custom"
 import { Link } from "gatsby"
 import { ExpensivePainPoints } from "../components/ExpensivePainPoints"
 import { WhyMe } from "../components/why-me"
-import { DefaultHead } from "../components/defaultHead"
+import { headWithTitle } from "../components/defaultHead"
 
 const CTA_URL =
   "https://calendly.com/edgardo-g-carreras/coaching-call-with-edgardo"
 const IndexPage = ({ location: { pathname } }) => (
   <Layout>
-    <Seo title={"Coaching Call | Edgardo Carreras"} />
     <MainNavBar pathname={pathname} />
     <LightContainer>
       <SectionContent>
@@ -188,6 +186,6 @@ const IndexPage = ({ location: { pathname } }) => (
   </Layout>
 )
 
-export const Head = DefaultHead
+export const Head = headWithTitle("Coaching Call | Edgardo Carreras")
 
 export default IndexPage

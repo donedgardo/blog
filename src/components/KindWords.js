@@ -131,7 +131,7 @@ export const KindWords = () => {
           </Testimonial>
           <TestimonialAuthor>
             - Johann Gracia
-            <StyledPortrait fixed={data.johannImg.childImageSharp.fixed} />
+            <StyledPortrait Tag="span" fixed={data.johannImg.childImageSharp.fixed} />
           </TestimonialAuthor>
         </TestimonialContainer>
 
@@ -145,7 +145,7 @@ export const KindWords = () => {
           </Testimonial>
           <TestimonialAuthor>
             - Tania Gonzalez
-            <StyledPortrait fixed={data.taniaImg.childImageSharp.fixed} />
+            <StyledPortrait Tag="span" fixed={data.taniaImg.childImageSharp.fixed} />
           </TestimonialAuthor>
         </TestimonialContainer>
 
@@ -158,7 +158,7 @@ export const KindWords = () => {
           </Testimonial>
           <TestimonialAuthor>
             - William Cheung
-            <StyledPortrait fixed={data.williamImg.childImageSharp.fixed} />
+            <StyledPortrait Tag="span" fixed={data.williamImg.childImageSharp.fixed} />
           </TestimonialAuthor>
         </TestimonialContainer>
 
@@ -171,7 +171,7 @@ export const KindWords = () => {
           </Testimonial>
           <TestimonialAuthor>
             - Lenny Mendez
-            <StyledPortrait fixed={data.lennyImg.childImageSharp.fixed} />
+            <StyledPortrait Tag="span" fixed={data.lennyImg.childImageSharp.fixed} />
           </TestimonialAuthor>
         </TestimonialContainer>
 
@@ -184,7 +184,7 @@ export const KindWords = () => {
           </Testimonial>
           <TestimonialAuthor>
             - Fernando Yordan
-            <StyledPortrait fixed={data.fernandoImg.childImageSharp.fixed} />
+            <StyledPortrait Tag="span" fixed={data.fernandoImg.childImageSharp.fixed} />
           </TestimonialAuthor>
         </TestimonialContainer>
 
@@ -197,7 +197,7 @@ export const KindWords = () => {
           </Testimonial>
           <TestimonialAuthor>
             - Karlo Martinez
-            <StyledPortrait fixed={data.karloImg.childImageSharp.fixed} />
+            <StyledPortrait Tag="span" fixed={data.karloImg.childImageSharp.fixed} />
           </TestimonialAuthor>
         </TestimonialContainer>
 
@@ -210,7 +210,7 @@ export const KindWords = () => {
           </Testimonial>
           <TestimonialAuthor>
             - Gabriel Flores
-            <StyledPortrait fixed={data.gabrielImg.childImageSharp.fixed} />
+            <StyledPortrait Tag="span" fixed={data.gabrielImg.childImageSharp.fixed} />
           </TestimonialAuthor>
         </TestimonialContainer>
 
@@ -223,7 +223,7 @@ export const KindWords = () => {
           </Testimonial>
           <TestimonialAuthor>
             - Ronald Delgado
-            <StyledPortrait fixed={data.ronaldImg.childImageSharp.fixed} />
+            <StyledPortrait Tag="span" fixed={data.ronaldImg.childImageSharp.fixed} />
           </TestimonialAuthor>
         </TestimonialContainer>
 
@@ -235,7 +235,7 @@ export const KindWords = () => {
           </Testimonial>
           <TestimonialAuthor>
             - Sam Yung
-            <StyledPortrait fixed={data.samImg.childImageSharp.fixed} />
+            <StyledPortrait Tag="span" fixed={data.samImg.childImageSharp.fixed} />
           </TestimonialAuthor>
         </TestimonialContainer>
       </SectionContent>

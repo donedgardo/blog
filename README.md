@@ -3,8 +3,8 @@
 [![CI](https://github.com/donedgardo/blog/actions/workflows/ci.yml/badge.svg)](https://github.com/donedgardo/blog/actions/workflows/ci.yml)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b26ecd99-4d22-4ed3-9607-7d7c4e5218e9/deploy-status)](https://app.netlify.com/sites/edgardocarreras/deploys)
 
-The source for [edgardocarreras.com](https://edgardocarreras.com): my portfolio,
-my technical blog and **Ed's Edge**, a daily newsletter on software delivery
+The source for [edgardocarreras.com](https://edgardocarreras.com): my portfolio
+and case studies, my technical blog and **Ed's Edge**, a daily newsletter on software delivery
 principles for development teams in the AI era.
 
 **Live site:** https://edgardocarreras.com ·
@@ -17,8 +17,10 @@ principles for development teams in the AI era.
 | --------------------------- | ------------------------------------ | ---------------------------------------------------------------- |
 | Blog posts                  | `content/blog/`                      | 59 technical articles on TDD, CI/CD, Rust and clean architecture |
 | Daily newsletter            | `content/daily/`                     | 72 issues of Ed's Edge, also published as an RSS feed            |
-| Landing and marketing pages | `src/pages/`                         | Home, newsletter signup, coaching pages                          |
-| Portfolio and resume        | `static/porfolio/`, `static/resume/` | Hand-written static HTML, served as is                           |
+| Portfolio home page         | `src/pages/index.js`                 | Home page, with case studies at `/work/<slug>/`                  |
+| Case studies                | `src/portfolio/work.js`              | One entry per case study; pages are generated from this file     |
+| Landing and marketing pages | `src/pages/`                         | Coaching (`/coaching/`), newsletter signup, contact              |
+| Resume                      | `static/resume/`                     | Hand-written static HTML, served as is                           |
 | End-to-end tests            | `cypress/e2e/`                       | Run against the production build in CI                           |
 
 Stack: Gatsby 4 · React 18 · MDX · styled-components · FlexSearch · Cypress · Netlify
@@ -80,8 +82,15 @@ Set `rss: false` to keep a daily issue out of the feed.
 - **Tests run against the production build.** CI builds the site and runs
   Cypress against `gatsby serve`, the same output Netlify publishes, so a
   problem that only appears after static rendering is caught before deploy.
-- **Portfolio and resume are plain HTML.** They sit in `static/` so they can be
-  edited and printed without going through the React build.
+- **Case studies are data.** Each one is an entry in `src/portfolio/work.js`
+  with the same fields: problem, what was built, decisions and tradeoffs, and
+  results. One template renders them all, so adding a case study is a data
+  change and every page keeps the same structure.
+- **The resume is plain HTML.** It sits in `static/` so it can be edited and
+  printed without going through the React build.
+- **The sitemap is generated in `gatsby-node.js`.** A short `onPostBuild` hook
+  writes `/sitemap.xml` from the list of built pages, which avoids adding a
+  plugin for one file.
 
 ## Deployment
 

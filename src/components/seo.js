@@ -42,7 +42,7 @@ function SEO({ description, lang, meta, keywords, title, pathname, image }) {
       <meta name="author" content="Edgardo Carreras" />
       <meta property="og:url" content={canonical} />
       <meta property="og:type" content="website" />
-      <meta name="og:image" content={imageUrl} />
+      <meta property="og:image" content={imageUrl} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={site.siteMetadata.author} />
       <meta name="twitter:title" content={title} />

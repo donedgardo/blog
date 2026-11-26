@@ -1,0 +1,503 @@
+/* Styles for the portfolio pages (home, /work/*, /contact/). Everything is
+   scoped under .pf so it cannot leak into the blog or coaching pages, which
+   share the same global stylesheet. */
+
+.pf {
+  --pf-bg: #0e1116;
+  --pf-surface: #161b22;
+  --pf-surface-2: #1c232c;
+  --pf-border: #2a323d;
+  --pf-text: #e6e9ee;
+  --pf-muted: #9aa5b4;
+  --pf-accent: #ed9567;
+  --pf-accent-strong: #f4a97f;
+  --pf-max: 1080px;
+
+  background: var(--pf-bg);
+  color: var(--pf-text);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.pf *,
+.pf *::before,
+.pf *::after {
+  box-sizing: border-box;
+}
+
+/* :where() keeps this reset at the specificity of a single class, so the
+   component rules below override it. */
+.pf :where(h1, h2, h3, p, ul, ol, li, blockquote, figure) {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-family: inherit;
+  letter-spacing: normal;
+  text-transform: none;
+  border: 0;
+}
+
+.pf :where(a) {
+  color: var(--pf-accent);
+  text-decoration: none;
+  box-shadow: none;
+  background-image: none;
+}
+
+.pf a:hover,
+.pf a:focus-visible {
+  color: var(--pf-accent-strong);
+  text-decoration: underline;
+}
+
+.pf a:focus-visible,
+.pf .pf-btn:focus-visible {
+  outline: 2px solid var(--pf-accent);
+  outline-offset: 3px;
+}
+
+.pf-wrap {
+  max-width: var(--pf-max);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navigation */
+
+.pf-nav {
+  border-bottom: 1px solid var(--pf-border);
+  background: rgba(14, 17, 22, 0.92);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+
+.pf-nav .pf-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 60px;
+  flex-wrap: wrap;
+}
+
+.pf .pf-brand {
+  color: var(--pf-text);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.pf-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 22px;
+  list-style: none;
+}
+
+.pf-nav li a {
+  color: var(--pf-muted);
+  font-size: 0.93rem;
+  font-weight: 500;
+}
+
+.pf-nav li a:hover {
+  color: var(--pf-text);
+  text-decoration: none;
+}
+
+/* Hero */
+
+.pf-hero {
+  padding: 72px 0 56px;
+}
+
+.pf-hero .pf-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 48px;
+  align-items: center;
+}
+
+.pf-eyebrow {
+  color: var(--pf-accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.pf h1 {
+  font-size: clamp(2rem, 4.6vw, 3.1rem);
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.pf-lede {
+  color: var(--pf-muted);
+  font-size: 1.14rem;
+  margin-top: 20px;
+  max-width: 62ch;
+}
+
+.pf-lede strong {
+  color: var(--pf-text);
+  font-weight: 600;
+}
+
+.pf-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.pf .pf-btn {
+  display: inline-block;
+  padding: 11px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--pf-border);
+  background: var(--pf-surface);
+  color: var(--pf-text);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.pf .pf-btn:hover {
+  border-color: var(--pf-accent);
+  color: var(--pf-text);
+  text-decoration: none;
+}
+
+.pf .pf-btn-primary {
+  background: var(--pf-accent);
+  border-color: var(--pf-accent);
+  color: #1a120c;
+}
+
+.pf .pf-btn-primary:hover {
+  background: var(--pf-accent-strong);
+  color: #1a120c;
+}
+
+.pf-portrait {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: linear-gradient(160deg, #2a323d, #161b22);
+  border: 1px solid var(--pf-border);
+  display: block;
+}
+
+/* Sections */
+
+.pf-section {
+  padding: 56px 0;
+  border-top: 1px solid var(--pf-border);
+}
+
+.pf h2 {
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.pf-section-intro {
+  color: var(--pf-muted);
+  margin-top: 8px;
+  max-width: 68ch;
+}
+
+.pf h3 {
+  font-size: 1.12rem;
+  line-height: 1.35;
+  font-weight: 650;
+}
+
+/* Metrics */
+
+.pf-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+  list-style: none;
+}
+
+.pf-metrics li {
+  background: var(--pf-surface);
+  border: 1px solid var(--pf-border);
+  border-radius: 10px;
+  padding: 18px;
+}
+
+.pf-metric-value {
+  display: block;
+  font-size: 1.45rem;
+  font-weight: 750;
+  color: var(--pf-text);
+  line-height: 1.2;
+}
+
+.pf-metric-label {
+  display: block;
+  color: var(--pf-muted);
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+/* Work cards */
+
+.pf-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+  list-style: none;
+}
+
+.pf-card {
+  background: var(--pf-surface);
+  border: 1px solid var(--pf-border);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pf-card:first-child {
+  grid-column: 1 / -1;
+}
+
+.pf-card:hover {
+  border-color: #3a4554;
+}
+
+.pf-kind {
+  color: var(--pf-accent);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.pf .pf-card h3 a {
+  color: var(--pf-text);
+}
+
+.pf .pf-card h3 a:hover {
+  color: var(--pf-accent-strong);
+}
+
+.pf-card p {
+  color: var(--pf-muted);
+  font-size: 0.97rem;
+}
+
+.pf-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+}
+
+.pf-tags li {
+  background: var(--pf-surface-2);
+  border: 1px solid var(--pf-border);
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-size: 0.78rem;
+  color: var(--pf-muted);
+}
+
+.pf-card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin-top: auto;
+  padding-top: 6px;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+/* Two-column text */
+
+.pf-cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.pf-panel {
+  background: var(--pf-surface);
+  border: 1px solid var(--pf-border);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.pf-panel p,
+.pf-panel li {
+  color: var(--pf-muted);
+  font-size: 0.97rem;
+}
+
+.pf-panel h3 {
+  margin-bottom: 10px;
+}
+
+.pf-list {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.pf-list li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--pf-muted);
+}
+
+.pf-list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.62em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--pf-accent);
+}
+
+/* Testimonials */
+
+.pf-quotes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.pf-quotes blockquote {
+  background: var(--pf-surface);
+  border: 1px solid var(--pf-border);
+  border-left: 3px solid var(--pf-accent);
+  border-radius: 10px;
+  padding: 22px;
+  font-style: normal;
+  font-size: 0.97rem;
+}
+
+.pf-quotes blockquote p {
+  color: var(--pf-text);
+}
+
+.pf-quotes footer {
+  color: var(--pf-muted);
+  font-size: 0.88rem;
+  margin-top: 14px;
+}
+
+/* Case study */
+
+.pf-case-head {
+  padding: 56px 0 40px;
+}
+
+.pf-crumb {
+  font-size: 0.9rem;
+  margin-bottom: 22px;
+}
+
+.pf-case-meta {
+  color: var(--pf-muted);
+  margin-top: 14px;
+  font-size: 0.97rem;
+}
+
+.pf-case-body {
+  display: grid;
+  gap: 44px;
+  padding-bottom: 64px;
+  max-width: 820px;
+}
+
+.pf-case-body h2 {
+  font-size: 1.3rem;
+  margin-bottom: 14px;
+}
+
+.pf-case-body p + p {
+  margin-top: 12px;
+}
+
+.pf-case-body p {
+  color: var(--pf-muted);
+}
+
+.pf-decisions {
+  display: grid;
+  gap: 14px;
+}
+
+.pf-decisions .pf-panel h3 {
+  color: var(--pf-text);
+}
+
+/* Footer */
+
+.pf-footer {
+  border-top: 1px solid var(--pf-border);
+  padding: 32px 0 48px;
+  color: var(--pf-muted);
+  font-size: 0.9rem;
+}
+
+.pf-footer .pf-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  justify-content: space-between;
+}
+
+.pf-footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  list-style: none;
+}
+
+@media (max-width: 860px) {
+  .pf-hero {
+    padding: 44px 0 40px;
+  }
+
+  .pf-hero .pf-wrap {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .pf-portrait {
+    width: 140px;
+    height: 140px;
+    order: -1;
+  }
+
+  .pf-cards,
+  .pf-cols,
+  .pf-quotes {
+    grid-template-columns: 1fr;
+  }
+
+  .pf-section {
+    padding: 44px 0;
+  }
+}

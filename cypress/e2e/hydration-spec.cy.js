@@ -5,6 +5,9 @@
 // regression.
 const pages = [
   "/",
+  "/coaching/",
+  "/contact/",
+  "/work/gitlaunch/",
   "/newsletter/",
   "/blog/",
   "/blog/10x-developer-myth/",

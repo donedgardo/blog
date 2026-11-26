@@ -1,0 +1,5 @@
+# The portfolio used to live at a misspelled path; it is now the home page.
+/porfolio    /    301
+/porfolio/*  /    301
+/portfolio   /    301
+/portfolio/* /    301

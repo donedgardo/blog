@@ -82,7 +82,13 @@ const work = [
     period: "Ongoing",
     role: "Design, build and operations",
     summary:
-      "Deployment control for teams: see what is deployed in every environment, then promote or roll back in one click on top of the CI you already run.",
+      "Deployment control the whole team can drive: QA, product owners and engineers see what is deployed in every environment, then promote, roll back or switch a feature on in one click, on top of the CI they already run.",
+    video: {
+      src: "/videos/gitlaunch-launch.mp4",
+      poster: "/videos/gitlaunch-launch.jpg",
+      caption:
+        "Launch video, recorded from the product: QA ships a build to staging and turns a feature on, then a product owner promotes it to production, releases the feature and rolls back.",
+    },
     stack: [
       "TypeScript",
       "Fastify",
@@ -106,8 +112,8 @@ const work = [
       { label: "One-click deploy on Railway", href: "https://railway.com/deploy/gitlaunch" },
     ],
     problem: [
-      "On most teams only one or two people know what is deployed where, and a rollback means finding the right pipeline run and hoping it still works. I saw the same gap at every client I coached.",
-      "GitLaunch gives the whole team one page with the state of every environment, and makes promote and rollback a button.",
+      "On most teams, deploying belongs to one or two people. QA wants a specific version in their environment, and waits. A product owner wants to release a finished feature, and waits. The pipelines exist, but only the deploy hero can safely use them. I saw the same queue at every client I coached.",
+      "GitLaunch gives the whole team one page with the state of every environment, and makes promote, rollback and feature release a button that anyone on the team can press.",
     ],
     built: [
       "Deployment tracking: build history per service and the current state of every environment.",
@@ -139,7 +145,8 @@ const work = [
       },
     ],
     results: [
-      "Deployed and running in production at gitlaunch.dev.",
+      "Launched publicly at gitlaunch.dev, with open signup and Free, Pro and Team plans billed through Stripe.",
+      "GitLaunch deploys itself: every merge to main ships to production once the checks pass, and reports the deploy to its own release board.",
       "CI runs unit tests, Playwright integration tests, a Helm chart check and a Docker image build on every push.",
       "Every push to main publishes a container image; a Railway template and a Helm chart cover self-hosting.",
     ],

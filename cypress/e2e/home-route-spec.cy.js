@@ -33,6 +33,7 @@ describe("home-route-spec.cy.js", () => {
     cy.contains("h2", "Decisions and tradeoffs")
     cy.contains("h2", "Results")
     cy.contains("a", "Live site").should("have.attr", "href", "https://gitlaunch.dev")
+    cy.get('video source[src="/videos/gitlaunch-launch.mp4"]').should("exist")
   })
 
   it("links to GitHub, LinkedIn, the resume and the contact page", () => {

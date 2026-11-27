@@ -43,6 +43,22 @@ const WorkPage = ({ pageContext: { item } }) => (
             ))}
           </ul>
 
+          {item.video && (
+            <figure className="pf-video">
+              {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+              <video
+                controls
+                preload="none"
+                playsInline
+                poster={item.video.poster}
+                aria-label={item.video.caption}
+              >
+                <source src={item.video.src} type="video/mp4" />
+              </video>
+              <figcaption>{item.video.caption}</figcaption>
+            </figure>
+          )}
+
           <section>
             <h2>The problem</h2>
             {item.problem.map(p => (

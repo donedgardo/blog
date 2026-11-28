@@ -18,6 +18,7 @@ describe("home-route-spec.cy.js", () => {
   it("links every case study", () => {
     ;[
       "agentic-delivery-at-origin",
+      "gitlaunch-mcp-server",
       "gitlaunch",
       "flexio-delivery-coaching",
       "react-ci-cd-template",

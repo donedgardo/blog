@@ -75,6 +75,82 @@ const work = [
     ],
   },
   {
+    slug: "gitlaunch-mcp-server",
+    name: "An MCP server that lets an AI agent ship a release, inside limits set by its key",
+    kind: "Product",
+    org: "GitLaunch, founder and sole engineer",
+    period: "November 2026",
+    role: "Design, build and operations",
+    summary:
+      "GitLaunch's MCP server gives a coding agent 11 tools to deploy, verify, roll back and switch feature flags. What the agent may touch is decided by its API key, and every change it makes is recorded with who, how and why.",
+    video: {
+      src: "/videos/gitlaunch-mcp-demo.mp4",
+      poster: "/videos/gitlaunch-mcp-demo.jpg",
+      caption:
+        "Unedited and in real time: Claude Code, holding a staging-only key, ships a build to staging, sees the health check fail and rolls back in about 30 seconds. Then it ships the fix and is refused when it tries to promote to production. Recorded against a local instance with a stub pipeline and a stub staging app.",
+    },
+    stack: [
+      "Model Context Protocol",
+      "TypeScript",
+      "MCP TypeScript SDK",
+      "Streamable HTTP",
+      "Zod",
+      "Fastify",
+      "MongoDB",
+      "Vitest",
+      "Claude Code",
+    ],
+    metrics: [
+      { value: "11", label: "tools: 8 that read, 3 that change something" },
+      { value: "30 s", label: "for an agent to ship, catch a failed health check and roll back" },
+      { value: "2 min → 30 s", label: "the same run, after adding a tool that waits for a deploy" },
+      { value: "3", label: "key access levels, each limitable to named environments" },
+    ],
+    links: [
+      { label: "MCP docs", href: "https://gitlaunch.dev/docs#mcp" },
+      { label: "Source on GitHub", href: "https://github.com/donedgardo/gitlaunch/tree/main/src/services/mcp" },
+    ],
+    problem: [
+      "Coding agents can now write a change, open the pull request and watch CI. The last step, getting the build into an environment and checking that it works, usually still waits for a person, because the only credential on offer can deploy anything anywhere.",
+      "I wanted an agent to be able to do the release work a QA engineer does in GitLaunch, and to be unable to do more than that no matter what its prompt says.",
+    ],
+    built: [
+      "An MCP endpoint served by the GitLaunch application itself over streamable HTTP, stateless, authenticated with the same API keys as the REST API.",
+      "8 tools that read: services, the release board, build history, an activity timeline, the four DORA metrics and feature flags. 3 tools that change something: deploy a build, roll an environment back, and switch a flag in one environment.",
+      "Key scoping: a key is Full, Release or Read-only, and can be limited to named environments. A tool the key cannot use is not listed to the agent at all.",
+      "Attribution: every deploy and flag change records the key that made it, that it came through MCP, the client's name and the reason the agent gave. The release board shows who shipped what is live.",
+      "A contract test that pins every tool's name, description and input schema, so a change an existing agent would notice has to be made on purpose.",
+    ],
+    decisions: [
+      {
+        title: "Put the guardrail in the key, not in the prompt",
+        body: "The staging-only limit is enforced by the server on every call, in the same rule the REST API uses. In the demo the agent decides to promote to production and is refused; it reports that and stops. An instruction in a prompt can be argued with. A key cannot.",
+      },
+      {
+        title: "Serve it from the application instead of a separate package",
+        body: "I first planned a standalone server that called the REST API. Running it in-process means the tools use the same services and the same authorization as the dashboard, and cannot drift from them. The tradeoff is that it ships and scales with the application.",
+      },
+      {
+        title: "Leave out what an agent should not do",
+        body: "No tool creates or deletes a flag, or reconfigures a service or its environments. An agent can release and undo a release; it cannot change what there is to release.",
+      },
+      {
+        title: "Watch a real agent, then fix what it struggles with",
+        body: "In the first recorded run the agent had no good way to wait for a deploy: it polled the board 4 times in 6 seconds, then slept for 45 seconds at a time, and the run took 2 minutes. I added wait_for_deploy, which holds the call open until the pipeline reports back. The same run then took 30 seconds.",
+      },
+      {
+        title: "Refusals an agent can act on",
+        body: "A wrong environment name is answered with the environments the service has. A deploy is answered with the next tool to call. Each of these saves the agent a guess.",
+      },
+    ],
+    results: [
+      "Live at gitlaunch.dev as a preview, behind one of GitLaunch's own feature flags.",
+      "Against production, Claude Code read the release board, named who shipped the live build and reported the 30-day delivery metrics, using a real account's key.",
+      "The first production call found a bug that local test data had not: the activity tool failed on deploy history written before entries were dated. It was reproduced in a failing test and then fixed.",
+      "Built test-first, in pairs of commits: a failing test, then the change that makes it pass.",
+    ],
+  },
+  {
     slug: "gitlaunch",
     name: "GitLaunch",
     kind: "Product",

@@ -144,7 +144,7 @@ const work = [
       },
     ],
     results: [
-      "Live at gitlaunch.dev as a preview, behind one of GitLaunch's own feature flags.",
+      "Live at gitlaunch.dev for every account. It launched behind one of GitLaunch's own feature flags, which was removed once a real agent had run against production.",
       "Against production, Claude Code read the release board, named who shipped the live build and reported the 30-day delivery metrics, using a real account's key.",
       "The first production call found a bug that local test data had not: the activity tool failed on deploy history written before entries were dated. It was reproduced in a failing test and then fixed.",
       "Built test-first, in pairs of commits: a failing test, then the change that makes it pass.",
